@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Maritime Presence | Marine Corporation of India</title>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#43474e",
+            "surface-tint": "#436083",
+            "inverse-primary": "#abc9f0",
+            "primary-fixed": "#d2e4ff",
+            "primary-container": "#0d2f4f",
+            "on-tertiary-fixed": "#001e2b",
+            "on-surface": "#0f1d28",
+            "background": "#f6f9ff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#00537d",
+            "tertiary-fixed": "#c1e8ff",
+            "outline": "#73777f",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#e1f0ff",
+            "surface-variant": "#d6e4f3",
+            "on-primary-fixed": "#001c37",
+            "secondary-fixed-dim": "#90cdff",
+            "tertiary-container": "#003244",
+            "tertiary-fixed-dim": "#90cff0",
+            "on-primary-fixed-variant": "#2b486a",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c3c6cf",
+            "surface": "#f6f9ff",
+            "surface-container-low": "#ecf4ff",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#abc9f0",
+            "surface-container-highest": "#d6e4f3",
+            "secondary": "#046494",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004d67",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#24323d",
+            "on-secondary-fixed": "#001e30",
+            "inverse-on-surface": "#e6f2ff",
+            "on-tertiary-container": "#5e9dbd",
+            "on-primary-container": "#7a97bd",
+            "secondary-container": "#84c8fe",
+            "tertiary": "#001c28",
+            "primary": "#001a32",
+            "on-background": "#0f1d28",
+            "on-error": "#ffffff",
+            "surface-bright": "#f6f9ff",
+            "surface-container-high": "#dbeaf9",
+            "on-secondary-fixed-variant": "#004b71",
+            "secondary-fixed": "#cbe6ff",
+            "surface-dim": "#cddceb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-sm": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "title-md": ["Manrope"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-sm": ["Manrope"],
+            "display-hero": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "body-lg": ["Inter"],
+            "display-hero-mobile": ["Manrope"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-map-radar {
+      background-image: radial-gradient(rgba(23, 107, 156, 0.25) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .pulsing-beacon {
+      box-shadow: 0 0 0 0 rgba(132, 200, 254, 0.7);
+      animation: beacon-pulse 2.2s infinite cubic-bezier(0.66, 0, 0, 1);
+    }
+    @keyframes beacon-pulse {
+      to {
+        box-shadow: 0 0 0 14px rgba(132, 200, 254, 0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary-fixed-dim selection:text-primary">
+<!-- TOP APP BAR / BRAND HEADER -->
+<header class="w-full bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand Anchor & Crest -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded-lg text-on-primary">
+<span class="material-symbols-outlined" data-icon="anchor">anchor</span>
+</div>
+<div>
+<span class="text-title-md font-title-md tracking-tight font-bold text-primary block leading-tight">Marine Corporation of India</span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider">SOVEREIGN MARITIME INFRASTRUCTURE &amp; CORRIDORS</span>
+</div>
+</div>
+<!-- Navigation Hierarchy with active 'Global Presence' -->
+<nav class="hidden lg:flex items-center gap-space-lg">
+<a class="text-on-surface-variant font-medium text-label-md font-label-md hover:text-secondary transition-colors duration-150" href="#home">Home</a>
+<a class="text-on-surface-variant font-medium text-label-md font-label-md hover:text-secondary transition-colors duration-150" href="#about">About MCI</a>
+<a class="text-on-surface-variant font-medium text-label-md font-label-md hover:text-secondary transition-colors duration-150" href="#activities">Activities</a>
+<a class="text-on-surface-variant font-medium text-label-md font-label-md hover:text-secondary transition-colors duration-150" href="#group">Group</a>
+<a class="text-secondary border-b-2 border-secondary font-semibold pb-1 text-label-md font-label-md" href="#global-presence">Global Presence</a>
+<a class="text-on-surface-variant font-medium text-label-md font-label-md hover:text-secondary transition-colors duration-150" href="#investors">Investor Relations</a>
+<a class="text-on-surface-variant font-medium text-label-md font-label-md hover:text-secondary transition-colors duration-150" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action Desk Hub -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden xl:flex items-center bg-surface-container-low px-3 py-1.5 rounded-lg border border-outline-variant mr-2">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-0 p-0 text-label-sm font-label-sm text-on-surface placeholder:text-outline focus:ring-0 w-44" placeholder="Track Fairway / Port Code..." type="text"/>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 border border-outline text-primary text-label-md font-label-md rounded hover:bg-surface-variant transition-colors duration-150" href="#operations">
+<span class="material-symbols-outlined text-[16px]" data-icon="radio_button_checked">radio_button_checked</span>
+          Operations Desk
+        </a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary-container text-on-primary text-label-md font-label-md rounded hover:bg-secondary transition-colors duration-150 shadow-sm" href="#portal">
+<span class="material-symbols-outlined text-[16px]" data-icon="shield_person">shield_person</span>
+          Client Portal
+        </a>
+</div>
+</div>
+</header>
+<main>
+<!-- HERO SECTION: Deep Navy Architecture -->
+<section class="bg-primary text-on-primary py-16 lg:py-24 border-b border-primary-container relative overflow-hidden">
+<!-- Ambient Grid Background -->
+<div class="absolute inset-0 custom-map-radar opacity-15 pointer-events-none"></div>
+<div class="w-full max-w-[1440px] mx-auto px-margin relative z-10">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg mb-12">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high/15 border border-primary-fixed-dim/30 rounded text-secondary-fixed text-label-sm font-label-sm tracking-wider mb-4 uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary-container pulsing-beacon"></span>
+              STRATEGIC SEA LANES &amp; REGIONAL OPERATIONAL BASES // 24/7 GLOBAL REACH
+            </div>
+<h1 class="text-headline-xl lg:text-display-hero font-headline-xl lg:font-display-hero text-on-primary tracking-tight leading-none mb-6">
+              Global Maritime Presence &amp; Strategic Shipping Corridors
+            </h1>
+<p class="text-on-primary-container font-body-lg text-body-lg max-w-2xl leading-relaxed">
+              Operating along key international trade choke points, Indian Ocean routes, Arabian Sea fairways, and Bay of Bengal hubs with continuous AIS telemetry tracking and rapid emergency mobilization.
+            </p>
+</div>
+<!-- Key Mission Telemetry Snapshot -->
+<div class="flex flex-wrap lg:flex-nowrap gap-4">
+<div class="bg-primary-container/80 border border-on-primary-container/20 p-4 rounded-xl backdrop-blur-sm min-w-[160px]">
+<span class="text-label-sm font-label-sm text-on-primary-container block uppercase">Active Sea Corridors</span>
+<span class="text-headline-md font-headline-md text-on-primary font-bold">14</span>
+<span class="text-label-sm font-label-sm text-secondary-container block mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span> 100% Monitored
+              </span>
+</div>
+<div class="bg-primary-container/80 border border-on-primary-container/20 p-4 rounded-xl backdrop-blur-sm min-w-[160px]">
+<span class="text-label-sm font-label-sm text-on-primary-container block uppercase">Forward Fleet Command</span>
+<span class="text-headline-md font-headline-md text-on-primary font-bold">142</span>
+<span class="text-label-sm font-label-sm text-secondary-container block mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="sailing">sailing</span> Deployed Vessels
+              </span>
+</div>
+<div class="bg-primary-container/80 border border-on-primary-container/20 p-4 rounded-xl backdrop-blur-sm min-w-[160px]">
+<span class="text-label-sm font-label-sm text-on-primary-container block uppercase">Emergency Response</span>
+<span class="text-headline-md font-headline-md text-on-primary font-bold">&lt; 45m</span>
+<span class="text-label-sm font-label-sm text-secondary-fixed block mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="speed">speed</span> Coastal Dispatch
+              </span>
+</div>
+</div>
+</div>
+<!-- Real-Time Telemetry Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-primary-container/70 text-on-primary-container">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="satellite_alt">satellite_alt</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-outline-variant">AIS Data Feed</div>
+<div class="text-title-md font-title-md text-on-primary">INMARSAT &amp; Iridium Constellation</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="water">water</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-outline-variant">Bathymetric Standard</div>
+<div class="text-title-md font-title-md text-on-primary">IHO S-44 Edition 6.1 Special Order</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="policy">policy</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-outline-variant">Safety &amp; Compliance</div>
+<div class="text-title-md font-title-md text-on-primary">SOLAS V/19 &amp; ISPS Tier-1</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="support_agent">support_agent</span>
+<div>
+<div class="text-label-sm font-label-sm uppercase tracking-wider text-outline-variant">Superintendent Desk</div>
+<div class="text-title-md font-title-md text-on-primary">24/7 Watchstander Online</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE WORLD MARITIME MAP CANVAS -->
+<section class="py-12 bg-surface-container-lowest border-b border-outline-variant" id="global-presence">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<!-- Section Header with Filters -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 gap-4 border-b border-outline-variant mb-8">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest font-semibold">Live Operational Geospatial Layer</span>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight">Active Marine Corridors &amp; Primary Stations</h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 text-label-sm font-label-sm bg-primary text-on-primary rounded font-medium flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="public">public</span> All Global Sectors
+            </button>
+<button class="px-3 py-1.5 text-label-sm font-label-sm bg-surface-container-low hover:bg-surface-variant text-primary border border-outline-variant rounded font-medium transition-colors">
+              Arabian Sea &amp; Gulf
+            </button>
+<button class="px-3 py-1.5 text-label-sm font-label-sm bg-surface-container-low hover:bg-surface-variant text-primary border border-outline-variant rounded font-medium transition-colors">
+              Bay of Bengal &amp; Malacca
+            </button>
+<button class="px-3 py-1.5 text-label-sm font-label-sm bg-surface-container-low hover:bg-surface-variant text-primary border border-outline-variant rounded font-medium transition-colors">
+              Deep-Sea High Fairways
+            </button>
+</div>
+</div>
+<!-- High-Resolution Cartographic Display with Route Geometry and Stations -->
+<div class="relative w-full rounded-xl overflow-hidden border border-outline-variant bg-tertiary shadow-md">
+<!-- Background Maritime Global Map Reference -->
+<div class="relative w-full aspect-[21/9] min-h-[520px] overflow-hidden">
+<img class="w-full h-full object-cover opacity-90 filter contrast-125" data-alt="An expansive panoramic high-resolution nautical routing world map showing deep ocean bathymetry lines, glowing cyan international shipping corridors, transoceanic maritime trade lanes, and detailed strategic vessel routes against a deep navy blue sea. The architectural visualization displays high clarity navigational grids, vector route segments connecting Indian Ocean gateways to the Persian Gulf, Red Sea, and Strait of Malacca. Professional light-mode contrast detailing with high-precision technical chart aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFG4WyH9mMrEUW8ufY3pVYTqXXMWIrR_TfnRGZ9ZPzTjiBd8jFrEd9CjVYRr3Ef4sx0iqpDMgUo806Gg3a9FH7YmAc7IG3VaDr8Yaqb30_kHOjrxMnpsqCks9gn9q26Vwry8ZfljYFNgGTI-af2WDlYoLx4W5_y4rAK82skglYHrY2fE-HEZKkVEWoCb9KWIahZ4pjGUK7Xv3k18Wl5FReoj-J7hoTGuyNKT2UvLQUWw3iPoFmxG4s"/>
+<!-- Vector Overlay: Hub Pin Coordinates with Interactive Tooltips -->
+<!-- 1. Headquarters: Mumbai / Nhava Sheva (Arabian Sea) -->
+<div class="absolute top-[49%] left-[64%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-8 h-8 rounded-full bg-secondary-container/40 animate-ping"></span>
+<span class="relative flex items-center justify-center w-5 h-5 rounded-full bg-secondary-container border-2 border-on-primary shadow-lg text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 bottom-7 bg-primary/95 text-on-primary border border-secondary-fixed/30 backdrop-blur-md px-3 py-2 rounded-lg text-left shadow-2xl min-w-[220px] pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-30">
+<div class="flex items-center justify-between border-b border-primary-container pb-1 mb-1.5">
+<span class="text-label-sm font-label-sm font-bold text-secondary-fixed">MUMBAI / JNPT BASE</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-on-primary">HQ &amp; FLEET YARD</span>
+</div>
+<div class="text-[11px] text-on-primary-container leading-tight">
+                  Ballard Estate Directorate &amp; Nhava Sheva Heavy Drydock. Rapid dispatch for West Coast.
+                </div>
+<div class="mt-1.5 pt-1 border-t border-primary-container flex items-center justify-between text-[10px] text-secondary-fixed-dim">
+<span>38 Vessels Stationed</span>
+<span class="text-secondary-container font-semibold">Ready P1</span>
+</div>
+</div>
+</div>
+<!-- 2. Southern Transshipment Hub: Vizhinjam International Seaport -->
+<div class="absolute top-[57%] left-[66%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="w-4 h-4 rounded-full bg-secondary-container border-2 border-on-primary shadow-lg"></span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 bottom-6 bg-primary/95 text-on-primary border border-secondary-fixed/30 backdrop-blur-md px-3 py-2 rounded-lg text-left shadow-2xl min-w-[210px] pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-30 hidden sm:block">
+<div class="flex items-center justify-between border-b border-primary-container pb-1 mb-1.5">
+<span class="text-label-sm font-label-sm font-bold text-secondary-fixed">VIZHINJAM SEAPORT</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-on-primary">TRANSSHIPMENT</span>
+</div>
+<div class="text-[11px] text-on-primary-container leading-tight">
+                  Deep-draft mega-container channel dredging &amp; salvage catamarans. 10nm to East-West Trunk Route.
+                </div>
+</div>
+</div>
+<!-- 3. Eastern Directorate: SMP Kolkata & Haldia Riverine Approaches -->
+<div class="absolute top-[48%] left-[70%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="w-4 h-4 rounded-full bg-secondary-container border-2 border-on-primary shadow-lg"></span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 bottom-6 bg-primary/95 text-on-primary border border-secondary-fixed/30 backdrop-blur-md px-3 py-2 rounded-lg text-left shadow-2xl min-w-[210px] pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-30 hidden sm:block">
+<div class="flex items-center justify-between border-b border-primary-container pb-1 mb-1.5">
+<span class="text-label-sm font-label-sm font-bold text-secondary-fixed">SMP KOLKATA &amp; HALDIA</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded bg-secondary text-on-primary">RIVERINE WING</span>
+</div>
+<div class="text-[11px] text-on-primary-container leading-tight">
+                  Hooghly Estuary maintenance dredging, dynamic sandbar monitoring, and trans-Bay tug operations.
+                </div>
+</div>
+</div>
+<!-- 4. Gulf & Red Sea Route Support: Middle East Corridor -->
+<div class="absolute top-[46%] left-[58%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim border-2 border-on-primary shadow-md"></span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 bottom-6 bg-primary/95 text-on-primary border border-secondary-fixed/30 backdrop-blur-md px-3 py-2 rounded-lg text-left shadow-2xl min-w-[200px] pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-30 hidden lg:block">
+<div class="text-label-sm font-label-sm font-bold text-secondary-fixed mb-1">GULF &amp; RED SEA CORRIDOR</div>
+<div class="text-[11px] text-on-primary-container leading-tight">
+                  Strait of Hormuz escort towage, deep-sea security rendezvous, and bunkering coordination.
+                </div>
+</div>
+</div>
+<!-- 5. Far East & Malacca Straits Connectivity -->
+<div class="absolute top-[58%] left-[78%] -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="relative flex items-center justify-center">
+<span class="w-3.5 h-3.5 rounded-full bg-secondary-fixed-dim border-2 border-on-primary shadow-md"></span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2 bottom-6 bg-primary/95 text-on-primary border border-secondary-fixed/30 backdrop-blur-md px-3 py-2 rounded-lg text-left shadow-2xl min-w-[200px] pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-30 hidden lg:block">
+<div class="text-label-sm font-label-sm font-bold text-secondary-fixed mb-1">MALACCA STRAITS LINK</div>
+<div class="text-[11px] text-on-primary-container leading-tight">
+                  Southeast Asian maritime gateway support, open ocean salvage, and bunker logistics.
+                </div>
+</div>
+</div>
+<!-- Floating In-Map Telemetry Control HUD -->
+<div class="absolute bottom-4 left-4 bg-primary/90 text-on-primary p-4 rounded-lg border border-primary-container/80 backdrop-blur-md max-w-sm hidden md:block">
+<div class="flex items-center justify-between pb-2 border-b border-primary-container text-label-sm font-label-sm">
+<span class="text-secondary-fixed flex items-center gap-1.5 font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                  AIS Telemetry Engine
+                </span>
+<span class="text-outline-variant font-code-metric">UTC 08:44:12</span>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2 text-[12px]">
+<div>
+<div class="text-outline-variant">Tracking Precision</div>
+<div class="font-semibold text-on-primary">DGPS ± 0.05m</div>
+</div>
+<div>
+<div class="text-outline-variant">Active Towages</div>
+<div class="font-semibold text-secondary-container">22 High-Seas Tugs</div>
+</div>
+<div>
+<div class="text-outline-variant">TSHD Hopper Operations</div>
+<div class="font-semibold text-on-primary">9 Units Underway</div>
+</div>
+<div>
+<div class="text-outline-variant">Emergency Tugs on Standby</div>
+<div class="font-semibold text-on-primary">12 Rapid Units</div>
+</div>
+</div>
+</div>
+<!-- Map Legend in Top Right -->
+<div class="absolute top-4 right-4 bg-primary/90 text-on-primary px-3 py-2.5 rounded-lg border border-primary-container backdrop-blur-md text-[11px] space-y-1.5 hidden sm:block">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span>Command Base &amp; Heavy Yard</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+<span>Strategic Transshipment Corridor Hub</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-4 h-0.5 bg-secondary-container inline-block"></span>
+<span>Designated High-Seas Safe Channel</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- REGIONAL OPERATIONAL HUB DIRECTORY (BENTO GRID ARCHITECTURE) -->
+<section class="py-16 bg-surface-container-low border-b border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-outline-variant">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest font-semibold">Strategic Base Assets</span>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight">Regional Operational Hub Directory</h2>
+</div>
+<p class="text-on-surface-variant font-body-sm text-body-sm max-w-md mt-2 md:mt-0">
+            Dedicated shore superintendents, engineering workshops, and pilotage response clusters positioned along high-density maritime traffic routes.
+          </p>
+</div>
+<!-- Bento Grid of Key Operational Stations -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- CARD 1: Mumbai HQ & West Coast Command -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant mb-4">
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-sm font-label-sm rounded font-semibold">WESTERN SEABOARD HQ</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-outline font-code-metric">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 18.9220° N, 72.8347° E
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Mumbai &amp; JNPT Maritime Base</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Primary naval engineering headquarters, housing central hydrographic command, heavy repair drydocks, and deep-water salvage coordination desks.
+              </p>
+<!-- Technical Specifications Table / Chips -->
+<div class="space-y-2 py-3 border-t border-surface-container text-[12px]">
+<div class="flex justify-between">
+<span class="text-outline">Drydock Capability:</span>
+<span class="font-medium text-on-surface">Capesize &amp; VLCC up to 320m</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Bollard Pull Fleet:</span>
+<span class="font-medium text-on-surface">4 × 120T ASD Tugs on standby</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Survey Launch:</span>
+<span class="font-medium text-on-surface">IHO Special Order Dual-Frequency</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Fairway Control:</span>
+<span class="font-medium text-on-surface">Nhava Sheva &amp; Vadhavan Approaches</span>
+</div>
+</div>
+</div>
+<!-- Superintendent Dispatch Action -->
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between mt-4">
+<div>
+<span class="text-label-sm font-label-sm text-outline block">Duty Superintendent</span>
+<span class="text-title-md font-title-md text-primary text-[14px]">Capt. R. Deshmukh, FNI</span>
+</div>
+<a class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors inline-flex items-center gap-1" href="#contact">
+<span class="material-symbols-outlined text-[14px]" data-icon="call">call</span> Dispatch Desk
+              </a>
+</div>
+</div>
+<!-- CARD 2: Vizhinjam International Seaport Hub -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant mb-4">
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-sm font-label-sm rounded font-semibold">SOUTHERN TRANSSHIPMENT</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-outline font-code-metric">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 8.3812° N, 76.9944° E
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Vizhinjam &amp; Cochin Station</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Strategic transshipment corridor direct to the Suez-Malacca oceanic trunk highway. Equipped for ultra-large container vessel escort and dredging.
+              </p>
+<!-- Technical Specifications -->
+<div class="space-y-2 py-3 border-t border-surface-container text-[12px]">
+<div class="flex justify-between">
+<span class="text-outline">Natural Channel Depth:</span>
+<span class="font-medium text-on-surface">20.0m - 24.5m Draft</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Dredging Assets:</span>
+<span class="font-medium text-on-surface">TSHD Kaveri (12,000 m³ Hopper)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Escort Pilotage:</span>
+<span class="font-medium text-on-surface">24,000+ TEU Megamax Certified</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Emergency Salvage:</span>
+<span class="font-medium text-on-surface">Rapid deployment zone (12nm)</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between mt-4">
+<div>
+<span class="text-label-sm font-label-sm text-outline block">Duty Superintendent</span>
+<span class="text-title-md font-title-md text-primary text-[14px]">Cmdr. K. G. Menon (Retd.)</span>
+</div>
+<a class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors inline-flex items-center gap-1" href="#contact">
+<span class="material-symbols-outlined text-[14px]" data-icon="call">call</span> Dispatch Desk
+              </a>
+</div>
+</div>
+<!-- CARD 3: Eastern Bay of Bengal Directorate -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant mb-4">
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-sm font-label-sm rounded font-semibold">BAY OF BENGAL DIVISION</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-outline font-code-metric">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 22.0294° N, 88.0645° E
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">SMP Kolkata &amp; Haldia Complex</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Specialized shallow-water estuary hydrography, round-the-clock navigation aid management, and continuous bar dredging on the riverine channels.
+              </p>
+<!-- Technical Specifications -->
+<div class="space-y-2 py-3 border-t border-surface-container text-[12px]">
+<div class="flex justify-between">
+<span class="text-outline">Estuary Maintenance:</span>
+<span class="font-medium text-on-surface">Hooghly River Navigation Channel</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Active Dredging Units:</span>
+<span class="font-medium text-on-surface">3 × Trailing Suction Hoppers</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Survey Frequency:</span>
+<span class="font-medium text-on-surface">Daily Multibeam Bathymetry</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Towage &amp; Mooring:</span>
+<span class="font-medium text-on-surface">Riverine Berthing Assist Tugs</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between mt-4">
+<div>
+<span class="text-label-sm font-label-sm text-outline block">Duty Superintendent</span>
+<span class="text-title-md font-title-md text-primary text-[14px]">Capt. A. Sengupta</span>
+</div>
+<a class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors inline-flex items-center gap-1" href="#contact">
+<span class="material-symbols-outlined text-[14px]" data-icon="call">call</span> Dispatch Desk
+              </a>
+</div>
+</div>
+<!-- CARD 4: Middle East & Gulf Route Support Hub -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant mb-4">
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-sm font-label-sm rounded font-semibold">GULF TRANSIT HUB</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-outline font-code-metric">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 25.2048° N, 55.2708° E
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Middle East Forward Station</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Corridor liaison office providing escort planning, offshore crew transfers, safety inspections, and high-risk zone routing across Arabian Gulf fairways.
+              </p>
+<div class="space-y-2 py-3 border-t border-surface-container text-[12px]">
+<div class="flex justify-between">
+<span class="text-outline">Operations Focus:</span>
+<span class="font-medium text-on-surface">Hydrocarbon Tanker Escort</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Bunkering Oversight:</span>
+<span class="font-medium text-on-surface">Fujairah &amp; Oman Anchorage</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">ISPS Protocol:</span>
+<span class="font-medium text-on-surface">Armed Security Embarkation Support</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between mt-4">
+<div>
+<span class="text-label-sm font-label-sm text-outline block">Duty Superintendent</span>
+<span class="text-title-md font-title-md text-primary text-[14px]">Capt. T. Al-Mansoori</span>
+</div>
+<a class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors inline-flex items-center gap-1" href="#contact">
+<span class="material-symbols-outlined text-[14px]" data-icon="call">call</span> Dispatch Desk
+              </a>
+</div>
+</div>
+<!-- CARD 5: Southeast Asia / Singapore Link Base -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant mb-4">
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-sm font-label-sm rounded font-semibold">MALACCA APPROACHES</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-outline font-code-metric">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 1.3521° N, 103.8198° E
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Singapore &amp; Straits Desk</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Coordinated fairway transits, deep-water salvage standby, and bunker quality testing for vessels crossing the Strait of Malacca towards Far East terminals.
+              </p>
+<div class="space-y-2 py-3 border-t border-surface-container text-[12px]">
+<div class="flex justify-between">
+<span class="text-outline">Vessel Coverage:</span>
+<span class="font-medium text-on-surface">Container, Bulk &amp; LNG Carriers</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">TSS Monitoring:</span>
+<span class="font-medium text-on-surface">Live Marine Radar &amp; AIS Relay</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Fleet Base:</span>
+<span class="font-medium text-on-surface">Tuas Marine Workshop &amp; Spares Depot</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between mt-4">
+<div>
+<span class="text-label-sm font-label-sm text-outline block">Duty Superintendent</span>
+<span class="text-title-md font-title-md text-primary text-[14px]">Lin Wei-Ting, Master Mariner</span>
+</div>
+<a class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors inline-flex items-center gap-1" href="#contact">
+<span class="material-symbols-outlined text-[14px]" data-icon="call">call</span> Dispatch Desk
+              </a>
+</div>
+</div>
+<!-- CARD 6: Andaman & Nicobar Sea Gate -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant mb-4">
+<span class="px-2.5 py-1 bg-surface-container text-secondary text-label-sm font-label-sm rounded font-semibold">ISLAND LOGISTICS COMMAND</span>
+<span class="flex items-center gap-1 text-label-sm font-label-sm text-outline font-code-metric">
+<span class="material-symbols-outlined text-[14px]" data-icon="location_on">location_on</span> 11.6234° N, 92.7265° E
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Port Blair &amp; Great Nicobar Base</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4 leading-relaxed">
+                Strategic island surveillance, search and rescue coordination, and deep-sea bunkering along the Six Degree Channel international shipping funnel.
+              </p>
+<div class="space-y-2 py-3 border-t border-surface-container text-[12px]">
+<div class="flex justify-between">
+<span class="text-outline">Security Mandate:</span>
+<span class="font-medium text-on-surface">Integrated Joint Maritime Surveillance</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Offshore Tugs:</span>
+<span class="font-medium text-on-surface">2 × 80T FiFi-1 Capable Cutters</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">Helideck Facilities:</span>
+<span class="font-medium text-on-surface">Certified Day/Night Medevac Access</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between mt-4">
+<div>
+<span class="text-label-sm font-label-sm text-outline block">Duty Superintendent</span>
+<span class="text-title-md font-title-md text-primary text-[14px]">Lt. Cdr. V. Nair (Retd.)</span>
+</div>
+<a class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors inline-flex items-center gap-1" href="#contact">
+<span class="material-symbols-outlined text-[14px]" data-icon="call">call</span> Dispatch Desk
+              </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FLEET COVERAGE & SEA LANE SECURITY -->
+<section class="py-16 bg-surface-container-lowest border-b border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5">
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-widest font-semibold">Active Fleet Deployment</span>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight mt-1 mb-4">
+              142 Vessels Safeguarding Territorial and High-Seas Corridors
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 leading-relaxed">
+              MCI maintains one of Asia’s most versatile fleets of deep-water hydrographic vessels, heavy-duty Trailing Suction Hopper Dredgers (TSHDs), anchor handlers, and ocean-going tugboats certified under IMO and SOLAS classifications.
+            </p>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+<div class="w-10 h-10 rounded bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary">IHO S-44 Survey Catamarans</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Equipped with Kongsberg EM2040 multibeam sonars and sub-bottom profilers delivering sub-decimeter bathymetric precision.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+<div class="w-10 h-10 rounded bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="rv_hookup">rv_hookup</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary">Deep-Draft TSHDs &amp; Backhoes</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Continuous capital dredging and approach channel deepening maintaining international port accessibility year-round.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-outline-variant">
+<div class="w-10 h-10 rounded bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="shield">shield</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary">High-Seas Ocean Tugs (Up to 150T BP)</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">FiFi-1 fire-fighting systems, dynamic positioning (DP-2), and emergency salvage towing capability for distressed vessels.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Editorial Vessel Photography Showcase -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="rounded-xl overflow-hidden border border-outline-variant shadow-sm group">
+<div class="relative h-64 overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A massive modern container vessel navigating deep maritime waters under dramatic overcast coastal storm skies. Ocean spray crashes against the industrial bow as the ship powers forward along a certified Indian Ocean trade corridor. Realistic crisp lighting with cool maritime teal-blue tones and fine architectural hull detail, showcasing sovereign freight logistics scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZm5uUMRuRYAdL-IDDCY_sFzB70dGpyiJJw2K7cm-aZeddTaTlZNe0UIWr0oOIEOql0SqB-Yv805thUK2tWtuf2nT9mVjc5lX8rr4XyI8TqV_C_EvlnjTzO1EeRZ_yxtEsFJhMk1e9j_NH19Qj-of1jWQK2_LuYYoEdYXDeo04C_xLo6FUrgHkLK9Q0Ilm2tcBG8ONmxKp-FBopJobPGEwNcwhp0xQeFOMnHRXqVsXGcrSb_Y2KvHF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 text-on-primary">
+<span class="text-label-sm font-label-sm text-secondary-fixed block uppercase">Deep-Sea Fairway Transit</span>
+<span class="text-title-md font-title-md font-semibold">Ocean Giant Class Escort</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<div class="text-[12px] text-outline flex items-center justify-between">
+<span>AIS Class-A Broadcast Active</span>
+<span class="font-code-metric text-on-surface font-semibold">Speed: 19.4 knots</span>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden border border-outline-variant shadow-sm group">
+<div class="relative h-64 overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A heavy industrial ocean harbor tug guiding a container megaship into port approaches during a golden-hued nautical twilight. Navigation beacon lights glow green and red along the sea channel, illuminating the ocean surface and industrial vessel hulls in rich maritime color. Crisp architectural perspective highlighting professional port pilotage and tugboat assist operations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvzv_Hsj9QzGDEY-dPE-dqGH0IKPxAgl3EB9UzGqSSN3nMuCPbxTf7WfMoun7FK5d41cJd09mc8N02KHViJxCRBJGYRKaIsMKRcht_npV5WwdBVK1Bv2oJP79Hthz5U2B3ZbtdpLWCOaDkLWJKMl1j4070rATanhqPWNFU4LtOq9pXkoTtUCPeuOqWmVMrSXE975f0kxGVbndhrNf92cGBWrp8JBlGbblCN-g90QcejWWgHhYX11Yx"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 text-on-primary">
+<span class="text-label-sm font-label-sm text-secondary-fixed block uppercase">Harbor Entry &amp; Pilotage</span>
+<span class="text-title-md font-title-md font-semibold">Port Escort Operations Desk</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container-lowest">
+<div class="text-[12px] text-outline flex items-center justify-between">
+<span>Harbor Pilot Onboard</span>
+<span class="font-code-metric text-on-surface font-semibold">Bollard Pull: 110T</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GLOBAL MOBILIZATION DISPATCH CTA: High Priority Operational Section -->
+<section class="py-16 bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute inset-0 custom-map-radar opacity-10 pointer-events-none"></div>
+<div class="w-full max-w-[1440px] mx-auto px-margin relative z-10">
+<div class="bg-primary-container border border-on-primary-container/20 rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 text-label-sm font-label-sm text-secondary-container font-semibold tracking-wider uppercase mb-2">
+<span class="material-symbols-outlined text-[16px]" data-icon="emergency">emergency</span>
+              Immediate Vessel Assistance &amp; Superintendent Mobilization
+            </div>
+<h2 class="text-headline-lg lg:text-headline-xl font-headline-lg lg:font-headline-xl text-on-primary tracking-tight mb-4">
+              Engage Regional Port Superintendent
+            </h2>
+<p class="text-on-primary-container font-body-md text-body-md leading-relaxed">
+              Facing fairway hazards, deep-draft berthing constraints, or salvage requirements? Connect immediately with MCI’s watchstander desk for prioritized tug allocation, hydrographic data, or sovereign port clearance.
+            </p>
+<div class="flex flex-wrap items-center gap-6 mt-6 pt-6 border-t border-on-primary-container/20 text-label-sm font-label-sm text-on-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle">check_circle</span>
+<span>Average Dispatch Under 45 Mins</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" data-icon="verified_user">verified_user</span>
+<span>IMO &amp; Lloyd's Open Form (LOF) Ready</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" data-icon="lan">lan</span>
+<span>Encrypted Satellite Uplink</span>
+</div>
+</div>
+</div>
+<!-- Trailing Dispatch Controls -->
+<div class="flex flex-col sm:flex-row lg:flex-col gap-4 w-full lg:w-auto shrink-0">
+<a class="px-6 py-4 bg-secondary-container hover:bg-secondary-fixed text-primary font-bold rounded-lg text-center shadow-lg transition-colors flex items-center justify-center gap-2" href="tel:+912222618000">
+<span class="material-symbols-outlined text-xl" data-icon="support_agent">support_agent</span>
+<span>Operations Hotline: +91 (22) 2261-8000</span>
+</a>
+<a class="px-6 py-3.5 bg-surface-container-highest/10 hover:bg-surface-container-highest/20 text-on-primary border border-on-primary-container/30 rounded-lg text-center transition-colors flex items-center justify-center gap-2 text-label-md font-label-md" href="#portal">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+              Submit AIS Route Advisory Notice
+            </a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (EXACT MATCH TO DESIGN SYSTEM TOKENS) -->
+<footer class="bg-primary text-on-primary border-t border-primary-container">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-primary-container">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-lowest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="anchor">anchor</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-primary tracking-wider uppercase">Marine Corporation of India</span>
+</div>
+<div class="text-label-sm font-label-sm text-outline-variant">
+          HEADQUARTERS: Ballard Estate, Fort, Mumbai 400 001, Maharashtra, Republic of India
+        </div>
+</div>
+<!-- Links Grid from Shared Components Specs -->
+<div class="flex flex-wrap gap-x-8 gap-y-3 text-label-sm font-label-sm text-outline-variant">
+<a class="hover:text-secondary-container transition-colors duration-150" href="#telemetry">Fleet Telemetry</a>
+<a class="hover:text-secondary-container transition-colors duration-150" href="#imo">Maritime Safety &amp; IMO Compliance</a>
+<a class="hover:text-secondary-container transition-colors duration-150" href="#clearance">Port Authority Clearance</a>
+<a class="hover:text-secondary-container transition-colors duration-150" href="#specs">Vessel Engineering Specs</a>
+<a class="hover:text-secondary-container transition-colors duration-150" href="#esg">ESG &amp; Decarbonization</a>
+<a class="hover:text-secondary-container transition-colors duration-150" href="#careers">Careers</a>
+<a class="hover:text-secondary-container transition-colors duration-150" href="#protocols">Legal &amp; Sovereign Protocols</a>
+</div>
+<div class="pt-6 border-t border-primary-container/50 flex flex-col md:flex-row items-start md:items-center justify-between text-body-sm font-body-sm text-outline-variant gap-4">
+<p class="max-w-3xl">
+          © 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.
+        </p>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<span class="inline-flex items-center gap-1.5 text-secondary-fixed">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+            AIS System Operational
+          </span>
+<span class="text-outline-variant">DEFCON MarSec Tier 1</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

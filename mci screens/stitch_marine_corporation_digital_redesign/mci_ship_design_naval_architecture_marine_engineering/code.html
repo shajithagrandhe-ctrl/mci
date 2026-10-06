@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MCI — Ship Design, Naval Architecture &amp; Marine Engineering</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#d6e4f3",
+            "primary-fixed": "#d2e4ff",
+            "error-container": "#ffdad6",
+            "primary-container": "#0d2f4f",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed-variant": "#004d67",
+            "tertiary-fixed-dim": "#90cff0",
+            "on-secondary-container": "#00537d",
+            "on-tertiary-container": "#5e9dbd",
+            "on-surface": "#0f1d28",
+            "on-surface-variant": "#43474e",
+            "tertiary": "#001c28",
+            "on-secondary-fixed-variant": "#004b71",
+            "on-primary-fixed": "#001c37",
+            "surface-variant": "#d6e4f3",
+            "secondary-fixed-dim": "#90cdff",
+            "primary": "#001a32",
+            "on-tertiary": "#ffffff",
+            "secondary-container": "#84c8fe",
+            "inverse-primary": "#abc9f0",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#f6f9ff",
+            "surface-tint": "#436083",
+            "surface-dim": "#cddceb",
+            "surface-container-low": "#ecf4ff",
+            "on-primary-container": "#7a97bd",
+            "inverse-surface": "#24323d",
+            "on-background": "#0f1d28",
+            "secondary": "#046494",
+            "surface-container-high": "#dbeaf9",
+            "error": "#ba1a1a",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#e6f2ff",
+            "tertiary-container": "#003244",
+            "on-tertiary-fixed": "#001e2b",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#001e30",
+            "primary-fixed-dim": "#abc9f0",
+            "outline-variant": "#c3c6cf",
+            "outline": "#73777f",
+            "secondary-fixed": "#cbe6ff",
+            "background": "#f6f9ff",
+            "surface-bright": "#f6f9ff",
+            "surface-container": "#e1f0ff",
+            "tertiary-fixed": "#c1e8ff",
+            "on-primary-fixed-variant": "#2b486a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "margin": "2.5rem",
+            "space-md": "1rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "display-hero": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "display-hero-mobile": ["Manrope"],
+            "label-sm": ["Inter"],
+            "headline-sm": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "title-md": ["Manrope"]
+          },
+          "fontSize": {
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-fixed selection:text-primary">
+<!-- TOP NAV BAR (Shared Component Execution) -->
+<header class="sticky top-0 z-50 bg-surface-container-lowest dark:bg-primary shadow-sm">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand Logo / Anchor -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-on-primary text-2xl" data-icon="anchor">anchor</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md tracking-tight font-bold text-primary dark:text-on-primary uppercase leading-tight">
+            Marine Corporation of India
+          </span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider">
+            GOVERNMENT OF INDIA UNDERTAKING // NATIONAL MARITIME FLEET
+          </span>
+</div>
+</div>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#fleet">Fleet &amp; Ops</a>
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed font-semibold pb-1 text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#engineering">Engineering</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#compliance">Compliance</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#ports">Global Ports</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#corporate">Corporate</a>
+</nav>
+<!-- Right Header Actions & Search Bar -->
+<div class="flex items-center gap-space-sm">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg" data-icon="search">search</span>
+<input class="pl-9 pr-3 py-1.5 bg-surface text-on-surface text-body-sm font-body-sm rounded border border-outline-variant focus:outline-none focus:border-secondary transition-all w-52" placeholder="Search vessel code, CAD..." type="text"/>
+</div>
+<button class="px-3.5 py-2 text-primary font-medium text-label-md font-label-md hover:bg-surface-container transition-colors rounded">
+          Operations Desk
+        </button>
+<button class="px-4 py-2 bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-secondary transition-colors rounded shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+          Client Portal
+        </button>
+</div>
+</div>
+</header>
+<!-- TELEMETRY BREADCRUMB BAR -->
+<section class="bg-surface-container-low border-b border-outline-variant/60 py-2.5">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex flex-wrap items-center justify-between gap-2 text-label-sm font-label-sm">
+<div class="flex items-center gap-2 text-outline">
+<span class="hover:text-primary transition-colors cursor-pointer">Services Directory</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Ship Design, Naval Architecture &amp; Marine Engineering</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-bold">Vertical 03 // NAVAL ARCHITECTURE &amp; ENGINEERING</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 text-secondary font-semibold bg-surface-container px-2 py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          SYS.STATUS: OPERATIONAL
+        </span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant font-code-metric text-label-sm">HPC CLUSTER 03 ACTIVE</span>
+<span class="text-outline-variant">|</span>
+<span class="text-on-surface-variant font-code-metric text-label-sm">CODE: MCI-ENG-NAVAL-03</span>
+</div>
+</div>
+</section>
+<!-- MAIN CANVAS -->
+<main class="w-full max-w-[1440px] mx-auto px-margin py-space-xl space-y-space-xl">
+<!-- HERO SECTION -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<!-- Hero Copy -->
+<div class="lg:col-span-6 space-y- space-md">
+<!-- Accreditation Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/5 border border-primary/20 rounded">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="verified">verified</span>
+<span class="text-label-sm font-label-sm text-primary tracking-wide">
+            DG SHIPPING &amp; IACS CLASS APPROVED DESIGN FACILITY // IMO SOLAS &amp; MARPOL COMPLIANT
+          </span>
+</div>
+<h1 class="text-headline-xl font-headline-xl text-primary tracking-tight">
+          Ship Design, Naval Architecture &amp; Marine Engineering Solutions
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+          End-to-end commercial vessel design, computational fluid dynamics (CFD) hull hydrodynamics, structural FEA simulation, class-approved production engineering, and conversion naval architecture for merchant fleets, offshore units, and specialized vessels.
+        </p>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-sm pt-2">
+<a class="px-5 py-3 bg-primary text-on-primary text-label-md font-label-md rounded font-semibold hover:bg-secondary transition-all duration-200 flex items-center gap-2 shadow-sm" href="#commission">
+<span class="material-symbols-outlined text-lg" data-icon="assignment_add">assignment_add</span>
+            Commission Vessel Design Study
+          </a>
+<button class="px-5 py-3 bg-transparent border border-outline text-primary text-label-md font-label-md rounded font-semibold hover:bg-surface-container transition-all duration-200 flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="download">download</span>
+            Download Naval Architecture Capabilities Spec (PDF)
+          </button>
+</div>
+<!-- Trust & Accreditation Chips -->
+<div class="pt-4 border-t border-outline-variant/60 flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-1 bg-surface-container text-on-surface text-label-sm font-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-xs" data-icon="check_circle">check_circle</span>
+            IACS Class Design Approved
+          </span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface text-label-sm font-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-xs" data-icon="check_circle">check_circle</span>
+            RINA / DNV / IRS Verified Design Office
+          </span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface text-label-sm font-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-xs" data-icon="check_circle">check_circle</span>
+            ISO 9001:2015 Marine CAD
+          </span>
+<span class="px-2.5 py-1 bg-surface-container text-on-surface text-label-sm font-label-sm rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-xs" data-icon="check_circle">check_circle</span>
+            SNAME &amp; RINA Corporate Fellow Engineers
+          </span>
+</div>
+</div>
+<!-- Hero Visual Card with CFD Telemetry Overlay -->
+<div class="lg:col-span-6 relative rounded overflow-hidden border border-outline-variant/80 shadow-md group">
+<div class="h-[460px] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A commercial container vessel cutting through deep navy blue choppy ocean waters under an atmospheric stormy overcast sky. The ship displays high structural engineering fidelity, maritime container stacks, and detailed naval bow wave foam with crisp cold lighting highlighting its steel hull." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxBNxaPMVfqLMBOaFofeb38UjskYGvbZNrXwOg5_5IK_COOxHg9BNoDA3Z13plfGurT9-QY4dux_cJqBWYYBD5fq9iwQ4CovOVdB3eeYM2jx6jAnS24tQozAcKKRsFWXX2E-Qzb69N-P9mqq6hPnd3esMooMr8kHM7KiQdDNY89r3MogVF-naBUGEp1UudszoXgHEbJZAMNon9iOdOV_o2cBYG5AzT-ULTyvTMS7eqfwMHvCyRQ-G9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent"></div>
+</div>
+<!-- Telemetry Glassmorphism Card Overlay -->
+<div class="absolute bottom-4 left-4 right-4 bg-primary/90 backdrop-blur-md border border-white/20 p-4 rounded text-on-primary">
+<div class="flex items-center justify-between border-b border-white/10 pb-2 mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="text-label-sm font-label-sm font-code-metric tracking-wider text-secondary-fixed">
+                LIVE CFD HYDRODYNAMIC SIMULATION CLUSTER // WORKSTATION HPC-08
+              </span>
+</div>
+<span class="text-label-sm font-label-sm text-outline-variant">GRID RES: 48M CELLS</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-label-sm font-label-sm">
+<div>
+<div class="text-outline-variant text-[10px] tracking-wide uppercase">Active Model</div>
+<div class="text-on-primary font-semibold truncate">MCI 9,200 TEU ECO-FEEDER</div>
+</div>
+<div>
+<div class="text-outline-variant text-[10px] tracking-wide uppercase">Wave Res. (Cw)</div>
+<div class="text-secondary-fixed font-code-metric font-semibold">0.00142</div>
+</div>
+<div>
+<div class="text-outline-variant text-[10px] tracking-wide uppercase">Effective Power</div>
+<div class="text-on-primary font-code-metric font-semibold">18,400 kW @ 19.5 kts</div>
+</div>
+<div>
+<div class="text-outline-variant text-[10px] tracking-wide uppercase">Hydro Efficiency</div>
+<div class="text-secondary-container font-semibold">+14.8% vs Baseline</div>
+</div>
+</div>
+<div class="mt-3 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] text-outline-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary-container" data-icon="engineering">engineering</span>
+              Lead Naval Architect: Er. K. V. Ramanathan, CEng MRINA
+            </span>
+<span class="text-secondary-fixed font-medium">DNV &amp; IRS Dual Sign-off</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4-PILLAR HIGH-DENSITY KPI STRIP -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md border border-outline-variant/80 bg-surface-container-lowest p-space-md rounded shadow-sm">
+<div class="flex items-start gap-3.5 p-3 rounded hover:bg-surface-container transition-colors">
+<div class="p-2.5 bg-primary/5 text-secondary rounded">
+<span class="material-symbols-outlined text-2xl" data-icon="directions_boat">directions_boat</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight">380+</div>
+<div class="text-title-md font-title-md text-on-surface font-semibold">Vessel Designs &amp; Conversions</div>
+<div class="text-body-sm font-body-sm text-outline">Tankers, Bulkers, Container Feeders, DP2 OWSVs &amp; Dredgers.</div>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-3 rounded hover:bg-surface-container transition-colors border-t sm:border-t-0 sm:border-l border-outline-variant/60">
+<div class="p-2.5 bg-primary/5 text-secondary rounded">
+<span class="material-symbols-outlined text-2xl" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight">99.8%</div>
+<div class="text-title-md font-title-md text-on-surface font-semibold">First-Pass Class Approval</div>
+<div class="text-body-sm font-body-sm text-outline">Certified by IRS, DNV, Lloyd's Register, ABS, &amp; Bureau Veritas.</div>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-3 rounded hover:bg-surface-container transition-colors border-t lg:border-t-0 lg:border-l border-outline-variant/60">
+<div class="p-2.5 bg-primary/5 text-secondary rounded">
+<span class="material-symbols-outlined text-2xl" data-icon="memory">memory</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight">3.2M+</div>
+<div class="text-title-md font-title-md text-on-surface font-semibold">HPC CFD &amp; FEA Cores</div>
+<div class="text-body-sm font-body-sm text-outline">High-fidelity wave diffraction, slamming &amp; non-linear crashworthiness.</div>
+</div>
+</div>
+<div class="flex items-start gap-3.5 p-3 rounded hover:bg-surface-container transition-colors border-t sm:border-t-0 sm:border-l border-outline-variant/60">
+<div class="p-2.5 bg-primary/5 text-secondary rounded">
+<span class="material-symbols-outlined text-2xl" data-icon="speed">speed</span>
+</div>
+<div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight">&lt; 14 Days</div>
+<div class="text-title-md font-title-md text-on-surface font-semibold">Hydrostatic Feasibility</div>
+<div class="text-body-sm font-body-sm text-outline">Rapid concept turnarounds for competitive bids &amp; CAPEX vetting.</div>
+</div>
+</div>
+</div>
+<!-- 4-PILLAR CORE NAVAL ARCHITECTURE SUITES -->
+<div class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-2 border-b border-outline-variant/80 pb-3">
+<div>
+<div class="text-label-sm font-label-sm text-secondary font-bold tracking-wider">ENGINEERING DISCIPLINES</div>
+<h2 class="text-headline-lg font-headline-lg text-primary">Core Naval Architecture Suites</h2>
+</div>
+<p class="text-body-sm font-body-sm text-outline max-w-xl">
+          Comprehensive integrated design cycles aligned with statutory SOLAS protocols, IACS unified interpretations, and production-ready manufacturing packages.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Suite 01 -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-md flex flex-col justify-between hover:border-secondary transition-all shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-code-metric text-secondary font-bold">SUITE 01 // CFD</span>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="tsunami">tsunami</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary">Hull Form Optimization &amp; CFD</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              Parametric hull morphing, bulbous bow tuning, wave-making resistance minimization, propeller wakefield interaction modeling, and IMO EEDI/EEXI power-speed curve verification.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/50 space-y-1.5 mt-4">
+<div class="text-[11px] font-semibold text-outline tracking-wider uppercase">Key Capabilities:</div>
+<div class="flex flex-wrap gap-1">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Adjoint Solver</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Trim Tables</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Wake Cavitation</span>
+</div>
+</div>
+</div>
+<!-- Suite 02 -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-md flex flex-col justify-between hover:border-secondary transition-all shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-code-metric text-secondary font-bold">SUITE 02 // STRUCTURE</span>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="grid_4x4">grid_4x4</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary">FEA &amp; Scantling Calculation</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              IACS Common Structural Rules (CSR-H) calculations, global hull girder longitudinal bending strength, spectral fatigue life cycle assessments, and bow-flare slamming reinforcement.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/50 space-y-1.5 mt-4">
+<div class="text-[11px] font-semibold text-outline tracking-wider uppercase">Key Capabilities:</div>
+<div class="flex flex-wrap gap-1">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">CSR-H Verified</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Fatigue Cycle</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">ANSYS Mechanical</span>
+</div>
+</div>
+</div>
+<!-- Suite 03 -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-md flex flex-col justify-between hover:border-secondary transition-all shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-code-metric text-secondary font-bold">SUITE 03 // STABILITY</span>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="balance">balance</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary">Damage &amp; Intact Stability</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              Deterministic &amp; probabilistic damage stability under SOLAS 2020, probabilistic flooding simulations, Grain Code, MODU stability booklets, and live incline experiment certification.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/50 space-y-1.5 mt-4">
+<div class="text-[11px] font-semibold text-outline tracking-wider uppercase">Key Capabilities:</div>
+<div class="flex flex-wrap gap-1">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">SOLAS 2020</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Incline Tests</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">NAPA Stability</span>
+</div>
+</div>
+</div>
+<!-- Suite 04 -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-md flex flex-col justify-between hover:border-secondary transition-all shadow-sm">
+<div class="space-y-3">
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-code-metric text-secondary font-bold">SUITE 04 // DETAIL CAD</span>
+<span class="material-symbols-outlined text-primary text-xl" data-icon="view_in_ar">view_in_ar</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary">Production 3D Nesting &amp; Digital Twin</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+              Class-approved shipyard structural fabrication drawings, 3D piping spool isometric models, CNC cutting plate nesting data, machinery space arrangement, and laser-scanned retrofit twins.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/50 space-y-1.5 mt-4">
+<div class="text-[11px] font-semibold text-outline tracking-wider uppercase">Key Capabilities:</div>
+<div class="flex flex-wrap gap-1">
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">CNC Nesting</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">Spool Isometrics</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface">AVEVA Marine</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LIVE DESIGN PROJECT REGISTER & VESSEL ENGINEERING MANIFEST (Data Table) -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-md shadow-sm space-y-space-md">
+<!-- Table Header & Controls -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-2 border-b border-outline-variant/60">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary">Live Naval Architecture Project Registry &amp; Design Manifest</h2>
+<p class="text-body-sm font-body-sm text-outline">Real-time status of commercial newbuild hulls, offshore retrofits, and statutory class dossiers.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-base" data-icon="filter_list">filter_list</span>
+<input class="pl-8 pr-3 py-1.5 text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary w-44" placeholder="Search manifest..." type="text"/>
+</div>
+<button class="px-3 py-1.5 border border-outline-variant text-primary text-label-sm font-label-sm rounded hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="tune">tune</span>
+            Filter Project Stage
+          </button>
+<button class="px-3 py-1.5 bg-primary-container text-on-primary text-label-sm font-label-sm rounded hover:bg-secondary transition-colors flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
+            Export Design Manifest CSV
+          </button>
+</div>
+</div>
+<!-- Manifest Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface border-b border-outline-variant/80 text-outline text-label-sm font-label-sm tracking-wider uppercase">
+<th class="py-3 px-4">Project Code &amp; Vessel Class</th>
+<th class="py-3 px-4">Design Discipline / Hull Type</th>
+<th class="py-3 px-4">Displacement / Capacity</th>
+<th class="py-3 px-4">Efficiency Gain</th>
+<th class="py-3 px-4">Classification Society</th>
+<th class="py-3 px-4">Design Stage &amp; Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/60 text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-semibold text-primary">MCI-NB-7201</div>
+<div class="text-outline text-label-sm">11,000 DWT Chemical Tanker</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">Dual-Fuel Methanol Ready // Double Hull</td>
+<td class="py-3.5 px-4 font-code-metric">14,200 m³</td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric font-semibold text-secondary">+16.2% Hull Hydro</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  IRS (India)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 bg-secondary-fixed/50 text-on-secondary-container rounded text-label-sm font-semibold">
+                  Active Detail Engineering / CNC Release
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-semibold text-primary">MCI-NB-4480</div>
+<div class="text-outline text-label-sm">85T BP Escort ASD Tug</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">Azimuth Stern Drive // High Escort Braking</td>
+<td class="py-3.5 px-4 font-code-metric">85T Bollard Pull</td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric font-semibold text-secondary">+11.4% Dynamic Steering</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  DNV GL
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded text-label-sm font-semibold">
+                  Class Approved / Yard Fabrication
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-semibold text-primary">MCI-CV-9102</div>
+<div class="text-outline text-label-sm">180,000 DWT Capesize Bulker</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">Rotor Sail Aerodynamic Deck Retrofit</td>
+<td class="py-3.5 px-4 font-code-metric">205,000 MT Displ.</td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric font-semibold text-secondary">-18.5% CII Energy Index</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Lloyd's Register
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 bg-secondary-fixed/50 text-on-secondary-container rounded text-label-sm font-semibold">
+                  CFD Validation &amp; Class Clearance
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-semibold text-primary">MCI-NB-6310</div>
+<div class="text-outline text-label-sm">65m Multipurpose DP-2 OSV</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">Offshore Support / FiFi-1 / Oil Recovery</td>
+<td class="py-3.5 px-4 font-code-metric">3,400 DWT</td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric font-semibold text-secondary">DP Cap A Approved</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  ABS
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 bg-surface-container-high text-on-surface rounded text-label-sm font-semibold">
+                  Sea Trial Hydrostatic Testing
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container/40 transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-semibold text-primary">MCI-DS-1055</div>
+<div class="text-outline text-label-sm">5,000 m³ TSHD Hopper Dredger</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">Custom Shallow-Draft River-Sea Hull</td>
+<td class="py-3.5 px-4 font-code-metric">8,200 MT Displ.</td>
+<td class="py-3.5 px-4">
+<span class="font-code-metric font-semibold text-secondary">Low Silt Drag Profile</span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 bg-surface-container rounded text-label-sm font-semibold text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Bureau Veritas
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm font-semibold">
+                  Concept Design &amp; Towing Tank Test
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- DETAILED ENGINEERING CASE STUDY SPOTLIGHT -->
+<div class="bg-surface-container-low border border-outline-variant/80 rounded p-space-lg shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-7 space-y-4">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-secondary font-bold tracking-wider">
+<span class="material-symbols-outlined text-sm" data-icon="biotech">biotech</span>
+            MAJOR ENGINEERING BREAKTHROUGH &amp; BASIN AUDIT
+          </div>
+<h2 class="text-headline-lg font-headline-lg text-primary">
+            Next-Gen 8,500 TEU Green Methanol Container Carrier — Hull Optimization &amp; Hydrodynamic Breakthrough
+          </h2>
+<div class="space-y-3">
+<div class="bg-surface-container-lowest p-3.5 rounded border border-outline-variant/60">
+<div class="text-label-sm font-label-sm font-bold text-error uppercase tracking-wider mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span>
+                Defect / Baseline Challenge:
+              </div>
+<p class="text-body-sm font-body-sm text-on-surface leading-relaxed">
+                Traditional wide-beam container hulls suffer high wave-making resistance at 18–20 knot operating speeds, leading to excessive fuel consumption and challenging EEDI Phase 3 compliance.
+              </p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded border border-outline-variant/60">
+<div class="text-label-sm font-label-sm font-bold text-secondary uppercase tracking-wider mb-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="psychology">psychology</span>
+                Sovereign MCI Solution:
+              </div>
+<p class="text-body-sm font-body-sm text-on-surface leading-relaxed">
+                MCI Naval Architecture team deployed 250+ automated parametric CFD iterations utilizing adjoint solver algorithms to re-contour the bulbous bow and stern flow skegs, optimizing propeller inflow uniformity.
+              </p>
+</div>
+</div>
+</div>
+<!-- Verified Audit Results Box -->
+<div class="lg:col-span-5 bg-primary text-on-primary p-space-md rounded border border-primary-container shadow-md space-y-4">
+<div class="border-b border-primary-container pb-2 flex items-center justify-between">
+<span class="text-label-sm font-label-sm font-code-metric tracking-wider text-secondary-fixed">
+              VERIFIED EXPERIMENTAL BASIN AUDIT
+            </span>
+<span class="material-symbols-outlined text-secondary-container" data-icon="verified">verified</span>
+</div>
+<div class="space-y-3">
+<div class="p-3 bg-surface-container-lowest/10 rounded border border-white/10">
+<div class="text-headline-md font-headline-md text-secondary-fixed">-13.4% Delivered Power (Pe)</div>
+<div class="text-body-sm font-body-sm text-outline-variant">Empirically verified in towing tank basin trials at SSPA / HSVA.</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/10 rounded border border-white/10">
+<div class="text-headline-md font-headline-md text-secondary-container">EEDI Phase 3 Exceeded</div>
+<div class="text-body-sm font-body-sm text-outline-variant">Achieved 34.2% below IMO baseline, exceeding mandatory benchmarks.</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/10 rounded border border-white/10">
+<div class="text-headline-md font-headline-md text-on-primary">120 Tonnes Steel Saved</div>
+<div class="text-body-sm font-body-sm text-outline-variant">Optimized CSR-H finite element scantlings while safeguarding total strength.</div>
+</div>
+</div>
+<div class="pt-2 border-t border-primary-container text-label-sm font-label-sm text-outline-variant flex items-center justify-between">
+<span>DNV &amp; IRS Class Approval Dossier Signed</span>
+<span class="font-code-metric text-secondary-fixed">REF: MCI-DES-8500-METH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- INSTITUTIONAL GOVERNANCE & SOVEREIGN SOFTWARE TOOLCHAIN -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-md shadow-sm">
+<div class="text-center max-w-2xl mx-auto space-y-1 mb-6">
+<div class="text-label-sm font-label-sm text-secondary font-bold tracking-wider uppercase">High-Performance Computing Infrastructure</div>
+<h3 class="text-headline-sm font-headline-sm text-primary">Sovereign Computational Naval Architecture Toolchain</h3>
+<p class="text-body-sm font-body-sm text-outline">Directly certified for tier-1 shipyard execution, naval defense yards, and statutory class compliance.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+<div class="p-3 border border-outline-variant/60 rounded bg-surface text-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1" data-icon="cloud_computing">file_copy_off</span>
+<div class="text-label-md font-label-md font-bold text-primary">Siemens STAR-CCM+</div>
+<div class="text-[11px] text-outline">HPC Cluster Hydrodynamics</div>
+</div>
+<div class="p-3 border border-outline-variant/60 rounded bg-surface text-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1" data-icon="sailing">sailing</span>
+<div class="text-label-md font-label-md font-bold text-primary">NAPA Marine</div>
+<div class="text-[11px] text-outline">Stability &amp; Hull Design</div>
+</div>
+<div class="p-3 border border-outline-variant/60 rounded bg-surface text-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1" data-icon="precision_manufacturing">precision_manufacturing</span>
+<div class="text-label-md font-label-md font-bold text-primary">AVEVA Marine</div>
+<div class="text-[11px] text-outline">3D Detail &amp; Nesting CAD</div>
+</div>
+<div class="p-3 border border-outline-variant/60 rounded bg-surface text-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1" data-icon="deployed_code">deployed_code</span>
+<div class="text-label-md font-label-md font-bold text-primary">ANSYS Mechanical</div>
+<div class="text-[11px] text-outline">Nonlinear FEA &amp; Fatigue</div>
+</div>
+<div class="p-3 border border-outline-variant/60 rounded bg-surface text-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1" data-icon="water">water</span>
+<div class="text-label-md font-label-md font-bold text-primary">Maxsurf Ultimate</div>
+<div class="text-[11px] text-outline">Hydrostatic Modeling</div>
+</div>
+<div class="p-3 border border-outline-variant/60 rounded bg-surface text-center hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary text-2xl mb-1" data-icon="military_tech">military_tech</span>
+<div class="text-label-md font-label-md font-bold text-primary">SNAME Fellow</div>
+<div class="text-[11px] text-outline">Peer-Reviewed Design Sign-off</div>
+</div>
+</div>
+</div>
+<!-- VESSEL DESIGN STUDY COMMISSIONING & CONSULTATION DESK -->
+<div class="bg-surface-container-lowest border border-outline-variant/80 rounded p-space-lg shadow-sm" id="commission">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left: Contact & Bureau Overview -->
+<div class="lg:col-span-5 space-y-space-md border-b lg:border-b-0 lg:border-r border-outline-variant/60 pr-0 lg:pr-space-lg pb-space-lg lg:pb-0">
+<div>
+<div class="text-label-sm font-label-sm text-secondary font-bold tracking-wider uppercase">Direct Bureau Access</div>
+<h2 class="text-headline-md font-headline-md text-primary">Naval Architecture Consultation Desk</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 leading-relaxed">
+              Initiate formal design tenders, class-approval fast-tracking, or CAPEX optimization feasibility studies with MCI’s principal naval architects.
+            </p>
+</div>
+<div class="space-y-3 pt-2">
+<div class="flex items-start gap-3 p-3 bg-surface rounded border border-outline-variant/60">
+<span class="material-symbols-outlined text-secondary mt-0.5" data-icon="call">call</span>
+<div>
+<div class="text-label-sm font-label-sm text-outline">24/7 Chief Naval Architect Direct Line:</div>
+<div class="text-body-md font-body-md font-bold text-primary">+91 22 2261-0945 / +91 98200 44521</div>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface rounded border border-outline-variant/60">
+<span class="material-symbols-outlined text-secondary mt-0.5" data-icon="mail">mail</span>
+<div>
+<div class="text-label-sm font-label-sm text-outline">Design Bureau Inquiries:</div>
+<div class="text-body-md font-body-md font-bold text-primary">naval.architecture@marinecorp.gov.in</div>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface rounded border border-outline-variant/60">
+<span class="material-symbols-outlined text-secondary mt-0.5" data-icon="location_on">location_on</span>
+<div>
+<div class="text-label-sm font-label-sm text-outline">Central Design Bureau:</div>
+<div class="text-body-sm font-body-sm text-on-surface font-semibold">Naval Dockyard Precinct, SBS Road, Mumbai 400001, Maharashtra, India</div>
+</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container rounded border border-outline-variant/40 text-label-sm font-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="shield">shield</span>
+<span>All conceptual submissions protected under Sovereign Maritime Defense &amp; Trade Non-Disclosure Agreements (NDA).</span>
+</div>
+</div>
+<!-- Right: Interactive Commissioning Form -->
+<div class="lg:col-span-7">
+<form class="space-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm font-semibold text-primary mb-1">Vessel Type &amp; Concept Name</label>
+<input class="w-full px-3 py-2 bg-surface text-on-surface text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary transition-colors" placeholder="e.g. 15,000 DWT Clean Coastal Tanker" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-semibold text-primary mb-1">Target Classification Society</label>
+<select class="w-full px-3 py-2 bg-surface text-on-surface text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary transition-colors">
+<option>Indian Register of Shipping (IRS)</option>
+<option>DNV Maritime</option>
+<option>Lloyd's Register (LR)</option>
+<option>American Bureau of Shipping (ABS)</option>
+<option>Bureau Veritas (BV)</option>
+<option>ClassNK</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm font-semibold text-primary mb-1">Primary Engineering Scope</label>
+<select class="w-full px-3 py-2 bg-surface text-on-surface text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary transition-colors">
+<option>Full Concept-to-Delivery Design Package</option>
+<option>CFD Hull Optimization &amp; Power-Speed Prediction</option>
+<option>CSR-H Finite Element (FEA) Structural Analysis</option>
+<option>Stability Booklet &amp; Incline Experiment</option>
+<option>Production 3D Nesting &amp; Piping Spools</option>
+</select>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-semibold text-primary mb-1">Operating Speed &amp; DWT / TEU Parameters</label>
+<input class="w-full px-3 py-2 bg-surface text-on-surface text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary transition-colors" placeholder="e.g. 14.5 kts service / 12,500 DWT" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-semibold text-primary mb-1">Target Yard Mobilization / Project Timeline</label>
+<input class="w-full px-3 py-2 bg-surface text-on-surface text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary transition-colors" type="date"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-semibold text-primary mb-1">Design Brief &amp; Regulatory Targets (EEDI, Fuel type, Cargo payload)</label>
+<textarea class="w-full px-3 py-2 bg-surface text-on-surface text-body-sm font-body-sm border border-outline-variant rounded focus:outline-none focus:border-secondary transition-colors" placeholder="Provide operational profile, trade routes, draft restrictions, and statutory objectives..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-2">
+<input class="rounded border-outline text-primary focus:ring-secondary" id="preliminary" type="checkbox"/>
+<label class="text-label-sm font-label-sm text-on-surface" for="preliminary">Request preliminary General Arrangement (GA) outline &amp; hydrostatic weight estimate.</label>
+</div>
+<div class="pt-2">
+<button class="w-full sm:w-auto px-6 py-3 bg-primary-container text-on-primary text-label-md font-label-md font-semibold rounded hover:bg-secondary transition-all shadow-sm flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+                Submit Vessel Design Commissioning Request
+              </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- FOOTER (Shared Component Execution) -->
+<footer class="bg-primary dark:bg-tertiary text-on-primary dark:text-on-primary mt-space-xl border-t border-primary-container dark:border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<!-- Top Row -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-space-lg border-b border-primary-container">
+<div class="flex flex-col">
+<div class="text-headline-sm font-headline-sm font-bold text-on-primary tracking-wider uppercase">
+            Marine Corporation of India
+          </div>
+<div class="text-body-sm font-body-sm text-outline-variant">
+            Ministry of Ports, Shipping and Waterways // Apex Maritime Technology Bureau
+          </div>
+</div>
+<div class="flex flex-wrap items-center gap-4 text-label-sm font-label-sm">
+<span class="flex items-center gap-1 text-secondary-fixed">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+            IMO Certified Registry #IND-MCI-8821
+          </span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline-variant">SOLAS &amp; MARPOL Sovereign Authority</span>
+<span class="text-outline-variant">|</span>
+<span class="text-outline-variant">ISO 9001:2015 Marine Certified</span>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="flex flex-wrap items-center justify-between gap-y-4 gap-x-6 text-label-sm font-label-sm text-outline-variant">
+<a class="hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Fleet Telemetry</a>
+<a class="hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Maritime Safety &amp; IMO Compliance</a>
+<a class="hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Port Authority Clearance</a>
+<a class="text-secondary-fixed font-medium hover:text-secondary-container transition-colors duration-150" href="#">Vessel Engineering Specs</a>
+<a class="hover:text-secondary-fixed-dim transition-colors duration-150" href="#">ESG &amp; Decarbonization</a>
+<a class="hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Careers</a>
+<a class="hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Legal &amp; Sovereign Protocols</a>
+</div>
+<!-- Copyright Statement -->
+<div class="pt-4 border-t border-primary-container/60 flex flex-col md:flex-row items-center justify-between gap-2 text-body-sm font-body-sm text-outline-variant">
+<p>© 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.</p>
+<div class="font-code-metric text-[12px] text-secondary-fixed">SYS VER: 4.8.1-PROD-NAV</div>
+</div>
+</div>
+</footer>
+</body></html>

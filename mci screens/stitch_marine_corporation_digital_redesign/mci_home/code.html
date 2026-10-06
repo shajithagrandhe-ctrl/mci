@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Marine Corporation of India | Sovereign Infrastructure &amp; Maritime Fleet</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#43474e",
+            "surface-tint": "#436083",
+            "inverse-primary": "#abc9f0",
+            "primary-fixed": "#d2e4ff",
+            "primary-container": "#0d2f4f",
+            "on-tertiary-fixed": "#001e2b",
+            "on-surface": "#0f1d28",
+            "background": "#f6f9ff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#00537d",
+            "tertiary-fixed": "#c1e8ff",
+            "outline": "#73777f",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#e1f0ff",
+            "surface-variant": "#d6e4f3",
+            "on-primary-fixed": "#001c37",
+            "secondary-fixed-dim": "#90cdff",
+            "tertiary-container": "#003244",
+            "tertiary-fixed-dim": "#90cff0",
+            "on-primary-fixed-variant": "#2b486a",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c3c6cf",
+            "surface": "#f6f9ff",
+            "surface-container-low": "#ecf4ff",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#abc9f0",
+            "surface-container-highest": "#d6e4f3",
+            "secondary": "#046494",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004d67",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#24323d",
+            "on-secondary-fixed": "#001e30",
+            "inverse-on-surface": "#e6f2ff",
+            "on-tertiary-container": "#5e9dbd",
+            "on-primary-container": "#7a97bd",
+            "secondary-container": "#84c8fe",
+            "tertiary": "#001c28",
+            "primary": "#001a32",
+            "on-background": "#0f1d28",
+            "on-error": "#ffffff",
+            "surface-bright": "#f6f9ff",
+            "surface-container-high": "#dbeaf9",
+            "on-secondary-fixed-variant": "#004b71",
+            "secondary-fixed": "#cbe6ff",
+            "surface-dim": "#cddceb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-sm": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "title-md": ["Manrope"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-sm": ["Manrope"],
+            "display-hero": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "body-lg": ["Inter"],
+            "display-hero-mobile": ["Manrope"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+            "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+            "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+            "display-hero": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+            "headline-xl-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+            "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "code-metric": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "display-hero-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-telemetry-scan {
+      background: linear-gradient(90deg, rgba(23, 107, 156, 0.05) 0%, rgba(23, 107, 156, 0.2) 50%, rgba(23, 107, 156, 0.05) 100%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary selection:text-on-primary">
+<!-- TOP APP BAR / BRAND HEADER -->
+<header class="w-full bg-surface-container-lowest dark:bg-primary shadow-sm border-b border-outline-variant dark:border-primary-container sticky top-0 z-50 transition-all duration-200">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand Anchor & Identity -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-secondary-fixed text-headline-sm" data-icon="anchor">anchor</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md tracking-tight font-bold text-primary dark:text-on-primary uppercase">Marine Corporation of India</span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider uppercase">Sovereign Infrastructure &amp; Maritime Fleet</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed font-semibold pb-1 text-label-md font-label-md transition-colors duration-150" href="#home">Fleet &amp; Ops</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#engineering">Engineering</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#compliance">Compliance</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#global-ports">Global Ports</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium text-label-md font-label-md hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150" href="#corporate">Corporate</a>
+</nav>
+<!-- Trailing Primary & Secondary Actions -->
+<div class="flex items-center gap-space-sm">
+<a class="hidden lg:inline-flex items-center gap-1.5 px-3 py-2 border border-secondary text-primary font-label-md text-label-md rounded hover:bg-surface-container-high transition-colors" href="#desk">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal">terminal</span>
+          Operations Desk
+        </a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md rounded shadow-sm transition-colors" href="#portal">
+<span class="material-symbols-outlined text-[16px]" data-icon="lock">lock</span>
+          Client Portal
+        </a>
+</div>
+</div>
+</header>
+<!-- HERO SECTION WITH CINEMATIC VESSEL BACKDROP -->
+<section class="relative w-full bg-primary text-on-primary overflow-hidden min-h-[640px] flex flex-col justify-between" id="home">
+<!-- Visual Background: Deep Ocean Cargo Vessel -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-35 object-center" data-alt="A wide-angle panoramic view of massive container ships and specialized maritime escort vessels navigating deep sea shipping channels at twilight. The dramatic dusky sky reflects subtle warm amber tones against deep navy blue ocean water. High-end sovereign industrial maritime aesthetic, clean technical lighting and atmospheric perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-6u8iTMC5J90_ON5nIAU6_yqo6NgnoyABS_STTh494SNjDLJ1zzNfPtmOwi1CPuzPTTYtJy-rRS97A41TuC10F42VipyyDMtoBQwcj_Q0uurrO9lJPCUisNQ4Hqi7KV0Zj5dd3SZ5dIwzPj_N-v5-1J8LbJEc_Zzzde1bAqGJR1dHQ4PaqT8gLdRDq0hJIw4rjGpZC_qjPqoYfov9xn2zQOqremmuthzBu0HGl05m7A62lgtlifVx"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+</div>
+<!-- Content Canvas -->
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin pt-space-xl pb-space-lg flex-1 flex flex-col justify-center">
+<div class="max-w-3xl space-y-space-md">
+<!-- Sovereign Tagline Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-lowest/10 border border-outline-variant/30 rounded backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="text-label-sm font-label-sm text-secondary-fixed tracking-widest font-semibold uppercase">
+            SOVEREIGN MARITIME OPERATIONS // DGS &amp; IWAI RECOGNIZED // IACS &amp; IMO COMPLIANT
+          </span>
+</div>
+<!-- Headline -->
+<h1 class="text-headline-xl font-headline-xl text-on-primary tracking-tight font-extrabold text-balance leading-tight">
+          Sovereign Maritime Infrastructure, Heavy Engineering &amp; Strategic Ocean Logistics
+        </h1>
+<!-- Subhead -->
+<p class="text-body-lg font-body-lg text-primary-fixed-dim max-w-2xl leading-relaxed">
+          Marine Corporation of India deploys end-to-end deepwater engineering, state-of-the-art vessel maintenance, dredging infrastructure, and commercial energy fleet logistics safeguarding national and international trade corridors.
+        </p>
+<!-- CTA Buttons -->
+<div class="pt-space-sm flex flex-wrap items-center gap-space-md">
+<a class="px-5 py-3 bg-secondary hover:bg-secondary-container hover:text-primary transition-all duration-200 text-on-primary font-label-md text-label-md rounded flex items-center gap-2" href="#capabilities">
+<span>Explore Operational Capabilities</span>
+<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="px-5 py-3 bg-transparent border border-outline-variant text-on-primary hover:bg-surface-container-lowest/10 transition-all duration-200 font-label-md text-label-md rounded flex items-center gap-2" href="#telemetry">
+<span class="material-symbols-outlined text-[18px]" data-icon="satellite_alt">satellite_alt</span>
+<span>Launch Fleet Telemetry Portal</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Live Telemetry Ticker Bar -->
+<div class="relative z-10 w-full border-t border-outline-variant/20 bg-primary/95 backdrop-blur-md py-3" id="telemetry">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex flex-wrap items-center justify-between gap-y-2 text-label-sm font-label-sm text-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="text-on-primary font-code-metric">142</span>
+<span class="text-primary-fixed-dim">Vessels Actively Deployed</span>
+</div>
+<div class="hidden sm:block h-3 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" data-icon="verified_user">verified_user</span>
+<span class="text-on-primary font-code-metric">100%</span>
+<span class="text-primary-fixed-dim">IMO / SOLAS Ratified</span>
+</div>
+<div class="hidden sm:block h-3 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" data-icon="dock">dock</span>
+<span class="text-on-primary font-code-metric">4</span>
+<span class="text-primary-fixed-dim">Dry Dock Graving Facilities</span>
+</div>
+<div class="hidden md:block h-3 w-px bg-outline-variant/30"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" data-icon="support_agent">support_agent</span>
+<span class="text-primary-fixed-dim">24/7 Central Operations Desk:</span>
+<a class="text-secondary-fixed font-code-metric hover:underline" href="tel:+912222610940">+91 22 2261-0940</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CORE ACTIVITIES HIGHLIGHTS (BENTO-STYLE ARCHITECTURAL GRID) -->
+<section class="py-space-xl bg-background border-b border-outline-variant" id="capabilities">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-4">
+<div>
+<div class="flex items-center gap-2 text-secondary text-label-md font-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="grid_view">grid_view</span>
+            Core Maritime Divisions
+          </div>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold">
+            Sovereign Industrial Capabilities &amp; Deepwater Logistics
+          </h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md">
+          Precision-engineered marine interventions deployed across strategic ocean sectors, commercial energy support, and coastal harbor expansions.
+        </p>
+</div>
+<!-- Bento Grid (6 Divisional Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- Division 1: Port Development -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+<div class="relative h-48 w-full overflow-hidden bg-primary">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A massive deepwater container terminal at twilight with automated gantry cranes illuminating berths and cargo vessels loaded with containers reflected over dark calm harbor waters. Crisp industrial maritime photography, sharp contrast, professional logistics tone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8z1cmUXGbvg039U3IZZd4ShFKMpE8DflphZkdy7TXMuIpox7AiitKxYzrrtTXWmErzA574K_zKOzd2jm_MelDLWccVmEfFMh-5YqXGgrqiChmQEVX3Q1FtwhImVNZnkkm3QaydqABkJkDSWTgS6hvrU-zvWFb5oyumJPMbJiKDjE9aHGyLWtJ5d_PRWYJZxid9czrhGmfKyroqp9Mjtk3eZudnBSUEgdtKjDxNuZH3n_hupGIIIRF"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-label-sm font-label-sm text-secondary-fixed flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="forklift">forklift</span>
+              DIV-01 // INFRASTRUCTURE
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Port Development &amp; Marine Terminal Management</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+                State-backed design, dredging operations, and berth management servicing Class-A deepwater terminals, automated gantry systems, and continuous multi-modal container transfer nodes.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="font-code-metric">14 Berths Commissioned</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Division 2: Offshore Drilling Support & Energy Fleet -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+<div class="relative h-48 w-full overflow-hidden bg-primary">
+<img alt="Offshore supply vessel operating near semi-submersible platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WPzQXrFvCoXrQG04T5sf0W6ml09MD_xfxpHOVMV8CE3UZwd0zB8_llLylJ9zMxL3VMcuqUzuR_4BirXrqqRZK0wx6j6mX4GKlHqxuhRh2ueJPSvcMRcMyK3zRuQ5c_nvux4GfEFv7tLSU-h9N_31pLpT9aBkg1AiXOw9pZg1l0KvrdjKwbY9L5iV0nJKyl3pvGw5wD7R3JRoKRfHN2-u7_0z1RE92ehhTlPMtW4eX3oJAqRiSOyR2awLw"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-label-sm font-label-sm text-secondary-fixed flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="oil_barrel">oil_barrel</span>
+              DIV-02 // ENERGY FLEET
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Offshore Drilling Support &amp; Energy Fleet</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+                Specialized Dynamic Positioning (DP-2/DP-3) anchor handling tug supply (AHTS) vessels and subsea support units provisioning deep ocean oilfields and critical offshore gas rigs.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="font-code-metric">DP-3 Certified Fleet</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Division 3: Commercial Marine Repairs & Dry Dock -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+<div class="relative h-48 w-full overflow-hidden bg-primary">
+<img alt="Massive commercial marine dry dock facility with commercial vessel hull undergoing maintenance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1V8j1f8WrSL0TfpTsXXe5Q6UD8Gvxdqye4ltCq4RG1pCVAsjhFoUQWV_5T-DlLLOkZJ8i0tO5SI99hMxuFdi1Q2GfUqetQJ2a7DRXHQeoC9GkIHd8IIrz4BNAw4D717-nSLm9ny2s9-OUemnvem1fzy5HpjUmohHx375ndLXYBJGd4kX3BV4bbSKJ6I7Zf1NycEqkEPEArpW-G5Fr29IfVPkFXS9tCBde_6azV5Plz35sCp_uknixuzoT0"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-label-sm font-label-sm text-secondary-fixed flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="build">build</span>
+              DIV-03 // SHIPBUILDING &amp; YARD
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Commercial Marine Repairs &amp; Heavy Dry Dock</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+                Four sovereign graving dry docks with 120,000 DWT vessel handling capacity, structural hull retrofitting, rudder repairs, underwater grit blasting, and emergency structural salvage.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="font-code-metric">120,000 DWT Capacity</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Division 4: Propulsion Turbine Engineering -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+<div class="relative h-48 w-full overflow-hidden bg-primary">
+<img alt="Precision marine propulsion turbine machinery and heavy mechanical components" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WmtvIAyRtclXJ41nMLQwPyQQ1nIIY_bwm0LOOfoPUpue3NRVgfdTaaZGwTu9sDekwWMI5hL9BORgRvTXlOBeO-5liMYsyUTTTP7xBpqawjZH_ERavlKWLMBPQXSeqI13kDxuI7rgikR7Lxrs7TmcsMzwRHkBK8WhXXlx2PPhSmua2VFAH1pRV-V8xUQe_o9jl3yBzb0cDJrWvyCfePpV7dYzvuNrLSkVwJgteLwheUoKkH0DB60JkEwxk"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-label-sm font-label-sm text-secondary-fixed flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="settings">settings</span>
+              DIV-04 // PROPULSION
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Propulsion Turbine Engineering &amp; Machinery</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+                Precision shaft alignment, 2-stroke diesel turbine overhauls, controllable pitch propeller maintenance, and specialized high-torque marine gearing fabrication.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="font-code-metric">OEM Certified Technicians</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Division 5: Marine Surveys & Inspection -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+<div class="relative h-48 w-full overflow-hidden bg-primary">
+<img alt="Certified marine surveyor in safety gear inspecting commercial vessel hull structure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Ucgr5DZOE5OGv_6b39AzNvdZV3RU9DDe9gSHSJLDmcryE45skD7CbYCBpQfPnrnVxB1On24ubTJP_5REhTcXzpyTpL2vx6_KfuB2GgUoR-nAtvEjSIG1fVqUg-xj4Obun0Ja4DT2R4ol4aAgRT4l6xHtOyVitnE6V2CJ5sTEqOSDXykERS8dP9Hbmer9UJf6ZZdn5R5_wnWGbip6me5gxG9e-PDEvVFmQjDzkiz6A2L8okF4V6kjxHmhA"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-label-sm font-label-sm text-secondary-fixed flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="search_check">search_check</span>
+              DIV-05 // STATUTORY AUDIT
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Marine Surveys &amp; Statutory Inspection</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+                Non-destructive hull testing (NDT), ultrasonic thickness measurements, Class-A insurance condition surveys, and statutory SOLAS/MARPOL compliance certifications.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="font-code-metric">IACS &amp; DGS Authorized</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<!-- Division 6: Maritime Green Tech & Decarbonization -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col group">
+<div class="relative h-48 w-full overflow-hidden bg-primary">
+<img alt="Clean industrial engineering photograph of maritime green technologies and eco-efficient machinery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1WElh4wxDVCmGpdk6MLynNxGIDeDAepgJ9B9U9P8Ew4PSMAGuZqra1lMBDk0S3eaHCX78pZCn1YEzVwkurjJqdzIxnn4_yLqC8czsMqEtwhmtuYbACnG5IZ981MKjs4UK4Zl5hWjNqa5Tiah7Fp_NNU5_nuyDDDPLVSWzuoWu7wy2DT7Gq8tPEgvRds9-9ilrwbPm7UJ6Jzcs18FUESV82s-OOyOxZtRDdkFYA_jAjFlPV_ZJ_nGA7JThU"/>
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-2.5 py-1 rounded text-label-sm font-label-sm text-secondary-fixed flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]" data-icon="eco">eco</span>
+              DIV-06 // DECARBONIZATION
+            </div>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-2">Maritime Green Technologies &amp; Decarbonization</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+                Ballast Water Management System (BWMS) retrofitting, cold-ironing shore power integration, scrubbers, and dual-fuel LNG/methanol conversion engineering.
+              </p>
+</div>
+<div class="pt-3 border-t border-outline-variant/60 flex items-center justify-between text-label-sm font-label-sm text-secondary">
+<span class="font-code-metric">IMO 2030 Aligned</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CORPORATE OVERVIEW & INSTITUTIONAL CREDIBILITY -->
+<section class="py-space-xl bg-surface-container-lowest border-b border-outline-variant" id="corporate">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: HQ Imagery & Telemetry Callout -->
+<div class="lg:col-span-6 relative">
+<div class="border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<img alt="Marine Corporation of India corporate headquarters and operations control center overlooking harbor" class="w-full h-[460px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_dQOhg4vqbK-8xikKRAHxTCB8ZEt91awLCxaUp114M_LpaGxFyQEmBK1M3Ev1C-nbEwrH36ETtiNWjn_J-KyW168D_XnwUiBj-DxOhaNPoBgPW0zsO_CkZUSYyhd4t7SGg0-1FuBS6cnssF_YoRQuwcrAPYTGWP0qYunV9tnMzCQG_cWhnOXQl3Sa_yzTlfPxITL6dKC3x2KAI2A5w1lCPY4ayk9Mo-FExai6cIU0OUR_BBks1I4f"/>
+</div>
+<!-- Floating Architectural Badge -->
+<div class="absolute -bottom-6 -right-6 hidden sm:flex bg-primary border border-primary-container p-space-md rounded-lg shadow-md max-w-xs text-on-primary flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" data-icon="domain">domain</span>
+<span class="text-label-md font-label-md font-bold uppercase tracking-wide">Central Command Tower</span>
+</div>
+<p class="text-body-sm font-body-sm text-outline-variant">
+              Centralized vessel telemetry, satellite routing control, and emergency incident dispatch in Mumbai.
+            </p>
+</div>
+</div>
+<!-- Right Column: Institutional Profile & Statutory Accreditations -->
+<div class="lg:col-span-6 flex flex-col justify-center space-y-space-md">
+<div class="flex items-center gap-2 text-secondary text-label-md font-label-md uppercase tracking-wider">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance">account_balance</span>
+            Institutional Profile
+          </div>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold">
+            Sovereign Trust Safeguarding National Oceanic Corridors
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            Established under national infrastructure mandates, the Marine Corporation of India (MCI) provides the institutional backbone for national maritime resilience, specialized deep-sea towage, salvage operations, and maritime asset integrity across the Indian Ocean Region (IOR).
+          </p>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            Our multi-disciplinary team brings together naval architects, master mariners, salvage engineers, and regulatory specialists executing operations in full compliance with United Nations IMO protocols and international classification society requirements.
+          </p>
+<!-- Accreditations & Badges Cluster -->
+<div class="pt-space-sm space-y-space-sm">
+<span class="text-label-sm font-label-sm text-outline uppercase tracking-wider font-semibold block">Statutory Accreditations &amp; Class Approvals</span>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+<div class="border border-outline-variant/80 bg-surface-container-low px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="verified">verified</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-none">DGS</span>
+<span class="text-[10px] text-outline block mt-0.5">Govt. of India</span>
+</div>
+</div>
+<div class="border border-outline-variant/80 bg-surface-container-low px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="shield">shield</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-none">IRS</span>
+<span class="text-[10px] text-outline block mt-0.5">Indian Register</span>
+</div>
+</div>
+<div class="border border-outline-variant/80 bg-surface-container-low px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="waves">waves</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-none">IWAI</span>
+<span class="text-[10px] text-outline block mt-0.5">Inland Waterways</span>
+</div>
+</div>
+<div class="border border-outline-variant/80 bg-surface-container-low px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="public">public</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-none">IMO / SOLAS</span>
+<span class="text-[10px] text-outline block mt-0.5">UN Maritime</span>
+</div>
+</div>
+<div class="border border-outline-variant/80 bg-surface-container-low px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="map">map</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-none">IHO S-44</span>
+<span class="text-[10px] text-outline block mt-0.5">Hydrographic Class</span>
+</div>
+</div>
+<div class="border border-outline-variant/80 bg-surface-container-low px-3 py-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]" data-icon="military_tech">military_tech</span>
+<div>
+<span class="text-label-sm font-label-sm font-bold text-primary block leading-none">ISO 9001/14001</span>
+<span class="text-[10px] text-outline block mt-0.5">Bureau Veritas</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GLOBAL REACH & MARITIME CORRIDORS TEASER -->
+<section class="py-space-xl bg-primary text-on-primary relative overflow-hidden" id="global-ports">
+<div class="w-full max-w-[1440px] mx-auto px-margin relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-4">
+<div>
+<div class="flex items-center gap-2 text-secondary-container text-label-md font-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="hub">hub</span>
+            Operational Geography
+          </div>
+<h2 class="text-headline-lg font-headline-lg text-on-primary tracking-tight font-bold">
+            Strategic Global Reach &amp; Primary Shipping Corridors
+          </h2>
+</div>
+<a class="inline-flex items-center gap-2 px-4 py-2 border border-outline-variant/50 hover:bg-surface-container-lowest/10 transition-colors text-label-md font-label-md rounded text-secondary-fixed" href="#corridors">
+<span>View Global Presence Directory</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+<!-- Map Display Container -->
+<div class="relative w-full border border-primary-container rounded-xl overflow-hidden bg-tertiary">
+<img alt="Minimalist executive corporate world map maritime graphic on deep navy background with global shipping sea lanes" class="w-full h-[400px] object-cover object-center" src="https://lh3.googleusercontent.com/aida/AEtjO1X_ta1AzsmAHlNcicgV_62MrykD3UjgDB6R8iYOY0WgKuzczDU5m8G8c6CTynCo43MYOajWN1Jw18yB0FFNFY_p4rvn2FXrGpIO2aJFWP9XXQnePBQ3o-MYNg7taIkDRA5z2KwLbG-RZideTJypp_0aFYX2jw5DJqhXtI-lD0ahFDu-pWPcYzAFAtDcvMQRitPvy4isZ4tCryVdmJIvtg1UjLXhBuAoHwrY1dsSccELlLIqxoAkuvRW54k"/>
+<!-- Telemetry Data Overlay -->
+<div class="absolute bottom-4 left-4 right-4 grid grid-cols-2 md:grid-cols-4 gap-3 bg-primary/90 backdrop-blur-md p-4 rounded-lg border border-outline-variant/20">
+<div>
+<span class="text-label-sm font-label-sm text-outline-variant block">Strait of Malacca Transit</span>
+<span class="text-title-md font-title-md text-on-primary font-semibold">Active Escort Tier 1</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-outline-variant block">Arabian Sea Hub</span>
+<span class="text-title-md font-title-md text-on-primary font-semibold">Nhava Sheva &amp; Kandla</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-outline-variant block">Bay of Bengal Channel</span>
+<span class="text-title-md font-title-md text-on-primary font-semibold">Visakhapatnam &amp; Paradip</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-outline-variant block">Middle East Gulf Route</span>
+<span class="text-title-md font-title-md text-on-primary font-semibold">Direct Tanker Support</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FINAL CTA / INITIATE FLEET DISPATCH -->
+<section class="py-space-xl bg-surface-container-low border-b border-outline-variant" id="desk">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-xl shadow-sm flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container rounded text-label-sm font-label-sm text-secondary font-semibold uppercase mb-3">
+<span class="material-symbols-outlined text-[16px]" data-icon="speed">speed</span>
+            24/7 Rapid Mobilization
+          </div>
+<h2 class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold mb-2">
+            Initiate Fleet Dispatch &amp; Operational Inquiry
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Connect directly with our central duty superintendents for emergency towage, scheduled dry dock reservations, salvage interventions, or sovereign hydrographic project planning.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md w-full lg:w-auto">
+<a class="px-5 py-3.5 bg-primary hover:bg-primary-container text-on-primary rounded font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" href="tel:+912222610940">
+<span class="material-symbols-outlined text-[20px]" data-icon="call">call</span>
+<span>+91 22 2261-0940</span>
+</a>
+<a class="px-5 py-3.5 border border-secondary text-primary hover:bg-surface-container rounded font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" href="mailto:ops@marinecorpindia.gov.in">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+<span>ops@marinecorpindia.gov.in</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FOOTER (PREDICTED COMPONENT FROM JSON) -->
+<footer class="w-full bg-primary dark:bg-tertiary border-t border-primary-container dark:border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md pb-space-lg border-b border-primary-container">
+<div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-primary dark:text-on-primary tracking-wider uppercase block">Marine Corporation of India</span>
+<span class="text-body-sm font-body-sm text-outline-variant mt-1 block">Statutory Maritime Infrastructure &amp; Technical Vessel Operations</span>
+</div>
+<div class="flex items-center gap-4 text-outline-variant">
+<span class="text-label-sm font-label-sm">Class-A Classification</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span class="text-label-sm font-label-sm">IMO Registered No. MCI-IN-8840</span>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#telemetry">Fleet Telemetry</a>
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#compliance">Maritime Safety &amp; IMO Compliance</a>
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#ports">Port Authority Clearance</a>
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#specs">Vessel Engineering Specs</a>
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#esg">ESG &amp; Decarbonization</a>
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#careers">Careers</a>
+<a class="text-label-sm font-label-sm text-outline-variant dark:text-outline-variant hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#legal">Legal &amp; Sovereign Protocols</a>
+</div>
+<!-- Copyright Notice -->
+<div class="pt-4 flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-outline-variant">
+<p>© 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.</p>
+<span class="text-label-sm font-label-sm text-secondary-fixed-dim mt-2 md:mt-0">Government of India Undertaking</span>
+</div>
+</div>
+</footer>
+</body></html>

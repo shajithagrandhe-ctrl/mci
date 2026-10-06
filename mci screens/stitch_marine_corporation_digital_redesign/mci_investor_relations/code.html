@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Investor Relations &amp; Statutory Governance | Marine Corporation of India</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#43474e",
+            "surface-tint": "#436083",
+            "inverse-primary": "#abc9f0",
+            "primary-fixed": "#d2e4ff",
+            "primary-container": "#0d2f4f",
+            "on-tertiary-fixed": "#001e2b",
+            "on-surface": "#0f1d28",
+            "background": "#f6f9ff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#00537d",
+            "tertiary-fixed": "#c1e8ff",
+            "outline": "#73777f",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#e1f0ff",
+            "surface-variant": "#d6e4f3",
+            "on-primary-fixed": "#001c37",
+            "secondary-fixed-dim": "#90cdff",
+            "tertiary-container": "#003244",
+            "tertiary-fixed-dim": "#90cff0",
+            "on-primary-fixed-variant": "#2b486a",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c3c6cf",
+            "surface": "#f6f9ff",
+            "surface-container-low": "#ecf4ff",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#abc9f0",
+            "surface-container-highest": "#d6e4f3",
+            "secondary": "#046494",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004d67",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#24323d",
+            "on-secondary-fixed": "#001e30",
+            "inverse-on-surface": "#e6f2ff",
+            "on-tertiary-container": "#5e9dbd",
+            "on-primary-container": "#7a97bd",
+            "secondary-container": "#84c8fe",
+            "tertiary": "#001c28",
+            "primary": "#001a32",
+            "on-background": "#0f1d28",
+            "on-error": "#ffffff",
+            "surface-bright": "#f6f9ff",
+            "surface-container-high": "#dbeaf9",
+            "on-secondary-fixed-variant": "#004b71",
+            "secondary-fixed": "#cbe6ff",
+            "surface-dim": "#cddceb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-sm": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "title-md": ["Manrope"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-sm": ["Manrope"],
+            "display-hero": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "body-lg": ["Inter"],
+            "display-hero-mobile": ["Manrope"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary selection:text-on-secondary font-body-md text-body-md min-h-screen flex flex-col">
+<!-- TOP APP BAR / BRAND HEADER -->
+<header class="w-full bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand & Sovereign Entity Lockup -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary-container flex items-center justify-center rounded-lg shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary-fixed text-2xl" data-icon="anchor">anchor</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md tracking-tight font-bold text-primary uppercase">Marine Corporation of India</span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider uppercase">Govt. of India Undertaking // Maritime Command</span>
+</div>
+</div>
+<!-- Navigation Hierarchy -->
+<nav class="hidden xl:flex items-center gap-6">
+<a class="text-on-surface-variant font-medium text-body-sm hover:text-secondary transition-colors duration-150" href="#">Home</a>
+<a class="text-on-surface-variant font-medium text-body-sm hover:text-secondary transition-colors duration-150" href="#">About MCI</a>
+<a class="text-on-surface-variant font-medium text-body-sm hover:text-secondary transition-colors duration-150" href="#">Activities</a>
+<a class="text-on-surface-variant font-medium text-body-sm hover:text-secondary transition-colors duration-150" href="#">Group</a>
+<a class="text-on-surface-variant font-medium text-body-sm hover:text-secondary transition-colors duration-150" href="#">Global Presence</a>
+<a class="text-secondary border-b-2 border-secondary font-semibold pb-1 text-body-sm transition-all duration-200" href="#">Investor Relations</a>
+<a class="text-on-surface-variant font-medium text-body-sm hover:text-secondary transition-colors duration-150" href="#">Contact</a>
+</nav>
+<!-- Trailing Action Portals -->
+<div class="flex items-center gap-space-sm">
+<button class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-outline-variant text-primary text-label-md font-label-md rounded-lg hover:bg-surface-container-high transition-colors">
+          Operations Desk
+        </button>
+<button class="inline-flex items-center gap-2 bg-primary-container hover:bg-secondary text-on-primary px-4 py-2 rounded-lg text-label-md font-label-md shadow-sm transition-colors duration-150">
+<span class="material-symbols-outlined text-sm" data-icon="shield">shield</span>
+<span>Client Portal</span>
+</button>
+</div>
+</div>
+</header>
+<!-- SUB-BAR: TICKER / STATUTORY STATUS -->
+<div class="bg-surface-container-low border-b border-outline-variant py-2">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex flex-wrap items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="inline-flex items-center gap-1.5 font-semibold text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          OFFICIAL DISCLOSURE BULLETIN
+        </span>
+<span class="hidden md:inline text-outline-variant">|</span>
+<span class="hidden md:inline">FY 2023-24 CAG Audit Clearance Ratified</span>
+<span class="hidden lg:inline text-outline-variant">|</span>
+<span class="hidden lg:inline">MoPSW Capex Target Realization: 99.4%</span>
+</div>
+<div class="flex items-center gap-6 font-code-metric text-code-metric">
+<div class="flex items-center gap-1.5">
+<span class="text-outline uppercase text-[10px]">NSE:</span>
+<span class="font-semibold text-primary">MARINECORP</span>
+<span class="text-secondary font-semibold">₹1,842.60</span>
+<span class="text-secondary text-[11px] font-bold">+1.85%</span>
+</div>
+<div class="hidden sm:flex items-center gap-1.5">
+<span class="text-outline uppercase text-[10px]">BSE:</span>
+<span class="font-semibold text-primary">532984</span>
+<span class="text-secondary font-semibold">₹1,841.90</span>
+<span class="text-secondary text-[11px] font-bold">+1.78%</span>
+</div>
+</div>
+</div>
+</div>
+<main class="flex-grow">
+<!-- HERO SECTION: Executive Restraint & Technical Precision -->
+<section class="relative bg-primary text-on-primary overflow-hidden border-b border-primary-container">
+<div class="absolute inset-0 z-0 opacity-25 mix-blend-luminosity">
+<img alt="Marine Corporation Boardroom &amp; Port Complex" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvFnQTuVxdrnqGdh-JdljKIRy-1APDiJkUPbHjqL4xgnYF-Bq9TnYOrGL72WpQ1--togsZH-4u0_bfaHWPCq1-cL96fUCw3IYoOs6RoB5zQgVZNilzqEL84-aDBu7192e3uqrVzWIyvPW4KhO7VXi6RRJ3_UARvYZv2MNsyKNf15t9s1FEvo6H_8H_SQanjBZZT03Cc1l5bemHVHGotkr8hQxnvKvzdvxLSybC9fkgZb_cAzL0m-0y"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/60 z-0"></div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin py-16 lg:py-24">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/80 border border-outline-variant/30 rounded text-label-sm font-label-sm text-secondary-fixed mb-6 tracking-wider">
+<span class="material-symbols-outlined text-sm" data-icon="assured_workload">assured_workload</span>
+            STATUTORY CORPORATE GOVERNANCE // CAPITAL INTEGRITY &amp; STAKEHOLDER VALUE
+          </div>
+<h1 class="text-headline-xl lg:text-display-hero font-display-hero tracking-tight text-on-primary mb-6">
+            Investor Relations &amp; Statutory Governance
+          </h1>
+<p class="text-body-lg font-body-lg text-surface-variant leading-relaxed mb-8 max-w-2xl">
+            Fostering long-term sovereign infrastructure growth, transparent reporting, and disciplined capital allocation across critical maritime assets.
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6 border-t border-outline-variant/30">
+<div>
+<div class="text-headline-sm font-headline-sm font-bold text-on-primary">₹14,250 Cr</div>
+<div class="text-label-sm font-label-sm text-outline-variant uppercase mt-1">Asset Base (FY24)</div>
+</div>
+<div>
+<div class="text-headline-sm font-headline-sm font-bold text-secondary-fixed">AAA / Stable</div>
+<div class="text-label-sm font-label-sm text-outline-variant uppercase mt-1">CRISIL Sovereign Rating</div>
+</div>
+<div>
+<div class="text-headline-sm font-headline-sm font-bold text-on-primary">100%</div>
+<div class="text-label-sm font-label-sm text-outline-variant uppercase mt-1">CAG Audit Compliance</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CORPORATE OVERVIEW & CAPITAL PHILOSOPHY: Bento Grid Layout -->
+<section class="py-space-xl bg-background">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-outline-variant">
+<div>
+<span class="text-label-sm font-label-sm text-secondary tracking-widest uppercase font-semibold">Capital Allocation Architecture</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mt-1">Prudent Reinvestment &amp; Fleet Modernization</h2>
+</div>
+<p class="text-on-surface-variant text-body-sm max-w-md mt-2 md:mt-0">
+            Disciplined allocation engineered to expand domestic deep-sea handling while adhering to strict sovereign hurdle rates.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Dredging Fleet Expansion -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-secondary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="waves">waves</span>
+</div>
+<div class="text-label-sm font-label-sm text-outline tracking-wider uppercase mb-1">Pillar I // Core Asset</div>
+<h3 class="text-title-md font-title-md text-primary mb-3">State-of-the-Art Dredging Fleet</h3>
+<p class="text-on-surface-variant text-body-sm leading-relaxed mb-6">
+                Deployment of advanced trailing suction hopper dredgers (TSHD) to maintain critical navigable draft across Major Ports, de-risking sovereign commerce corridors.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Capex Outlay (FY24-26)</span>
+<span class="font-code-metric font-bold text-primary">₹3,400 Cr</span>
+</div>
+</div>
+<!-- Card 2: Automated Terminals -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-secondary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div class="text-label-sm font-label-sm text-outline tracking-wider uppercase mb-1">Pillar II // Infrastructure</div>
+<h3 class="text-title-md font-title-md text-primary mb-3">Automated Container Terminals</h3>
+<p class="text-on-surface-variant text-body-sm leading-relaxed mb-6">
+                Installation of optical vessel berthing systems and electrified rail-mounted gantry (e-RMG) cranes, driving down turnaround times below 22.4 hours.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Capex Outlay (FY24-26)</span>
+<span class="font-code-metric font-bold text-primary">₹5,150 Cr</span>
+</div>
+</div>
+<!-- Card 3: Green Propulsion -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg flex flex-col justify-between shadow-sm">
+<div>
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-lg text-secondary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<div class="text-label-sm font-label-sm text-outline tracking-wider uppercase mb-1">Pillar III // Decarbonization</div>
+<h3 class="text-title-md font-title-md text-primary mb-3">Green Vessel Conversions</h3>
+<p class="text-on-surface-variant text-body-sm leading-relaxed mb-6">
+                Dual-fuel LNG/Methanol repowering of coastal tugs and auxiliary crafts to fulfill IMO GHG 2030 targets and national maritime green vision guidelines.
+              </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Capex Outlay (FY24-26)</span>
+<span class="font-code-metric font-bold text-primary">₹1,850 Cr</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GOVERNANCE & COMPLIANCE FRAMEWORK -->
+<section class="py-space-xl bg-surface-container-low border-y border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="max-w-2xl mb-10">
+<span class="text-label-sm font-label-sm text-secondary tracking-widest uppercase font-semibold">Institutional Reliability</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mt-1">Multi-Tier Statutory Governance</h2>
+<p class="text-on-surface-variant text-body-md mt-2">
+            MCI operates under stringent statutory oversight designed to protect minority stakeholders, safeguard sovereign interests, and maintain pristine auditing standards.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Tier 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg border border-outline-variant">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="account_balance">account_balance</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-secondary font-semibold">Level 01</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-2">Board of Directors</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Comprising sovereign nominees, seasoned maritime technocrats, and majority independent directors adhering strictly to SEBI (LODR) regulations.
+            </p>
+</div>
+<!-- Tier 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg border border-outline-variant">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="fact_check">fact_check</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-secondary font-semibold">Level 02</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-2">CAG Audit Oversight</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Independent supplementary audits and transaction reviews performed annually by the Comptroller &amp; Auditor General of India.
+            </p>
+</div>
+<!-- Tier 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg border border-outline-variant">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="lan">lan</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-secondary font-semibold">Level 03</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-2">MoPSW Protocols</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Strategic alignment with the Ministry of Ports, Shipping and Waterways on tariff setting, national logistics security, and concession agreements.
+            </p>
+</div>
+<!-- Tier 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg border border-outline-variant">
+<div class="flex items-center justify-between mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="verified">verified</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-secondary font-semibold">Level 04</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-2">DGS Compliance</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Mandatory certifications and vessel registry inspections under the Directorate General of Shipping ensuring Solas and Marpol conformity.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- DOCUMENT DOWNLOAD CENTER & REGULATORY FILINGS -->
+<section class="py-space-xl bg-background">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-outline-variant">
+<div>
+<span class="text-label-sm font-label-sm text-secondary tracking-widest uppercase font-semibold">Public Repository</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mt-1">Regulatory Filings &amp; Corporate Disclosures</h2>
+</div>
+<div class="mt-4 md:mt-0 flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-outline">Filter:</span>
+<span class="text-label-sm font-label-sm bg-primary-container text-on-primary px-3 py-1 rounded">All Official Filings</span>
+<span class="text-label-sm font-label-sm border border-outline-variant text-on-surface-variant px-3 py-1 rounded hover:bg-surface-container cursor-pointer">Annual Reports</span>
+<span class="text-label-sm font-label-sm border border-outline-variant text-on-surface-variant px-3 py-1 rounded hover:bg-surface-container cursor-pointer">ESG Charters</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Document Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:border-secondary transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-semibold text-secondary bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                  PDF FILING
+                </span>
+<span class="text-label-sm font-label-sm font-code-metric text-outline">18.4 MB</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-1">Corporate Profile &amp; Fleet Manifest</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Complete registry of 84 operational vessels, dry dock specs, and capital assets.</p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Updated: Q3 FY24</span>
+<a class="inline-flex items-center gap-1 text-secondary font-semibold text-label-md font-label-md hover:underline" href="#">
+<span>Download</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<!-- Document Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:border-secondary transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-semibold text-secondary bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                  PDF FILING
+                </span>
+<span class="text-label-sm font-label-sm font-code-metric text-outline">24.1 MB</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-1">Annual Statutory Compliance &amp; Environmental Report</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Includes full Comptroller &amp; Auditor General (CAG) audit clearances and balance sheets.</p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Period: FY 2023-24</span>
+<a class="inline-flex items-center gap-1 text-secondary font-semibold text-label-md font-label-md hover:underline" href="#">
+<span>Download</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<!-- Document Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:border-secondary transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-semibold text-secondary bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                  PDF FILING
+                </span>
+<span class="text-label-sm font-label-sm font-code-metric text-outline">12.8 MB</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-1">Sovereign Maritime Operations Framework</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Standard operating guidelines under the Merchant Shipping Act and defense protocols.</p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Ratified: Jan 2024</span>
+<a class="inline-flex items-center gap-1 text-secondary font-semibold text-label-md font-label-md hover:underline" href="#">
+<span>Download</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<!-- Document Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:border-secondary transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-semibold text-secondary bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                  PDF FILING
+                </span>
+<span class="text-label-sm font-label-sm font-code-metric text-outline">9.2 MB</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-1">ESG &amp; IMO 2030/2050 Decarbonization Charter</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Detailed baseline carbon accounting, shore-power implementations, and biofuel trials.</p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Updated: Annual Cycle</span>
+<a class="inline-flex items-center gap-1 text-secondary font-semibold text-label-md font-label-md hover:underline" href="#">
+<span>Download</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<!-- Document Card 5 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-5 hover:border-secondary transition-colors duration-150 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-semibold text-secondary bg-surface-container px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+                  PDF FILING
+                </span>
+<span class="text-label-sm font-label-sm font-code-metric text-outline">15.6 MB</span>
+</div>
+<h4 class="text-title-md font-title-md text-primary mb-1">Standard Concession &amp; Joint Venture Tender Guidelines</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">Legal templates, risk allocations, and foreign investment participation criteria.</p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Version: Rev 4.2</span>
+<a class="inline-flex items-center gap-1 text-secondary font-semibold text-label-md font-label-md hover:underline" href="#">
+<span>Download</span>
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</a>
+</div>
+</div>
+<!-- Document Card 6: Portal Access Callout -->
+<div class="bg-primary-container text-on-primary rounded-lg p-5 border border-primary-container flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 bg-secondary flex items-center justify-center rounded mb-3">
+<span class="material-symbols-outlined text-xl" data-icon="folder_zip">folder_zip</span>
+</div>
+<h4 class="text-title-md font-title-md text-on-primary mb-1">Complete Data Room Archive</h4>
+<p class="text-body-sm font-body-sm text-surface-variant mb-4">Accredited institutional investors may request full historical data packs and board minutes.</p>
+</div>
+<button class="w-full bg-surface-container-lowest text-primary py-2 px-3 rounded text-label-md font-label-md font-bold hover:bg-secondary-fixed transition-colors">
+              Access Institutional Repository
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- INVESTOR & INSTITUTIONAL INQUIRIES PATHWAY -->
+<section class="py-space-xl bg-surface-container-low border-t border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="max-w-2xl mb-8">
+<span class="text-label-sm font-label-sm text-secondary tracking-widest uppercase font-semibold">Statutory Points of Contact</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mt-1">Investor &amp; Institutional Inquiries Pathway</h2>
+<p class="text-on-surface-variant text-body-md mt-2">
+            Direct access to corporate secretarial representatives and regulatory compliance officers.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Institutional Secretariat -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary">Institutional Secretariat</h4>
+<span class="text-label-sm font-label-sm text-outline">Equity &amp; Sovereign Funds</span>
+</div>
+</div>
+<div class="space-y-3 text-body-sm font-body-sm text-on-surface-variant">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="mail">mail</span>
+<span class="font-code-metric">investor.relations@marinecorp.gov.in</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="call">call</span>
+<span class="font-code-metric">+91 (22) 2261 4900 / Ext 402</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="schedule">schedule</span>
+<span>Mon–Fri, 09:30 – 17:30 IST</span>
+</p>
+</div>
+</div>
+<!-- RTI Compliance Officer -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary">RTI Nodal Officer</h4>
+<span class="text-label-sm font-label-sm text-outline">Right to Information Act</span>
+</div>
+</div>
+<div class="space-y-3 text-body-sm font-body-sm text-on-surface-variant">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="mail">mail</span>
+<span class="font-code-metric">rti.compliance@marinecorp.gov.in</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="call">call</span>
+<span class="font-code-metric">+91 (22) 2261 4988</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="policy">policy</span>
+<span>Statutory 30-Day Turnaround</span>
+</p>
+</div>
+</div>
+<!-- Shareholder & Debenture Trustee Liaison -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-space-lg shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+</div>
+<div>
+<h4 class="text-title-md font-title-md text-primary">Registrar &amp; Transfer Agent</h4>
+<span class="text-label-sm font-label-sm text-outline">KFin Technologies Ltd.</span>
+</div>
+</div>
+<div class="space-y-3 text-body-sm font-body-sm text-on-surface-variant">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="mail">mail</span>
+<span class="font-code-metric">einward.ris@kfintech.com</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="call">call</span>
+<span class="font-code-metric">1800 309 4001 (Toll Free)</span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="pin_drop">pin_drop</span>
+<span>Financial District, Hyderabad</span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Using verbatim schema from Shared Components) -->
+<footer class="w-full bg-primary border-t border-primary-container text-on-primary">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<!-- Top Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pb-6 border-b border-outline-variant/20">
+<div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-primary tracking-wider uppercase">Marine Corporation of India</span>
+<p class="text-body-sm font-body-sm text-surface-variant mt-1">Sovereign maritime infrastructure, engineering &amp; bulk transport command.</p>
+</div>
+<div class="flex items-center gap-4 text-secondary-fixed text-label-sm font-label-sm font-medium">
+<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> IMO Certified</span>
+<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> ISO 9001:2015</span>
+<span class="inline-flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-secondary-fixed rounded-full"></span> SOLAS Compliant</span>
+</div>
+</div>
+<!-- Links Array -->
+<div class="flex flex-wrap gap-x-8 gap-y-3 text-label-sm font-label-sm">
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Fleet Telemetry</a>
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Maritime Safety &amp; IMO Compliance</a>
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Port Authority Clearance</a>
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Vessel Engineering Specs</a>
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">ESG &amp; Decarbonization</a>
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Careers</a>
+<a class="text-outline-variant hover:text-secondary-fixed-dim transition-colors duration-150" href="#">Legal &amp; Sovereign Protocols</a>
+</div>
+<!-- Copyright Statement -->
+<div class="text-body-sm font-body-sm text-outline-variant pt-4 border-t border-outline-variant/10 flex flex-col sm:flex-row justify-between gap-4">
+<span>© 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.</span>
+<span class="text-surface-variant font-code-metric text-[12px]">CIN: L63090MH1950GOI008129</span>
+</div>
+</div>
+</footer>
+</body></html>

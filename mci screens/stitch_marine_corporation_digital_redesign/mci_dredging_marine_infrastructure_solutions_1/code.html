@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MCI — Dredging &amp; Marine Infrastructure Solutions</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#004d67",
+            "outline": "#73777f",
+            "on-primary-fixed-variant": "#2b486a",
+            "surface-tint": "#436083",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#001e30",
+            "error-container": "#ffdad6",
+            "surface-variant": "#d6e4f3",
+            "primary-fixed": "#d2e4ff",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#c3c6cf",
+            "secondary-container": "#84c8fe",
+            "surface-dim": "#cddceb",
+            "on-surface-variant": "#43474e",
+            "primary-fixed-dim": "#abc9f0",
+            "surface-container-high": "#dbeaf9",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#90cff0",
+            "primary-container": "#0d2f4f",
+            "on-primary-container": "#7a97bd",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#001c37",
+            "surface-container": "#e1f0ff",
+            "background": "#f6f9ff",
+            "surface": "#f6f9ff",
+            "secondary": "#046494",
+            "on-secondary-fixed-variant": "#004b71",
+            "inverse-primary": "#abc9f0",
+            "tertiary": "#001c28",
+            "surface-container-highest": "#d6e4f3",
+            "surface-bright": "#f6f9ff",
+            "secondary-fixed": "#cbe6ff",
+            "on-tertiary-container": "#5e9dbd",
+            "inverse-on-surface": "#e6f2ff",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#90cdff",
+            "primary": "#001a32",
+            "on-background": "#0f1d28",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#ecf4ff",
+            "on-tertiary-fixed": "#001e2b",
+            "inverse-surface": "#24323d",
+            "on-secondary-container": "#00537d",
+            "on-surface": "#0f1d28",
+            "tertiary-fixed": "#c1e8ff",
+            "tertiary-container": "#003244"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "2.5rem",
+            "margin-sm": "1rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "title-md": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "headline-sm": ["Manrope"],
+            "label-md": ["Inter"],
+            "display-hero": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "display-hero-mobile": ["Manrope"],
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary selection:text-white">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-container-lowest dark:bg-primary-container border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="w-full mx-auto px-margin flex items-center justify-between h-16 max-w-[1440px]">
+<!-- Brand & Entity -->
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-sm text-decoration-none" href="#">
+<span class="material-symbols-outlined text-secondary text-[26px]" data-icon="anchor">anchor</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed uppercase tracking-tight">
+            Marine Corporation of India
+          </span>
+</a>
+<span class="hidden xl:inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-primary border border-outline-variant">
+          DREDGING &amp; CIVIL CORPS
+        </span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#">Fleet Telemetry</a>
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-semibold text-title-md font-title-md transition-colors duration-150" href="#">Civil Suites</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#">Deepening Manifest</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#">Hydrographic Tools</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#">Mobilization Desk</a>
+</nav>
+<!-- Trailing Actions & Profile -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden lg:flex items-center relative">
+<input class="bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface pl-8 pr-3 py-1.5 rounded focus:border-secondary focus:ring-1 focus:ring-secondary w-56" placeholder="Search hydrographic coordinates..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 text-outline text-[18px]" data-icon="search">search</span>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary rounded hover:bg-surface-container-low transition-colors duration-150" title="Notifications">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 border border-outline-variant text-body-sm font-body-sm text-primary hover:bg-surface-container-low rounded transition-colors duration-150">
+<span class="material-symbols-outlined text-[18px] text-error" data-icon="warning">warning</span>
+<span>Emergency Telemetry</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-primary-container text-on-primary text-body-sm font-body-sm font-semibold rounded hover:bg-secondary transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+<span>Dispatch Portal</span>
+</button>
+<div class="w-8 h-8 rounded-full border border-outline-variant overflow-hidden ml-1">
+<img class="w-full h-full object-cover" data-alt="A dignified close-up portrait of a Chief Hydrographer and Fleet Director of the Indian Marine Corporation in full naval white uniform, standing against an ultra-modern maritime operations bridge with radar screens, soft cool high-key lighting, technical charts in background, ultra-sharp corporate precision aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz--3nf5LrspCbB3qoAWYJce4x9VihjsuJ-HXmfU4XL6qVHQMNC8999EPlTcgtRtyPjPjYEwY8XVgf7aLMwLUTu_oGx9mxLlZEkhddnUPJPPPU0HWGnu2XONl_bM3lDA08cXz_k75EyKRnrU-C5OcwFajLPGUC2subStv_CqcNwx2-nLDB2wVzXQHR1vs7kpW6WHqaNt3NvwhavZxlH7i5Zm_HTJsYgnYAnRnR8PQWZswRLRf76d1c"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumb & System State Indicator Bar -->
+<div class="border-b border-outline-variant bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto px-margin py-2 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>Services Directory</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span>Dredging &amp; Marine Infrastructure</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-semibold">VERTICAL 07 // DREDGING &amp; MARINE CIVIL INFRASTRUCTURE</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-code-metric px-2 py-0.5 rounded bg-surface-container-low border border-outline-variant text-secondary">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          SYS.STATUS: OPERATIONAL // DREDGE DISPATCH CELL 07 ACTIVE // CODE: MCI-ENG-DREDGE-07
+        </span>
+</div>
+</div>
+</div>
+<main class="max-w-[1440px] mx-auto px-margin py-space-xl space-y-space-xl">
+<!-- Hero Section with Authority Badges and Dual Action CTAs -->
+<section class="space-y-space-lg">
+<div class="max-w-4xl space-y-space-sm">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container-high rounded border border-outline-variant text-label-sm font-label-sm text-primary font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="verified_user">verified_user</span>
+          MINISTRY OF PORTS, SHIPPING &amp; WATERWAYS // DGS &amp; IWAI RECOGNIZED SOVEREIGN DREDGING CORPS // IHO STANDARDS COMPLIANT
+        </div>
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-primary tracking-tight">
+          Sovereign Capital Dredging, Deep-Draft Channel Deepening &amp; Marine Civil Infrastructure
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">
+          End-to-end national maritime civil logistics: large-scale capital &amp; maintenance dredging, deep navigation channel deepening, island &amp; port land reclamation, coastal revetment armoring, and subsea trenching executed by India's sovereign dredging fleet.
+        </p>
+<!-- CTAs -->
+<div class="pt-2 flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded bg-primary-container text-white text-body-md font-body-md font-semibold hover:bg-secondary transition-colors duration-150 shadow-sm" href="#mobilization-desk">
+<span class="material-symbols-outlined text-[20px]" data-icon="rocket_launch">rocket_launch</span>
+            Commission Dredging Fleet &amp; Civil Survey
+          </a>
+<button class="inline-flex items-center gap-2 px-4 py-3 rounded border border-secondary text-primary-container bg-transparent hover:bg-surface-container-low text-body-md font-body-md font-semibold transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+            Download Dredging Capabilities &amp; Fleet Specs (PDF)
+          </button>
+</div>
+<!-- Compliance & Accreditations Micro Badges -->
+<div class="pt-2 flex flex-wrap items-center gap-y-2 gap-x-4 text-label-sm font-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            IHO S-44 Order 1a Hydrographic Survey Certified
+          </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            MoPSW &amp; IWAI Sovereign Dredging Fleet Operator
+          </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            ISO 9001 &amp; ISO 14001 Marine Environmental Safety
+          </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            CEDA &amp; WEDA Accredited Dredging Engineers
+          </span>
+</div>
+</div>
+<!-- Hero Visual with Technical Telemetry Overlay -->
+<div class="relative w-full rounded-xl overflow-hidden border border-outline-variant bg-primary-container shadow-md group">
+<div class="h-[440px] md:h-[520px] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A massive modern trailing suction hopper dredger vessel operating in deep sovereign ocean approach channel under dramatic moody oceanic clouds with industrial dredging arms deployed, heavy churned wake water, precision technical marine engineering aesthetic in deep maritime blues and white foam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD249AXtTac_44gRVBuFs52z5pQkz6s-9T3Oy8oO0MeDcGK9IiwYt7yTwQ7luOZ6GWL1gqUqPFkjiSi8dPI5YUMLojzefOJhRd7cVD-uIhQHRtjD3Cs2nPbgmB_HRPkntV5g3SJt-USJnPyXFEq2xdik4_p_MYgmu3_kJDPxl9vHVm7FKe-U_QjDdyxAoSkgLWffLeSLZxbzD3OSpuxk9nWTFh1JzAxx_Ei9ksqJJ93aFD9OdD0RyUe"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+</div>
+<!-- Floating Telemetry HUD Card -->
+<div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-auto md:max-w-xl bg-surface-container-lowest/95 backdrop-blur-md p-5 rounded-lg border border-outline-variant shadow-lg space-y-3">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="text-label-md font-label-md font-code-metric text-primary uppercase">LIVE FLEET TELEMETRY: TSHD FLEET HARBOR SECTOR 04</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">PORT ENNORE &amp; CHENNAI DEEP APPROACH</span>
+</div>
+<div class="grid grid-cols-2 gap-3 text-body-sm font-body-sm">
+<div>
+<p class="text-label-sm font-label-sm text-outline">Active Dredger</p>
+<p class="font-semibold text-primary">TSHD SAMUDRA VIKRAM</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant font-code-metric">Hopper: 12,500 m³</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline">Target Nav Depth</p>
+<p class="font-semibold text-secondary font-code-metric">-18.5m CD (Chart Datum)</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Tidal Independence</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline">Slurry Pumping Density</p>
+<p class="font-semibold text-primary font-code-metric">1.48 t/m³ @ 4,200 m³/hr</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline">Trailing Suction Depth</p>
+<p class="font-semibold text-primary font-code-metric">32.0m Max LOA Reach</p>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-2 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Master: Capt. R. K. Mukherjee, CEng FIMarEST</span>
+<span class="text-secondary font-semibold">IRS &amp; DGS Dual Attestation</span>
+</div>
+</div>
+</div>
+</section>
+<!-- KPI Metrics Strip -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">ANNUAL EXCAVATION</span>
+<span class="material-symbols-outlined text-secondary" data-icon="waves">waves</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">85M+ m³</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Capital deepening, maintenance cuts &amp; sovereign defense channel clearance.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">DREDGE &amp; SURVEY FLEET</span>
+<span class="material-symbols-outlined text-secondary" data-icon="directions_boat">directions_boat</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">35+ Vessels</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Large TSHDs, Heavy CSDs, Grab dredgers &amp; Hydrographic Catamarans.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">MAX CHANNEL DEPTH</span>
+<span class="material-symbols-outlined text-secondary" data-icon="straighten">straighten</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">-35.0m CD</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Deep offshore trenches, LNG berths &amp; Capesize navigation channel access.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">RAPID SWELL MOBILIZATION</span>
+<span class="material-symbols-outlined text-secondary" data-icon="timer">timer</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">&lt; 48 Hours</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Emergency harbor siltation rapid response across all 12 major Indian ports.</p>
+</div>
+</section>
+<!-- Core Engineering Suites (Bento / High-contrast Technical Grid) -->
+<section class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-outline-variant pb-4">
+<div>
+<span class="text-label-md font-label-md uppercase text-secondary font-code-metric">ENGINEERING SUITES // CAPABILITIES CATALOGUE</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Specialized Marine Civil &amp; Hydro-Excavation Divisions</h2>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">
+          Standardized under Indian Register of Shipping (IRS) and International Association of Marine Contractors (CEDA) guidelines.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Suite 01 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 01 // TSHD &amp; CAPITAL
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="reorder">reorder</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Trailing Suction Hopper Dredging &amp; Deep Channels</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Long-distance trailing suction, continuous dredging in high-swell offshore fairways, bottom dumping and rainbowing reclamation for deep-draft container harbors.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Twin 1,000mm suction pipes with active swell compensation up to 3.5m wave height</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Integrated Dredge View 3D real-time bathymetry and automated dredge draghead tracking</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Self-discharge bow coupling &amp; offshore rainbowing distance up to 120 meters</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">High-Swell Capable</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Mega Hopper 12.5k m³</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">RTK GNSS Positioning</span>
+</div>
+</div>
+<!-- Suite 02 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 02 // CSD &amp; HARD ROCK
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Heavy Cutter Suction &amp; Hard Stratum Breaking</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                High-torque cutter head dredging in calcified basalt, sandstone, and hard seabed formations without explosive blasting. Subsea pipeline pre-trenching.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>4,500 kW heavy rock cutter head with tungsten carbide chisel points</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Subsea rock chipping without shockwave disruption to port marine ecology</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Heavy spud carriage system capable of operating in 4 knot cross-currents</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">4,500 kW Rock Power</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Zero-Blast Excavation</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Pipeline Trenching</span>
+</div>
+</div>
+<!-- Suite 03 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 03 // CIVIL &amp; RECLAMATION
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="foundation">foundation</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Port Land Reclamation &amp; Breakwater Armoring</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Geotextile containment bunding, hydraulic sand filling, vibroflotation ground improvement, tetrapod/accropode armor placement for deepwater harbor protection.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Geosynthetic tubes and perimeter revetment dykes for dredge spoil containment</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Deep vibro-compaction to achieve 250 kPa post-reclamation bearing capacity</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>GPS-guided 40-tonne crane barge placement of CORE-LOC and Accropode units</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Accropode Armoring</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Vibro-Compaction</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Eco-Geobag Bunds</span>
+</div>
+</div>
+<!-- Suite 04 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 04 // HYDROGRAPHY &amp; SURVEY
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="radar">radar</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Multibeam Bathymetry &amp; Seabed Telemetry</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                High-resolution multibeam echo sounding (MBES), sub-bottom acoustic profiling, side-scan sonar silt migration monitoring, and real-time nautical chart drafting.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Dual-head 400 kHz multibeam sonar with 0.02m vertical sounding accuracy</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Chirp sub-bottom profiling identifying sediment strata down to 50m below seabed</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span>Real-time CARIS HIPS/SIPS processing for immediate DGS and IHO S-44 compliance</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">IHO S-44 Order 1a</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">LiDAR Bathymetry</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Sub-Bottom Profiling</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Spotlight (JNPT Fairway Elevation) -->
+<section class="bg-primary-container text-white rounded-xl overflow-hidden border border-outline p-6 md:p-8 space-y-6">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-outline/50 pb-4">
+<div>
+<span class="text-label-sm font-label-sm font-code-metric text-secondary-fixed uppercase tracking-wider">
+            CASE STUDY SPOTLIGHT // NATIONAL MARITIME CORRIDOR 01
+          </span>
+<h2 class="text-headline-md font-headline-md text-white mt-1">
+            Sovereign Maritime Deepening Breakthrough // Jawaharlal Nehru Port Fairway Elevation
+          </h2>
+</div>
+<span class="px-3 py-1 rounded bg-secondary text-white text-label-sm font-label-sm font-code-metric">
+          PROJECT CERTIFIED &amp; COMPLETED
+        </span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-7 space-y-4 text-surface-variant font-body-md">
+<div class="space-y-1">
+<h4 class="text-white font-semibold text-title-md font-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" data-icon="report_problem">report_problem</span>
+              Defect / Baseline Threat
+            </h4>
+<p class="text-body-sm font-body-sm text-surface-variant">
+              Heavy seasonal monsoon siltation reduced JNPT container vessel access to tidal windows, risking off-hire demurrage for ultra-large 20,000+ TEU container vessels and bottlenecking national supply chains.
+            </p>
+</div>
+<div class="space-y-1">
+<h4 class="text-white font-semibold text-title-md font-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" data-icon="build_circle">build_circle</span>
+              Sovereign MCI Engineering Solution
+            </h4>
+<p class="text-body-sm font-body-sm text-surface-variant">
+              Deployed twin mega-TSHDs with dynamic trailing dragheads and real-time RTK-GNSS seabed profiling, operating continuously in adverse sea states to excise 4.8M m³ of consolidated silt and hard clay within 90 days.
+            </p>
+</div>
+</div>
+<div class="lg:col-span-5 bg-tertiary-container/80 rounded-lg p-5 border border-outline/60 space-y-3">
+<div class="text-label-sm font-label-sm font-code-metric text-secondary-fixed-dim border-b border-outline/40 pb-2 uppercase">
+            VERIFIED STATISTICAL OUTCOME
+          </div>
+<div class="grid grid-cols-2 gap-3 text-body-sm">
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Draft Unlocked</p>
+<p class="text-headline-sm font-headline-sm font-bold text-white font-code-metric">-17.5m CD</p>
+<p class="text-label-sm font-label-sm text-surface-variant">24/7 Tidal Independence</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Execution Speed</p>
+<p class="text-headline-sm font-headline-sm font-bold text-secondary-fixed font-code-metric">90 Days</p>
+<p class="text-label-sm font-label-sm text-surface-variant">18 Days Ahead of Schedule</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Excavated Mass</p>
+<p class="text-headline-sm font-headline-sm font-bold text-white font-code-metric">4.8M m³</p>
+<p class="text-label-sm font-label-sm text-surface-variant">MoEFCC Cleared Disposal</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Statutory Compliance</p>
+<p class="text-headline-sm font-headline-sm font-bold text-secondary-fixed font-code-metric">100%</p>
+<p class="text-label-sm font-label-sm text-surface-variant">IRS &amp; DGS Endorsed</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Dredging Operations & Channel Deepening Manifest Table -->
+<section class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-sm overflow-hidden space-y-4 p-5">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-label-sm font-label-sm font-code-metric uppercase text-secondary">ACTIVE OPERATIONS // SECURE BATHYMETRIC FEEDS</span>
+<h2 class="text-headline-md font-headline-md text-primary">Live Dredging Operations, Channel Deepening &amp; Fleet Manifest</h2>
+</div>
+<!-- Controls -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="relative">
+<input class="text-body-sm font-body-sm border border-outline-variant rounded pl-8 pr-3 py-1.5 focus:border-secondary focus:ring-1 focus:ring-secondary w-48 sm:w-56" placeholder="Filter project or vessel..." type="text"/>
+<span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[18px]" data-icon="filter_list">filter_list</span>
+</div>
+<button class="px-3 py-1.5 border border-outline-variant text-body-sm font-body-sm rounded hover:bg-surface-container-low text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+<span>Filter Sector</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container-high text-primary font-semibold text-body-sm font-body-sm rounded hover:bg-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="file_download">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Manifest Table -->
+<div class="overflow-x-auto border border-outline-variant rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-4">Project Code &amp; Sector</th>
+<th class="py-3 px-4">Dredge Architecture / Vessel</th>
+<th class="py-3 px-4">Dredge Volume / Target</th>
+<th class="py-3 px-4">Production Rate &amp; Slurry</th>
+<th class="py-3 px-4">Statutory Authority / Class</th>
+<th class="py-3 px-4">Operational Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-DR-8801</div>
+<div class="text-outline text-label-sm font-label-sm">JNPT Approach Fairway</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">TSHD Samudra Vikram</div>
+<div class="text-label-sm font-label-sm text-outline">12,500 m³ Hopper Capacity</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">4.8M m³</div>
+<div class="text-secondary text-label-sm font-label-sm">Target: -16.5m CD</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div>4,200 m³/hr</div>
+<div class="text-label-sm font-label-sm text-outline">1.48 t/m³ Slurry Density</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">JNPA / IRS Class</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-blue-50 text-secondary border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Active Capital Deepening / 74%
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-CS-3340</div>
+<div class="text-outline text-label-sm font-label-sm">Vadhavan Port New Basin</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">CSD Vajra Shakti</div>
+<div class="text-label-sm font-label-sm text-outline">4,500 kW Heavy Rock Cutter</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">3.2M m³ Basalt</div>
+<div class="text-secondary text-label-sm font-label-sm">Target: -20.0m CD</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div>1,850 m³/hr</div>
+<div class="text-label-sm font-label-sm text-outline">High-Density Rock Slurry</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">MoPSW / DNV GL</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-amber-50 text-amber-800 border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Hard Rock Excavation &amp; Trenching
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-RC-5520</div>
+<div class="text-outline text-label-sm font-label-sm">Vizhinjam Transshipment</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">Crane Barge CB-04 &amp; Hopper</div>
+<div class="text-label-sm font-label-sm text-outline">Accropode Armor Unit Layer</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">2.1M m³ Reclamation</div>
+<div class="text-secondary text-label-sm font-label-sm">Revetment Bund Fill</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div>Vibroflotation Prep</div>
+<div class="text-label-sm font-label-sm text-outline">Ground Consolidation</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">Vizhinjam Port / IRS</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-blue-50 text-secondary border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Armoring &amp; Bund Consolidation
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-MN-1108</div>
+<div class="text-outline text-label-sm font-label-sm">Hooghly River Navigation</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">TSHD Ganga Rakshak</div>
+<div class="text-label-sm font-label-sm text-outline">4,500 m³ Shallow Draft</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">1.9M m³ Silt Sweep</div>
+<div class="text-secondary text-label-sm font-label-sm">Target: -8.2m CD</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div>3,100 m³/hr</div>
+<div class="text-label-sm font-label-sm text-outline">Continuous Silt Scour</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">SMP Kolkata / BV</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  Continuous Maintenance Dredging
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-HY-9042</div>
+<div class="text-outline text-label-sm font-label-sm">Gulf of Khambhat Corridor</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">RV Sagardhwani</div>
+<div class="text-label-sm font-label-sm text-outline">Hydrographic Catamaran</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">84 km Corridor</div>
+<div class="text-secondary text-label-sm font-label-sm">MBES &amp; Sub-Bottom Profiling</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div>High-Res 0.05m Mesh</div>
+<div class="text-label-sm font-label-sm text-outline">Acoustic Seabed Mapping</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">IHO / Indian Navy NHO</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-purple-50 text-purple-800 border border-purple-200">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+                  Pre-Dredge Survey Attestation
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline pt-1">
+<span>Displaying 5 of 32 Sovereign Operations Nationwide</span>
+<span>Data verified via Coastal AIS &amp; Bathymetric Telemetry Gateway</span>
+</div>
+</section>
+<!-- Sovereign Technology & Regulatory Accreditations Strip -->
+<section class="bg-surface-container-low p-6 rounded-lg border border-outline-variant space-y-4">
+<div class="text-center space-y-1">
+<span class="text-label-sm font-label-sm uppercase font-code-metric text-secondary">INSTITUTIONAL INTEGRATION &amp; REGULATORY COMPLIANCE</span>
+<h3 class="text-title-md font-title-md text-primary">Endorsed &amp; Certified by National &amp; Global Maritime Authorities</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="policy">policy</span>
+<span class="text-label-md font-label-md font-semibold text-primary">DGS India</span>
+<span class="text-[10px] text-outline">Directorate General of Shipping</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="sailing">sailing</span>
+<span class="text-label-md font-label-md font-semibold text-primary">IWAI</span>
+<span class="text-[10px] text-outline">Inland Waterways Authority</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="map">map</span>
+<span class="text-label-md font-label-md font-semibold text-primary">IHO S-44</span>
+<span class="text-[10px] text-outline">Hydrographic Organization</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="engineering">engineering</span>
+<span class="text-label-md font-label-md font-semibold text-primary">CEDA &amp; WEDA</span>
+<span class="text-[10px] text-outline">Dredging Association</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="verified">verified</span>
+<span class="text-label-md font-label-md font-semibold text-primary">IRS Class</span>
+<span class="text-[10px] text-outline">Indian Register of Shipping</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="eco">eco</span>
+<span class="text-label-md font-label-md font-semibold text-primary">MoEFCC Clearance</span>
+<span class="text-[10px] text-outline">Green Coastal Protocols</span>
+</div>
+</div>
+</section>
+<!-- Consultation & Mobilization Desk -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 md:p-8 space-y-6" id="mobilization-desk">
+<div class="border-b border-outline-variant pb-4">
+<span class="text-label-sm font-label-sm font-code-metric uppercase text-secondary">DIRECT COMMISSIONING PORTAL</span>
+<h2 class="text-headline-md font-headline-md text-primary">Dredging Fleet Mobilization &amp; Hydrographic Request Desk</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          Authorized for Port Trusts, State Maritime Boards, Defense Establishments, and Private Terminal Operators.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left: Direct Bureau Access -->
+<div class="lg:col-span-5 space-y-6">
+<div class="space-y-4">
+<h3 class="text-title-md font-title-md text-primary">Direct Bureau Access &amp; Dispatch Cell</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Submit your navigational channel dimensions, bathymetric contour surveys, or emergency harbor siltation notices directly to our central dredging operations superintendent.
+            </p>
+</div>
+<div class="space-y-4 text-body-sm font-body-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5" data-icon="call">call</span>
+<div>
+<p class="font-semibold text-primary">24/7 Chief Dredging Superintendent Line</p>
+<p class="text-on-surface-variant font-code-metric">+91 22 2261-0945 / +91 98200 44521</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5" data-icon="mail">mail</span>
+<div>
+<p class="font-semibold text-primary">Operations Dispatch Email</p>
+<p class="text-on-surface-variant font-code-metric">dredging.ops@marinecorp.gov.in</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5" data-icon="location_on">location_on</span>
+<div>
+<p class="font-semibold text-primary">Central Hydrographic Headquarters</p>
+<p class="text-on-surface-variant">Sovereign Marine Tower, SBS Road, Port Trust Estate, Mumbai 400001, India</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded border border-outline-variant space-y-2">
+<div class="flex items-center gap-2 text-label-md font-label-md font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="security">security</span>
+              Sovereign Official Secrets Act &amp; Coastal Defense
+            </div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">
+              All bathymetric soundings, subsea trenching manifests, and fairway elevation maps are classified under Sovereign Indian Coastal Defense protocols. Secure digital handshakes mandatory for data release.
+            </p>
+</div>
+</div>
+<!-- Right: Mobilization Request Form -->
+<div class="lg:col-span-7 bg-background p-6 rounded-lg border border-outline-variant space-y-4">
+<h3 class="text-title-md font-title-md text-primary mb-2">Interactive Dredge Mobilization Request</h3>
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Port / Navigational Sector Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="e.g. Kandla Port Fairway Reach" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Target Channel Depth &amp; Seabed Stratum</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary">
+<option>Maintenance Silt (-10m to -14m)</option>
+<option>Capital Deepening (-14m to -18m)</option>
+<option>Deepwater Trenching (-18m to -25m)</option>
+<option>Hard Rock Stratum / Basalt Breaking</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Dredging Methodology Required</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary">
+<option>Trailing Suction Hopper (TSHD)</option>
+<option>Heavy Cutter Suction (CSD)</option>
+<option>Marine Land Reclamation</option>
+<option>Multibeam Bathymetric Survey</option>
+</select>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Estimated In-Situ Volume (m³)</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary font-code-metric" placeholder="e.g. 2,500,000 m³" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Target Mobilization Window</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" type="date"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Project Requirements &amp; Silt Disposal Details</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" placeholder="Outline specific dredge dumping coordinates, environmental silt curtain needs, or high-current restrictions..." rows="3"></textarea>
+</div>
+<div class="flex items-start gap-2 pt-1">
+<input class="mt-1 rounded text-primary focus:ring-secondary border-outline-variant" id="prelim-chart" type="checkbox"/>
+<label class="text-label-sm font-label-sm text-on-surface-variant" for="prelim-chart">
+                Request preliminary bathymetric depth chart analysis &amp; sediment disposal feasibility model
+              </label>
+</div>
+<button class="w-full py-3 bg-primary-container hover:bg-secondary text-white font-semibold rounded text-body-md font-body-md transition-colors duration-150 flex items-center justify-center gap-2 shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="anchor">anchor</span>
+              Submit Dredging Fleet Mobilization Request
+            </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary dark:bg-inverse-surface text-primary-fixed dark:text-primary-fixed-dim border-t border-outline-variant dark:border-outline mt-space-xl">
+<div class="w-full px-margin py-space-xl max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<!-- Top Row: Brand & Summary -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b border-outline/30 pb-space-lg">
+<div class="space-y-1">
+<div class="text-headline-sm font-headline-sm font-bold text-surface-container-lowest dark:text-surface-bright uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" data-icon="anchor">anchor</span>
+            Marine Corporation of India
+          </div>
+<p class="text-body-sm font-body-sm text-on-primary-container dark:text-on-surface-variant">
+            Sovereign Maritime Operations, Dredging Fleet &amp; Hydrographic Survey Directorate.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="text-surface-container-lowest dark:text-surface-bright font-medium text-body-sm font-body-sm hover:text-secondary-fixed transition-colors duration-150" href="#">Fleet Telemetry API</a>
+<a class="text-on-primary-container dark:text-on-surface-variant text-body-sm font-body-sm hover:text-secondary-fixed transition-colors duration-150" href="#">Port Authority Clearances</a>
+<a class="text-on-primary-container dark:text-on-surface-variant text-body-sm font-body-sm hover:text-secondary-fixed transition-colors duration-150" href="#">Emergency Silt Protocol</a>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-label-sm font-label-sm">
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">SOVEREIGN FLEET</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">TSHD Mega Hoppers</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Heavy Rock CSDs</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Split Hopper Barges</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Grab Dredging Units</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">HYDROGRAPHY</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Multibeam Bathymetry</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Sub-Bottom Chirp</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">IHO Chart Compliance</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">LiDAR Topography</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">CIVIL WORKS</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Land Reclamation</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Breakwater Armoring</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Accropode Placement</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Subsea Trenching</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">STATUTORY</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Sovereign Dredging Protocols</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">DGS Clearances</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">IWAI Waterway Acts</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">MoEFCC Environmental</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">TELEMETRY</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Bathymetric AIS Feeds</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Channel Depth Manifests</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Swell Sensor Arrays</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Tidal Harmonic Gauge</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">GOVERNANCE</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">National Logistics Policy</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Sagarmala Initiative</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Defense Maritime Access</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">RTI &amp; Compliance</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Row: Mandatory Copyright String & Compliance -->
+<div class="border-t border-outline/30 pt-space-md flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-on-primary-container dark:text-on-surface-variant gap-2">
+<p class="text-label-sm font-label-sm">
+          © 2024 Marine Corporation of India. Sovereign Maritime Operations &amp; Hydrographic Survey Directorate. Certified DGS, IWAI, MoPSW &amp; IHO Compliant.
+        </p>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<span class="text-surface-container-lowest">IHO S-44 Order 1a</span>
+<span>•</span>
+<span class="text-surface-container-lowest">IRS Class Certified</span>
+<span>•</span>
+<span class="text-surface-container-lowest">ISO 14001 Marine</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

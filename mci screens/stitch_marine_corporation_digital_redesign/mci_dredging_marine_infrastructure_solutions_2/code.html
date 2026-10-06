@@ -1,0 +1,1858 @@
+<!DOCTYPE html><html lang="en" style=""><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>MCI — Dredging &amp; Marine Infrastructure Solutions</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-fixed-variant": "#004d67",
+            "outline": "#73777f",
+            "on-primary-fixed-variant": "#2b486a",
+            "surface-tint": "#436083",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-secondary-fixed": "#001e30",
+            "error-container": "#ffdad6",
+            "surface-variant": "#d6e4f3",
+            "primary-fixed": "#d2e4ff",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#c3c6cf",
+            "secondary-container": "#84c8fe",
+            "surface-dim": "#cddceb",
+            "on-surface-variant": "#43474e",
+            "primary-fixed-dim": "#abc9f0",
+            "surface-container-high": "#dbeaf9",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#90cff0",
+            "primary-container": "#0d2f4f",
+            "on-primary-container": "#7a97bd",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#001c37",
+            "surface-container": "#e1f0ff",
+            "background": "#f6f9ff",
+            "surface": "#f6f9ff",
+            "secondary": "#046494",
+            "on-secondary-fixed-variant": "#004b71",
+            "inverse-primary": "#abc9f0",
+            "tertiary": "#001c28",
+            "surface-container-highest": "#d6e4f3",
+            "surface-bright": "#f6f9ff",
+            "secondary-fixed": "#cbe6ff",
+            "on-tertiary-container": "#5e9dbd",
+            "inverse-on-surface": "#e6f2ff",
+            "on-error-container": "#93000a",
+            "secondary-fixed-dim": "#90cdff",
+            "primary": "#001a32",
+            "on-background": "#0f1d28",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#ecf4ff",
+            "on-tertiary-fixed": "#001e2b",
+            "inverse-surface": "#24323d",
+            "on-secondary-container": "#00537d",
+            "on-surface": "#0f1d28",
+            "tertiary-fixed": "#c1e8ff",
+            "tertiary-container": "#003244"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "2.5rem",
+            "margin-sm": "1rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "title-md": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "headline-sm": ["Manrope"],
+            "label-md": ["Inter"],
+            "display-hero": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "display-hero-mobile": ["Manrope"],
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary selection:text-white">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-container-lowest dark:bg-primary-container border-b border-outline-variant dark:border-outline sticky top-0 z-50">
+<div class="w-full mx-auto px-margin flex items-center justify-between h-16 max-w-[1440px]">
+<!-- Brand & Entity -->
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-sm text-decoration-none" href="#">
+<span class="material-symbols-outlined text-secondary text-[26px]" data-icon="anchor">anchor</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary dark:text-primary-fixed uppercase tracking-tight">
+            Marine Corporation of India
+          </span>
+</a>
+<span class="hidden xl:inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-high text-primary border border-outline-variant">
+          DREDGING &amp; CIVIL CORPS
+        </span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-space-lg">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#">Fleet Telemetry</a>
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed pb-1 font-semibold text-title-md font-title-md transition-colors duration-150" href="#">Civil Suites</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#">Deepening Manifest</a>
+<button class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150 flex items-center gap-1" onclick="openBathymetricModal()">
+<span class="">Hydrographic Tools</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</button>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed pb-1 text-title-md font-title-md transition-colors duration-150" href="#mobilization-desk">Mobilization Desk</a>
+</nav>
+<!-- Trailing Actions & Profile -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden lg:flex items-center relative">
+<input class="bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface pl-8 pr-3 py-1.5 rounded focus:border-secondary focus:ring-1 focus:ring-secondary w-56" placeholder="Search hydrographic coordinates..." type="text">
+<span class="material-symbols-outlined absolute left-2 text-outline text-[18px]" data-icon="search">search</span>
+</div>
+<button class="p-2 text-on-surface-variant hover:text-primary rounded hover:bg-surface-container-low transition-colors duration-150" title="Notifications">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications">notifications</span>
+</button>
+<button class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 border border-secondary/30 bg-surface-container-low text-body-sm font-body-sm text-secondary hover:bg-secondary hover:text-white rounded transition-colors duration-150" onclick="openBathymetricModal('JNPT Fairway Approach')">
+<span class="material-symbols-outlined text-[18px]" data-icon="radar">radar</span>
+<span class="">Bathymetric Profiler</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-primary-container text-on-primary text-body-sm font-body-sm font-semibold rounded hover:bg-secondary transition-colors duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+<span class="">Dispatch Portal</span>
+</button>
+<div class="w-8 h-8 rounded-full border border-outline-variant overflow-hidden ml-1">
+<img class="w-full h-full object-cover" data-alt="A dignified close-up portrait of a Chief Hydrographer and Fleet Director of the Indian Marine Corporation in full naval white uniform, standing against an ultra-modern maritime operations bridge with radar screens, soft cool high-key lighting, technical charts in background, ultra-sharp corporate precision aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz--3nf5LrspCbB3qoAWYJce4x9VihjsuJ-HXmfU4XL6qVHQMNC8999EPlTcgtRtyPjPjYEwY8XVgf7aLMwLUTu_oGx9mxLlZEkhddnUPJPPPU0HWGnu2XONl_bM3lDA08cXz_k75EyKRnrU-C5OcwFajLPGUC2subStv_CqcNwx2-nLDB2wVzXQHR1vs7kpW6WHqaNt3NvwhavZxlH7i5Zm_HTJsYgnYAnRnR8PQWZswRLRf76d1c">
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumb & System State Indicator Bar -->
+<div class="border-b border-outline-variant bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto px-margin py-2 flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="">Services Directory</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="">Dredging &amp; Marine Infrastructure</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-semibold">VERTICAL 07 // DREDGING &amp; MARINE CIVIL INFRASTRUCTURE</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="inline-flex items-center gap-1.5 text-label-sm font-label-sm font-code-metric px-2 py-0.5 rounded bg-surface-container-low border border-outline-variant text-secondary hover:bg-secondary hover:text-white transition-colors" onclick="openBathymetricModal()">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          SYS.STATUS: OPERATIONAL // DREDGE DISPATCH CELL 07 ACTIVE // CODE: MCI-ENG-DREDGE-07
+</button>
+</div>
+</div>
+</div>
+<main class="max-w-[1440px] mx-auto px-margin py-space-xl space-y-space-xl">
+<!-- Hero Section with Authority Badges and Dual Action CTAs -->
+<section class="space-y-space-lg">
+<div class="max-w-4xl space-y-space-sm">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container-high rounded border border-outline-variant text-label-sm font-label-sm text-primary font-semibold tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="verified_user">verified_user</span>
+          MINISTRY OF PORTS, SHIPPING &amp; WATERWAYS // DGS &amp; IWAI RECOGNIZED SOVEREIGN DREDGING CORPS // IHO STANDARDS COMPLIANT
+        </div>
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-primary tracking-tight">
+          Sovereign Capital Dredging, Deep-Draft Channel Deepening &amp; Marine Civil Infrastructure
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">
+          End-to-end national maritime civil logistics: large-scale capital &amp; maintenance dredging, deep navigation channel deepening, island &amp; port land reclamation, coastal revetment armoring, and subsea trenching executed by India's sovereign dredging fleet.
+        </p>
+<!-- CTAs -->
+<div class="pt-2 flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded bg-primary-container text-white text-body-md font-body-md font-semibold hover:bg-secondary transition-colors duration-150 shadow-sm" href="#mobilization-desk">
+<span class="material-symbols-outlined text-[20px]" data-icon="rocket_launch">rocket_launch</span>
+            Commission Dredging Fleet &amp; Civil Survey
+          </a>
+<button class="inline-flex items-center gap-2 px-4 py-3 rounded border border-secondary text-primary-container bg-surface-container-low hover:bg-surface-variant text-body-md font-body-md font-semibold transition-colors duration-150 shadow-sm" onclick="openBathymetricModal('JNPT Fairway Approach')">
+<span class="material-symbols-outlined text-[20px] text-secondary" data-icon="radar">radar</span>
+            Launch Bathymetric Depth Analyzer
+          </button>
+<button class="inline-flex items-center gap-2 px-4 py-3 rounded border border-outline text-on-surface-variant bg-transparent hover:bg-surface-container-low text-body-md font-body-md font-medium transition-colors duration-150">
+<span class="material-symbols-outlined text-[20px]" data-icon="download">download</span>
+            Capabilities &amp; Fleet Specs (PDF)
+          </button>
+</div>
+<!-- Compliance & Accreditations Micro Badges -->
+<div class="pt-2 flex flex-wrap items-center gap-y-2 gap-x-4 text-label-sm font-label-sm text-on-surface-variant">
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            IHO S-44 Order 1a Hydrographic Survey Certified
+          </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            MoPSW &amp; IWAI Sovereign Dredging Fleet Operator
+          </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            ISO 9001 &amp; ISO 14001 Marine Environmental Safety
+          </span>
+<span class="inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="check_circle">check_circle</span>
+            CEDA &amp; WEDA Accredited Dredging Engineers
+          </span>
+</div>
+</div>
+<!-- Hero Visual with Technical Telemetry Overlay -->
+<div class="relative w-full rounded-xl overflow-hidden border border-outline-variant bg-primary-container shadow-md group">
+<div class="h-[440px] md:h-[520px] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A massive modern trailing suction hopper dredger vessel operating in deep sovereign ocean approach channel under dramatic moody oceanic clouds with industrial dredging arms deployed, heavy churned wake water, precision technical marine engineering aesthetic in deep maritime blues and white foam." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD249AXtTac_44gRVBuFs52z5pQkz6s-9T3Oy8oO0MeDcGK9IiwYt7yTwQ7luOZ6GWL1gqUqPFkjiSi8dPI5YUMLojzefOJhRd7cVD-uIhQHRtjD3Cs2nPbgmB_HRPkntV5g3SJt-USJnPyXFEq2xdik4_p_MYgmu3_kJDPxl9vHVm7FKe-U_QjDdyxAoSkgLWffLeSLZxbzD3OSpuxk9nWTFh1JzAxx_Ei9ksqJJ93aFD9OdD0RyUe">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent"></div>
+</div>
+<!-- Floating Telemetry HUD Card -->
+<div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-auto md:max-w-xl bg-surface-container-lowest/95 backdrop-blur-md p-5 rounded-lg border border-outline-variant shadow-lg space-y-3">
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+<span class="text-label-md font-label-md font-code-metric text-primary uppercase">LIVE FLEET TELEMETRY: TSHD FLEET HARBOR SECTOR 04</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">PORT ENNORE &amp; CHENNAI DEEP APPROACH</span>
+</div>
+<div class="grid grid-cols-2 gap-3 text-body-sm font-body-sm">
+<div>
+<p class="text-label-sm font-label-sm text-outline">Active Dredger</p>
+<p class="font-semibold text-primary">TSHD SAMUDRA VIKRAM</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant font-code-metric">Hopper: 12,500 m³</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline">Target Nav Depth</p>
+<p class="font-semibold text-secondary font-code-metric">-18.5m CD (Chart Datum)</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant">Tidal Independence</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline">Slurry Pumping Density</p>
+<p class="font-semibold text-primary font-code-metric">1.48 t/m³ @ 4,200 m³/hr</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline">Trailing Suction Depth</p>
+<p class="font-semibold text-primary font-code-metric">32.0m Max LOA Reach</p>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-2 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span class="">Master: Capt. R. K. Mukherjee, CEng FIMarEST</span>
+<button class="text-secondary hover:underline font-semibold flex items-center gap-1" onclick="openBathymetricModal('Ennore Deep Approach')">
+<span class="">Inspect Bathymetry</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- KPI Metrics Strip -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">ANNUAL EXCAVATION</span>
+<span class="material-symbols-outlined text-secondary" data-icon="waves">waves</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">85M+ m³</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Capital deepening, maintenance cuts &amp; sovereign defense channel clearance.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">DREDGE &amp; SURVEY FLEET</span>
+<span class="material-symbols-outlined text-secondary" data-icon="directions_boat">directions_boat</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">35+ Vessels</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Large TSHDs, Heavy CSDs, Grab dredgers &amp; Hydrographic Catamarans.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">MAX CHANNEL DEPTH</span>
+<span class="material-symbols-outlined text-secondary" data-icon="straighten">straighten</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">-35.0m CD</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Deep offshore trenches, LNG berths &amp; Capesize navigation channel access.</p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-outline-variant shadow-sm hover:border-secondary transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="text-label-md font-label-md uppercase text-outline">RAPID SWELL MOBILIZATION</span>
+<span class="material-symbols-outlined text-secondary" data-icon="timer">timer</span>
+</div>
+<div class="text-headline-xl font-headline-xl text-primary font-bold tracking-tight">&lt; 48 Hours</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Emergency harbor siltation rapid response across all 12 major Indian ports.</p>
+</div>
+</section>
+<!-- Core Engineering Suites (Bento / High-contrast Technical Grid) -->
+<section class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-outline-variant pb-4">
+<div>
+<span class="text-label-md font-label-md uppercase text-secondary font-code-metric">ENGINEERING SUITES // CAPABILITIES CATALOGUE</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Specialized Marine Civil &amp; Hydro-Excavation Divisions</h2>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-md">
+          Standardized under Indian Register of Shipping (IRS) and International Association of Marine Contractors (CEDA) guidelines.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Suite 01 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 01 // TSHD &amp; CAPITAL
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="reorder">reorder</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Trailing Suction Hopper Dredging &amp; Deep Channels</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Long-distance trailing suction, continuous dredging in high-swell offshore fairways, bottom dumping and rainbowing reclamation for deep-draft container harbors.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Twin 1,000mm suction pipes with active swell compensation up to 3.5m wave height</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Integrated Dredge View 3D real-time bathymetry and automated dredge draghead tracking</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Self-discharge bow coupling &amp; offshore rainbowing distance up to 120 meters</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">High-Swell Capable</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Mega Hopper 12.5k m³</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">RTK GNSS Positioning</span>
+</div>
+</div>
+<!-- Suite 02 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 02 // CSD &amp; HARD ROCK
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Heavy Cutter Suction &amp; Hard Stratum Breaking</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                High-torque cutter head dredging in calcified basalt, sandstone, and hard seabed formations without explosive blasting. Subsea pipeline pre-trenching.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">4,500 kW heavy rock cutter head with tungsten carbide chisel points</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Subsea rock chipping without shockwave disruption to port marine ecology</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Heavy spud carriage system capable of operating in 4 knot cross-currents</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">4,500 kW Rock Power</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Zero-Blast Excavation</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Pipeline Trenching</span>
+</div>
+</div>
+<!-- Suite 03 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 03 // CIVIL &amp; RECLAMATION
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="foundation">foundation</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Port Land Reclamation &amp; Breakwater Armoring</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Geotextile containment bunding, hydraulic sand filling, vibroflotation ground improvement, tetrapod/accropode armor placement for deepwater harbor protection.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Geosynthetic tubes and perimeter revetment dykes for dredge spoil containment</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Deep vibro-compaction to achieve 250 kPa post-reclamation bearing capacity</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">GPS-guided 40-tonne crane barge placement of CORE-LOC and Accropode units</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Accropode Armoring</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Vibro-Compaction</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Eco-Geobag Bunds</span>
+</div>
+</div>
+<!-- Suite 04 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-secondary font-code-metric text-label-sm font-label-sm border border-outline-variant">
+                SUITE 04 // HYDROGRAPHY &amp; SURVEY
+              </span>
+<span class="material-symbols-outlined text-secondary text-[28px]" data-icon="radar">radar</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">Multibeam Bathymetry &amp; Seabed Telemetry</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                High-resolution multibeam echo sounding (MBES), sub-bottom acoustic profiling, side-scan sonar silt migration monitoring, and real-time nautical chart drafting.
+              </p>
+</div>
+<ul class="space-y-2 text-body-sm font-body-sm text-on-surface border-t border-outline-variant pt-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Dual-head 400 kHz multibeam sonar with 0.02m vertical sounding accuracy</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Chirp sub-bottom profiling identifying sediment strata down to 50m below seabed</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary" data-icon="check">check</span>
+<span class="">Real-time CARIS HIPS/SIPS processing for immediate DGS and IHO S-44 compliance</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex flex-wrap items-center justify-between gap-2">
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">IHO S-44 Order 1a</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">LiDAR Bathymetry</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-label-sm font-label-sm">Sub-Bottom Profiling</span>
+</div>
+<button class="text-secondary hover:text-primary font-semibold text-label-sm font-label-sm flex items-center gap-1" onclick="openBathymetricModal()">
+<span class="">Launch Profiler</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Case Study Spotlight (JNPT Fairway Elevation) -->
+<section class="bg-primary-container text-white rounded-xl overflow-hidden border border-outline p-6 md:p-8 space-y-6">
+<div class="flex flex-wrap items-center justify-between gap-4 border-b border-outline/50 pb-4">
+<div>
+<span class="text-label-sm font-label-sm font-code-metric text-secondary-fixed uppercase tracking-wider">
+            CASE STUDY SPOTLIGHT // NATIONAL MARITIME CORRIDOR 01
+          </span>
+<h2 class="text-headline-md font-headline-md text-white mt-1">
+            Sovereign Maritime Deepening Breakthrough // Jawaharlal Nehru Port Fairway Elevation
+          </h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1 rounded bg-secondary-fixed text-primary text-label-sm font-label-sm font-code-metric font-semibold hover:bg-white transition-colors flex items-center gap-1.5" onclick="openBathymetricModal('JNPT Fairway Approach')">
+<span class="material-symbols-outlined text-[16px]" data-icon="insights">insights</span>
+<span class="">Inspect Bathymetric Mesh</span>
+</button>
+<span class="px-3 py-1 rounded bg-secondary text-white text-label-sm font-label-sm font-code-metric">
+            PROJECT CERTIFIED &amp; COMPLETED
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-7 space-y-4 text-surface-variant font-body-md">
+<div class="space-y-1">
+<h4 class="text-white font-semibold text-title-md font-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" data-icon="report_problem">report_problem</span>
+              Defect / Baseline Threat
+            </h4>
+<p class="text-body-sm font-body-sm text-surface-variant">
+              Heavy seasonal monsoon siltation reduced JNPT container vessel access to tidal windows, risking off-hire demurrage for ultra-large 20,000+ TEU container vessels and bottlenecking national supply chains.
+            </p>
+</div>
+<div class="space-y-1">
+<h4 class="text-white font-semibold text-title-md font-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]" data-icon="build_circle">build_circle</span>
+              Sovereign MCI Engineering Solution
+            </h4>
+<p class="text-body-sm font-body-sm text-surface-variant">
+              Deployed twin mega-TSHDs with dynamic trailing dragheads and real-time RTK-GNSS seabed profiling, operating continuously in adverse sea states to excise 4.8M m³ of consolidated silt and hard clay within 90 days.
+            </p>
+</div>
+</div>
+<div class="lg:col-span-5 bg-tertiary-container/80 rounded-lg p-5 border border-outline/60 space-y-3">
+<div class="text-label-sm font-label-sm font-code-metric text-secondary-fixed-dim border-b border-outline/40 pb-2 uppercase">
+            VERIFIED STATISTICAL OUTCOME
+          </div>
+<div class="grid grid-cols-2 gap-3 text-body-sm">
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Draft Unlocked</p>
+<p class="text-headline-sm font-headline-sm font-bold text-white font-code-metric">-17.5m CD</p>
+<p class="text-label-sm font-label-sm text-surface-variant">24/7 Tidal Independence</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Execution Speed</p>
+<p class="text-headline-sm font-headline-sm font-bold text-secondary-fixed font-code-metric">90 Days</p>
+<p class="text-label-sm font-label-sm text-surface-variant">18 Days Ahead of Schedule</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Excavated Mass</p>
+<p class="text-headline-sm font-headline-sm font-bold text-white font-code-metric">4.8M m³</p>
+<p class="text-label-sm font-label-sm text-surface-variant">MoEFCC Cleared Disposal</p>
+</div>
+<div>
+<p class="text-label-sm font-label-sm text-outline-variant">Statutory Compliance</p>
+<p class="text-headline-sm font-headline-sm font-bold text-secondary-fixed font-code-metric">100%</p>
+<p class="text-label-sm font-label-sm text-surface-variant">IRS &amp; DGS Endorsed</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Dredging Operations & Channel Deepening Manifest Table -->
+<section class="bg-surface-container-lowest rounded-lg border border-outline-variant shadow-sm overflow-hidden space-y-4 p-5">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-label-sm font-label-sm font-code-metric uppercase text-secondary">ACTIVE OPERATIONS // SECURE BATHYMETRIC FEEDS</span>
+<h2 class="text-headline-md font-headline-md text-primary">Live Dredging Operations, Channel Deepening &amp; Fleet Manifest</h2>
+</div>
+<!-- Controls -->
+<div class="flex flex-wrap items-center gap-2">
+<div class="relative">
+<input class="text-body-sm font-body-sm border border-outline-variant rounded pl-8 pr-3 py-1.5 focus:border-secondary focus:ring-1 focus:ring-secondary w-48 sm:w-56" placeholder="Filter project or vessel..." type="text">
+<span class="material-symbols-outlined absolute left-2 top-2 text-outline text-[18px]" data-icon="filter_list">filter_list</span>
+</div>
+<button class="px-3 py-1.5 border border-outline-variant text-body-sm font-body-sm rounded hover:bg-surface-container-low text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="tune">tune</span>
+<span class="">Filter Sector</span>
+</button>
+<button class="px-3 py-1.5 bg-surface-container-high text-primary font-semibold text-body-sm font-body-sm rounded hover:bg-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]" data-icon="file_download">file_download</span>
+<span class="">Export CSV</span>
+</button>
+</div>
+</div>
+<!-- Manifest Table -->
+<div class="overflow-x-auto border border-outline-variant rounded">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="py-3 px-4">Project Code &amp; Sector</th>
+<th class="py-3 px-4">Dredge Architecture / Vessel</th>
+<th class="py-3 px-4">Dredge Volume / Target</th>
+<th class="py-3 px-4">Production Rate &amp; Slurry</th>
+<th class="py-3 px-4">Statutory Authority / Class</th>
+<th class="py-3 px-4">Operational Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-DR-8801</div>
+<div class="text-outline text-label-sm font-label-sm">JNPT Approach Fairway</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">TSHD Samudra Vikram</div>
+<div class="text-label-sm font-label-sm text-outline">12,500 m³ Hopper Capacity</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">4.8M m³</div>
+<div class="text-secondary text-label-sm font-label-sm">Target: -16.5m CD</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="">4,200 m³/hr</div>
+<div class="text-label-sm font-label-sm text-outline">1.48 t/m³ Slurry Density</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">JNPA / IRS Class</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-blue-50 text-secondary border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Active Capital Deepening / 74%
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-CS-3340</div>
+<div class="text-outline text-label-sm font-label-sm">Vadhavan Port New Basin</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">CSD Vajra Shakti</div>
+<div class="text-label-sm font-label-sm text-outline">4,500 kW Heavy Rock Cutter</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">3.2M m³ Basalt</div>
+<div class="text-secondary text-label-sm font-label-sm">Target: -20.0m CD</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="">1,850 m³/hr</div>
+<div class="text-label-sm font-label-sm text-outline">High-Density Rock Slurry</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">MoPSW / DNV GL</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-amber-50 text-amber-800 border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  Hard Rock Excavation &amp; Trenching
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-RC-5520</div>
+<div class="text-outline text-label-sm font-label-sm">Vizhinjam Transshipment</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">Crane Barge CB-04 &amp; Hopper</div>
+<div class="text-label-sm font-label-sm text-outline">Accropode Armor Unit Layer</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">2.1M m³ Reclamation</div>
+<div class="text-secondary text-label-sm font-label-sm">Revetment Bund Fill</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="">Vibroflotation Prep</div>
+<div class="text-label-sm font-label-sm text-outline">Ground Consolidation</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">Vizhinjam Port / IRS</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-blue-50 text-secondary border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Armoring &amp; Bund Consolidation
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-MN-1108</div>
+<div class="text-outline text-label-sm font-label-sm">Hooghly River Navigation</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">TSHD Ganga Rakshak</div>
+<div class="text-label-sm font-label-sm text-outline">4,500 m³ Shallow Draft</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">1.9M m³ Silt Sweep</div>
+<div class="text-secondary text-label-sm font-label-sm">Target: -8.2m CD</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="">3,100 m³/hr</div>
+<div class="text-label-sm font-label-sm text-outline">Continuous Silt Scour</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">SMP Kolkata / BV</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+                  Continuous Maintenance Dredging
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-4">
+<div class="font-semibold text-primary font-code-metric">MCI-HY-9042</div>
+<div class="text-outline text-label-sm font-label-sm">Gulf of Khambhat Corridor</div>
+</td>
+<td class="py-3 px-4">
+<div class="font-medium text-on-surface">RV Sagardhwani</div>
+<div class="text-label-sm font-label-sm text-outline">Hydrographic Catamaran</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="text-primary font-semibold">84 km Corridor</div>
+<div class="text-secondary text-label-sm font-label-sm">MBES &amp; Sub-Bottom Profiling</div>
+</td>
+<td class="py-3 px-4 font-code-metric">
+<div class="">High-Res 0.05m Mesh</div>
+<div class="text-label-sm font-label-sm text-outline">Acoustic Seabed Mapping</div>
+</td>
+<td class="py-3 px-4">
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container font-code-metric text-primary">IHO / Indian Navy NHO</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-purple-50 text-purple-800 border border-purple-200">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+                  Pre-Dredge Survey Attestation
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-outline pt-1">
+<span class="">Displaying 5 of 32 Sovereign Operations Nationwide</span>
+<span class="">Data verified via Coastal AIS &amp; Bathymetric Telemetry Gateway</span>
+</div>
+</section>
+<!-- Sovereign Technology & Regulatory Accreditations Strip -->
+<section class="bg-surface-container-low p-6 rounded-lg border border-outline-variant space-y-4">
+<div class="text-center space-y-1">
+<span class="text-label-sm font-label-sm uppercase font-code-metric text-secondary">INSTITUTIONAL INTEGRATION &amp; REGULATORY COMPLIANCE</span>
+<h3 class="text-title-md font-title-md text-primary">Endorsed &amp; Certified by National &amp; Global Maritime Authorities</h3>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="policy">policy</span>
+<span class="text-label-md font-label-md font-semibold text-primary">DGS India</span>
+<span class="text-[10px] text-outline">Directorate General of Shipping</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="sailing">sailing</span>
+<span class="text-label-md font-label-md font-semibold text-primary">IWAI</span>
+<span class="text-[10px] text-outline">Inland Waterways Authority</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="map">map</span>
+<span class="text-label-md font-label-md font-semibold text-primary">IHO S-44</span>
+<span class="text-[10px] text-outline">Hydrographic Organization</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="engineering">engineering</span>
+<span class="text-label-md font-label-md font-semibold text-primary">CEDA &amp; WEDA</span>
+<span class="text-[10px] text-outline">Dredging Association</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="verified">verified</span>
+<span class="text-label-md font-label-md font-semibold text-primary">IRS Class</span>
+<span class="text-[10px] text-outline">Indian Register of Shipping</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded border border-outline-variant flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[24px] mb-1" data-icon="eco">eco</span>
+<span class="text-label-md font-label-md font-semibold text-primary">MoEFCC Clearance</span>
+<span class="text-[10px] text-outline">Green Coastal Protocols</span>
+</div>
+</div>
+</section>
+<!-- Consultation & Mobilization Desk -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 md:p-8 space-y-6" id="mobilization-desk">
+<div class="border-b border-outline-variant pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div>
+<span class="text-label-sm font-label-sm font-code-metric uppercase text-secondary">DIRECT COMMISSIONING PORTAL</span>
+<h2 class="text-headline-md font-headline-md text-primary">Dredging Fleet Mobilization &amp; Hydrographic Request Desk</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          Authorized for Port Trusts, State Maritime Boards, Defense Establishments, and Private Terminal Operators.
+        </p>
+</div>
+<button class="self-start sm:self-auto inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-secondary text-secondary bg-surface-container-low hover:bg-secondary hover:text-white text-body-sm font-semibold transition-all shadow-sm" onclick="openBathymetricModal()">
+<span class="material-symbols-outlined text-[18px]" data-icon="grid_4x4">grid_4x4</span>
+<span class="">Launch Hydrographic Profiler</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left: Direct Bureau Access -->
+<div class="lg:col-span-5 space-y-6">
+<div class="space-y-4">
+<h3 class="text-title-md font-title-md text-primary">Direct Bureau Access &amp; Dispatch Cell</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Submit your navigational channel dimensions, bathymetric contour surveys, or emergency harbor siltation notices directly to our central dredging operations superintendent.
+            </p>
+</div>
+<div class="space-y-4 text-body-sm font-body-sm">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5" data-icon="call">call</span>
+<div>
+<p class="font-semibold text-primary">24/7 Chief Dredging Superintendent Line</p>
+<p class="text-on-surface-variant font-code-metric">+91 22 2261-0945 / +91 98200 44521</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5" data-icon="mail">mail</span>
+<div>
+<p class="font-semibold text-primary">Operations Dispatch Email</p>
+<p class="text-on-surface-variant font-code-metric">dredging.ops@marinecorp.gov.in</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5" data-icon="location_on">location_on</span>
+<div>
+<p class="font-semibold text-primary">Central Hydrographic Headquarters</p>
+<p class="text-on-surface-variant">Sovereign Marine Tower, SBS Road, Port Trust Estate, Mumbai 400001, India</p>
+</div>
+</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded border border-outline-variant space-y-2">
+<div class="flex items-center gap-2 text-label-md font-label-md font-semibold text-primary">
+<span class="material-symbols-outlined text-secondary text-[18px]" data-icon="security">security</span>
+              Sovereign Official Secrets Act &amp; Coastal Defense
+            </div>
+<p class="text-label-sm font-label-sm text-on-surface-variant">
+              All bathymetric soundings, subsea trenching manifests, and fairway elevation maps are classified under Sovereign Indian Coastal Defense protocols. Secure digital handshakes mandatory for data release.
+            </p>
+</div>
+</div>
+<!-- Right: Mobilization Request Form -->
+<div class="lg:col-span-7 bg-background p-6 rounded-lg border border-outline-variant space-y-4">
+<div class="flex items-center justify-between mb-2">
+<h3 class="text-title-md font-title-md text-primary">Interactive Dredge Mobilization Request</h3>
+<span class="hidden inline-flex items-center gap-1 px-2 py-0.5 bg-emerald-100 text-emerald-800 border border-emerald-300 rounded text-label-sm font-code-metric font-semibold" id="telemetry-injected-badge">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+            HYDRO-TELEMETRY INJECTED
+          </span>
+</div>
+<form class="space-y-4" id="mobilization-form" onsubmit="event.preventDefault(); showToast('Mobilization requisition dispatched to Central Hydrographic Cell.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Port / Navigational Sector Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" id="form-sector" placeholder="e.g. Kandla Port Fairway Reach" type="text">
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Target Channel Depth &amp; Seabed Stratum</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" id="form-depth">
+<option value="Maintenance Silt (-10m to -14m)">Maintenance Silt (-10m to -14m)</option>
+<option value="Capital Deepening (-14m to -18m)">Capital Deepening (-14m to -18m)</option>
+<option value="Deepwater Trenching (-18m to -25m)">Deepwater Trenching (-18m to -25m)</option>
+<option value="Hard Rock Stratum / Basalt Breaking">Hard Rock Stratum / Basalt Breaking</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Dredging Methodology Required</label>
+<select class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" id="form-method">
+<option value="Trailing Suction Hopper (TSHD)">Trailing Suction Hopper (TSHD)</option>
+<option value="Heavy Cutter Suction (CSD)">Heavy Cutter Suction (CSD)</option>
+<option value="Marine Land Reclamation">Marine Land Reclamation</option>
+<option value="Multibeam Bathymetric Survey">Multibeam Bathymetric Survey</option>
+</select>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Estimated In-Situ Volume (m³)</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary font-code-metric" id="form-volume" placeholder="e.g. 2,500,000 m³" type="text">
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Target Mobilization Window</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" type="date">
+</div>
+<div>
+<label class="block text-label-sm font-label-sm font-medium text-primary mb-1">Project Requirements &amp; Silt Disposal Details</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant text-body-sm font-body-sm text-on-surface px-3 py-2 rounded focus:border-secondary focus:ring-1 focus:ring-secondary" id="form-details" placeholder="Outline specific dredge dumping coordinates, environmental silt curtain needs, or high-current restrictions..." rows="3"></textarea>
+</div>
+<!-- Enhanced Checkbox / Modal Trigger Strip -->
+<div class="p-3 bg-surface-container-lowest rounded border border-outline-variant space-y-2">
+<div class="flex items-start gap-2.5">
+<input class="mt-1 rounded text-secondary focus:ring-secondary border-outline-variant w-4 h-4 cursor-pointer" id="prelim-chart" onchange="if(this.checked){ openBathymetricModal(); }" type="checkbox">
+<div class="flex-1">
+<label class="text-label-sm font-label-sm text-primary font-medium cursor-pointer" for="prelim-chart">
+                Request preliminary bathymetric depth chart analysis &amp; sediment disposal feasibility model
+              </label>
+<p class="text-label-sm font-label-sm text-on-surface-variant mt-0.5">
+                Integrates real-time IHO S-44 multibeam bathymetric soundings with calculated sediment volumes.
+              </p>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/60 flex items-center justify-between">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-secondary-fixed/50 hover:bg-secondary hover:text-white text-secondary font-semibold text-label-sm font-label-sm transition-all" onclick="openBathymetricModal()" type="button">
+<span class="material-symbols-outlined text-[16px]" data-icon="open_in_browser">open_in_browser</span>
+<span class="">Open Bathymetric Depth Analysis &amp; Hydrographic Profiler</span>
+</button>
+<span class="text-[11px] font-code-metric text-outline">MBES 400kHz • RTK-GNSS</span>
+</div>
+</div>
+<button class="w-full py-3 bg-primary-container hover:bg-secondary text-white font-semibold rounded text-body-md font-body-md transition-colors duration-150 flex items-center justify-center gap-2 shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[20px]" data-icon="anchor">anchor</span>
+              Submit Dredging Fleet Mobilization Request
+            </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Interactive Bathymetric Depth Chart Analysis Modal Overlay -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 hidden overflow-y-auto bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 lg:p-8 animate-fade-in" id="bathymetric-modal" role="dialog">
+<div class="relative w-full max-w-[1240px] bg-slate-900 border border-cyan-800/40 rounded-2xl shadow-2xl flex flex-col text-slate-100 overflow-hidden max-h-[92vh]">
+<!-- Modal Header -->
+<div class="px-5 py-4 bg-slate-950/90 border-b border-cyan-900/40 flex flex-wrap items-center justify-between gap-3">
+<div class="space-y-1">
+<div class="flex items-center gap-2.5">
+<span class="p-1 rounded bg-cyan-950 border border-cyan-700/50 text-cyan-400">
+<span class="material-symbols-outlined text-[20px]" data-icon="waves">waves</span>
+</span>
+<h2 class="text-title-md font-bold tracking-tight text-white flex items-center gap-2" id="modal-title">
+            SOVEREIGN HYDROGRAPHIC ANALYSIS // BATHYMETRIC DEPTH PROFILER
+          </h2>
+<span class="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-code-metric bg-emerald-950/80 text-emerald-400 border border-emerald-700/50">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            LIVE BATHYMETRY TELEMETRY: SYNCED
+          </span>
+</div>
+<p class="text-[12px] text-slate-400 font-code-metric flex items-center gap-2">
+<span class="">IHO S-44 Order 1a Standard Sounding</span>
+<span class="">•</span>
+<span id="sounding-meta-label" class="">Sector: JNPT Approach Fairway &amp; Vadhavan Corridor</span>
+<span class="">•</span>
+<span class="text-cyan-400">Dual-Head 400kHz MBES Soundings</span>
+</p>
+</div>
+<!-- Controls & Close -->
+<div class="flex items-center gap-3"><div class="flex items-center bg-slate-800/80 p-0.5 rounded border border-slate-700 text-[11px] font-code-metric" id="view-mode-toggle-group"><button class="view-mode-btn px-2.5 py-1 rounded bg-cyan-600 text-white font-semibold flex items-center gap-1.5 transition-all" id="btn-view-2d" onclick="switchModalView('2d')" type="button"><span class="material-symbols-outlined text-[14px]" data-icon="map">map</span><span class="">2D Contour</span></button><button class="view-mode-btn px-2.5 py-1 rounded text-slate-300 hover:text-white flex items-center gap-1.5 transition-all" id="btn-view-profile" onclick="switchModalView('profile')" type="button"><span class="material-symbols-outlined text-[14px]" data-icon="water">water</span><span class="">Cross-Cut</span></button><button class="view-mode-btn px-2.5 py-1 rounded text-slate-300 hover:text-white flex items-center gap-1.5 transition-all group relative" id="btn-view-3d" onclick="switchModalView('3d')" type="button"><span class="material-symbols-outlined text-[14px] text-cyan-400 group-hover:text-cyan-300" data-icon="grid_4x4">grid_4x4</span><span class="">3D Seabed Mesh</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse ml-0.5"></span></button></div>
+<!-- Sector Selector Dropdown -->
+<div class="flex items-center gap-1.5 bg-slate-800/80 px-2 py-1 rounded border border-slate-700">
+<span class="text-[11px] uppercase font-code-metric text-slate-400">Sector:</span>
+<select class="bg-transparent text-[12px] text-cyan-300 font-semibold focus:outline-none border-none p-0 cursor-pointer pr-4" id="modal-sector-select" onchange="switchSector(this.value)">
+<option class="bg-slate-900 text-white" value="JNPT">JNPT Fairway Approach</option>
+<option class="bg-slate-900 text-white" value="Vadhavan">Vadhavan Port Basin</option>
+<option class="bg-slate-900 text-white" value="Vizhinjam">Vizhinjam Deepwater</option>
+<option class="bg-slate-900 text-white" value="Hooghly">Hooghly Sandheads</option>
+</select>
+</div>
+<!-- Sounding Grid Resolution Toggle -->
+<div class="hidden md:flex items-center bg-slate-800/80 p-0.5 rounded border border-slate-700 text-[11px] font-code-metric">
+<button class="res-btn px-2 py-0.5 rounded bg-cyan-600 text-white font-semibold" onclick="setResolution('0.05m', this)" type="button">0.05m Ultra</button>
+<button class="res-btn px-2 py-0.5 rounded text-slate-300 hover:text-white" onclick="setResolution('0.25m', this)" type="button">0.25m Standard</button>
+<button class="res-btn px-2 py-0.5 rounded text-slate-300 hover:text-white" onclick="setResolution('1.0m', this)" type="button">1.0m Survey</button>
+</div>
+<!-- Close Button -->
+<button class="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" onclick="closeBathymetricModal()" title="Close Hydrographic Profiler">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+</div>
+<!-- Modal Scrollable Body -->
+<div class="p-4 sm:p-6 overflow-y-auto space-y-5 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
+<!-- Top Grid: Interactive Heatmap (Left 8 Cols) + Geotechnical/Stratigraphy (Right 4 Cols) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+<!-- Left/Center: Heatmap Bathymetric Surface (8 cols) -->
+<div class="lg:col-span-8 flex flex-col space-y-3">
+<!-- Heatmap Container Card -->
+<div class="relative bg-slate-950 border border-cyan-900/60 rounded-xl overflow-hidden shadow-inner p-3">
+<!-- Map Top Metadata Bar -->
+<div class="flex items-center justify-between pb-2 border-b border-cyan-900/40 text-[11px] font-code-metric text-slate-400">
+<div class="flex items-center gap-3">
+<span class="text-cyan-300 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="explore">explore</span>
+                  DATUM: CHART DATUM (CD) // LAT: 18°54'12.4"N LONG: 72°53'48.2"E
+                </span>
+<span class="hidden sm:inline text-slate-500">|</span>
+<span class="hidden sm:inline text-emerald-400">RTK-GNSS CARRIER PHASE: LOCKED</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/40">RESOLUTION: <span id="res-badge" class="">0.05m</span></span>
+</div>
+</div>
+<!-- Interactive Bathymetric Heatmap Canvas/SVG Area -->
+<div class="relative h-[320px] sm:h-[360px] w-full mt-2 rounded bg-[#061320] border border-cyan-900/50 cursor-crosshair overflow-hidden select-none" id="bathymetric-grid-area" onmouseleave="resetSoundingHUD()" onmousemove="updateSoundingHUD(event)">
+<!-- Subtle Grid lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-25" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="bathy-grid" patternUnits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.5"></path>
+</pattern>
+</defs>
+<rect fill="url(#bathy-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Dynamic Bathymetric Contour Layers -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none" viewBox="0 0 800 360">
+<defs>
+<linearGradient id="bathyGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#0284c7" stop-opacity="0.8"></stop>
+<stop offset="35%" stop-color="#0e7490" stop-opacity="0.9"></stop>
+<stop offset="65%" stop-color="#0369a1" stop-opacity="0.95"></stop>
+<stop offset="100%" stop-color="#082f49" stop-opacity="1"></stop>
+</linearGradient>
+<radialGradient cx="30%" cy="40%" id="shoalHole1" r="28%">
+<stop offset="0%" stop-color="#ea580c" stop-opacity="0.85"></stop>
+<stop offset="50%" stop-color="#d97706" stop-opacity="0.75"></stop>
+<stop offset="85%" stop-color="#0284c7" stop-opacity="0.4"></stop>
+<stop offset="100%" stop-color="transparent" stop-opacity="0"></stop>
+</radialGradient>
+<radialGradient cx="70%" cy="50%" id="deepFairway" r="45%">
+<stop offset="0%" stop-color="#020617" stop-opacity="0.9"></stop>
+<stop offset="50%" stop-color="#0c4a6e" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#0369a1" stop-opacity="0.2"></stop>
+</radialGradient>
+</defs>
+<!-- Base Bathymetry Gradient Mesh -->
+<rect fill="url(#bathyGradient)" height="360" width="800"></rect>
+<!-- Deep Fairway Trench -->
+<rect fill="url(#deepFairway)" height="360" width="800"></rect>
+<!-- Shallow Silt / Shoal Hazard Shoal Zone (Red/Amber warning) -->
+<ellipse cx="240" cy="150" fill="url(#shoalHole1)" rx="190" ry="110"></ellipse>
+<!-- Isobath Contours Lines with Labels -->
+<!-- -8m Hazard Contour -->
+<path d="M 120 150 Q 240 80 340 140 T 400 200" fill="none" stroke="#f97316" stroke-dasharray="4,2" stroke-width="1.5"></path>
+<text fill="#f97316" font-family="monospace" font-size="9" x="135" y="145">-8.0m Shoal Peak</text>
+<!-- -10m Isobath -->
+<path d="M 80 180 Q 240 60 420 130 T 490 240" fill="none" stroke="#f59e0b" stroke-width="1.2"></path>
+<text fill="#fbbf24" font-family="monospace" font-size="9" x="90" y="175">-10.0m CD</text>
+<!-- -12m Isobath -->
+<path d="M 60 220 Q 240 40 480 120 T 560 280" fill="none" stroke="#38bdf8" stroke-width="1.2"></path>
+<text fill="#38bdf8" font-family="monospace" font-size="9" x="70" y="215">-12.0m CD</text>
+<!-- -14.5m Target Deepening Contour -->
+<path d="M 40 260 Q 260 20 540 100 T 630 320" fill="none" stroke="#22d3ee" stroke-width="1.8"></path>
+<text fill="#22d3ee" font-family="monospace" font-size="10" font-weight="bold" x="50" y="255">-14.5m Active Cut Edge</text>
+<!-- -17.5m Required Navigation Draft (Thick Cyan) -->
+<path d="M 20 300 Q 280 10 610 90 T 720 340" fill="none" stroke="#38bdf8" stroke-dasharray="6,3" stroke-width="2.5"></path>
+<text fill="#67e8f9" font-family="monospace" font-size="10" font-weight="bold" x="540" y="85">TARGET FAIRWAY: -17.5m CD</text>
+<!-- -22.0m Safe Deep Water -->
+<path d="M 300 20 Q 550 50 780 120" fill="none" stroke="#818cf8" stroke-width="1.5"></path>
+<text fill="#a5b4fc" font-family="monospace" font-size="9" x="690" y="140">-22.0m Deep Safe</text>
+<!-- Channel Fairway Navigational Markers / Bounds -->
+<!-- Port Limit (Red buoy path) -->
+<line stroke="#ef4444" stroke-dasharray="8,6" stroke-width="2" x1="50" x2="750" y1="40" y2="70"></line>
+<circle cx="120" cy="43" fill="#ef4444" r="5"></circle>
+<text fill="#fca5a5" font-family="monospace" font-size="9" x="130" y="40">PORT BOUND BUOY FL(R)4s</text>
+<!-- Starboard Limit (Green buoy path) -->
+<line stroke="#10b981" stroke-dasharray="8,6" stroke-width="2" x1="50" x2="750" y1="320" y2="330"></line>
+<circle cx="680" cy="328" fill="#10b981" r="5"></circle>
+<text fill="#6ee7b7" font-family="monospace" font-size="9" x="540" y="325">STARBOARD BOUND FL(G)4s</text>
+<!-- Active Dredger Vessel Icon in Fairway -->
+<g transform="translate(380, 160)">
+<polygon fill="#38bdf8" points="0,-8 28,0 0,8 -10,6 -10,-6" stroke="#ffffff" stroke-width="1.5"></polygon>
+<circle cx="4" cy="0" fill="#ffffff" r="2.5"></circle>
+<text fill="#e0f2fe" font-family="monospace" font-size="10" font-weight="bold" x="-40" y="-12">TSHD SAMUDRA VIKRAM</text>
+<!-- Draghead suction path indicator -->
+<line stroke="#38bdf8" stroke-dasharray="2,2" stroke-width="1.5" x1="28" x2="55" y1="0" y2="20"></line>
+<circle cx="55" cy="20" fill="#f59e0b" r="3"></circle>
+</g>
+</svg>
+<!-- Dynamic Cursor Crosshairs HUD Tracking Overlay -->
+<div class="absolute top-0 bottom-0 w-[1px] bg-cyan-400/60 pointer-events-none hidden" id="bathy-crosshair-x"></div>
+<div class="absolute left-0 right-0 h-[1px] bg-cyan-400/60 pointer-events-none hidden" id="bathy-crosshair-y"></div>
+<!-- Floating Dynamic Sounding Inspection Badge on Hover -->
+<div class="absolute bottom-3 left-3 bg-slate-900/95 border border-cyan-500/70 p-2.5 rounded-lg shadow-2xl backdrop-blur-md pointer-events-none max-w-sm transition-all duration-75" id="hud-readout-card">
+<div class="flex items-center justify-between gap-2 border-b border-cyan-800/50 pb-1">
+<span class="text-[10px] font-code-metric text-cyan-300 font-bold uppercase tracking-wide flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                    ACTIVE SOUNDING POINT
+                  </span>
+<span class="text-[10px] font-code-metric text-slate-300" id="hud-coord">18°54'12.4"N 72°53'48.2"E</span>
+</div>
+<div class="grid grid-cols-2 gap-x-3 gap-y-1 mt-1 text-[11px] font-code-metric">
+<div>
+<span class="text-slate-400">Sounded Depth:</span>
+<span class="font-bold text-amber-400 ml-1" id="hud-depth">-13.8m CD</span>
+</div>
+<div>
+<span class="text-slate-400">Required Draft:</span>
+<span class="font-bold text-cyan-300 ml-1" id="hud-target">-17.5m CD</span>
+</div>
+<div>
+<span class="text-slate-400">Excavation Cut:</span>
+<span class="font-bold text-rose-400 ml-1" id="hud-cut">3.7m Required</span>
+</div>
+<div>
+<span class="text-slate-400">Substrate Class:</span>
+<span class="text-slate-200 ml-1 truncate" id="hud-substratum">Silty Clay / Basalt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Heatmap Gradient Color Legend Scale Bar -->
+<div class="mt-3 pt-2 border-t border-cyan-900/40 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[11px] font-code-metric">
+<span class="text-slate-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-cyan-400" data-icon="palette">palette</span>
+                Bathymetric Elevation Scale (Chart Datum):
+              </span>
+<div class="flex items-center gap-2">
+<div class="flex items-center rounded overflow-hidden h-3 w-48 sm:w-64 border border-cyan-900/60 shadow-inner">
+<span class="w-1/5 h-full bg-[#ef4444]" title="-6m to -8m Hazardous Shoal"></span>
+<span class="w-1/5 h-full bg-[#f59e0b]" title="-8m to -12m Silt Encroachment"></span>
+<span class="w-1/5 h-full bg-[#06b6d4]" title="-12m to -15m Active Dredge Cut"></span>
+<span class="w-1/5 h-full bg-[#0284c7]" title="-15m to -18m Safe Navigation Draft"></span>
+<span class="w-1/5 h-full bg-[#082f49]" title="-18m to -24m Ultra Deep Draft"></span>
+</div>
+<div class="flex justify-between text-[10px] text-slate-400 gap-2 font-mono">
+<span class="text-rose-400">-6m</span>
+<span class="text-amber-400">-12m</span>
+<span class="text-cyan-300 font-bold">-17.5m</span>
+<span class="text-sky-400">-24m+</span>
+</div>
+</div>
+</div>
+</div><div class="hidden bg-slate-950 border border-cyan-900/60 rounded-xl overflow-hidden shadow-inner p-3.5 space-y-3" id="seabed-3d-container"><!-- Top Header Bar with Live Mode Badges & Fly-Through Indicator -->
+<div class="flex flex-wrap items-center justify-between gap-2 border-b border-cyan-900/40 pb-2 text-[11px] font-code-metric text-slate-400">
+  <div class="flex items-center gap-2.5">
+    <span class="p-1 rounded bg-cyan-950 border border-cyan-700/50 text-cyan-300 flex items-center justify-center">
+      <span class="material-symbols-outlined text-[16px]" data-icon="view_in_ar">view_in_ar</span>
+    </span>
+    <span class="text-cyan-300 font-bold uppercase tracking-wider">3D Subsea Bathymetric Wireframe Mesh &amp; Channel Fly-Through</span>
+    <span class="px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-700/50 text-[10px] inline-flex items-center gap-1.5" id="flythrough-live-badge">
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="">TELEMETRY: DYNAMIC FLY-THROUGH READY</span>
+    </span>
+  </div>
+  <div class="flex items-center gap-2">
+    <span class="text-slate-400">Datum: <strong class="text-cyan-300">-17.5m CD</strong></span>
+    <span class="text-slate-600">|</span>
+    <span class="text-slate-400">Vert Exagg: <strong class="text-cyan-300" id="vert-exagg-val">2.5x</strong></span>
+    <span class="text-slate-600">|</span>
+    <span class="text-slate-400">Channel Reach: <strong class="text-cyan-300">5.40 NM</strong></span>
+  </div>
+</div>
+
+<!-- Interactive Fly-Through Command Bar & Perspective Controls -->
+<div class="flex flex-wrap items-center justify-between gap-2 bg-slate-900/90 border border-cyan-900/40 p-2.5 rounded-lg text-[11px] font-code-metric">
+  <!-- Play / Pause & Speed -->
+  <div class="flex items-center gap-2 flex-wrap">
+    <button class="px-3 py-1 rounded bg-cyan-600 hover:bg-cyan-500 text-white font-bold flex items-center gap-1.5 shadow-md shadow-cyan-950 transition-all border border-cyan-400" id="btn-flythrough-toggle" onclick="toggleFlyThrough()" type="button">
+      <span class="material-symbols-outlined text-[16px]" id="flythrough-icon" data-icon="play_arrow">play_arrow</span>
+      <span id="flythrough-label" class="">▶ Start Fly-Through</span>
+    <button class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/50 transition-colors flex items-center gap-1 font-semibold" id="toggle-strata-btn" onclick="toggleSubBottomStrata()" type="button" title="Toggle Sub-bottom Sediment Stratification"><span class="material-symbols-outlined text-[13px]" data-icon="layers">layers</span><span id="strata-btn-label" class="">Sediment Strata: ON</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse ml-0.5" id="strata-status-dot"></span></button><div class="hidden sm:flex items-center bg-slate-800 p-0.5 rounded border border-slate-700 text-[10px] ml-1"><span class="px-1.5 text-slate-400 font-semibold">CHIRP:</span><button class="px-1.5 py-0.5 rounded bg-cyan-600 text-white font-semibold" id="chirp-freq-btn" onclick="cycleChirpFreq(this)" type="button" title="Acoustic Sub-Bottom Profiler Frequency">3.5 kHz</button></div></button>
+    <div class="flex items-center bg-slate-800 p-0.5 rounded border border-slate-700 text-[10px]">
+      <button class="px-2 py-0.5 rounded bg-cyan-600 text-white font-semibold" id="speed-1x" onclick="setFlySpeed(1, this)" type="button">1x Cruise</button>
+      <button class="px-2 py-0.5 rounded text-slate-300 hover:text-white" id="speed-2x" onclick="setFlySpeed(2, this)" type="button">2x Fast</button>
+      <button class="px-2 py-0.5 rounded text-slate-300 hover:text-white" id="speed-4x" onclick="setFlySpeed(4, this)" type="button">4x Scan</button>
+    </div>
+    <button class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center gap-1 border border-slate-700 transition-colors" onclick="resetFlyThrough()" title="Reset to Station 00+000" type="button">
+      <span class="material-symbols-outlined text-[14px]" data-icon="skip_previous">skip_previous</span>
+      <span class="">Reset</span>
+    </button>
+  </div>
+
+  <!-- Station Range Scrubber -->
+  <div class="flex items-center gap-2 flex-1 max-w-sm px-2">
+    <span class="text-[10px] text-slate-400 uppercase font-semibold">Station:</span>
+    <input class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-400" id="station-scrubber" max="5400" min="0" oninput="onScrubStation(this.value)" step="50" type="range" value="2450">
+    <span class="text-cyan-300 font-bold min-w-[70px] text-right font-mono" id="scrubber-val">CH 02+450</span>
+  </div>
+
+  <!-- Camera Angle & Shading Presets -->
+  <div class="flex items-center gap-1.5">
+    <button class="angle-btn px-2 py-1 rounded bg-cyan-600 text-white font-semibold transition-all" onclick="set3DAngle('isometric', this)" type="button">Iso 45°</button>
+    <button class="angle-btn px-2 py-1 rounded text-slate-300 hover:text-white transition-all" onclick="set3DAngle('topdown', this)" type="button">Top 90°</button>
+    <button class="angle-btn px-2 py-1 rounded text-slate-300 hover:text-white transition-all" onclick="set3DAngle('crosscut', this)" type="button">Cockpit</button>
+    <button class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-800/40 transition-colors flex items-center gap-1 ml-1" id="toggle-mesh-style-btn" onclick="toggle3DShading()" type="button">
+      <span class="material-symbols-outlined text-[13px]" data-icon="polyline">polyline</span>
+      <span id="mesh-style-label" class="">Wireframe + Shaded</span>
+    </button>
+  <button class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/50 transition-colors flex items-center gap-1 font-semibold" id="toggle-strata-btn" onclick="toggleSubBottomStrata()" type="button" title="Toggle Sub-bottom Sediment Stratification"><span class="material-symbols-outlined text-[13px]" data-icon="layers">layers</span><span id="strata-btn-label" class="">Sediment Strata: ON</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse ml-0.5" id="strata-status-dot"></span></button><div class="hidden sm:flex items-center bg-slate-800 p-0.5 rounded border border-slate-700 text-[10px] ml-1"><span class="px-1.5 text-slate-400 font-semibold">CHIRP:</span><button class="px-1.5 py-0.5 rounded bg-cyan-600 text-white font-semibold" id="chirp-freq-btn" onclick="cycleChirpFreq(this)" type="button" title="Acoustic Sub-Bottom Profiler Frequency">3.5 kHz</button></div></div>
+</div>
+
+<!-- 3D Seabed Viewport Area -->
+<div class="bg-slate-900/80 border border-cyan-900/40 px-3 py-2 rounded-lg flex flex-wrap items-center justify-between gap-2 text-[10px] font-code-metric" id="strata-legend-panel"><div class="flex items-center gap-2 flex-wrap"><span class="text-cyan-300 font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-amber-400" data-icon="density_medium">density_medium</span>SUBSEA STRATIGRAPHY:</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-950/60 border border-amber-600/50 text-amber-300"><span class="w-2 h-2 rounded-sm bg-amber-500"></span> L1: Marine Silt &amp; Slurry (0 to -1.8m)</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-teal-950/60 border border-teal-600/50 text-teal-300"><span class="w-2 h-2 rounded-sm bg-cyan-600"></span> L2: Stiff Silty Clay (-1.8 to -4.2m)</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-900/40 border border-amber-700/50 text-amber-200"><span class="w-2 h-2 rounded-sm bg-amber-700"></span> L3: Weathered Sandstone (-4.2 to -7.5m)</span><span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-slate-900 border border-slate-700 text-slate-300"><span class="w-2 h-2 rounded-sm bg-[#082f49]"></span> L4: Hard Basalt Bedrock (-7.5m+)</span></div><div class="flex items-center gap-2"><span class="text-slate-400">Strata Filter / Penetration:</span><input class="w-24 h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-amber-400" id="strata-depth-filter" max="25" min="0" oninput="adjustStrataPenetration(this.value)" step="0.5" type="range" value="25"><span class="text-amber-400 font-bold min-w-[40px] text-right font-mono" id="strata-filter-val">Full 25m</span></div></div><div class="relative h-[360px] sm:h-[400px] w-full rounded-lg bg-[#030d17] border border-cyan-900/50 overflow-hidden select-none flex items-center justify-center" id="viewport-3d">
+  <style>
+    @keyframes sonarRings { 0% { r: 6px; opacity: 0.9; stroke-width: 2px; } 100% { r: 42px; opacity: 0; stroke-width: 0.5px; } }
+    @keyframes laserSweep { 0%, 100% { opacity: 0.35; transform: scaleX(0.92); } 50% { opacity: 0.75; transform: scaleX(1.08); } }
+    @keyframes centerGlow { 0%, 100% { stroke-opacity: 0.85; } 50% { stroke-opacity: 1; } }
+    .pulse-ring-1 { animation: sonarRings 2.2s cubic-bezier(0.1, 0.4, 0.2, 1) infinite; }
+    .pulse-ring-2 { animation: sonarRings 2.2s cubic-bezier(0.1, 0.4, 0.2, 1) infinite 0.7s; }
+    .laser-fan-sweep { transform-origin: 440px 200px; animation: laserSweep 1.8s ease-in-out infinite; }
+    .centerline-track-glow { animation: centerGlow 1.5s ease-in-out infinite; }
+  </style>
+  <svg class="w-full h-full transition-transform duration-500 ease-out" id="svg-3d-mesh" preserveAspectRatio="xMidYMid meet" viewBox="0 0 880 440">
+    <defs>
+      <linearGradient id="waterPlaneGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#0369a1" stop-opacity="0.15"></stop>
+        <stop offset="100%" stop-color="#082f49" stop-opacity="0.05"></stop>
+      </linearGradient>
+      <linearGradient id="datumPlaneGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"></stop>
+        <stop offset="100%" stop-color="#0891b2" stop-opacity="0.05"></stop>
+      </linearGradient>
+      <linearGradient id="trenchGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+        <stop offset="0%" stop-color="#071a2b" stop-opacity="0.95"></stop>
+        <stop offset="30%" stop-color="#001a32" stop-opacity="0.95"></stop>
+        <stop offset="70%" stop-color="#001a32" stop-opacity="0.95"></stop>
+        <stop offset="100%" stop-color="#071a2b" stop-opacity="0.95"></stop>
+      </linearGradient>
+      <linearGradient id="centerlineGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee"></stop>
+        <stop offset="50%" stop-color="#38bdf8"></stop>
+        <stop offset="100%" stop-color="#818cf8"></stop>
+      </linearGradient>
+      <linearGradient id="laserFanGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.6"></stop>
+        <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.05"></stop>
+      </linearGradient>
+    </defs>
+
+    <!-- Background Sounding Grid Matrix -->
+    <g opacity="0.2">
+      <path d="M 40 40 L 840 40 L 840 400 L 40 400 Z" fill="none" stroke="#38bdf8" stroke-dasharray="2,4" stroke-width="0.5"></path>
+      <line stroke="#0284c7" stroke-dasharray="1,3" stroke-width="0.5" x1="40" x2="840" y1="220" y2="220"></line>
+      <line stroke="#0284c7" stroke-dasharray="1,3" stroke-width="0.5" x1="440" x2="440" y1="40" y2="400"></line>
+    </g>
+
+    <!-- Seabed Undersea Base Mesh -->
+    <g id="mesh-undersea-base">
+      <polygon fill="#020b14" opacity="0.8" points="160,80 720,80 840,360 40,360" stroke="#0f3756" stroke-width="1"></polygon>
+    </g>
+
+    <!-- Shaded Terrain & Trench Slopes -->
+    <g id="mesh-terrain-shaded">
+      <!-- Port Slope -->
+      <polygon fill="#0a2238" points="40,360 160,80 320,80 260,360"></polygon>
+      <!-- Deep Dredged Channel Bed (-17.5m CD Box) -->
+      <polygon fill="url(#trenchGrad)" points="260,360 320,80 560,80 620,360"></polygon>
+      <!-- Starboard Slope -->
+      <polygon fill="#0a2238" points="620,360 560,80 720,80 840,360"></polygon>
+      <!-- Silt Shoal Hazard Humps -->
+      <ellipse cx="210" cy="220" fill="#b45309" opacity="0.45" rx="60" ry="35"></ellipse>
+      <ellipse cx="670" cy="250" fill="#d97706" opacity="0.35" rx="50" ry="30"></ellipse>
+    </g><g id="mesh-strata-layers" class="transition-opacity duration-300 ease-out"><defs><linearGradient id="strataL1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#d97706" stop-opacity="0.75"></stop><stop offset="100%" stop-color="#b45309" stop-opacity="0.6"></stop></linearGradient><linearGradient id="strataL2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0891b2" stop-opacity="0.8"></stop><stop offset="100%" stop-color="#0e7490" stop-opacity="0.7"></stop></linearGradient><linearGradient id="strataL3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#78350f" stop-opacity="0.85"></stop><stop offset="100%" stop-color="#451a03" stop-opacity="0.8"></stop></linearGradient><linearGradient id="strataL4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f172a" stop-opacity="0.95"></stop><stop offset="100%" stop-color="#020617" stop-opacity="0.98"></stop></linearGradient><pattern id="seismicStipple" width="12" height="12" patternUnits="userSpaceOnUse"><line x1="0" y1="6" x2="12" y2="6" stroke="#38bdf8" stroke-width="0.6" stroke-opacity="0.35" stroke-dasharray="2,2"></line></pattern></defs><polygon id="strata-poly-l1" points="40,360 85,255 795,255 840,360" fill="url(#strataL1)" stroke="#f59e0b" stroke-width="1"></polygon><polygon id="strata-poly-l2" points="85,255 115,185 765,185 795,255" fill="url(#strataL2)" stroke="#22d3ee" stroke-width="1"></polygon><polygon id="strata-poly-l3" points="115,185 145,115 735,115 765,185" fill="url(#strataL3)" stroke="#d97706" stroke-width="1"></polygon><polygon id="strata-poly-l4" points="145,115 160,80 720,80 735,115" fill="url(#strataL4)" stroke="#38bdf8" stroke-width="1"></polygon><polygon points="40,360 160,80 720,80 840,360" fill="url(#seismicStipple)" pointer-events="none"></polygon><g id="strata-cutaway-trench-left"><polygon points="260,360 270,300 290,200 320,80 300,80 270,200 240,300 220,360" fill="#d97706" opacity="0.55"></polygon><polygon points="270,300 280,240 300,160 320,80 310,80 290,160 270,240 260,300" fill="#0891b2" opacity="0.65"></polygon></g><g id="strata-cutaway-trench-right"><polygon points="620,360 610,300 590,200 560,80 575,80 605,200 625,300 645,360" fill="#d97706" opacity="0.55"></polygon><polygon points="610,300 600,240 580,160 560,80 570,80 590,160 610,240 620,300" fill="#0891b2" opacity="0.65"></polygon></g><g id="strata-seismic-reflectors" stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5"><line x1="65" y1="300" x2="815" y2="300" stroke="#fbbf24"></line><line x1="100" y1="220" x2="780" y2="220" stroke="#22d3ee"></line><line x1="130" y1="150" x2="750" y2="150" stroke="#f97316"></line></g><g id="strata-depth-callouts" font-family="monospace" font-size="8" font-weight="bold"><g transform="translate(50, 310)"><rect x="0" y="-11" width="138" height="15" rx="2" fill="#0f172a" fill-opacity="0.9" stroke="#f59e0b" stroke-width="0.8"></rect><circle cx="6" cy="-3" r="2.5" fill="#f59e0b"></circle><text x="13" y="0" fill="#fde68a">L1 REFLECTOR: -1.8m CD</text></g><g transform="translate(85, 230)"><rect x="0" y="-11" width="145" height="15" rx="2" fill="#0f172a" fill-opacity="0.9" stroke="#22d3ee" stroke-width="0.8"></rect><circle cx="6" cy="-3" r="2.5" fill="#22d3ee"></circle><text x="13" y="0" fill="#a5f3fc">L2 SILT-CLAY: -4.2m CD</text></g><g transform="translate(120, 160)"><rect x="0" y="-11" width="148" height="15" rx="2" fill="#0f172a" fill-opacity="0.9" stroke="#f97316" stroke-width="0.8"></rect><circle cx="6" cy="-3" r="2.5" fill="#f97316"></circle><text x="13" y="0" fill="#fed7aa">L3 SANDSTONE: -7.5m CD</text></g><g transform="translate(640, 100)"><rect x="0" y="-11" width="170" height="15" rx="2" fill="#0f172a" fill-opacity="0.9" stroke="#38bdf8" stroke-width="0.8"></rect><circle cx="6" cy="-3" r="2.5" fill="#38bdf8"></circle><text x="13" y="0" fill="#bae6fd">L4 BASALT: 4500kW CUTTER</text></g></g></g>
+
+    <!-- Transverse & Longitudinal Wireframe Lines -->
+    <g id="mesh-wireframe-lines" stroke="#0284c7" stroke-opacity="0.55" stroke-width="1">
+      <!-- Transverse Cross Isobaths -->
+      <line stroke="#f59e0b" stroke-opacity="0.9" stroke-width="1.5" x1="40" x2="840" y1="360" y2="360"></line>
+      <line stroke="#38bdf8" stroke-opacity="0.7" stroke-width="1" x1="55" x2="825" y1="325" y2="325"></line>
+      <line stroke="#38bdf8" stroke-opacity="0.7" stroke-width="1" x1="70" x2="810" y1="290" y2="290"></line>
+      <line stroke="#22d3ee" stroke-opacity="0.8" stroke-width="1.2" x1="85" x2="795" y1="255" y2="255"></line>
+      <line stroke="#22d3ee" stroke-opacity="0.8" stroke-width="1.2" x1="100" x2="780" y1="220" y2="220"></line>
+      <line stroke="#06b6d4" stroke-opacity="0.7" stroke-width="1" x1="115" x2="765" y1="185" y2="185"></line>
+      <line stroke="#0ea5e9" stroke-opacity="0.6" stroke-width="1" x1="130" x2="750" y1="150" y2="150"></line>
+      <line stroke="#0284c7" stroke-opacity="0.5" stroke-width="1" x1="145" x2="735" y1="115" y2="115"></line>
+      <line stroke="#0369a1" stroke-opacity="0.4" stroke-width="1" x1="160" x2="720" y1="80" y2="80"></line>
+
+      <!-- Longitudinal Profile Rungs -->
+      <line x1="160" x2="40" y1="80" y2="360"></line>
+      <line x1="200" x2="100" y1="80" y2="360"></line>
+      <line x1="240" x2="160" y1="80" y2="360"></line>
+      <line stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5" x1="280" x2="220" y1="80" y2="360"></line>
+      <line stroke="#06b6d4" stroke-width="1.8" x1="320" x2="280" y1="80" y2="360"></line>
+      <line stroke="#22d3ee" stroke-width="2" x1="370" x2="340" y1="80" y2="360"></line>
+      <line stroke="#22d3ee" stroke-width="2" x1="510" x2="540" y1="80" y2="360"></line>
+      <line stroke="#06b6d4" stroke-width="1.8" x1="560" x2="600" y1="80" y2="360"></line>
+      <line stroke="#f59e0b" stroke-dasharray="3,3" stroke-width="1.5" x1="600" x2="660" y1="80" y2="360"></line>
+      <line x1="640" x2="720" y1="80" y2="360"></line>
+      <line x1="680" x2="780" y1="80" y2="360"></line>
+      <line x1="720" x2="840" y1="80" y2="360"></line>
+    </g>
+
+    <!-- Target Excavation Bed Datum Plane -->
+    <g id="mesh-datum-plane">
+      <polygon fill="url(#datumPlaneGrad)" points="280,310 320,110 560,110 600,310" stroke="#22d3ee" stroke-dasharray="6,3" stroke-width="2"></polygon>
+      <text fill="#67e8f9" font-family="monospace" font-size="11" font-weight="bold" x="370" y="105">TARGET BED PLANE: -17.5m CD</text>
+      <line stroke="#ef4444" stroke-width="1.5" x1="280" x2="280" y1="310" y2="270"></line>
+      <circle cx="280" cy="270" fill="#ef4444" r="4"></circle>
+      <text fill="#fca5a5" font-family="monospace" font-size="9" x="210" y="270">1:3 CUT BATTER</text>
+      <line stroke="#10b981" stroke-width="1.5" x1="600" x2="600" y1="310" y2="270"></line>
+      <circle cx="600" cy="270" fill="#10b981" r="4"></circle>
+      <text fill="#6ee7b7" font-family="monospace" font-size="9" x="610" y="270">TRENCH TOE LIMIT</text>
+    </g>
+
+    <!-- Navigation Centerline Corridor Track with Milestone Waypoints -->
+    <g id="mesh-navigation-centerline">
+      <!-- Centerline glowing track -->
+      <line class="centerline-track-glow" stroke="url(#centerlineGrad)" stroke-dasharray="6,4" stroke-width="3" x1="440" x2="440" y1="80" y2="360"></line>
+      <!-- Milestone Station 1: CH 00+500 -->
+      <circle cx="440" cy="115" fill="#22d3ee" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+      <text fill="#a5f3fc" font-family="monospace" font-size="8" font-weight="bold" x="452" y="118">CH 00+500 (Harbor Mouth)</text>
+      <!-- Milestone Station 2: CH 02+000 -->
+      <circle cx="440" cy="185" fill="#22d3ee" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+      <text fill="#a5f3fc" font-family="monospace" font-size="8" font-weight="bold" x="452" y="188">CH 02+000 (Central Cut)</text>
+      <!-- Milestone Station 3: CH 04+200 -->
+      <circle cx="440" cy="290" fill="#22d3ee" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+      <text fill="#a5f3fc" font-family="monospace" font-size="8" font-weight="bold" x="452" y="293">CH 04+200 (Offshore Splay)</text>
+    </g>
+
+    <!-- Lateral Navigation Buoys -->
+    <g id="mesh-navigation-buoys">
+      <!-- Port Buoy (Red) -->
+      <g transform="translate(270, 185)">
+        <polygon fill="#ef4444" points="0,-12 5,0 -5,0" stroke="#ffffff" stroke-width="1"></polygon>
+        <circle cx="0" cy="-14" fill="#ef4444" r="2.5"></circle>
+        <text fill="#fca5a5" font-family="monospace" font-size="8" x="-45" y="-16">PORT BUOY NO.4</text>
+      </g>
+      <!-- Starboard Buoy (Green) -->
+      <g transform="translate(610, 185)">
+        <polygon fill="#10b981" points="0,-12 5,0 -5,0" stroke="#ffffff" stroke-width="1"></polygon>
+        <circle cx="0" cy="-14" fill="#10b981" r="2.5"></circle>
+        <text fill="#6ee7b7" font-family="monospace" font-size="8" x="10" y="-16">STBD BUOY NO.3</text>
+      </g>
+    </g>
+
+    <!-- Fly-Through Drone / Vessel Traversal Assembly (Animated along Centerline) -->
+    <g id="flythrough-drone-assembly" transform="translate(440, 200)">
+      <!-- Forward Laser Fan Bathymetric Scanner -->
+      <polygon class="laser-fan-sweep" fill="url(#laserFanGrad)" points="0,-8 110,-75 110,65" stroke="#22d3ee" stroke-opacity="0.7" stroke-width="1"></polygon>
+      <line stroke="#22d3ee" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="110" y1="-8" y2="-75"></line>
+      <line stroke="#22d3ee" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="110" y1="-8" y2="65"></line>
+
+      <!-- Acoustic Sonar Pulse Echo Rings -->
+      <circle class="pulse-ring-1" cx="0" cy="0" fill="none" stroke="#38bdf8"></circle>
+      <circle class="pulse-ring-2" cx="0" cy="0" fill="none" stroke="#06b6d4"></circle>
+
+      <!-- Autonomous Hydrographic Drone / Vessel -->
+      <ellipse cx="0" cy="0" fill="#0284c7" opacity="0.35" rx="36" ry="18"></ellipse>
+      <polygon fill="#38bdf8" points="-16,-7 16,-7 26,0 16,7 -16,7 -22,0" stroke="#ffffff" stroke-width="1.5"></polygon>
+      <circle cx="2" cy="0" fill="#ffffff" r="3.5"></circle>
+      <!-- Trailing draghead telemetry ping -->
+      <line stroke="#f59e0b" stroke-dasharray="2,2" stroke-width="2" x1="0" x2="0" y1="0" y2="50"></line>
+      <circle cx="0" cy="50" fill="#f59e0b" r="4.5"></circle>
+      <text fill="#fbbf24" font-family="monospace" font-size="9" font-weight="bold" id="drone-svg-depth-label" x="10" y="55">DRAGHEAD DEPTH: -16.8m CD</text>
+      <text fill="#ffffff" font-family="monospace" font-size="10" font-weight="bold" x="-65" y="-14">MCI SURVEY DRONE // TSHD-07</text>
+    </g>
+  </svg>
+
+  <!-- Real-time Centerline Telemetry Flight HUD (Top-Left) -->
+  <div class="absolute top-3 left-3 bg-slate-900/90 border border-cyan-800/60 p-2.5 rounded-lg shadow-xl backdrop-blur-md text-[10px] font-code-metric space-y-1">
+    <div class="text-cyan-300 font-bold uppercase tracking-wider flex items-center justify-between border-b border-cyan-900/50 pb-1 gap-2">
+      <span class="flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-ping"></span>
+        CENTERLINE FLIGHT HUD
+      <button class="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/50 transition-colors flex items-center gap-1 font-semibold" id="toggle-strata-btn" onclick="toggleSubBottomStrata()" type="button" title="Toggle Sub-bottom Sediment Stratification"><span class="material-symbols-outlined text-[13px]" data-icon="layers">layers</span><span id="strata-btn-label" class="">Sediment Strata: ON</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse ml-0.5" id="strata-status-dot"></span></button><div class="hidden sm:flex items-center bg-slate-800 p-0.5 rounded border border-slate-700 text-[10px] ml-1"><span class="px-1.5 text-slate-400 font-semibold">CHIRP:</span><button class="px-1.5 py-0.5 rounded bg-cyan-600 text-white font-semibold" id="chirp-freq-btn" onclick="cycleChirpFreq(this)" type="button" title="Acoustic Sub-Bottom Profiler Frequency">3.5 kHz</button></div></span>
+      <span class="px-1 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/40 text-[9px]" id="flythrough-status-pill">STANDBY</span>
+    </div>
+    <div class="grid grid-cols-2 gap-x-3 gap-y-0.5 text-slate-300">
+      <div class="">Station: <span class="text-white font-bold font-mono" id="hud-centerline-station">CH 02+450</span></div>
+      <div class="">Sounded Depth: <span class="text-amber-400 font-bold font-mono" id="hud-centerline-depth">-17.8m CD</span></div>
+      <div class="">Drone Alt: <span class="text-cyan-300 font-bold font-mono" id="hud-centerline-alt">+8.5m AGL</span></div>
+      <div class="">Speed: <span class="text-white font-bold font-mono" id="hud-centerline-speed">6.4 Knots</span></div>
+      <div class="col-span-2 py-0.5 text-[9px] text-slate-400 border-t border-slate-800 flex items-center justify-between" id="hud-strata-row"><span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>Active Bed Stratum:</span><strong class="text-amber-300 font-mono" id="hud-active-stratum">L2 Stiff Silty Clay (SPT N=18)</strong></div><div class="col-span-2 py-0.5 text-[9px] text-slate-400 flex items-center justify-between" id="hud-seismic-row"><span class="">Acoustic Impedance:</span><span class="text-cyan-300 font-mono" id="hud-acoustic-impedance">Z = 2.18 x 10⁶ kg/(m²·s)</span></div><div class="col-span-2 pt-0.5 border-t border-slate-800 text-[9px] text-emerald-400 flex items-center justify-between">
+        <span class="">CLEARANCE ENVELOPE:</span>
+        <strong class="font-mono">OPTIMAL DRAFT CLEARANCE</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dredge Trench Cut Depth Slider (Bottom-Right) -->
+  <div class="absolute bottom-3 right-3 bg-slate-900/90 border border-cyan-800/60 p-2.5 rounded-lg shadow-xl backdrop-blur-md text-[10px] font-code-metric space-y-1.5">
+    <div class="text-slate-300 font-semibold flex items-center justify-between gap-3">
+      <span class="">Dredge Trench Cut Plane:</span>
+      <span class="text-cyan-300 font-bold" id="dredge-slider-label">-17.5m CD</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="text-slate-500">-12m</span>
+      <input class="w-32 h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-400" id="dredge-depth-slider" max="22" min="12" oninput="update3DCutPlane(this.value)" step="0.5" type="range" value="17.5">
+      <span class="text-slate-500">-22m</span>
+    </div>
+  </div>
+</div>
+
+<!-- Bottom Legend & Perspective Actions -->
+<div class="pt-2 border-t border-cyan-900/40 flex flex-wrap items-center justify-between gap-2 text-[11px] font-code-metric text-slate-400">
+  <div class="flex items-center gap-3">
+    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2 rounded bg-[#0a2238] border border-cyan-500 inline-block"></span> Seabed Topography</span>
+    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2 rounded bg-amber-500 inline-block"></span> Siltation Shoal (+0.42m/mo)</span>
+    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2 rounded bg-cyan-400 inline-block"></span> Dredged Channel Box (-17.5m CD)</span>
+    <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-cyan-400 inline-block"></span> Centerline Waypoints</span>
+  <span class="flex items-center gap-1.5" id="legend-strata-badge"><span class="w-2.5 h-2 rounded bg-amber-600/70 border border-amber-400 inline-block"></span> Seismic Strata (-1.8m to -7.5m+)</span><span class="flex items-center gap-1.5 text-cyan-300"><span class="material-symbols-outlined text-[12px] text-cyan-400" data-icon="radar">radar</span> Chirp Profiling Active</span></div>
+  <div class="flex items-center gap-2">
+    <button class="text-cyan-400 hover:text-white transition-colors flex items-center gap-1 text-[11px]" onclick="reset3DCamera()" type="button">
+      <span class="material-symbols-outlined text-[13px]" data-icon="restart_alt">restart_alt</span>
+      <span class="">Reset Perspective</span>
+    </button>
+  </div>
+</div></div>
+<!-- Cross-Sectional Channel Depth Cutaway Profile (Bottom Sub-Panel) -->
+<div class="bg-slate-950 border border-cyan-900/60 rounded-xl p-3.5 space-y-2">
+<div class="flex items-center justify-between text-[11px] font-code-metric">
+<span class="text-cyan-300 font-bold uppercase flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-cyan-400" data-icon="water">water</span>
+                Fairway Transverse Elevation Cross-Section // Profile Cut A-A'
+              </span>
+<span class="text-slate-400">Scale: Vert 1:100 • Horiz 1:1000</span>
+</div>
+<!-- 2D Elevation Cross Section SVG -->
+<div class="w-full h-28 rounded bg-[#030d17] border border-cyan-950 overflow-hidden relative">
+<svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 700 110">
+<!-- Tide levels -->
+<line opacity="0.6" stroke="#38bdf8" stroke-dasharray="3,3" stroke-width="1" x1="0" x2="700" y1="12" y2="12"></line>
+<text fill="#38bdf8" font-family="monospace" font-size="8" x="8" y="10">High Water Spring (+4.2m)</text>
+<!-- Chart Datum (0.0m CD) Water Surface -->
+<line stroke="#0284c7" stroke-width="1.5" x1="0" x2="700" y1="26" y2="26"></line>
+<text fill="#7dd3fc" font-family="monospace" font-size="9" font-weight="bold" x="8" y="24">Water Surface 0.0m CD (Chart Datum)</text>
+<!-- Existing Silted Seabed Line (Wavy orange-cyan) -->
+<path d="M 0 52 Q 120 48 200 42 T 350 40 T 480 50 T 600 58 L 700 60 L 700 110 L 0 110 Z" fill="#1e293b" opacity="0.5"></path>
+<path d="M 0 52 Q 120 48 200 42 T 350 40 T 480 50 T 600 58 L 700 60" fill="none" stroke="#f59e0b" stroke-width="2"></path>
+<text fill="#fbbf24" font-family="monospace" font-size="8" x="210" y="38">Current Seabed (-13.8m Shoal)</text>
+<!-- Dredge Excavation Envelope (Shaded Cyan Cut Area) -->
+<path d="M 80 47 Q 200 42 350 40 T 480 50 L 520 78 L 80 78 Z" fill="#0891b2" opacity="0.25"></path>
+<!-- Target Excavation Bed (-17.5m CD) Line -->
+<line stroke="#22d3ee" stroke-width="2.5" x1="60" x2="540" y1="78" y2="78"></line>
+<text fill="#a5f3fc" font-family="monospace" font-size="9" font-weight="bold" x="180" y="74">Target Navigation Bed Depth: -17.5m CD</text>
+<!-- Target Dredger Draghead Cut Depth Bounds -->
+<line stroke="#22d3ee" stroke-dasharray="2,2" stroke-width="1.5" x1="60" x2="60" y1="78" y2="48"></line>
+<line stroke="#22d3ee" stroke-dasharray="2,2" stroke-width="1.5" x1="540" x2="540" y1="78" y2="52"></line>
+<!-- Hard Basalt Layer Base -->
+<line stroke="#64748b" stroke-dasharray="4,4" stroke-width="1.5" x1="0" x2="700" y1="95" y2="95"></line>
+<text fill="#94a3b8" font-family="monospace" font-size="8" x="8" y="92">Hard Basalt &amp; Sandstone Stratum (-21.5m CD)</text>
+<!-- Vessel Keel Profile Representation -->
+<rect fill="#334155" height="38" opacity="0.6" rx="2" width="160" x="260" y="26"></rect>
+<text fill="#f8fafc" font-family="monospace" font-size="9" x="270" y="46">20,000 TEU Keel Draft (-15.5m)</text>
+<!-- Underkeel Clearance (UKC) indicator -->
+<line stroke="#10b981" stroke-width="1.5" x1="340" x2="340" y1="64" y2="78"></line>
+<text fill="#6ee7b7" font-family="monospace" font-size="8" x="348" y="73">UKC: 2.0m</text>
+</svg>
+</div>
+<div class="flex flex-wrap items-center justify-between text-[11px] text-slate-400 font-code-metric pt-1">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded bg-amber-400 inline-block"></span> Current Silted Seabed (-13.8m CD)
+              </span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded bg-cyan-400 inline-block"></span> Target Design Depth (-17.5m CD)
+              </span>
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded bg-emerald-400 inline-block"></span> Safe Navigational Underkeel Clearance (2.0m UKC)
+              </span>
+</div>
+</div>
+</div>
+<!-- Right Panel: Sediment Stratigraphy, Volumetric Metrics & Dredge Dispatch Parameters (4 cols) -->
+<div class="lg:col-span-4 flex flex-col space-y-4">
+<!-- Volumetric Analysis KPI Box -->
+<div class="bg-slate-950 border border-cyan-900/60 rounded-xl p-4 space-y-3">
+<div class="flex items-center justify-between border-b border-cyan-900/40 pb-2">
+<span class="text-[11px] font-code-metric text-cyan-400 uppercase font-semibold">VOLUMETRIC EXCAVATION MODEL</span>
+<span class="material-symbols-outlined text-cyan-400 text-[18px]" data-icon="calculate">calculate</span>
+</div>
+<div class="space-y-2.5">
+<div>
+<span class="text-[11px] text-slate-400 uppercase font-code-metric">Total In-Situ Cut Volume</span>
+<div class="text-2xl font-bold font-code-metric text-white text-cyan-300" id="metric-volume">3,450,000 m³</div>
+<div class="text-[11px] text-slate-400">Consolidated Fairway &amp; Turning Basin Silt</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800 text-[12px] font-code-metric">
+<div>
+<span class="text-slate-400 block text-[10px]">Shoal Siltation Rate</span>
+<span class="text-amber-400 font-semibold">+0.42 m / Month</span>
+</div>
+<div>
+<span class="text-slate-400 block text-[10px]">Target Execution</span>
+<span class="text-emerald-400 font-semibold">42 Days Net Sweep</span>
+</div>
+</div>
+<div class="pt-2 border-t border-slate-800 text-[11px]">
+<div class="flex justify-between text-slate-300 font-code-metric mb-1">
+<span class="">Recommended Asset:</span>
+<span class="text-cyan-300 font-semibold">TSHD 12,500m³ (Twin Pipe)</span>
+</div>
+<div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-cyan-500 h-full w-[78%]"></div>
+</div>
+<span class="text-[10px] text-slate-400 mt-1 block font-code-metric">Optimal slurry payload density: 1.45 t/m³</span>
+</div>
+</div>
+</div>
+<!-- Subsea Core Stratigraphy Breakdown -->
+<div class="bg-slate-950 border border-cyan-900/60 rounded-xl p-4 space-y-3 flex-1">
+<div class="flex items-center justify-between border-b border-cyan-900/40 pb-2">
+<span class="text-[11px] font-code-metric text-cyan-400 uppercase font-semibold">SUBSEA CORE STRATIGRAPHY (BH-07)</span>
+<span class="material-symbols-outlined text-cyan-400 text-[18px]" data-icon="layers">layers</span>
+</div>
+<div class="space-y-2.5 text-[11px] font-code-metric">
+<!-- Layer 1 -->
+<div class="p-2 rounded bg-slate-900 border-l-4 border-amber-500">
+<div class="flex justify-between text-slate-200 font-semibold">
+<span class="">0.0m - 1.8m: Unconsolidated Silt</span>
+<span class="text-amber-400">SG: 1.35</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-0.5">High water-content marine mud; optimal for continuous high-rate trailing draghead scour.</p>
+</div>
+<!-- Layer 2 -->
+<div class="p-2 rounded bg-slate-900 border-l-4 border-cyan-500">
+<div class="flex justify-between text-slate-200 font-semibold">
+<span class="">1.8m - 4.2m: Dense Silty Clay</span>
+<span class="text-cyan-400">SPT N=18</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-0.5">Stiff marine sediment with medium sand laminations. Requires active water injection jetting.</p>
+</div>
+<!-- Layer 3 -->
+<div class="p-2 rounded bg-slate-900 border-l-4 border-slate-500">
+<div class="flex justify-between text-slate-200 font-semibold">
+<span class="">4.2m+: Calcified Basalt &amp; Sandstone</span>
+<span class="text-slate-300">UCS: 45 MPa</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-0.5">Competent rock bed; heavy CSD rock cutter pick heads mandatory if cutting below -18m CD.</p>
+</div>
+</div>
+<!-- Environmental & Spoil Disposal Feasibility -->
+<div class="pt-3 border-t border-cyan-900/40 space-y-1.5 text-[11px]">
+<span class="text-[10px] font-code-metric uppercase text-cyan-400 font-semibold">ENVIRONMENTAL &amp; SPOIL DISPOSAL FEASIBILITY</span>
+<div class="flex items-start gap-1.5 text-slate-300">
+<span class="material-symbols-outlined text-[15px] text-emerald-400 mt-0.5" data-icon="location_on">location_on</span>
+<span class="">Offshore Dumping Ground: <strong>Sector DS-4</strong> (14.2 NM Offshore, 45m Depth Envelope)</span>
+</div>
+<div class="flex items-start gap-1.5 text-slate-300">
+<span class="material-symbols-outlined text-[15px] text-emerald-400 mt-0.5" data-icon="eco">eco</span>
+<span class="">MoEFCC Compliance: Plume Dispersion &lt; 15 NTU. Silt curtain deployed.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Action Footer -->
+<div class="px-5 py-3.5 bg-slate-950/95 border-t border-cyan-900/50 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-body-sm transition-colors" onclick="downloadBathyCAD()">
+<span class="material-symbols-outlined text-[16px] text-cyan-400" data-icon="file_download">file_download</span>
+<span class="">Export Hydrographic Chart (GeoTIFF / CAD)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 text-body-sm transition-colors" onclick="printIHOReport()">
+<span class="material-symbols-outlined text-[16px]" data-icon="print">print</span>
+<span class="">Print IHO S-44 Depth Manifest</span>
+</button>
+</div>
+<div class="flex items-center gap-2.5">
+<button class="px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 text-body-sm font-medium transition-colors" onclick="closeBathymetricModal()">
+          Close
+        </button>
+<button class="inline-flex items-center gap-2 px-5 py-2 rounded bg-secondary hover:bg-cyan-600 text-white text-body-sm font-semibold shadow-lg shadow-cyan-950 transition-colors" onclick="injectParametersToForm()">
+<span class="material-symbols-outlined text-[18px]" data-icon="input">input</span>
+<span class="">Inject Parameters into Mobilization Request</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Component -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 max-w-md bg-primary-container text-white px-4 py-3 rounded-lg border border-secondary shadow-xl flex items-center gap-3" id="toast-notification">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" data-icon="verified">verified</span>
+<div>
+<p class="text-body-sm font-semibold" id="toast-title">Telemetry Parameters Injected</p>
+<p class="text-label-sm text-surface-variant" id="toast-body">Analyzed sector, target depth, and in-situ volume populated to requisition desk.</p>
+</div>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary dark:bg-inverse-surface text-primary-fixed dark:text-primary-fixed-dim border-t border-outline-variant dark:border-outline mt-space-xl">
+<div class="w-full px-margin py-space-xl max-w-[1440px] mx-auto flex flex-col gap-space-lg">
+<!-- Top Row: Brand & Summary -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b border-outline/30 pb-space-lg">
+<div class="space-y-1">
+<div class="text-headline-sm font-headline-sm font-bold text-surface-container-lowest dark:text-surface-bright uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-fixed text-[24px]" data-icon="anchor">anchor</span>
+            Marine Corporation of India
+          </div>
+<p class="text-body-sm font-body-sm text-on-primary-container dark:text-on-surface-variant">
+            Sovereign Maritime Operations, Dredging Fleet &amp; Hydrographic Survey Directorate.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<button class="text-surface-container-lowest dark:text-surface-bright font-medium text-body-sm font-body-sm hover:text-secondary-fixed transition-colors duration-150 flex items-center gap-1" onclick="openBathymetricModal()">
+<span class="material-symbols-outlined text-[16px]" data-icon="radar">radar</span>
+<span class="">Bathymetric Profiler</span>
+</button>
+<a class="text-on-primary-container dark:text-on-surface-variant text-body-sm font-body-sm hover:text-secondary-fixed transition-colors duration-150" href="#">Port Authority Clearances</a>
+<a class="text-on-primary-container dark:text-on-surface-variant text-body-sm font-body-sm hover:text-secondary-fixed transition-colors duration-150" href="#">Emergency Silt Protocol</a>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-label-sm font-label-sm">
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">SOVEREIGN FLEET</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">TSHD Mega Hoppers</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Heavy Rock CSDs</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Split Hopper Barges</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Grab Dredging Units</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">HYDROGRAPHY</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li class=""><button class="hover:text-secondary-fixed transition-colors text-left" onclick="openBathymetricModal()">Multibeam Bathymetry</button></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Sub-Bottom Chirp</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">IHO Chart Compliance</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">LiDAR Topography</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">CIVIL WORKS</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Land Reclamation</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Breakwater Armoring</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Accropode Placement</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Subsea Trenching</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">STATUTORY</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Sovereign Dredging Protocols</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">DGS Clearances</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">IWAI Waterway Acts</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">MoEFCC Environmental</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">TELEMETRY</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Bathymetric AIS Feeds</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Channel Depth Manifests</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Swell Sensor Arrays</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Tidal Harmonic Gauge</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-surface-container-lowest font-semibold mb-2">GOVERNANCE</h5>
+<ul class="space-y-1 text-on-primary-container">
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">National Logistics Policy</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Sagarmala Initiative</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">Defense Maritime Access</a></li>
+<li class=""><a class="hover:text-secondary-fixed transition-colors" href="#">RTI &amp; Compliance</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Row: Mandatory Copyright String & Compliance -->
+<div class="border-t border-outline/30 pt-space-md flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-on-primary-container dark:text-on-surface-variant gap-2">
+<p class="text-label-sm font-label-sm">
+          © 2024 Marine Corporation of India. Sovereign Maritime Operations &amp; Hydrographic Survey Directorate. Certified DGS, IWAI, MoPSW &amp; IHO Compliant.
+        </p>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<span class="text-surface-container-lowest">IHO S-44 Order 1a</span>
+<span class="">•</span>
+<span class="text-surface-container-lowest">IRS Class Certified</span>
+<span class="">•</span>
+<span class="text-surface-container-lowest">ISO 14001 Marine</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts for Bathymetric Depth Chart Analysis Modal -->
+<script>
+  // Sector Dataset configurations
+  const SECTOR_DATA = {
+    'JNPT': {
+      title: 'JNPT Fairway Approach Corridor',
+      subtitle: 'Sector: JNPT Approach Fairway & Vadhavan Navigation Corridor',
+      volume: '3,450,000 m³',
+      targetDepth: 'Capital Deepening (-14m to -18m)',
+      method: 'Trailing Suction Hopper (TSHD)',
+      targetDepthValue: '-17.5m CD',
+      cutDepth: '3.7m',
+      substrate: 'Calcified Silt & Stiff Marine Clay',
+      details: 'Dredge spoil designated for offshore Sector DS-4 (14.2 NM offshore). Double silt curtain mandated by MoEFCC.'
+    },
+    'Vadhavan': {
+      title: 'Vadhavan Port New Basin',
+      subtitle: 'Sector: Vadhavan Deepwater Basin & Basalt Barrier',
+      volume: '4,200,000 m³',
+      targetDepth: 'Hard Rock Stratum / Basalt Breaking',
+      method: 'Heavy Cutter Suction (CSD)',
+      targetDepthValue: '-20.0m CD',
+      cutDepth: '5.2m',
+      substrate: 'Dense Basalt & Calcified Hard Stratum',
+      details: 'Basalt breaking without blast shockwave. Trenching for LNG & mega-container berths.'
+    },
+    'Vizhinjam': {
+      title: 'Vizhinjam Deepwater Port Approach',
+      subtitle: 'Sector: Vizhinjam Transshipment Natural Basin',
+      volume: '1,800,000 m³',
+      targetDepth: 'Deepwater Trenching (-18m to -25m)',
+      method: 'Marine Land Reclamation',
+      targetDepthValue: '-22.5m CD',
+      cutDepth: '2.4m',
+      substrate: 'Coarse Sand & Rock Boulders',
+      details: 'Dredge mass channeled directly for breakwater armoring and tetrapod bed consolidation.'
+    },
+    'Hooghly': {
+      title: 'Hooghly Sandheads Navigation',
+      subtitle: 'Sector: Hooghly Estuary & Sagar Roads Approach',
+      volume: '2,900,000 m³',
+      targetDepth: 'Maintenance Silt (-10m to -14m)',
+      method: 'Trailing Suction Hopper (TSHD)',
+      targetDepthValue: '-9.5m CD',
+      cutDepth: '1.9m',
+      substrate: 'Rapid Silt & Estuarine Alluvial Mud',
+      details: 'High-swell continuous silt sweep to maintain tidal passage for container feeds to SMP Kolkata.'
+    }
+  };
+
+  let activeSectorKey = 'JNPT';
+
+  // Modal open/close functions
+  function openBathymetricModal(customSector) {
+    const modal = document.getElementById('bathymetric-modal');
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    if (customSector) {
+      if (customSector.toLowerCase().includes('vadhavan')) {
+        switchSector('Vadhavan');
+      } else if (customSector.toLowerCase().includes('vizhinjam')) {
+        switchSector('Vizhinjam');
+      } else if (customSector.toLowerCase().includes('hooghly')) {
+        switchSector('Hooghly');
+      } else {
+        switchSector('JNPT');
+      }
+    }
+  }
+
+  function closeBathymetricModal() {
+    const modal = document.getElementById('bathymetric-modal');
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  // Switch Active Sector
+  function switchSector(key) {
+    activeSectorKey = key;
+    const data = SECTOR_DATA[key];
+    if (!data) return;
+
+    document.getElementById('modal-sector-select').value = key;
+    document.getElementById('sounding-meta-label').textContent = data.subtitle;
+    document.getElementById('metric-volume').textContent = data.volume;
+    document.getElementById('hud-target').textContent = data.targetDepthValue;
+    document.getElementById('hud-substratum').textContent = data.substrate;
+  }
+
+  // Toggle Resolution buttons
+  function setResolution(res, button) {
+    document.getElementById('res-badge').textContent = res;
+    const buttons = document.querySelectorAll('.res-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('bg-cyan-600', 'text-white', 'font-semibold');
+      btn.classList.add('text-slate-300');
+    });
+    button.classList.add('bg-cyan-600', 'text-white', 'font-semibold');
+    button.classList.remove('text-slate-300');
+  }
+
+  // Interactive HUD tracking on hover
+  function updateSoundingHUD(e) {
+    const container = document.getElementById('bathymetric-grid-area');
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const crossX = document.getElementById('bathy-crosshair-x');
+    const crossY = document.getElementById('bathy-crosshair-y');
+
+    crossX.classList.remove('hidden');
+    crossY.classList.remove('hidden');
+    crossX.style.left = `${x}px`;
+    crossY.style.top = `${y}px`;
+
+    // Calculate synthetic depth based on normalized position
+    const normX = x / rect.width;
+    const normY = y / rect.height;
+
+    // Shoaling in upper left / middle, deep water in lower right
+    const baseDepth = 8.5 + (normX * 8.5) + (normY * 6.5);
+    const depthRounded = (-baseDepth).toFixed(1);
+
+    const targetVal = parseFloat(SECTOR_DATA[activeSectorKey].targetDepthValue.replace('m CD', ''));
+    const cutNeeded = Math.max(0, (Math.abs(targetVal) - baseDepth)).toFixed(1);
+
+    // Update HUD elements
+    document.getElementById('hud-depth').textContent = `${depthRounded}m CD`;
+    document.getElementById('hud-cut').textContent = `${cutNeeded}m Required`;
+
+    // Coordinates update slightly based on mouse
+    const latSec = (12.4 + (normY * 4.2)).toFixed(1);
+    const lonSec = (48.2 + (normX * 9.8)).toFixed(1);
+    document.getElementById('hud-coord').textContent = `18°54'${latSec}"N 72°53'${lonSec}"E`;
+  }
+
+  function resetSoundingHUD() {
+    document.getElementById('bathy-crosshair-x').classList.add('hidden');
+    document.getElementById('bathy-crosshair-y').classList.add('hidden');
+    document.getElementById('hud-depth').textContent = '-13.8m CD';
+    document.getElementById('hud-cut').textContent = '3.7m Required';
+    document.getElementById('hud-coord').textContent = '18°54\'12.4"N 72°53\'48.2"E';
+  }
+
+  // Inject bathymetric parameters into the parent Mobilization Desk Form
+  function injectParametersToForm() {
+    const data = SECTOR_DATA[activeSectorKey];
+    
+    // Set form fields
+    document.getElementById('form-sector').value = data.title;
+    document.getElementById('form-depth').value = data.targetDepth;
+    document.getElementById('form-method').value = data.method;
+    document.getElementById('form-volume').value = data.volume;
+    document.getElementById('form-details').value = data.details + " [Bathymetric sounding model verified via IHO S-44 Order 1a standard: target depth " + data.targetDepthValue + "]";
+    
+    // Check preliminary checkbox
+    document.getElementById('prelim-chart').checked = true;
+
+    // Show Telemetry Injected badge
+    const badge = document.getElementById('telemetry-injected-badge');
+    if (badge) badge.classList.remove('hidden');
+
+    // Close Modal smoothly
+    closeBathymetricModal();
+
+    // Scroll to the mobilization desk smoothly
+    const desk = document.getElementById('mobilization-desk');
+    if (desk) {
+      desk.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Trigger confirmation Toast
+    showToast(`Injected Bathymetry for ${data.title}: Volume ${data.volume} @ ${data.targetDepthValue}`);
+  }
+
+  // Toast helper
+  function showToast(message) {
+    const toast = document.getElementById('toast-notification');
+    const toastBody = document.getElementById('toast-body');
+    if (toast && toastBody) {
+      toastBody.textContent = message;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 4000);
+    }
+  }
+
+  // Mock export functions
+  function downloadBathyCAD() {
+    showToast('Hydrographic GeoTIFF bathymetric raster & CAD elevation grid packaged for download.');
+  }
+
+  function printIHOReport() {
+    showToast('Generating official IHO S-44 Order 1a Sounding Attestation Sheet...');
+    setTimeout(() => {
+      window.print();
+    }, 600);
+  }
+
+  // Close modal when pressing ESC
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      closeBathymetricModal();
+    }
+  });
+</script>
+
+
+</body></html>

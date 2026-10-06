@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MCI — Propulsion Turbine Engineering &amp; Machinery Overhaul</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container": "#e1f0ff",
+            "on-background": "#0f1d28",
+            "on-surface-variant": "#43474e",
+            "surface": "#f6f9ff",
+            "on-secondary-fixed-variant": "#004b71",
+            "outline-variant": "#c3c6cf",
+            "surface-container-low": "#ecf4ff",
+            "secondary-fixed-dim": "#90cdff",
+            "surface-variant": "#d6e4f3",
+            "tertiary-fixed-dim": "#90cff0",
+            "tertiary-fixed": "#c1e8ff",
+            "primary-fixed-dim": "#abc9f0",
+            "on-secondary-fixed": "#001e30",
+            "primary": "#001a32",
+            "inverse-surface": "#24323d",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#00537d",
+            "surface-tint": "#436083",
+            "background": "#f6f9ff",
+            "surface-container-highest": "#d6e4f3",
+            "on-primary-container": "#7a97bd",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#84c8fe",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#004d67",
+            "primary-container": "#0d2f4f",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-container": "#003244",
+            "on-tertiary-container": "#5e9dbd",
+            "primary-fixed": "#d2e4ff",
+            "surface-dim": "#cddceb",
+            "on-primary": "#ffffff",
+            "outline": "#73777f",
+            "on-tertiary": "#ffffff",
+            "tertiary": "#001c28",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#e6f2ff",
+            "inverse-primary": "#abc9f0",
+            "secondary": "#046494",
+            "on-primary-fixed": "#001c37",
+            "surface-container-high": "#dbeaf9",
+            "secondary-fixed": "#cbe6ff",
+            "on-tertiary-fixed": "#001e2b",
+            "on-primary-fixed-variant": "#2b486a",
+            "on-error-container": "#93000a",
+            "on-surface": "#0f1d28",
+            "surface-bright": "#f6f9ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xl": "2.5rem",
+            "margin-sm": "1rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "margin": "2.5rem",
+            "space-sm": "0.5rem",
+            "gutter-sm": "1rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Manrope"],
+            "body-sm": ["Inter"],
+            "title-md": ["Manrope"],
+            "display-hero-mobile": ["Manrope"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "headline-xl": ["Manrope"],
+            "display-hero": ["Manrope"],
+            "body-md": ["Inter"],
+            "code-metric": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "body-lg": ["Inter"],
+            "headline-sm": ["Manrope"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand Identity -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary flex items-center justify-center text-on-primary rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[24px]">anchor</span>
+</div>
+<div>
+<span class="text-title-md font-title-md tracking-tight font-bold text-primary uppercase block leading-none">
+            Marine Corporation of India
+          </span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider uppercase block mt-1">
+            Naval Engineering &amp; Sovereign Logistics
+          </span>
+</div>
+</div>
+<!-- Navigation Links (Services Active) -->
+<nav class="hidden lg:flex items-center gap-space-lg">
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-150 text-label-md font-label-md" href="#">
+          Fleet &amp; Ops
+        </a>
+<a class="text-secondary border-b-2 border-secondary font-semibold pb-1 text-label-md font-label-md" href="#">
+          Services
+        </a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-150 text-label-md font-label-md" href="#">
+          Engineering
+        </a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-150 text-label-md font-label-md" href="#">
+          Compliance
+        </a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-150 text-label-md font-label-md" href="#">
+          Global Ports
+        </a>
+<a class="text-on-surface-variant font-medium hover:text-secondary transition-colors duration-150 text-label-md font-label-md" href="#">
+          Corporate
+        </a>
+</nav>
+<!-- Right CTAs & Search -->
+<div class="flex items-center gap-space-md">
+<div class="hidden xl:flex items-center relative">
+<input class="bg-surface-container-low border border-outline-variant rounded-lg text-body-sm font-body-sm pl-9 pr-3 py-1.5 focus:outline-none focus:border-secondary w-56 text-on-surface placeholder:text-outline" placeholder="Search workshop specs, IMO regs..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 text-outline text-[18px]">search</span>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1.5 text-primary border border-outline-variant hover:border-secondary hover:bg-surface-container-low text-label-md font-label-md px-3.5 py-2 rounded-lg transition-colors" href="#inquiry">
+<span class="material-symbols-outlined text-[16px]">headset_mic</span>
+          Operations Desk
+        </a>
+<a class="bg-primary text-on-primary hover:bg-secondary text-label-md font-label-md px-4 py-2 rounded-lg transition-colors shadow-sm flex items-center gap-1.5" href="#inquiry">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+          Client Portal
+        </a>
+</div>
+</div>
+</header>
+<!-- Section 1: Telemetry & Breadcrumbs Bar -->
+<div class="bg-surface-container-lowest border-b border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-2.5 flex flex-wrap items-center justify-between gap-space-sm text-body-sm font-body-sm">
+<div class="flex items-center gap-2 text-outline">
+<a class="hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Services Directory</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors text-label-sm font-label-sm" href="#">Propulsion &amp; Heavy Machinery Overhaul</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-semibold text-label-sm font-label-sm">Vertical 04 // MACHINERY &amp; TURBINES</span>
+</div>
+<div class="flex items-center gap-space-md font-code-metric text-label-sm">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="text-on-surface font-medium">SYS.STATUS: OPERATIONAL</span>
+</div>
+<span class="text-outline-variant">|</span>
+<span class="text-outline">WORKSHOP CELL 01-04 ACTIVE</span>
+<span class="text-outline-variant">|</span>
+<span class="text-primary font-semibold">TELEMETRY CODE: MCI-ENG-TURB-04</span>
+</div>
+</div>
+</div>
+<main class="w-full max-w-[1440px] mx-auto px-margin py-space-xl space-y-space-xl">
+<!-- Section 2: Hero Section with Live Telemetry Photographic Frame -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low border border-outline-variant rounded text-label-sm font-label-sm text-secondary uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+          ISO 9001:2015 &amp; IACS CLASS APPROVED MACHINERY FACILITY // OEM CERTIFIED CALIBRATION
+        </div>
+<h1 class="text-headline-xl font-headline-xl text-primary tracking-tight">
+          Propulsion Turbine Engineering &amp; Heavy Machinery Overhaul
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Precision dynamic balancing, high-pressure steam and gas marine turbine overhaul, reduction gear diagnostics, and auxiliary propulsion system remanufacturing to OEM tolerances.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md pt-2">
+<a class="bg-primary-container text-on-primary hover:bg-secondary text-title-md font-title-md px-6 py-3 rounded-lg shadow-sm transition-all duration-150 inline-flex items-center gap-2" href="#inquiry">
+<span class="material-symbols-outlined text-[20px]">calendar_add_on</span>
+            Book Workshop Overhaul Slot
+          </a>
+<button class="bg-transparent border border-outline-variant hover:border-secondary hover:bg-surface-container-low text-primary text-title-md font-title-md px-5 py-3 rounded-lg transition-colors inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+            Download Turbine Technical Protocol (PDF)
+          </button>
+</div>
+<div class="grid grid-cols-3 gap-4 pt-4 border-t border-outline-variant">
+<div>
+<div class="text-label-sm font-label-sm uppercase text-outline">Tolerance Threshold</div>
+<div class="text-title-md font-title-md font-bold text-primary">DIN 3962 Class 4</div>
+</div>
+<div>
+<div class="text-label-sm font-label-sm uppercase text-outline">Balancing Standard</div>
+<div class="text-title-md font-title-md font-bold text-primary">ISO 1940 Grade G1.0</div>
+</div>
+<div>
+<div class="text-label-sm font-label-sm uppercase text-outline">Class Survey</div>
+<div class="text-title-md font-title-md font-bold text-secondary">IACS Class 100%</div>
+</div>
+</div>
+</div>
+<!-- Embedded Image with Architectural Overlay -->
+<div class="lg:col-span-5 relative">
+<div class="relative bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden shadow-sm">
+<img alt="MCI Heavy Machinery Turbine Facility" class="w-full h-[460px] object-cover filter contrast-[1.03] brightness-[0.98]" src="https://lh3.googleusercontent.com/aida/AEtjO1WmtvIAyRtclXJ41nMLQwPyQQ1nIIY_bwm0LOOfoPUpue3NRVgfdTaaZGwTu9sDekwWMI5hL9BORgRvTXlOBeO-5liMYsyUTTTP7xBpqawjZH_ERavlKWLMBPQXSeqI13kDxuI7rgikR7Lxrs7TmcsMzwRHkBK8WhXXlx2PPhSmua2VFAH1pRV-V8xUQe_o9jl3yBzb0cDJrWvyCfePpV7dYzvuNrLSkVwJgteLwheUoKkH0DB60JkEwxk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent pointer-events-none"></div>
+<!-- Live workshop telemetry overlay -->
+<div class="absolute bottom-0 left-0 right-0 p-space-md text-on-primary">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-on-primary/20">
+<div class="flex items-center gap-2 text-label-sm font-label-sm tracking-wider uppercase text-secondary-fixed">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim animate-ping"></span>
+                LIVE WORKSHOP TELEMETRY: HIGH-SPEED DYNAMIC BALANCING TUNNEL 02
+              </div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 bg-secondary text-on-primary rounded font-mono">LIVE FEED</span>
+</div>
+<p class="text-body-sm font-body-sm font-mono text-surface-bright/90 leading-snug">
+              Active Component: M/V MAHABALI MAIN STEAM ROTOR (32,000 SHP)<br/>
+              Residual Vibration: <span class="text-secondary-fixed font-bold">0.12 mm/s</span> (ISO 10816 Grade G2.5) // Tolerance: <span class="text-secondary-fixed font-bold">±0.01mm</span>
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Precision Engineering Key KPIs -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-xl shadow-sm">
+<div class="text-label-sm font-label-sm uppercase text-outline mb-1">Sub-Micron Machining Precision</div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold">±0.01 mm</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2">
+          Laser interferometer and 3D coordinate measuring arms for precision alignment &amp; journal verification.
+        </p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-xl shadow-sm">
+<div class="text-label-sm font-label-sm uppercase text-outline mb-1">Dynamic Balancing Rig Capacity</div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold">45 Tonne</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2">
+          Accommodating massive steam, gas, and hybrid propulsion rotors up to 14m LOA and 8,000 RPM.
+        </p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-xl shadow-sm">
+<div class="text-label-sm font-label-sm uppercase text-outline mb-1">Main Engines &amp; Turbines Overhauled</div>
+<div class="text-headline-lg font-headline-lg text-secondary tracking-tight font-bold">2,400+ Units</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2">
+          Zero in-service failure record across sovereign fleet and commercial strategic merchant operators.
+        </p>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant p-space-lg rounded-xl shadow-sm">
+<div class="text-label-sm font-label-sm uppercase text-outline mb-1">Emergency Fly-Out Squad SLA</div>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold">&lt; 72 Hours</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2">
+          Global 24/7 flying squad onboard service with portable dynamic laser alignment and in-situ boring rigs.
+        </p>
+</div>
+</section>
+<!-- Section 4: Core Mechanical & Turbine Engineering Capabilities -->
+<section class="space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm border-b border-outline-variant pb-4">
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-secondary font-semibold">Specialized Capabilities</span>
+<h2 class="text-headline-md font-headline-md text-primary mt-1">Core Mechanical &amp; Turbine Engineering Suites</h2>
+</div>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Class-approved certified procedures adhering to IACS, IMO SOLAS, and OEM engineering manuals.</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:border-secondary transition-colors duration-150">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-low text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">mode_fan</span>
+</div>
+<h3 class="text-title-md font-title-md text-primary mb-2">Marine Gas &amp; Steam Turbine Overhaul</h3>
+<ul class="text-body-sm font-body-sm text-on-surface-variant space-y-2 mt-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Full blading renewal &amp; root slot wire-EDM</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Shroud band peening &amp; nozzle diaphragm overhaul</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Labyrinth steam gland sealing replacement</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Rotor thermal deflection straightening &amp; stress relief</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant text-label-sm font-label-sm text-outline flex items-center justify-between">
+<span>SPEC: DIN 3962 / API 612</span>
+<span class="text-secondary font-semibold">VIEW PROTOCOL →</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:border-secondary transition-colors duration-150">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-low text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">settings</span>
+</div>
+<h3 class="text-title-md font-title-md text-primary mb-2">Main Reduction Gearbox Diagnostics</h3>
+<ul class="text-body-sm font-body-sm text-on-surface-variant space-y-2 mt-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Epicyclic &amp; double-helical gear train profiling</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Contact tooth pattern &amp; dye penetrant analysis</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Acoustic vibration spectrum analysis &amp; FFT logging</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Journal bearing babbiting, scraping &amp; clearances</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant text-label-sm font-label-sm text-outline flex items-center justify-between">
+<span>SPEC: AGMA 6011 / ISO 1328</span>
+<span class="text-secondary font-semibold">VIEW PROTOCOL →</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:border-secondary transition-colors duration-150">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-low text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">speed</span>
+</div>
+<h3 class="text-title-md font-title-md text-primary mb-2">Turbocharger Dynamic Balancing</h3>
+<ul class="text-body-sm font-body-sm text-on-surface-variant space-y-2 mt-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>ABB, MAN, Napier &amp; Mitsubishi cartridge overhauls</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Ultrasonic cleaning &amp; hydro-testing of housings</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Rotor balancing at operational speeds up to 45,000 RPM</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Gas inlet casing nozzle ring micro-restoration</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant text-label-sm font-label-sm text-outline flex items-center justify-between">
+<span>SPEC: OEM CLASS A CERT</span>
+<span class="text-secondary font-semibold">VIEW PROTOCOL →</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:border-secondary transition-colors duration-150">
+<div>
+<div class="w-12 h-12 rounded bg-surface-container-low text-secondary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">rotate_right</span>
+</div>
+<h3 class="text-title-md font-title-md text-primary mb-2">Shaft Line Auxiliary &amp; Thrusters</h3>
+<ul class="text-body-sm font-body-sm text-on-surface-variant space-y-2 mt-4">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>CPP hydraulic oil distribution hub rebuilds</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Bow thruster right-angle bevel gearboxes</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Steering gear ram actuators &amp; hunting gear</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+<span>Simplex stern tube seal re-bonding &amp; alignment</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant text-label-sm font-label-sm text-outline flex items-center justify-between">
+<span>SPEC: SOLAS II-1 REG 29</span>
+<span class="text-secondary font-semibold">VIEW PROTOCOL →</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Workshop & Test Bench Specification Sheet Table -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="p-space-lg border-b border-outline-variant flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="text-title-md font-title-md text-primary">Heavy Machinery Workshop &amp; Test Bench Specification Sheet</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Live operational telemetry across MCI Drydock &amp; Advanced Marine Workshop Cells 01-05.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 border border-outline-variant rounded text-label-sm font-label-sm text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px]">filter_list</span> Filter Bays
+          </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded text-label-sm font-label-sm hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span> Export CSV
+          </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-label-sm font-label-sm text-outline uppercase tracking-wider">
+<th class="py-3 px-space-md">Workshop Bay / Rig</th>
+<th class="py-3 px-space-md">Technical Specification</th>
+<th class="py-3 px-space-md">Maximum Envelope / Capacity</th>
+<th class="py-3 px-space-md">Precision / Tolerance</th>
+<th class="py-3 px-space-md">Live Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary">
+                Bay 01 // Schenck Hard-Bearing Dynamic Balancer
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+                High-speed multi-plane dynamic rotor balancing
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-on-surface">
+                45 Tonnes // 14,000mm LOA // 3,200mm Dia
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-secondary font-semibold">
+                ISO 1940 Grade G1.0 / G2.5
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active / On Test
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary">
+                Bay 02 // Horizontal Heavy-Duty Lathe &amp; Grinder
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+                Heavy shaft turning, journal skimming &amp; superfinishing
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-on-surface">
+                60 Tonnes // 18,000mm Bed // 2,400mm Swing
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-secondary font-semibold">
+                Runout: 0.005mm TIR
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-on-surface-variant font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Available / Standby
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary">
+                Bay 03 // 5-Axis CNC Blading Milling Center
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+                Subtractive manufacture of turbine blading &amp; diaphragms
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-on-surface">
+                5,000mm x 3,000mm Travel // Inconel &amp; Ti-Alloy
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-secondary font-semibold">
+                Positional Accuracy: ±0.003mm
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-fixed text-on-secondary-fixed font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> In Operation
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary">
+                Bay 04 // Hydraulic Load Absorption Dyno Test Cell
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+                Full-speed post-overhaul endurance test runs
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-on-surface">
+                Up to 25,000 kW (33,500 HP) Continuous
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-secondary font-semibold">
+                Class witnessed telemetry log
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-emerald-100 text-emerald-800 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Calibrated / Ready
+                </span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3.5 px-space-md font-semibold text-primary">
+                Bay 05 // In-Situ Line Boring &amp; Laser Optic Alignment
+              </td>
+<td class="py-3.5 px-space-md text-on-surface-variant">
+                Portable on-board engine block &amp; stern tube line boring
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-on-surface">
+                Bore diameters 150mm - 1,800mm
+              </td>
+<td class="py-3.5 px-space-md font-code-metric text-secondary font-semibold">
+                Laser Collimation 0.01mm/10m
+              </td>
+<td class="py-3.5 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-amber-100 text-amber-900 font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> Deployed Offshore
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Section 6: Emergency Case Study Showcase -->
+<section class="bg-primary text-on-primary rounded-xl overflow-hidden shadow-sm">
+<div class="p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 space-y-space-md">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 bg-secondary text-on-secondary rounded text-label-sm font-label-sm font-semibold uppercase">
+              Emergency Case Study
+            </span>
+<span class="text-secondary-fixed text-label-sm font-label-sm font-mono">
+              VESSEL IMO: 9684128 // OFFSHORE RAPID RESPONSE
+            </span>
+</div>
+<h3 class="text-headline-md font-headline-md font-bold tracking-tight">
+            Emergency LP Steam Turbine Re-Blading &amp; Rotor Trueing — LNG Carrier "Dishari"
+          </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2 text-body-sm font-body-sm">
+<div class="bg-primary-container p-4 rounded-lg border border-on-primary-container/20">
+<div class="text-label-sm font-label-sm text-secondary-fixed uppercase font-semibold mb-1">Defect Analysis</div>
+<p class="text-surface-bright/90">
+                Foreign object damage to row 4-7 low-pressure rotor blades during high-seas transit; excessive 9.4 mm/s vibration tripping vessel automated shutdown outside Mumbai port limits.
+              </p>
+</div>
+<div class="bg-primary-container p-4 rounded-lg border border-on-primary-container/20">
+<div class="text-label-sm font-label-sm text-secondary-fixed uppercase font-semibold mb-1">Engineering Solution</div>
+<p class="text-surface-bright/90">
+                MCI mobilized workshop emergency team, 3D laser-scanned blade root geometry, precision CNC-machined 142 replacement 12Cr stainless steel blades, and conducted precision vacuum chamber dynamic balancing within 9 days (saving client $1.4M in potential cargo off-hire penalty).
+              </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 bg-primary-container p-space-lg rounded-lg border border-on-primary-container/30 space-y-space-md">
+<div class="text-label-sm font-label-sm text-secondary-fixed uppercase tracking-wider font-semibold border-b border-on-primary-container/20 pb-2">
+            Verified Incident Outcomes
+          </div>
+<div>
+<div class="text-headline-lg font-headline-lg font-bold text-on-primary">9 Days</div>
+<div class="text-body-sm font-body-sm text-surface-bright/80">Total workshop dry-to-wet turnaround</div>
+</div>
+<div class="border-t border-on-primary-container/20 pt-3">
+<div class="text-headline-lg font-headline-lg font-bold text-secondary-fixed">0.08 mm/s</div>
+<div class="text-body-sm font-body-sm text-surface-bright/80">Final residual vibration (far below 1.2 mm/s threshold)</div>
+</div>
+<div class="border-t border-on-primary-container/20 pt-3">
+<div class="text-title-md font-title-md font-bold text-on-primary">100% Class Witnessed</div>
+<div class="text-body-sm font-body-sm text-surface-bright/80">Dual certified by DNV &amp; Indian Register of Shipping (IRS)</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Statutory Approvals Ribbon -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-around gap-space-md text-on-surface-variant text-label-md font-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span>OEM Authorized Service Facility</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">shield</span>
+<span>DNV GL Approved Mechanical Workshop</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">fact_check</span>
+<span>Lloyd's Register Certified Inspection</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">workspace_premium</span>
+<span>ISO 9001 Quality Assured</span>
+</div>
+<div class="hidden md:block w-px h-6 bg-outline-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">engineering</span>
+<span>IRS Certified NDT Personnel</span>
+</div>
+</div>
+</section>
+<!-- Section 8: Workshop Slot Reservation & Machinery Overhaul Inquiry Form -->
+<section class="bg-primary-container text-on-primary rounded-xl p-space-lg lg:p-space-xl border border-outline-variant shadow-sm" id="inquiry">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<div class="lg:col-span-5 space-y-space-md">
+<span class="text-label-sm font-label-sm text-secondary-fixed uppercase tracking-wider font-semibold">Priority Workshop Allocation</span>
+<h2 class="text-headline-lg font-headline-lg text-on-primary tracking-tight">Reserve Turbine or Heavy Machinery Bay</h2>
+<p class="text-body-md font-body-md text-surface-bright/80 leading-relaxed">
+            Directly interface with our Senior Naval Superintendent and Chief Diagnostic Engineers. All submissions invoke immediate berth and bay readiness sequencing.
+          </p>
+<div class="pt-space-md space-y-3 border-t border-on-primary-container/20 text-body-sm font-body-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">phone_in_talk</span>
+<div>
+<span class="text-outline-variant block text-label-sm font-label-sm">24/7 Engineering Hotline</span>
+<span class="font-semibold text-on-primary">+91 (22) 2261-0945</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">mark_email_read</span>
+<div>
+<span class="text-outline-variant block text-label-sm font-label-sm">Engineering Dispatch Email</span>
+<span class="font-semibold text-on-primary">turbines.engineering@marinecorp.gov.in</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">pin_drop</span>
+<div>
+<span class="text-outline-variant block text-label-sm font-label-sm">Central Overhaul Facility</span>
+<span class="font-semibold text-on-primary">MCI Naval Dockyard Complex, Port of Mumbai, Sector 04</span>
+</div>
+</div>
+</div>
+<div class="p-3 bg-tertiary-container/80 rounded border border-on-tertiary-container/30 flex items-center gap-3 text-label-sm font-label-sm text-surface-bright/90">
+<span class="material-symbols-outlined text-secondary-fixed text-[20px]">lock</span>
+<span>Sovereign Data Protocol: Work orders are encrypted under Indian Maritime Administration and MoPSW guidelines.</span>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-lowest text-on-surface p-space-lg rounded-xl border border-outline-variant shadow-sm">
+<form class="space-y-4">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm uppercase tracking-wider text-outline mb-1">Vessel Name &amp; IMO Number</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded p-2.5 text-body-sm font-body-sm focus:outline-none focus:border-secondary" placeholder="e.g. M/V MAHABALI (IMO 9481230)" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm uppercase tracking-wider text-outline mb-1">Machinery Classification</label>
+<select class="w-full bg-surface-container-low border border-outline-variant rounded p-2.5 text-body-sm font-body-sm focus:outline-none focus:border-secondary">
+<option>Marine Steam Turbine (Main / Gen)</option>
+<option>Gas Turbine Generator (LM2500 / GT13)</option>
+<option>Turbocharger Cartridge (ABB / MAN)</option>
+<option>Main Reduction Gear Train</option>
+<option>Controllable Pitch Propeller Hub</option>
+<option>Auxiliary Engine Line Boring</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-sm font-label-sm uppercase tracking-wider text-outline mb-1">Make &amp; OEM Model</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded p-2.5 text-body-sm font-body-sm focus:outline-none focus:border-secondary" placeholder="e.g. Kawasaki / Mitsubishi HP Rotor" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm uppercase tracking-wider text-outline mb-1">Required Turnaround Date</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded p-2.5 text-body-sm font-body-sm focus:outline-none focus:border-secondary" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm uppercase tracking-wider text-outline mb-1">Defect Summary / Scope of Work</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded p-2.5 text-body-sm font-body-sm focus:outline-none focus:border-secondary" placeholder="Provide vibration frequency readings, runout anomalies, blade damage specifics, or classification society survey deadlines..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<input class="rounded border-outline text-primary focus:ring-0" id="flying_squad" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface-variant" for="flying_squad">Request Emergency 72-Hour Flying Squad mobilization prior to port arrival.</label>
+</div>
+<div class="pt-2">
+<button class="w-full bg-primary text-on-primary hover:bg-secondary font-title-md text-title-md py-3 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+                Submit Machinery Work Order
+              </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-primary border-t border-primary-container text-on-primary">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<!-- Top Grid: Brand & Global Protocols -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-start border-b border-primary-container pb-space-lg">
+<div class="md:col-span-4 space-y-2">
+<span class="text-headline-sm font-headline-sm font-bold text-on-primary tracking-wider uppercase block">
+            Marine Corporation of India
+          </span>
+<p class="text-body-sm font-body-sm text-outline-variant leading-relaxed">
+            National sovereign maritime engineering authority, dedicated heavy vessel drydocking, propulsion plant overhaul, and class-certified marine infrastructure.
+          </p>
+</div>
+<div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-space-md">
+<div>
+<h4 class="text-label-sm font-label-sm uppercase tracking-wider text-secondary-fixed font-semibold mb-2">Technical Divisions</h4>
+<ul class="text-body-sm font-body-sm space-y-1.5 text-outline-variant">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Vessel Engineering Specs</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Fleet Telemetry</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Propulsion Workshop</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-sm font-label-sm uppercase tracking-wider text-secondary-fixed font-semibold mb-2">Regulatory &amp; Ports</h4>
+<ul class="text-body-sm font-body-sm space-y-1.5 text-outline-variant">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Maritime Safety &amp; IMO Compliance</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Port Authority Clearance</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">ESG &amp; Decarbonization</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-sm font-label-sm uppercase tracking-wider text-secondary-fixed font-semibold mb-2">Governance</h4>
+<ul class="text-body-sm font-body-sm space-y-1.5 text-outline-variant">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Legal &amp; Sovereign Protocols</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Class Survey Audit</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Meta & Statutory Certification -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm text-body-sm font-body-sm text-outline-variant">
+<div>
+          © 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.
+        </div>
+<div class="flex items-center gap-space-md text-label-sm font-label-sm">
+<span class="text-secondary-fixed font-mono">SYS-REV: 4.8.1-PROD</span>
+<span>|</span>
+<span class="text-secondary-fixed font-mono">VERIFIED BY IRS / DNV</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Operational Dispatch | Marine Corporation of India</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#43474e",
+            "surface-tint": "#436083",
+            "inverse-primary": "#abc9f0",
+            "primary-fixed": "#d2e4ff",
+            "primary-container": "#0d2f4f",
+            "on-tertiary-fixed": "#001e2b",
+            "on-surface": "#0f1d28",
+            "background": "#f6f9ff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#00537d",
+            "tertiary-fixed": "#c1e8ff",
+            "outline": "#73777f",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#e1f0ff",
+            "surface-variant": "#d6e4f3",
+            "on-primary-fixed": "#001c37",
+            "secondary-fixed-dim": "#90cdff",
+            "tertiary-container": "#003244",
+            "tertiary-fixed-dim": "#90cff0",
+            "on-primary-fixed-variant": "#2b486a",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c3c6cf",
+            "surface": "#f6f9ff",
+            "surface-container-low": "#ecf4ff",
+            "error": "#ba1a1a",
+            "primary-fixed-dim": "#abc9f0",
+            "surface-container-highest": "#d6e4f3",
+            "secondary": "#046494",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#004d67",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#24323d",
+            "on-secondary-fixed": "#001e30",
+            "inverse-on-surface": "#e6f2ff",
+            "on-tertiary-container": "#5e9dbd",
+            "on-primary-container": "#7a97bd",
+            "secondary-container": "#84c8fe",
+            "tertiary": "#001c28",
+            "primary": "#001a32",
+            "on-background": "#0f1d28",
+            "on-error": "#ffffff",
+            "surface-bright": "#f6f9ff",
+            "surface-container-high": "#dbeaf9",
+            "on-secondary-fixed-variant": "#004b71",
+            "secondary-fixed": "#cbe6ff",
+            "surface-dim": "#cddceb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-sm": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "title-md": ["Manrope"],
+            "body-md": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-sm": ["Manrope"],
+            "display-hero": ["Manrope"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "code-metric": ["Inter"],
+            "body-lg": ["Inter"],
+            "display-hero-mobile": ["Manrope"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant shadow-sm sticky top-0 z-50">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand Logo & Identity Anchor -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary-container text-on-primary flex items-center justify-center rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary-fixed">anchor</span>
+</div>
+<div>
+<span class="font-title-md text-title-md tracking-tight font-bold text-primary block leading-tight">Marine Corporation of India</span>
+<span class="font-label-sm text-label-sm text-outline tracking-wider uppercase">Central Dispatch &amp; Regional Offices</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">About MCI</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Activities</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Group</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Global Presence</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Investor Relations</a>
+<a class="font-label-md text-label-md text-secondary border-b-2 border-secondary font-semibold pb-1" href="#">Contact</a>
+</nav>
+<!-- Trailing Action Desk Controls -->
+<div class="flex items-center gap-3">
+<button class="hidden lg:flex items-center gap-2 bg-surface-container-low text-secondary px-3 py-2 rounded-lg border border-outline-variant font-label-md text-label-md hover:bg-surface-container transition-all duration-150">
+<span class="material-symbols-outlined text-[18px]">radio</span>
+          Operations Desk
+        </button>
+<button class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-secondary focus:ring-2 focus:ring-secondary focus:outline-none transition-all duration-150 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+          Client Portal
+        </button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative bg-primary text-on-primary overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Ballard Estate Port Trust Administration Complex" class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsEEQ48KFrLoZu-Ly4QMQxRj5ysfQbooccrj9eAA84WoM15e7q0ea6X6tm_JyBMVokqmWJ-JhKM4sy-joZAC64Mx-j1Aj7jIcp2WlWosL-byJrqR3oqfbbAn8WNs4oW-Yy1UYEFp2WZxJC1W3HTmyl39vx6rd8Cm7_1Ulqzxrr45AF4wPIKGlmtuOz9RbezTpHxj1lRiXlO2rquT3ji_YgQoHBahjFQlddFJjgZYXhmd0L7X7d5AIE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/60"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin py-16 lg:py-24">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-primary-container/80 border border-outline-variant/30 text-secondary-fixed mb-6 backdrop-blur-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">CENTRAL OPERATIONS DESK // 24/7 DEDICATED MARITIME COMMUNICATIONS</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl lg:text-display-hero font-bold tracking-tight text-on-primary mb-4">
+          Contact Marine Corporation of India
+        </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed">
+          Direct interface with our operations desk, dredging superintendents, dry dock yards, and statutory survey directorates.
+        </p>
+<!-- Live Telemetry Badges Strip -->
+<div class="mt-8 pt-8 border-t border-primary-container/80 grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Mumbai Port Radio</span>
+<span class="font-code-metric text-code-metric text-secondary-fixed font-semibold">VHF CH 16 / 12</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Command Status</span>
+<span class="font-code-metric text-code-metric text-emerald-300 font-semibold">Active Dispatch</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">SOLAS Response Unit</span>
+<span class="font-code-metric text-code-metric text-secondary-fixed font-semibold">Ready • Tier 1</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Indian Coastal Datum</span>
+<span class="font-code-metric text-code-metric text-on-primary font-semibold">WGS-84 / MSL Sync</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Workspace: Two-Column Operational Architecture -->
+<main class="w-full max-w-[1440px] mx-auto px-margin py-12 lg:py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- LEFT COLUMN: Direct Corporate & Bureau Access (5 Cols) -->
+<div class="lg:col-span-5 space-y-6">
+<!-- Central Headquarters Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm hover:border-secondary/40 transition-colors">
+<div class="flex items-start gap-4">
+<div class="p-2.5 rounded-lg bg-surface-container-low text-secondary border border-outline-variant/60 flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Principal Executive Authority</span>
+<h2 class="font-headline-sm text-headline-sm text-primary font-bold">Central Headquarters</h2>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
+                Sovereign Marine Tower, SBS Road, Ballard Estate, Mumbai 400001, Maharashtra, India.
+              </p>
+<div class="pt-3 flex items-center gap-2 text-outline">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+<span class="font-label-sm text-label-sm">Navigational Coordinates: 18.9322° N, 72.8436° E</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 24/7 Operations Desk Telephony & Digital Lines -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm space-y-5">
+<div class="border-b border-outline-variant pb-3 flex items-center justify-between">
+<h3 class="font-title-md text-title-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">headset_mic</span>
+              Direct Operational Telecom
+            </h3>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold tracking-wider uppercase bg-emerald-50 text-emerald-800 border border-emerald-200">24/7 Standby</span>
+</div>
+<div class="space-y-4">
+<!-- Superintendent Line -->
+<div class="group">
+<div class="font-label-sm text-label-sm text-outline uppercase font-semibold">Chief Operations Superintendent</div>
+<div class="flex items-center justify-between mt-1">
+<div class="font-code-metric text-code-metric font-semibold text-primary">
+                  +91 22 2261-0940 <span class="text-outline-variant font-normal">/</span> +91 98200 44521
+                </div>
+<a class="text-secondary hover:text-primary-container p-1" href="tel:+912222610940" title="Call Superintendent">
+<span class="material-symbols-outlined text-[20px]">call</span>
+</a>
+</div>
+</div>
+<!-- Operational Dispatch Email -->
+<div class="pt-3 border-t border-outline-variant/60">
+<div class="font-label-sm text-label-sm text-outline uppercase font-semibold">Operational Dispatch Email</div>
+<div class="mt-1 flex flex-col gap-1 font-code-metric text-code-metric font-semibold text-secondary">
+<a class="hover:underline flex items-center gap-1.5" href="mailto:telemetry@marinecorp.gov.in">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+                  telemetry@marinecorp.gov.in
+                </a>
+<a class="hover:underline flex items-center gap-1.5" href="mailto:ops@marinecorp.gov.in">
+<span class="material-symbols-outlined text-[16px] text-outline">mail</span>
+                  ops@marinecorp.gov.in
+                </a>
+</div>
+</div>
+<!-- Emergency Berthing VHF -->
+<div class="pt-3 border-t border-outline-variant/60 bg-error-container/20 -mx-6 -mb-6 p-4 rounded-b-xl border-t border-error/20">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[22px] flex-shrink-0 mt-0.5">crisis_alert</span>
+<div>
+<div class="font-label-sm text-label-sm text-error uppercase font-bold tracking-wide">Emergency Berthing &amp; Vessel Casualty Cell</div>
+<div class="font-body-sm text-body-sm text-on-surface mt-1">
+                    Direct Port Radio Link: <strong class="font-code-metric text-primary">VHF Channel 16 / 12</strong> (Mumbai Port Radio Control). For marine salvage, sudden listing, or propulsion blackouts.
+                  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Regional Directorate Desks -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg shadow-sm">
+<div class="border-b border-outline-variant pb-3 mb-4">
+<h3 class="font-title-md text-title-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+              Regional Directorate Desks
+            </h3>
+</div>
+<div class="space-y-4 divide-y divide-outline-variant/60">
+<!-- Desk 1 -->
+<div class="pt-2 first:pt-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-[14px] font-bold text-primary">JNPT Operations Center</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-semibold">Nhava Sheva Sector</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Container Berth Terminal 4, Sector Maritime Corridor. Tel: +91 22 2724-4001</p>
+</div>
+<!-- Desk 2 -->
+<div class="pt-3">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-[14px] font-bold text-primary">Kolkata SMP Port Desk</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-semibold">Eastern Seaboard</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Syama Prasad Mookerjee Port Trust Building, Strand Road. Tel: +91 33 2230-7411</p>
+</div>
+<!-- Desk 3 -->
+<div class="pt-3">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-[14px] font-bold text-primary">Vizhinjam Maritime Cell</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container text-secondary font-semibold">Deepwater Transshipment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">South Breakwater Command Office, Thiruvananthapuram. Tel: +91 471 230-1880</p>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive Dispatch & Operational Inquiry Form (7 Cols) -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<!-- Form Header -->
+<div class="bg-surface-container-low px-8 py-6 border-b border-outline-variant flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold tracking-wider">Direct Superintendent Routing</span>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">Operational Dispatch &amp; Vessel Inquiry</h2>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 text-outline text-xs">
+<span class="material-symbols-outlined text-[16px] text-emerald-600">verified</span>
+              TLS-256 Encrypted
+            </div>
+</div>
+<form action="#" class="p-8 space-y-6" method="POST" onsubmit="event.preventDefault(); alert('Operational Dispatch Request Logged under MCI Protocol 78/B. Transmission sent to Duty Superintendent.');">
+<!-- Inquiry Category -->
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="category">
+                Inquiry Category <span class="text-error">*</span>
+</label>
+<select class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="category" name="category" required="">
+<option disabled="" selected="" value="">Select operational classification...</option>
+<option value="dry-dock">Dry Dock Booking &amp; Slipway Allocation</option>
+<option value="dredging">Dredging, Hydrography &amp; Bathymetry Survey</option>
+<option value="fleet-charter">Fleet Charter &amp; Offshore Tug Support</option>
+<option value="marine-survey">Marine Survey, NDT &amp; Statutory Hull Inspection</option>
+<option value="corporate">General Corporate &amp; Inter-Agency Liaison</option>
+</select>
+</div>
+<!-- Vessel Details (2-col grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="vessel-name">
+                  Vessel Name &amp; IMO Number <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="vessel-name" name="vessel_name" placeholder="e.g. M.T. SAGAR PRIDE / IMO 9412086" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="gross-tonnage">
+                  Gross Tonnage (GRT) / Draft
+                </label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="gross-tonnage" name="gross_tonnage" placeholder="e.g. 48,500 GRT / 12.4m Draft" type="text"/>
+</div>
+</div>
+<!-- Organization & Representative (2-col grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="organization">
+                  Organization / Port Authority / Line <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="organization" name="organization" placeholder="e.g. Shipping Corporation / Port Trust" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="representative">
+                  Designated Representative Name <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="representative" name="representative" placeholder="Captain / Superintendent Name" required="" type="text"/>
+</div>
+</div>
+<!-- Contact Coordinates (Email & Tel) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="contact-email">
+                  Official Communication Email <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="contact-email" name="contact_email" placeholder="dispatch@lineagency.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="contact-phone">
+                  Direct Duty Mobile / SatCom Number <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="contact-phone" name="contact_phone" placeholder="+91 XXXXX XXXXX / Inmarsat-C" required="" type="tel"/>
+</div>
+</div>
+<!-- Scope of Engineering Support -->
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2" for="scope-details">
+                Scope of Engineering Support or Berthing Request <span class="text-error">*</span>
+</label>
+<textarea class="w-full p-3.5 bg-surface-container-lowest border border-outline-variant rounded-lg text-primary text-body-md placeholder:text-outline/60 focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="scope-details" name="scope_details" placeholder="Detail operational requirements: ETA, required bollard pull, dry dock beam clearance, cargo manifest class (IMDG), or dredging volume specs..." required="" rows="4"></textarea>
+</div>
+<!-- File / Manifest Attachment -->
+<div>
+<label class="block font-label-md text-label-md text-primary font-semibold mb-2">
+                Vessel Documentation / General Arrangement Plan / Manifest
+              </label>
+<div class="border-2 border-dashed border-outline-variant hover:border-secondary/60 rounded-xl p-6 text-center bg-surface-container-low/40 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[32px] text-secondary">cloud_upload</span>
+<p class="font-body-md text-body-md font-medium text-primary mt-2">
+                  Drag and drop vessel technical papers, or <span class="text-secondary font-semibold hover:underline">browse storage</span>
+</p>
+<p class="font-label-sm text-label-sm text-outline mt-1">Supported: PDF, DWG, DXF, XLSX, XML up to 35MB (Strict Anti-Malware Verification Enabled)</p>
+<input class="hidden" type="file"/>
+</div>
+</div>
+<!-- Priority Transmission Check -->
+<div class="flex items-start gap-3 pt-2">
+<input class="mt-1 w-4 h-4 rounded text-secondary focus:ring-secondary border-outline" id="urgent-flag" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="urgent-flag">
+<strong>Emergency Port Call / Distress Berth Priority:</strong> Check only if vessel is experiencing mechanical impediment, unseaworthy hull breaches, or requires Immediate Salvage Command intervention.
+              </label>
+</div>
+<!-- Submit Button -->
+<div class="pt-4 border-t border-outline-variant">
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary hover:bg-secondary text-on-primary font-title-md text-title-md font-bold tracking-wide transition-all duration-200 flex items-center justify-center gap-2 shadow-sm focus:ring-2 focus:ring-secondary" type="submit">
+<span class="material-symbols-outlined text-[20px]">send_time_extension</span>
+                Submit Operational Dispatch Request
+              </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- Statutory Security Notice Banner -->
+<div class="mt-12 bg-surface-container-low border border-outline-variant rounded-xl p-space-md">
+<div class="flex items-start sm:items-center gap-4">
+<div class="p-2 bg-primary-container text-secondary-fixed rounded-lg flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-label-md text-label-md uppercase font-bold text-primary tracking-wider">Statutory Security Notice // Official Secrets &amp; Indian Coastal Defense</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            All data logged via this terminal is routed via encrypted Government-grade infrastructure. Transmission of forged vessel telemetry, illicit AIS spoofing manifests, or unauthorized maritime reconnaissance queries constitutes a non-bailable offense under the Indian Ports Act, 1908, the Merchant Shipping Act, 1958, and relevant Coastal Defense Security Directives.
+          </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component as defined in Shared Components JSON -->
+<footer class="bg-primary border-t border-primary-container text-on-primary mt-16">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<!-- Top Row: Brand & Mission Brief -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-primary-container">
+<div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary tracking-wider uppercase">Marine Corporation of India</span>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">Sovereign maritime infrastructure, deep-water port engineering &amp; heavy logistics authority.</p>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-primary-container text-secondary-fixed border border-secondary/30">IMO Certified</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-primary-container text-secondary-fixed border border-secondary/30">SOLAS Compliant</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-primary-container text-secondary-fixed border border-secondary/30">ISO 9001:2015</span>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">Fleet Telemetry</a>
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">Maritime Safety &amp; IMO Compliance</a>
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">Port Authority Clearance</a>
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">Vessel Engineering Specs</a>
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">ESG &amp; Decarbonization</a>
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">Careers</a>
+<a class="font-label-sm text-label-sm text-outline-variant hover:text-secondary-fixed transition-colors duration-150" href="#">Legal &amp; Sovereign Protocols</a>
+</div>
+<!-- Copyright & Institutional Stamp -->
+<div class="pt-6 border-t border-primary-container flex flex-col md:flex-row md:items-center justify-between text-outline-variant gap-4">
+<p class="font-body-sm text-body-sm leading-relaxed max-w-4xl">
+          © 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.
+        </p>
+<div class="flex items-center gap-4 text-xs font-code-metric">
+<span>PORT RADIO: 156.800 MHz</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span>NET ONLINE</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

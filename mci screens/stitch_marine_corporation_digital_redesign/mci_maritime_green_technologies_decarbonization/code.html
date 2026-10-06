@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MCI — Maritime Green Technologies &amp; Decarbonization | Marine Corporation of India</title>
+<!-- Google Fonts: Manrope (Headlines & Architecture), Inter (Data & Telemetry) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim matching Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#001c37",
+            "surface-container-low": "#ecf4ff",
+            "on-secondary": "#ffffff",
+            "outline": "#73777f",
+            "secondary-fixed-dim": "#90cdff",
+            "surface-container-highest": "#d6e4f3",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#004d67",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "primary-fixed": "#d2e4ff",
+            "tertiary-fixed-dim": "#90cff0",
+            "on-background": "#0f1d28",
+            "tertiary-fixed": "#c1e8ff",
+            "inverse-primary": "#abc9f0",
+            "tertiary-container": "#003244",
+            "secondary": "#046494",
+            "background": "#f6f9ff",
+            "outline-variant": "#c3c6cf",
+            "on-primary": "#ffffff",
+            "surface-container": "#e1f0ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#dbeaf9",
+            "on-secondary-fixed-variant": "#004b71",
+            "on-error-container": "#93000a",
+            "on-secondary-fixed": "#001e30",
+            "primary": "#001a32",
+            "inverse-on-surface": "#e6f2ff",
+            "secondary-container": "#84c8fe",
+            "primary-fixed-dim": "#abc9f0",
+            "tertiary": "#001c28",
+            "on-secondary-container": "#00537d",
+            "surface-variant": "#d6e4f3",
+            "on-tertiary-fixed": "#001e2b",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#43474e",
+            "inverse-surface": "#24323d",
+            "surface": "#f6f9ff",
+            "surface-dim": "#cddceb",
+            "surface-tint": "#436083",
+            "secondary-fixed": "#cbe6ff",
+            "on-surface": "#0f1d28",
+            "on-tertiary-container": "#5e9dbd",
+            "surface-bright": "#f6f9ff",
+            "on-primary-container": "#7a97bd",
+            "primary-container": "#0d2f4f",
+            "on-primary-fixed-variant": "#2b486a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "margin": "2.5rem",
+            "margin-sm": "1rem"
+          },
+          "fontFamily": {
+            "code-metric": ["Inter", "monospace"],
+            "label-md": ["Inter", "sans-serif"],
+            "display-hero": ["Manrope", "sans-serif"],
+            "headline-md": ["Manrope", "sans-serif"],
+            "headline-lg": ["Manrope", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-xl-mobile": ["Manrope", "sans-serif"],
+            "headline-xl": ["Manrope", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "title-md": ["Manrope", "sans-serif"],
+            "display-hero-mobile": ["Manrope", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "headline-sm": ["Manrope", "sans-serif"]
+          },
+          "fontSize": {
+            "code-metric": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+            "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Subtle industrial grid lines */
+    .bg-grid-telemetry {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(195, 198, 207, 0.25) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(195, 198, 207, 0.25) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- ========================================== -->
+<!-- SHARED COMPONENT 1: TopNavBar (Web)       -->
+<!-- ========================================== -->
+<header class="w-full bg-surface-container-lowest dark:bg-primary shadow-sm border-b border-outline-variant dark:border-primary-container sticky top-0 z-50 transition-all duration-200">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex items-center justify-between h-20">
+<!-- Brand & Sovereign Anchor -->
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-primary-container text-on-primary flex items-center justify-center rounded-lg shadow-sm border border-secondary/40">
+<span class="material-symbols-outlined" data-icon="anchor">anchor</span>
+</div>
+<div class="flex flex-col">
+<span class="text-title-md font-title-md tracking-tight font-bold text-primary dark:text-on-primary uppercase">Marine Corporation of India</span>
+<span class="text-label-sm font-label-sm text-outline tracking-wider">MINISTRY OF PORTS, SHIPPING &amp; WATERWAYS // GOVT. OF INDIA</span>
+</div>
+</div>
+<!-- Navigation Links (Services Active) -->
+<nav class="hidden lg:flex items-center gap-space-lg">
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 text-label-md font-label-md" href="#fleet">Fleet &amp; Ops</a>
+<!-- Active link: Services -->
+<a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary dark:border-secondary-fixed font-semibold pb-1 hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 text-label-md font-label-md flex items-center gap-1" href="#services">
+          Services
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 text-label-md font-label-md" href="#engineering">Engineering</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 text-label-md font-label-md" href="#compliance">Compliance</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 text-label-md font-label-md" href="#ports">Global Ports</a>
+<a class="text-on-surface-variant dark:text-outline-variant font-medium hover:text-secondary dark:hover:text-secondary-fixed transition-colors duration-150 text-label-md font-label-md" href="#corporate">Corporate</a>
+</nav>
+<!-- Search & Trailing Actions -->
+<div class="flex items-center gap-space-sm">
+<!-- Search bar on right -->
+<div class="relative hidden xl:block w-48">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-label-md" data-icon="search">search</span>
+<input class="w-full pl-8 pr-3 py-1.5 bg-surface-container-low text-on-surface border border-outline-variant rounded-lg text-body-sm font-body-sm focus:outline-none focus:border-secondary transition-colors" placeholder="Search Telemetry / IMO..." type="text"/>
+</div>
+<a class="px-3.5 py-2 border border-outline text-primary dark:text-on-primary hover:bg-surface-container transition-colors rounded-lg text-label-md font-label-md flex items-center gap-1.5" href="#ops-desk">
+<span class="material-symbols-outlined text-secondary" data-icon="terminal">terminal</span>
+          Operations Desk
+        </a>
+<a class="px-4 py-2 bg-primary-container text-on-primary hover:bg-secondary transition-colors rounded-lg text-label-md font-label-md flex items-center gap-1.5 shadow-sm" href="#client-portal">
+<span class="material-symbols-outlined text-secondary-container" data-icon="lock">lock</span>
+          Client Portal
+        </a>
+</div>
+</div>
+</header>
+<!-- ========================================== -->
+<!-- SUB-NAV / BREADCRUMB & TELEMETRY STRIP    -->
+<!-- ========================================== -->
+<section class="w-full bg-surface-container-lowest border-b border-outline-variant py-2.5">
+<div class="w-full max-w-[1440px] mx-auto px-margin flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<!-- Breadcrumb -->
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>Services Directory</span>
+<span class="material-symbols-outlined text-[14px] text-outline" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-surface">Maritime Green Technologies &amp; Decarbonization</span>
+<span class="material-symbols-outlined text-[14px] text-outline" data-icon="chevron_right">chevron_right</span>
+<span class="text-secondary font-semibold">Vertical 06 // DECARBONIZATION &amp; GREEN RETROFITS</span>
+</div>
+<!-- Real-Time Telemetry Indicator -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-3 py-1 rounded-full border border-secondary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="text-label-sm font-code-metric font-semibold text-primary tracking-wide">
+          SYS.STATUS: OPERATIONAL // GREEN EMISSIONS TELEMETRY CELL 06 ACTIVE // CODE: MCI-ESG-DECARB-06
+        </span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- HERO SECTION                               -->
+<!-- ========================================== -->
+<section class="w-full bg-surface border-b border-outline-variant pt-space-xl pb-space-xl relative overflow-hidden bg-grid-telemetry">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Copy & CTAs (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Sovereign & IMO Compliance Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-high border border-secondary/30 rounded-lg w-fit">
+<span class="material-symbols-outlined text-secondary text-label-md" data-icon="verified">verified</span>
+<span class="text-label-sm font-label-sm font-semibold tracking-wider text-primary">
+              DIRECTORATE GENERAL OF SHIPPING &amp; IMO MARPOL ANNEX VI / CII COMPLIANT // MEPC 80 NET-ZERO 2050 ALIGNED
+            </span>
+</div>
+<!-- Main Title -->
+<h1 class="font-headline-xl text-headline-xl lg:font-display-hero lg:text-display-hero text-primary tracking-tight">
+            Maritime Green Technologies, Vessel Decarbonization &amp; Clean Energy
+          </h1>
+<!-- Subtitle / Descriptor -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Comprehensive low-carbon marine solutions: IMO CII/EEXI rating optimization, shore-to-ship cold ironing grid integration, scrubbers and selective catalytic reduction (SCR), advanced wind-assisted propulsion (WAPS), and dual-fuel methanol/LNG retrofits for commercial fleets.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<button class="px-6 py-3 bg-primary-container text-on-primary hover:bg-secondary rounded-lg font-title-md text-title-md flex items-center gap-2 shadow-sm transition-all duration-150">
+<span class="material-symbols-outlined text-secondary-container" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+              Schedule Fleet Decarbonization Audit
+            </button>
+<button class="px-5 py-3 bg-surface-container-lowest text-primary border border-outline hover:border-secondary hover:bg-surface-container-low rounded-lg font-title-md text-title-md flex items-center gap-2 transition-all duration-150">
+<span class="material-symbols-outlined text-secondary" data-icon="download">download</span>
+              Download IMO MEPC Decarbonization Roadmap (PDF)
+            </button>
+</div>
+<!-- Accreditation Badges Strip -->
+<div class="pt-space-md border-t border-outline-variant flex flex-wrap items-center gap-y-2 gap-x-6">
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-secondary" data-icon="policy">policy</span>
+              IMO 2030/2050 Aligned
+            </div>
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-secondary" data-icon="shield">shield</span>
+              DNV Green Fleet Certified
+            </div>
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-secondary" data-icon="analytics">analytics</span>
+              ISO 14064 GHG Accounting
+            </div>
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-secondary" data-icon="approval">approval</span>
+              BIMCO Carbon Expert Approved
+            </div>
+</div>
+</div>
+<!-- Right Column: Hero Visual with Live Carbon Telemetry HUD (5 Cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-md">
+<!-- Hero Image with required token -->
+<img class="w-full h-[460px] object-cover" data-alt="Clean industrial engineering photograph of maritime green technologies and eco-efficient shipboard machinery: clean stainless steel piping systems, oily-water separator equipment, and scrubbers in modern ship engine compartment under crisp technical lighting with deep blue reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN0FU0pf0xFthIss1Cw7HquYpKNo7tvyW1zGowl-lVumFDH7nFxVBEiU5QUyjrRsivfrp4xXOS_7ItvSGPnLD1S7F6_YbGWRn9oxI2oFCriEVx51eVdOIvFkvDkRq3LTde8ct6p12XC_6DqPWwCnE0UZm_e8a0PATElKh7eqngi3Lt_JVDAcaKDvon8r14e-Pl-uJrUBgkeXmNOYICzGCBgB0ZF93xd3NOV7kRHyFsElyuI7uJayUl"/>
+<!-- Architectural Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent"></div>
+<!-- Top HUD Badge -->
+<div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+<div class="bg-primary/85 backdrop-blur-md px-3 py-1 rounded border border-outline-variant/30 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-label-sm font-code-metric text-on-primary tracking-wide">LIVE EMISSION TELEMETRY: RETROFIT DOCK 03 // PORT KOCHI</span>
+</div>
+<span class="material-symbols-outlined text-secondary-container" data-icon="sensors">sensors</span>
+</div>
+<!-- Bottom HUD Data Panel -->
+<div class="absolute bottom-4 left-4 right-4 bg-primary/90 backdrop-blur-md border border-outline-variant/40 p-space-md rounded-lg text-on-primary">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-outline-variant/30">
+<div class="flex flex-col">
+<span class="text-label-sm font-label-sm text-secondary-fixed uppercase">Active Project Spec</span>
+<span class="text-title-md font-title-md font-bold">M/V SARASWATI PRIDE (110,000 DWT Aframax)</span>
+</div>
+<div class="bg-secondary/40 text-secondary-fixed text-label-sm font-code-metric px-2.5 py-1 rounded border border-secondary/50 font-bold">
+                  CAT E → CAT B
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-label-sm font-body-sm pt-1">
+<div>
+<span class="text-outline-variant block text-label-sm">CII Performance Shift:</span>
+<span class="text-secondary-fixed font-semibold font-code-metric">+32.4% Carbon Intensity Reduction</span>
+</div>
+<div>
+<span class="text-outline-variant block text-label-sm">Installed Scope:</span>
+<span class="text-on-primary truncate font-code-metric">Rotor Sail Prep + WHRS</span>
+</div>
+</div>
+<div class="mt-2.5 pt-2 border-t border-outline-variant/20 flex items-center justify-between text-label-sm text-outline-variant font-code-metric">
+<span>TECH LEAD: DR. S. MENON, CEng FRINA</span>
+<span class="text-secondary-fixed">DNV / IRS DUAL SURVEY</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- HIGH-DENSITY KPI METRICS STRIP             -->
+<!-- ========================================== -->
+<section class="w-full bg-surface-container-lowest border-b border-outline-variant py-space-lg">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg divide-y md:divide-y-0 md:divide-x divide-outline-variant">
+<!-- Metric 1 -->
+<div class="flex flex-col pt-4 md:pt-0 md:pl-0 lg:pr-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">-35%</span>
+<span class="text-secondary font-label-md font-semibold">CO2e Reduction</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Average vessel lifecycle carbon intensity reduction delivered across retrofitted tonnage.
+          </p>
+<div class="mt-3 flex items-center gap-1 text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="speed">speed</span>
+<span>IMO CII Aerodynamic Verified</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="flex flex-col pt-4 md:pt-0 md:pl-space-md lg:pr-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">120+</span>
+<span class="text-secondary font-label-md font-semibold">Vessels Retrofitted</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Commercial carriers, container ships, and coastal vessels upgraded to IMO EEXI &amp; CII standards.
+          </p>
+<div class="mt-3 flex items-center gap-1 text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span>Dry Dock &amp; Turnkey In-Situ</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="flex flex-col pt-4 md:pt-0 md:pl-space-md lg:pr-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">100%</span>
+<span class="text-secondary font-label-md font-semibold">IMO MEPC Clearance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Zero non-compliance notices under IMO MARPOL Annex VI regulations and EU ETS maritime carbon trading.
+          </p>
+<div class="mt-3 flex items-center gap-1 text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="task_alt">task_alt</span>
+<span>Zero Port State Control Detentions</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="flex flex-col pt-4 md:pt-0 md:pl-space-md">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg text-primary font-bold">18.5 MW</span>
+<span class="text-secondary font-label-md font-semibold">Cold Ironing Grid</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Installed shore-power high-voltage connection capacity delivered across sovereign deepwater berths.
+          </p>
+<div class="mt-3 flex items-center gap-1 text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="bolt">bolt</span>
+<span>IEC/IEEE 80005-1 Compliant</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- CORE GREEN TECHNOLOGIES & ENGINEERING      -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl bg-background border-b border-outline-variant" id="services">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="w-3 h-0.5 bg-secondary"></span>
+<span class="text-label-md font-label-md text-secondary uppercase font-semibold">Decarbonization Architecture</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold">
+            Core Green Technologies &amp; Marine Engineering Suites
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Architected for severe sea states, commercial operational endurance, and rigorous international environmental compliance.
+          </p>
+</div>
+<div class="mt-4 md:mt-0">
+<span class="text-label-sm font-code-metric text-outline bg-surface-container px-3 py-1.5 rounded border border-outline-variant">
+            TECH MATRIX: VER 2024.4 // CLASS-APPROVED
+          </span>
+</div>
+</div>
+<!-- 4-Card Pillar Grid (Bento Style with Technical Accents) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Card 1: Alternative Fuels & Dual Fuel -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:shadow-md hover:border-secondary transition-all duration-200">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center mb-space-md border border-secondary/20">
+<span class="material-symbols-outlined text-headline-sm" data-icon="propane_tank">propane_tank</span>
+</div>
+<span class="text-label-sm font-code-metric text-outline">SUITE 01 // PROPULSION CONVERSION</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">
+              Alternative Fuels &amp; Dual-Fuel Conversions
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Methanol, LNG, and green ammonia fuel delivery piping systems designed to withstand cryogenic parameters.
+            </p>
+<ul class="space-y-2 border-t border-outline-variant/60 pt-space-sm mb-space-md">
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Cryogenic fuel tank insulation &amp; boil-off gas handling</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Double-walled IGF-Code compliant supply manifolds</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Autonomous leak-detection &amp; nitrogen purge cycles</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-1.5 text-label-md font-label-md text-secondary hover:text-primary font-semibold group pt-2 border-t border-outline-variant/40" href="#audit">
+<span>View Dual-Fuel Engineering Protocols</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2: Exhaust Abatement & Carbon Capture -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:shadow-md hover:border-secondary transition-all duration-200">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center mb-space-md border border-secondary/20">
+<span class="material-symbols-outlined text-headline-sm" data-icon="filter_alt">filter_alt</span>
+</div>
+<span class="text-label-sm font-code-metric text-outline">SUITE 02 // MARPOL ANNEX VI</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">
+              Exhaust Gas Abatement &amp; Carbon Capture (OCCS)
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Hybrid and closed-loop SOx wet scrubbers, Selective Catalytic Reduction (SCR) for IMO Tier III compliance.
+            </p>
+<ul class="space-y-2 border-t border-outline-variant/60 pt-space-sm mb-space-md">
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Modular Onboard Carbon Capture &amp; Storage (OCCS)</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Cryogenic CO2 liquefaction and onboard pressure tanks</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Zero-discharge caustic washwater treatment systems</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-1.5 text-label-md font-label-md text-secondary hover:text-primary font-semibold group pt-2 border-t border-outline-variant/40" href="#audit">
+<span>Explore Emission Abatement</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3: Wind-Assisted Propulsion & Hydrodynamics -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:shadow-md hover:border-secondary transition-all duration-200">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center mb-space-md border border-secondary/20">
+<span class="material-symbols-outlined text-headline-sm" data-icon="air">air</span>
+</div>
+<span class="text-label-sm font-code-metric text-outline">SUITE 03 // AERODYNAMICS &amp; HULL</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">
+              Wind-Assisted Propulsion &amp; Clean Hull Hydrodynamics
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Flettner rotor sails, suction wings, and rigid wingsails paired with microscopic drag reduction coatings.
+            </p>
+<ul class="space-y-2 border-t border-outline-variant/60 pt-space-sm mb-space-md">
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Rotor sail foundation deck structural reinforcement</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Air Lubrication Systems (ALS) micro-bubble generators</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Mewis Duct &amp; Propeller Boss Cap Fins (PBCF) integration</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-1.5 text-label-md font-label-md text-secondary hover:text-primary font-semibold group pt-2 border-t border-outline-variant/40" href="#audit">
+<span>Inspect Aerodynamic Solutions</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4: Cold Ironing & Microgrids -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg flex flex-col justify-between hover:shadow-md hover:border-secondary transition-all duration-200">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-low text-secondary flex items-center justify-center mb-space-md border border-secondary/20">
+<span class="material-symbols-outlined text-headline-sm" data-icon="ev_station">ev_station</span>
+</div>
+<span class="text-label-sm font-code-metric text-outline">SUITE 04 // SHORE-TO-SHIP POWER</span>
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold mt-1 mb-2">
+              High-Voltage Shore Connection &amp; Microgrids
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              IEC/IEEE 80005-1 high-voltage shore connection (HVSC) panels and automatic cable management systems.
+            </p>
+<ul class="space-y-2 border-t border-outline-variant/60 pt-space-sm mb-space-md">
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Zero auxiliary engine emissions during port berth stays</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Solid-state Battery Energy Storage Systems (BESS)</span>
+</li>
+<li class="flex items-start gap-2 text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span>Hybrid peak-shaving &amp; harbor maneuver zero-sound mode</span>
+</li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-1.5 text-label-md font-label-md text-secondary hover:text-primary font-semibold group pt-2 border-t border-outline-variant/40" href="#audit">
+<span>Review Shore-Power Systems</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- FLEET ENERGY EFFICIENCY MANIFEST (TABLE)   -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl bg-surface-container-lowest border-b border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<!-- Table Controls Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between pb-space-md border-b border-outline-variant gap-space-md">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary" data-icon="dataset">dataset</span>
+<span class="text-label-md font-label-md uppercase text-secondary font-semibold">Live Operational Ledger</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">
+            Vessel Decarbonization &amp; Fleet Energy Efficiency Manifest
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Continuous real-time reporting of commercial tonnage undergoing environmental refits across sovereign dry docks.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Search in Table -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]" data-icon="search">search</span>
+<input class="pl-8 pr-3 py-1.5 bg-background text-on-surface border border-outline-variant rounded text-body-sm font-body-sm focus:outline-none focus:border-secondary w-56" placeholder="Filter IMO or Vessel Name..." type="text"/>
+</div>
+<!-- Status Filter -->
+<button class="px-3 py-1.5 bg-background border border-outline-variant text-on-surface hover:border-secondary rounded text-label-md font-label-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-outline" data-icon="tune">tune</span>
+            Filter Fleet Status
+          </button>
+<!-- Export CSV -->
+<button class="px-3.5 py-1.5 bg-primary-container text-on-primary hover:bg-secondary rounded text-label-md font-label-md flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary-container" data-icon="csv">csv</span>
+            Export Carbon Manifest CSV
+          </button>
+</div>
+</div>
+<!-- Manifest Data Table -->
+<div class="overflow-x-auto mt-4 border border-outline-variant rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface border-b border-outline-variant">
+<th class="py-3 px-4 text-label-sm font-label-sm uppercase tracking-wider text-outline">VESSEL NAME &amp; IMO</th>
+<th class="py-3 px-4 text-label-sm font-label-sm uppercase tracking-wider text-outline">RETROFIT ARCHITECTURE</th>
+<th class="py-3 px-4 text-label-sm font-label-sm uppercase tracking-wider text-outline">MEASURED CII BASELINE</th>
+<th class="py-3 px-4 text-label-sm font-label-sm uppercase tracking-wider text-outline">TARGET CII RATING</th>
+<th class="py-3 px-4 text-label-sm font-label-sm uppercase tracking-wider text-outline">ESTIMATED ANNUAL CO2 SAVINGS</th>
+<th class="py-3 px-4 text-label-sm font-label-sm uppercase tracking-wider text-outline">WORKSHOP STATUS</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-bold text-primary font-code-metric">M/V Ganga Fortune</div>
+<div class="text-label-sm text-outline font-code-metric">IMO 9642105 // Container 8,500 TEU</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Rotor Sails (2x 24m) &amp; Waste Heat Recovery
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-amber-100 text-amber-900 border border-amber-300">
+                  Rating D (Moderate Risk)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-fixed text-primary border border-secondary/30">
+                  Rating A (High Performance)
+                </span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-secondary font-code-metric">
+                4,200 MT CO2/yr
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-medium text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  Active Retrofit (Kochi Yard 02)
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-bold text-primary font-code-metric">M/T Narmada Star</div>
+<div class="text-label-sm text-outline font-code-metric">IMO 9520114 // Chemical Tanker</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Dual-Fuel Methanol Ready &amp; Scrubber Integration
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-red-100 text-red-900 border border-red-300">
+                  Rating E (Non-Compliant)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-fixed text-primary border border-secondary/30">
+                  Rating B (Compliant)
+                </span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-secondary font-code-metric">
+                3,150 MT CO2/yr
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-medium text-primary">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  Sea Trials &amp; Gas Cleared
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-bold text-primary font-code-metric">M/V Kanyakumari</div>
+<div class="text-label-sm text-outline font-code-metric">IMO 9811400 // Bulker 180k DWT</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Air Lubrication System (ALS) &amp; Mewis Duct
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-amber-50 text-amber-800 border border-amber-200">
+                  Rating C (Borderline)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-fixed text-primary border border-secondary/30">
+                  Rating B (Comfortable)
+                </span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-secondary font-code-metric">
+                2,800 MT CO2/yr
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-medium text-outline">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                  Engineering Sign-off
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-bold text-primary font-code-metric">Tug Samudra Veer</div>
+<div class="text-label-sm text-outline font-code-metric">IMO 9904221 // Escort Tug 80T BP</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Fully Electric Hybrid BESS (2.4 MWh Battery)
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-semibold bg-surface-container text-on-surface-variant">
+                  Non-rated (Harborcraft)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-secondary text-on-secondary">
+                  Zero-Port Emission
+                </span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-secondary font-code-metric">
+                920 MT CO2/yr
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-medium text-emerald-700">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                  Commissioned &amp; Active
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3.5 px-4">
+<div class="font-bold text-primary font-code-metric">M/V Indian Ocean</div>
+<div class="text-label-sm text-outline font-code-metric">IMO 9732009 // LNG Carrier</div>
+</td>
+<td class="py-3.5 px-4 text-on-surface">
+                Sub-cooler Reliquefaction &amp; Shaft Generator
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-amber-50 text-amber-800 border border-amber-200">
+                  Rating C (Baseline)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-label-sm font-bold bg-secondary-fixed text-primary border border-secondary/30">
+                  Rating A (Class Leader)
+                </span>
+</td>
+<td class="py-3.5 px-4 font-semibold text-secondary font-code-metric">
+                5,600 MT CO2/yr
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 text-label-sm font-medium text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                  Class Verification (DNV)
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footnote -->
+<div class="mt-3 flex items-center justify-between text-label-sm text-outline">
+<span>* CII Ratings calculated according to IMO Resolution MEPC.354(78) and certified via continuous shipboard DCS telemetry.</span>
+<span class="font-code-metric">TOTAL VERIFIED ANNUAL FLEET ABATEMENT: 16,670 MT CO2e</span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- FEATURED DECARBONIZATION CASE STUDY        -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl bg-background border-b border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<!-- Header Banner -->
+<div class="bg-primary text-on-primary px-space-lg py-3 flex flex-wrap items-center justify-between gap-2 border-b border-primary-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" data-icon="verified">verified</span>
+<span class="text-label-sm font-code-metric tracking-wider uppercase">IMO MEPC 80 FAST-TRACK CASE STUDY // AFRAMAX MODERNIZATION</span>
+</div>
+<span class="text-label-sm text-outline-variant font-code-metric">PROJECT DOCKET: MCI-ENG-CS-984</span>
+</div>
+<div class="p-space-lg lg:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: Case Narrative (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight mb-space-md">
+                  Rapid CII Rating Elevation &amp; Hybrid Clean Retrofit — M/T Sindhu Ratna
+                </h3>
+<!-- Problem Statement -->
+<div class="mb-space-md bg-surface-container-low p-4 rounded-lg border-l-4 border-error">
+<span class="text-label-sm font-label-sm font-bold text-error uppercase block mb-1">Operational Threat / Baseline Issue</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                    "The 105,000 DWT tanker faced imminent IMO Carbon Intensity Indicator (CII) Category E downgrade, risking commercial off-charter and heavy penalties in EU ETS shipping zones."
+                  </p>
+</div>
+<!-- Solution Statement -->
+<div class="mb-space-md bg-surface-container-high p-4 rounded-lg border-l-4 border-secondary">
+<span class="text-label-sm font-label-sm font-bold text-secondary uppercase block mb-1">Sovereign MCI Engineering Solution</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                    "MCI green flying engineering team deployed turnkey package: in-situ hydrodynamic propeller boss cap fins (PBCF), silicone foul-release hull coating during scheduled dry dock, and high-efficiency variable frequency drive (VFD) sea-water cooling pumps, plus installation of certified IMO DCS continuous emissions telemetry."
+                  </p>
+</div>
+</div>
+<!-- Executive Quote -->
+<div class="mt-4 pt-4 border-t border-outline-variant">
+<blockquote class="italic text-body-sm text-on-surface-variant">
+                  “MCI's technical execution delivered instant CII compliance and lowered our fuel expenditure by $480,000 in the first quarter of post-retrofit operations.”
+                </blockquote>
+<div class="mt-2 text-label-sm font-semibold text-primary">
+                  — Chief Fleet Superintendent, Oceanic Maritime Shipping
+                </div>
+</div>
+</div>
+<!-- Right Column: Key Results Grid (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-low rounded-xl p-space-lg border border-outline-variant">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase font-bold tracking-wider block mb-space-sm">Verified Audit Results</span>
+<div class="space-y-space-md">
+<!-- Metric A -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant shadow-sm">
+<span class="text-label-sm text-outline uppercase font-code-metric block">Execution Velocity</span>
+<div class="text-headline-md font-headline-md font-bold text-primary mt-0.5">32 Days Turnaround</div>
+<span class="text-body-sm text-on-surface-variant">Fully integrated during scheduled intermediate survey with zero operational off-hire extension.</span>
+</div>
+<!-- Metric B -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant shadow-sm">
+<span class="text-label-sm text-outline uppercase font-code-metric block">Hydrodynamic &amp; Energy Gain</span>
+<div class="text-headline-md font-headline-md font-bold text-secondary mt-0.5">-21.8% Fuel Consumption</div>
+<span class="text-body-sm text-on-surface-variant">Empirically verified on laden transit between Visakhapatnam and Singapore sea corridors.</span>
+</div>
+<!-- Metric C -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant shadow-sm">
+<span class="text-label-sm text-outline uppercase font-code-metric block">Classification Attestation</span>
+<div class="text-headline-md font-headline-md font-bold text-emerald-700 mt-0.5">Category B Attestation</div>
+<span class="text-body-sm text-on-surface-variant">Zero class reservations; official compliance endorsement signed off by Indian Register of Shipping &amp; DNV.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-code-metric text-outline">DOCKET SEAL: IRS-GRN-2024-88</span>
+<button class="px-3 py-1.5 bg-surface-container-lowest border border-outline text-primary hover:border-secondary rounded text-label-sm font-label-sm flex items-center gap-1 font-semibold">
+<span>Download Case Study Report</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="open_in_new">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- INSTITUTIONAL ACCREDITATIONS RIBBON        -->
+<!-- ========================================== -->
+<section class="w-full bg-surface-container border-b border-outline-variant py-space-md">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md">
+<span class="text-label-sm font-label-sm text-primary uppercase font-bold tracking-wider shrink-0">
+          Institutional Accreditations &amp; Class Authority Endorsements:
+        </span>
+<div class="flex flex-wrap items-center justify-center gap-6 text-body-sm font-semibold text-on-surface-variant">
+<div class="flex items-center gap-1.5 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+<span>DGS Decarbonization Directorate</span>
+</div>
+<div class="flex items-center gap-1.5 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="military_tech">military_tech</span>
+<span>Indian Register of Shipping (IRS) Green Class</span>
+</div>
+<div class="flex items-center gap-1.5 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="water_voc">water_voc</span>
+<span>IMO Clean Sea Auditor</span>
+</div>
+<div class="flex items-center gap-1.5 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="eco">eco</span>
+<span>ISO 14001 / ISO 50001 Certified</span>
+</div>
+<div class="flex items-center gap-1.5 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="public">public</span>
+<span>Mission Innovation Net-Zero Shipping Partner</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- FLEET AUDIT & CONSULTATION BOOKING DESK    -->
+<!-- ========================================== -->
+<section class="w-full py-space-xl bg-surface" id="audit">
+<div class="w-full max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg lg:p-space-xl shadow-md">
+<!-- Left Column: Contact & Security Assurance (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-outline-variant pb-space-lg lg:pb-0 lg:pr-space-xl">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2.5 h-2.5 bg-secondary rounded-full"></span>
+<span class="text-label-md font-label-md uppercase tracking-wider text-secondary font-bold">Priority Advisory Portal</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight mb-2">
+              MCI Maritime Decarbonization Cell
+            </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              Engage certified marine energy auditors, naval architects, and alternative fuel systems specialists to evaluate fleet EEXI/CII performance and model turnkey retrofit economics.
+            </p>
+<!-- Direct Contact Points -->
+<div class="space-y-space-md">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded bg-surface-container-low text-secondary flex items-center justify-center shrink-0 border border-secondary/20">
+<span class="material-symbols-outlined" data-icon="phone_in_talk">phone_in_talk</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-outline uppercase block">24/7 Marine Energy Hotline</span>
+<span class="text-body-md font-body-md font-semibold text-primary font-code-metric">+91 (22) 2261-0945 / +91 98200 44521</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded bg-surface-container-low text-secondary flex items-center justify-center shrink-0 border border-secondary/20">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-outline uppercase block">Priority Inquiries</span>
+<span class="text-body-md font-body-md font-semibold text-primary font-code-metric">green.maritime@marinecorp.gov.in</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded bg-surface-container-low text-secondary flex items-center justify-center shrink-0 border border-secondary/20">
+<span class="material-symbols-outlined" data-icon="location_city">location_city</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm text-outline uppercase block">Headquarters Command</span>
+<span class="text-body-sm font-body-sm text-on-surface">
+                    MCI Maritime Tower, Marine Drive / Nariman Point, Mumbai 400021, India
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sovereign Cyber Security Badge -->
+<div class="mt-space-lg pt-space-md border-t border-outline-variant flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-headline-sm" data-icon="encrypted">encrypted</span>
+<div class="text-label-sm font-code-metric text-outline">
+              DISPATCH PROTECTED UNDER SOVEREIGN MARITIME CYBER SECURITY PROTOCOL (CERT-IN CLASSIFIED).
+            </div>
+</div>
+</div>
+<!-- Right Column: Interactive Audit Booking Form (7 Cols) -->
+<div class="lg:col-span-7 lg:pl-space-md">
+<form class="space-y-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Vessel Name & IMO -->
+<div>
+<label class="block text-label-sm font-label-sm text-primary mb-1">
+                  VESSEL NAME &amp; IMO NUMBER *
+                </label>
+<input class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg p-2.5 text-body-sm font-body-sm focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none" placeholder="e.g., M/T Ocean Pioneer (IMO 9876543)" required="" type="text"/>
+</div>
+<!-- Current IMO CII Classification -->
+<div>
+<label class="block text-label-sm font-label-sm text-primary mb-1">
+                  CURRENT IMO CII CLASSIFICATION *
+                </label>
+<select class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg p-2.5 text-body-sm font-body-sm focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none">
+<option value="A">Category A (High Performance)</option>
+<option value="B">Category B (Minor Optimization)</option>
+<option value="C">Category C (Moderate Baseline)</option>
+<option value="D">Category D (Action Plan Required)</option>
+<option value="E">Category E (Non-Compliant Urgent)</option>
+<option selected="" value="Unknown">Unknown / Unassessed Preliminary</option>
+</select>
+</div>
+</div>
+<!-- Target Retrofit / Decarbonization Scope -->
+<div>
+<label class="block text-label-sm font-label-sm text-primary mb-1">
+                TARGET RETROFIT / DECARBONIZATION SCOPE *
+              </label>
+<select class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg p-2.5 text-body-sm font-body-sm focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none">
+<option selected="">Full CII Optimization Audit &amp; Technical Gap Analysis</option>
+<option>Wind Propulsion (WAPS / Flettner Rotor Integration)</option>
+<option>Dual-Fuel Methanol / LNG Conversion Engineering</option>
+<option>Shore Connection (Cold Ironing HVSC 6.6kV/11kV)</option>
+<option>Air Lubrication (ALS) &amp; Hydrodynamic Appendages</option>
+<option>Exhaust Scrubbers (SOx) &amp; SCR (NOx Tier III) Abatement</option>
+</select>
+</div>
+<!-- Estimated Mobilization Port & Berth Window -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div>
+<label class="block text-label-sm font-label-sm text-primary mb-1">
+                  ESTIMATED MOBILIZATION PORT
+                </label>
+<input class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg p-2.5 text-body-sm font-body-sm focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none" placeholder="e.g., Cochin Shipyard / Mumbai Port Trust" type="text"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-primary mb-1">
+                  DRY DOCK / SURVEY WINDOW
+                </label>
+<input class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg p-2.5 text-body-sm font-body-sm focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none" type="date"/>
+</div>
+</div>
+<!-- Technical Notes / Defect Profile -->
+<div>
+<label class="block text-label-sm font-label-sm text-primary mb-1">
+                TECHNICAL DEFECT / FLEET DECARBONIZATION NOTES
+              </label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant rounded-lg p-2.5 text-body-sm font-body-sm focus:border-secondary focus:ring-1 focus:ring-secondary focus:outline-none" placeholder="Include current main engine propulsion specs, daily fuel burn rate, and priority route requirements..." rows="3"></textarea>
+</div>
+<!-- ROI Simulation Checkbox -->
+<div class="flex items-start gap-2 pt-1">
+<input checked="" class="mt-1 h-4 w-4 rounded border-outline text-primary-container focus:ring-secondary" id="sim-model" type="checkbox"/>
+<label class="text-body-sm font-body-sm text-on-surface" for="sim-model">
+                Request Preliminary ROI &amp; Carbon Fuel Savings Simulation Model (Complimentary DGS/IMO Compliant Assessment)
+              </label>
+</div>
+<!-- Submit CTA -->
+<div class="pt-2">
+<button class="w-full py-3.5 bg-primary-container text-on-primary hover:bg-secondary font-title-md text-title-md rounded-lg flex items-center justify-center gap-2 shadow-sm transition-all duration-150" type="submit">
+<span class="material-symbols-outlined text-secondary-container" data-icon="send">send</span>
+                Submit Fleet Decarbonization Inquiry
+              </button>
+</div>
+<p class="text-label-sm text-outline text-center">
+              All engineering blueprints and carbon telemetries remain protected under sovereign non-disclosure NDA protocols.
+            </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- SHARED COMPONENT 2: Footer (Web)           -->
+<!-- ========================================== -->
+<footer class="w-full bg-primary dark:bg-tertiary text-on-primary dark:text-on-primary border-t border-primary-container dark:border-outline-variant">
+<div class="w-full max-w-[1440px] mx-auto px-margin py-space-xl flex flex-col gap-space-lg">
+<!-- Top Row: Brand & Sovereign Identity -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between pb-space-lg border-b border-outline/20 gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 bg-surface-container-lowest text-primary flex items-center justify-center rounded-lg shadow">
+<span class="material-symbols-outlined" data-icon="anchor">anchor</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm font-bold text-on-primary dark:text-on-primary tracking-wider uppercase">Marine Corporation of India</span>
+<span class="text-label-sm font-label-sm text-outline-variant">SOVEREIGN MARITIME INFRASTRUCTURE &amp; FLEET ENGINEERING</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm text-label-sm font-code-metric text-secondary-fixed">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span>IMO GLOBAL DATABASE LINK ACTIVE // CERTIFIED MARITIME AUTHORITY</span>
+</div>
+</div>
+<!-- Center Row: Mandatory Footer Links from JSON -->
+<div class="flex flex-wrap items-center justify-between gap-y-3 gap-x-6 text-body-sm font-body-sm text-outline-variant dark:text-outline-variant">
+<a class="hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#telemetry">Fleet Telemetry</a>
+<a class="hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#imo">Maritime Safety &amp; IMO Compliance</a>
+<a class="hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#port-clearance">Port Authority Clearance</a>
+<a class="hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#specs">Vessel Engineering Specs</a>
+<!-- Active link in footer matching current context -->
+<a class="text-secondary-fixed dark:text-secondary-fixed font-medium hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150 flex items-center gap-1" href="#esg">
+          ESG &amp; Decarbonization
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed"></span>
+</a>
+<a class="hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#careers">Careers</a>
+<a class="hover:text-secondary-container dark:hover:text-secondary-fixed-dim transition-colors duration-150" href="#protocols">Legal &amp; Sovereign Protocols</a>
+</div>
+<!-- Bottom Row: Mandatory Copyright Text from JSON -->
+<div class="pt-space-md border-t border-outline/20 flex flex-col md:flex-row items-center justify-between text-label-sm font-label-sm text-outline-variant gap-2">
+<p>© 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.</p>
+<span class="font-code-metric text-secondary-fixed">STRICTLY FLAT UI // HAIRLINE ARCHITECTURAL ELEVATION</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCI - Marine Corporation of India</title>
+    <meta
+      name="description"
+      content="Marine Corporation of India Group of Companies website redesign implementation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-shell">
+      <header class="site-header" data-header>
+        <div class="header-frame">
+          <a class="brand-card" href="/" data-link aria-label="MCI home">
+            <span class="brand-mark" aria-hidden="true">
+              <span class="wheel">MCI</span>
+              <span class="anchor-shank"></span>
+            </span>
+            <span class="brand-text">
+              <strong>MCI</strong>
+              <small>Group of Companies</small>
+            </span>
+          </a>
+
+          <div class="nav-stack">
+            <div class="social-strip" aria-label="Social links">
+              <a href="/contact" data-link aria-label="Facebook">f</a>
+              <a href="/contact" data-link aria-label="Skype">s</a>
+              <a href="/contact" data-link aria-label="Twitter">t</a>
+              <a href="/contact" data-link aria-label="More contact options">••</a>
+            </div>
+
+            <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">
+              <span></span><span></span><span></span>
+              <span class="sr-only">Open menu</span>
+            </button>
+
+            <nav class="primary-nav" data-nav aria-label="Primary navigation">
+              <a href="/" data-link>Home</a>
+              <a href="/about" data-link>About Us</a>
+              <a href="/group" data-link>Group</a>
+              <div class="nav-dropdown" data-activities-nav>
+                <a href="/activities" data-link class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                  Activities
+                </a>
+                <div class="mega-menu" data-mega-menu>
+                  <div class="mega-copy">
+                    <span>Activities Directory</span>
+                    <strong>Discover MCI service categories and move into detailed capability pages.</strong>
+                  </div>
+                  <div class="mega-links" data-mega-links></div>
+                </div>
+              </div>
+              <a href="/global-presence" data-link>Global Presence</a>
+              <a href="/investor-relations" data-link>Investor Relationship</a>
+              <a href="/contact" data-link>Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" tabindex="-1"></main>
+
+      <footer class="site-footer">
+        <button class="back-top" type="button" data-back-top aria-label="Back to top">⌃</button>
+        <div class="footer-inner">
+          <div>
+            <strong>Marine Corporation of India</strong>
+            <span>Group of Companies</span>
+          </div>
+          <nav aria-label="Footer navigation">
+            <a href="/activities" data-link>Activities</a>
+            <a href="/global-presence" data-link>Global Presence</a>
+            <a href="/contact" data-link>Contact</a>
+          </nav>
+          <p>Copyright © MCI GROUP - Designed by Colourmoon(P) LTD</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
