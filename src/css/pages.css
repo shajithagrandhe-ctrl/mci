@@ -2470,3 +2470,84 @@ body:has(#home-hero) .site-header.scrolled {
     margin-left: 0 !important;
   }
 }
+
+/* Final navigation/footer annotation pass: fixed liquid glass and calmer footer image opacity. */
+.site-header,
+.site-header.scrolled,
+body:has(#home-hero) .site-header,
+body:has(#home-hero) .site-header.scrolled {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 1200 !important;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.1)) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.46) !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(22px) saturate(1.5) contrast(1.04) !important;
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.06) 42%, rgba(255, 255, 255, 0.22)),
+    radial-gradient(circle at 18% 12%, rgba(255, 255, 255, 0.58), transparent 28%);
+  opacity: 0.72;
+}
+
+.site-header > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-desktop {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.38) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 14px 36px rgba(0, 0, 0, 0.16) !important;
+  backdrop-filter: blur(18px) saturate(1.35) !important;
+}
+
+.nav-desktop .nav-link.active,
+.nav-desktop .nav-link:hover,
+body:has(#home-hero) .site-header .nav-link.active,
+body:has(#home-hero) .site-header .nav-link:hover {
+  color: #fff !important;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.42) !important;
+}
+
+#page-root {
+  padding-top: 112px;
+}
+
+body:has(#home-hero) #page-root {
+  padding-top: 0;
+}
+
+.site-footer {
+  background:
+    linear-gradient(rgba(245, 250, 248, 0.44), rgba(245, 250, 248, 0.5)),
+    url('/assets/footer-submarine.png') center / cover no-repeat !important;
+}
+
+.site-footer > .container {
+  background: rgba(255, 255, 255, 0.34) !important;
+  border-color: rgba(255, 255, 255, 0.56) !important;
+  backdrop-filter: blur(7px) saturate(0.82) !important;
+}
+
+@media (max-width: 1180px) {
+  #page-root {
+    padding-top: 92px;
+  }
+
+  body:has(#home-hero) #page-root {
+    padding-top: 0;
+  }
+}

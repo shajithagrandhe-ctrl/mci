@@ -256,10 +256,6 @@
               <span>Operational Capabilities</span>
               <span class="material-symbols-outlined" style="font-size: 18px;">arrow_downward</span>
             </a>
-            <a href="/global-presence" class="btn btn-outline-white btn-lg" data-nav-link>
-              <span class="material-symbols-outlined" style="font-size: 18px;">satellite_alt</span>
-              <span>Launch Fleet Telemetry Portal</span>
-            </a>
           </div>
 
           <div class="workflow-strip">
@@ -499,10 +495,6 @@
         <div class="container">
           <div class="cta-banner">
             <div class="cta-banner-content">
-              <div class="badge badge-accent" style="margin-bottom: 0.75rem;">
-                <span class="material-symbols-outlined" style="font-size: 14px;">speed</span>
-                24/7 Rapid Mobilization
-              </div>
               <h2 class="section-title" style="margin-bottom: 0.5rem;">
                 Initiate Fleet Dispatch &amp; Operational Inquiry
               </h2>
@@ -757,10 +749,6 @@
         <div class="container">
           <div class="cta-banner">
             <div class="cta-banner-content">
-              <div class="badge badge-accent" style="margin-bottom: 0.75rem;">
-                <span class="material-symbols-outlined" style="font-size: 14px;">support_agent</span>
-                24/7 Rapid Mobilization Available
-              </div>
               <h2 class="section-title" style="margin-bottom: 0.5rem;">Request a Capability Briefing</h2>
               <p style="font-size: 0.95rem; color: var(--color-primary-fixed-dim); line-height: 1.55;">
                 Connect with our duty superintendents to discuss your specific operational requirements, fleet mobilization timelines, and project scope assessments.
