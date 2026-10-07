@@ -2618,3 +2618,54 @@ body:has(#home-hero) .site-header.scrolled {
     transform: none;
   }
 }
+
+/* Split brand identity from the navbar: only the navigation pill keeps glass. */
+.site-header,
+.site-header.scrolled,
+body:has(#home-hero) .site-header,
+body:has(#home-hero) .site-header.scrolled {
+  background: transparent !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.site-header::before {
+  content: none !important;
+}
+
+.header-main::after {
+  display: none !important;
+}
+
+.brand-anchor {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.brand-name,
+.brand-subtext {
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.78),
+    0 10px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+body:has(#home-hero) .site-header .brand-name,
+body:has(#home-hero) .site-header .brand-subtext {
+  color: #fff !important;
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.7),
+    0 0 1px rgba(0, 0, 0, 0.95) !important;
+}
+
+.nav-desktop {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.16)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.46) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 14px 34px rgba(0, 0, 0, 0.14) !important;
+  backdrop-filter: blur(20px) saturate(1.45) !important;
+}
