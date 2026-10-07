@@ -2132,3 +2132,276 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Applied annotation pass: monochrome palette, sticky header, footer glass card, and prompt map. */
+body {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.96) 0 18%, rgba(255, 255, 255, 0) 42%),
+    linear-gradient(145deg, #ffffff 0%, #eeeeee 34%, #9d9d9d 72%, #111111 130%) !important;
+}
+
+.page-transition {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.08)),
+    transparent !important;
+}
+
+.section-light,
+.section-white {
+  background: rgba(255, 255, 255, 0.42) !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.section-dark,
+[style*="#071a2b"],
+[style*="#0d2f4f"],
+[style*="#001c28"] {
+  background: linear-gradient(135deg, #0b0b0b 0%, #2f2f2f 48%, #efefef 150%) !important;
+}
+
+.site-header,
+.site-header.scrolled,
+body:has(#home-hero) .site-header,
+body:has(#home-hero) .site-header.scrolled {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 980 !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14) !important;
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.16) !important;
+  backdrop-filter: blur(14px) saturate(1.08) !important;
+}
+
+body:has(#home-hero) .site-header .brand-name,
+body:has(#home-hero) .site-header .brand-subtext,
+body:has(#home-hero) .site-header .nav-link {
+  color: #111 !important;
+  text-shadow: none !important;
+}
+
+.header-main {
+  height: 112px !important;
+  min-height: 112px !important;
+}
+
+.brand-anchor {
+  margin-left: min(10cm, 18vw) !important;
+}
+
+.brand-logo-img {
+  height: 106px !important;
+}
+
+.brand-name,
+.brand-subtext {
+  font-family: 'Oxanium', var(--font-heading), sans-serif !important;
+}
+
+.brand-subtext {
+  text-transform: uppercase;
+}
+
+body:has(#home-hero) .hero {
+  padding-top: 0 !important;
+}
+
+.site-footer {
+  padding: 2.25rem 0 !important;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.1)),
+    url('/assets/footer-submarine.png') center / cover no-repeat !important;
+}
+
+.site-footer > .container {
+  background: rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.15rem, 2vw, 1.75rem) !important;
+  box-shadow: 0 22px 65px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(10px) saturate(1.15);
+}
+
+.site-footer .footer-brand span,
+.site-footer .footer-col h4,
+.site-footer .footer-links,
+.site-footer .footer-links span,
+.site-footer .footer-links a,
+.site-footer .footer-bottom,
+.site-footer .footer-bottom p,
+.site-footer .footer-bottom span,
+.site-footer .footer-bottom a {
+  color: #020202 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.92);
+}
+
+#btn-back-top {
+  position: fixed !important;
+  right: clamp(1rem, 2vw, 1.8rem) !important;
+  bottom: clamp(1rem, 2vw, 1.8rem) !important;
+  z-index: 990 !important;
+  color: #111 !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(0, 0, 0, 0.18) !important;
+}
+
+.activities-hero .filter-pill,
+.activities-hero .filter-pill:hover,
+.activities-hero .filter-pill:focus-visible,
+.activities-hero .filter-pill.active,
+.activities-hero .filter-pill.origin-filled {
+  min-width: max-content;
+  max-width: none;
+  overflow: visible;
+  white-space: nowrap;
+  color: #071019 !important;
+  text-shadow: none !important;
+}
+
+.activities-hero .filter-pill.active,
+.activities-hero .filter-pill:hover,
+.activities-hero .filter-pill:focus-visible {
+  background: #111 !important;
+  border-color: #111 !important;
+  color: #fff !important;
+}
+
+.global-prompt-map-section {
+  padding: clamp(2.5rem, 5vw, 4.5rem) 0 !important;
+}
+
+.world-map-shell {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.42fr) minmax(340px, 1fr);
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(220, 220, 220, 0.68));
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.24);
+  padding: clamp(1rem, 2vw, 1.5rem);
+}
+
+.world-map-copy {
+  color: #111;
+  padding: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.world-map-copy h2 {
+  margin: 0.35rem 0 0.75rem;
+  font-family: 'Oxanium', var(--font-heading);
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+  color: #080808;
+}
+
+.world-map-copy p,
+.world-map-copy .network-kicker {
+  color: #151515 !important;
+}
+
+.world-map-stage {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 58% 48%, rgba(255, 255, 255, 0.72), transparent 30%),
+    linear-gradient(135deg, #f8f8f8, #d0d0d0 56%, #1a1a1a 150%);
+}
+
+.world-map-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.22) 1px, transparent 1px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent);
+  opacity: 0.64;
+}
+
+.world-map-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.world-map-land {
+  fill: rgba(255, 255, 255, 0.46);
+  stroke: rgba(0, 0, 0, 0.16);
+  stroke-width: 1;
+}
+
+.world-route {
+  fill: none;
+  stroke: url(#route-gradient);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  animation: drawRoute 5.6s ease-in-out infinite;
+}
+
+.route-delay-1 { animation-delay: 0.35s; }
+.route-delay-2 { animation-delay: 0.7s; }
+.route-delay-3 { animation-delay: 1.05s; }
+.route-delay-4 { animation-delay: 1.4s; }
+.route-delay-5 { animation-delay: 1.75s; }
+
+.world-point circle:last-of-type {
+  fill: #111;
+}
+
+.world-point .pulse-ring {
+  fill: rgba(0, 0, 0, 0.1);
+  stroke: rgba(0, 0, 0, 0.46);
+  stroke-width: 1;
+  transform-origin: center;
+  animation: mapPulse 2.4s ease-out infinite;
+}
+
+.world-point text {
+  font-family: 'Oxanium', var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  fill: #111;
+  paint-order: stroke;
+  stroke: rgba(255, 255, 255, 0.86);
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+@keyframes drawRoute {
+  0%, 12% { stroke-dashoffset: 420; opacity: 0; }
+  32%, 76% { stroke-dashoffset: 0; opacity: 1; }
+  100% { stroke-dashoffset: -420; opacity: 0; }
+}
+
+@keyframes mapPulse {
+  0% { opacity: 0.56; transform: scale(0.72); }
+  70%, 100% { opacity: 0; transform: scale(1.55); }
+}
+
+@media (max-width: 1180px) {
+  .header-main {
+    height: 92px !important;
+    min-height: 92px !important;
+  }
+
+  .brand-anchor {
+    margin-left: 0 !important;
+  }
+
+  .brand-logo-img {
+    height: 78px !important;
+  }
+}
+
+@media (max-width: 860px) {
+  .world-map-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .world-map-stage {
+    min-height: 280px;
+  }
+}

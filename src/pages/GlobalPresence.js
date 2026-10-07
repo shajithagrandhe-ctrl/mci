@@ -45,30 +45,82 @@ export function renderGlobalPresence() {
         </div>
       </section>
 
-      <!-- MAP SECTION -->
-      <section class="section section-dark" style="padding: 0;">
-        <div style="position: relative; overflow: hidden; height: 340px;">
-          <img src="/assets/images/asset_15_global_presence.jpg" alt="Global maritime operations map" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-          <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(7,26,43,0.58) 0%, rgba(7,26,43,0.16) 60%, rgba(7,26,43,0.48) 100%);"></div>
-          <div style="position: absolute; inset: 0; display: flex; align-items: center;">
-            <div class="container">
-              <div class="global-network-panel">
-                <div>
-                  <span class="network-kicker">Global Network</span>
-                  <h2>Connected Maritime Corridors</h2>
-                  <p>
-                    Coordinated fleet, survey, salvage, port, and offshore support across Indian Ocean trade lanes, linking headquarters teams with regional operating desks and alliance partners.
-                  </p>
-                </div>
-                <div class="network-route-grid">
-                  <span>New Delhi</span>
-                  <span>Visakhapatnam</span>
-                  <span>Mumbai</span>
-                  <span>Arabian Sea</span>
-                  <span>Bay of Bengal</span>
-                  <span>Strait of Malacca</span>
-                </div>
-              </div>
+      <!-- PROMPT MAP SECTION -->
+      <section class="section section-dark global-prompt-map-section">
+        <div class="container">
+          <div class="world-map-shell" aria-label="Global maritime network routes">
+            <div class="world-map-copy">
+              <span class="network-kicker">Global Network</span>
+              <h2>Connected Maritime Corridors</h2>
+              <p>
+                Animated route paths connect MCI command desks with strategic maritime corridors across India, the Gulf, Africa, Europe, and Southeast Asia.
+              </p>
+            </div>
+
+            <div class="world-map-stage">
+              <div class="world-map-grid" aria-hidden="true"></div>
+              <svg class="world-map-svg" viewBox="0 0 800 400" role="img" aria-label="Prompt-style global route map">
+                <defs>
+                  <linearGradient id="route-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+                    <stop offset="10%" stop-color="#111111" stop-opacity="0.95" />
+                    <stop offset="90%" stop-color="#111111" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </linearGradient>
+                  <filter id="point-glow">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <path class="world-map-land" d="M102 122c30-28 76-26 100 0 20 22 15 54-16 70-34 18-88 7-104-24-8-16-4-32 20-46Zm177-22c31-10 78-2 99 24 20 25 14 61-14 80-29 20-75 14-99-12-24-27-20-77 14-92Zm193 34c38-38 113-24 146 14 39 45 24 116-36 137-58 20-139-13-151-72-5-26 5-55 41-79Zm-40 168c26-10 62-5 78 13 18 19 10 46-15 57-27 12-66 0-78-24-9-18-3-37 15-46Zm-295-17c25-7 58 1 71 20 14 21 3 47-22 55-27 8-62-6-72-30-8-19 0-38 23-45Z" />
+
+                <path class="world-route route-delay-0" d="M548 212 Q506 148 465 190" />
+                <path class="world-route route-delay-1" d="M548 212 Q604 180 660 224" />
+                <path class="world-route route-delay-2" d="M548 212 Q480 240 410 210" />
+                <path class="world-route route-delay-3" d="M410 210 Q350 166 292 188" />
+                <path class="world-route route-delay-4" d="M548 212 Q528 270 482 314" />
+                <path class="world-route route-delay-5" d="M548 212 Q454 126 352 108" />
+
+                <g class="world-point" transform="translate(548 212)">
+                  <circle r="15" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="12" y="-10">New Delhi</text>
+                </g>
+                <g class="world-point" transform="translate(465 190)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-84" y="-8">Gulf Desk</text>
+                </g>
+                <g class="world-point" transform="translate(660 224)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-4" y="28">Malacca</text>
+                </g>
+                <g class="world-point" transform="translate(410 210)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-86" y="26">Arabian Sea</text>
+                </g>
+                <g class="world-point" transform="translate(292 188)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-38" y="-16">Lisbon</text>
+                </g>
+                <g class="world-point" transform="translate(482 314)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-22" y="30">Nairobi</text>
+                </g>
+                <g class="world-point" transform="translate(352 108)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-36" y="-15">London</text>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
