@@ -100,10 +100,6 @@ export function renderHome() {
 
             <!-- Right Column: Institutional Profile & Accreditations -->
             <div>
-              <span class="section-eyebrow">
-                <span class="material-symbols-outlined" style="font-size: 16px;">account_balance</span>
-                Institutional Profile
-              </span>
               <h2 class="section-title" style="margin-bottom: 1rem;">
                 Sovereign Trust Safeguarding National Oceanic Corridors
               </h2>
