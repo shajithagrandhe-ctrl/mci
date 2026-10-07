@@ -1,5 +1,4 @@
 ﻿import { activitiesData } from '../data/activities.js';
-import { renderSpecTable } from '../components/SpecTable.js';
 
 export function renderActivityDetail(id) {
   const act = activitiesData.find(a => a.id === id);
@@ -37,21 +36,20 @@ export function renderActivityDetail(id) {
           <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,26,43,0.97) 0%, rgba(7,26,43,0.65) 50%, rgba(7,26,43,0.2) 100%);"></div>
         </div>
         <div class="container" style="position: relative; z-index: 1; padding: 3rem var(--gutter-desktop);">
-          <span class="badge badge-accent" style="margin-bottom: 1rem;">${act.sectorCode}</span>
           <h1 class="hero-title" style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); max-width: 800px;">${act.title}</h1>
           <p style="font-size: 0.975rem; color: var(--color-primary-fixed-dim); max-width: 720px; line-height: 1.65; margin-top: 1rem;">${act.summary}</p>
         </div>
       </section>
 
       <!-- METRICS BAR -->
-      <section style="background: var(--color-primary); padding: 1.5rem 0;">
+      <section class="activity-metrics-bar" style="padding: 1.5rem 0;">
         <div class="container">
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
             ${act.metrics.map(m => `
               <div style="text-align: center; padding: 0.5rem;">
-                <div style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: var(--color-secondary-container);">${m.value}</div>
-                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-fixed-dim); margin-top: 4px;">${m.label}</div>
-                <div style="font-size: 0.7rem; color: var(--color-primary-fixed-dim); opacity: 0.7; margin-top: 2px;">${m.sub}</div>
+                <div style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #ffffff;">${m.value}</div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; margin-top: 4px;">${m.label}</div>
+                <div style="font-size: 0.7rem; color: #d6d6d6; margin-top: 2px;">${m.sub}</div>
               </div>
             `).join('')}
           </div>
@@ -103,7 +101,7 @@ export function renderActivityDetail(id) {
               ` : ''}
 
               ${act.caseStudy ? `
-                <div style="background: var(--color-primary); color: #fff; border-radius: var(--radius-lg); padding: 1.5rem;">
+                <div class="activity-case-study" style="border-radius: var(--radius-lg); padding: 1.5rem;">
                   <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary-container); display: block; margin-bottom: 0.5rem;">${act.caseStudy.tag}</span>
                   <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;">${act.caseStudy.title}</h4>
                   <div style="font-size: 0.8rem; line-height: 1.6; color: var(--color-primary-fixed-dim);">
@@ -128,42 +126,6 @@ export function renderActivityDetail(id) {
       </section>
 
       <!-- SPEC TABLE -->
-      ${act.tableManifest ? `
-        <section class="section section-light" style="padding: 2.5rem 0;">
-          <div class="container">
-            <span class="section-eyebrow">
-              <span class="material-symbols-outlined" style="font-size: 16px;">table_chart</span>
-              Live Operational Registry
-            </span>
-            <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">${act.tableManifest.title}</h2>
-            ${renderSpecTable(act.tableManifest)}
-          </div>
-        </section>
-      ` : ''}
-
-      <!-- NAV BETWEEN ACTIVITIES -->
-      <section class="section section-dark" style="padding: 2rem 0;">
-        <div class="container">
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
-            ${prev ? `
-              <a href="/activities/${prev.id}" class="btn btn-outline-white" data-nav-link>
-                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
-                <span style="font-size: 0.8rem;">${prev.navLabel || prev.title}</span>
-              </a>
-            ` : '<div></div>'}
-            <a href="/activities" class="btn btn-secondary" data-nav-link>
-              <span class="material-symbols-outlined" style="font-size: 16px;">grid_view</span>
-              <span>All Activities</span>
-            </a>
-            ${next ? `
-              <a href="/activities/${next.id}" class="btn btn-outline-white" data-nav-link>
-                <span style="font-size: 0.8rem;">${next.navLabel || next.title}</span>
-                <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-              </a>
-            ` : '<div></div>'}
-          </div>
-        </div>
-      </section>
     </div>
   `;
 }

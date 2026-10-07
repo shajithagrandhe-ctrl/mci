@@ -7,7 +7,9 @@ export function renderHome() {
       <!-- HERO SECTION -->
       <section class="hero" id="home-hero">
         <div class="hero-bg">
-          <img src="/assets/images/asset_18_home.jpg" alt="Panoramic view of container ships and escort vessels at twilight" class="hero-bg-img" />
+          <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="/assets/ship-coming-to-frame.mp4" type="video/mp4" />
+          </video>
           <div class="hero-gradient"></div>
         </div>
 

@@ -8,14 +8,11 @@ export function renderHeader(currentPath) {
     <header class="site-header" id="main-header">
       <!-- Main Navigation Strip -->
       <div class="container header-main">
-        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark theme" aria-pressed="false">
-          <span class="material-symbols-outlined">dark_mode</span>
-        </button>
         <!-- Brand Identity with Official Logo -->
         <a href="/" class="brand-anchor" data-nav-link aria-label="Marine Corporation of India Home">
           <img src="/assets/mci-logo-transparent.png" alt="Marine Corporation of India Logo" class="brand-logo-img" />
           <div class="brand-text-block">
-            <span class="brand-name">Marine Corporation of India</span>
+            <span class="brand-name">MCI</span>
             <span class="brand-subtext">Sovereign Infrastructure &amp; Maritime Fleet</span>
           </div>
         </a>
@@ -40,15 +37,6 @@ export function renderHeader(currentPath) {
 
         <!-- Right Quick Actions -->
         <div class="header-actions">
-          <button type="button" class="btn btn-desk" id="btn-open-dispatch" aria-label="Open Operations Desk">
-            <span class="material-symbols-outlined" style="font-size: 16px;">terminal</span>
-            <span>Operations Desk</span>
-          </button>
-          <a href="/contact" class="btn btn-portal" data-nav-link>
-            <span class="material-symbols-outlined" style="font-size: 16px;">lock</span>
-            <span>Client Portal</span>
-          </a>
-          
           <!-- Mobile Hamburger Toggle -->
           <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
             <span></span>

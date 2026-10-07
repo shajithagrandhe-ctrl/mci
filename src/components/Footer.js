@@ -8,7 +8,7 @@ export function renderFooter() {
             <img src="/assets/mci-logo-transparent.png" alt="MCI Group Logo" class="footer-logo-img" />
             <div>
               <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; display: block;">
-                Marine Corporation of India
+                MCI
               </span>
               <span style="font-size: 0.75rem; color: var(--color-primary-fixed-dim); display: block; margin-top: 2px;">
                 Statutory Maritime Infrastructure &amp; Technical Fleet Operations
@@ -17,11 +17,6 @@ export function renderFooter() {
           </div>
           
           <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; color: var(--color-primary-fixed-dim);">
-            <span>Class-A Classification</span>
-            <span style="display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--color-secondary-container);"></span>
-            <span>IMO Registered No. MCI-IN-8840</span>
-            <span style="display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: var(--color-secondary-container);"></span>
-            <span>ISO 9001:2015 / SOLAS Certified</span>
             <button type="button" class="btn btn-sm btn-outline-white" id="btn-back-top" aria-label="Scroll back to top" title="Scroll back to top">
               <span class="material-symbols-outlined" style="font-size: 16px;">arrow_upward</span>
             </button>

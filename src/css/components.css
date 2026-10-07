@@ -371,3 +371,49 @@
   transform: translateY(0);
 }
 
+/* Origin-button treatment, implemented with native CSS/JS for this vanilla app. */
+.origin-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 0.5px solid #e3e7ec !important;
+  border-radius: 0.75rem !important;
+  background: linear-gradient(135deg, #fcfcfd 0%, #f5f7fa 45%, #e4e7ec 100%) !important;
+  color: #111 !important;
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.12),
+    0 8px 16px rgba(0, 0, 0, 0.10),
+    0 16px 32px rgba(0, 0, 0, 0.08),
+    inset 0 2px 1px rgba(255, 255, 255, 0.7),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.1);
+  transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1), transform 200ms ease, box-shadow 300ms ease;
+}
+
+.origin-button:hover,
+.origin-button:focus-visible {
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.origin-button:active {
+  transform: scale(0.985);
+}
+
+.origin-button > *:not(.origin-fill) {
+  position: relative;
+  z-index: 1;
+}
+
+.origin-fill {
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  pointer-events: none;
+  background: #111;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.origin-fill.visible {
+  transform: translate(-50%, -50%) scale(1);
+}

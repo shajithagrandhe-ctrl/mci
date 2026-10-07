@@ -86,43 +86,6 @@ export function renderGroup() {
         </div>
       </section>
 
-      <!-- INTERNATIONAL OFFICES -->
-      <section class="section section-light" style="padding: 3rem 0;">
-        <div class="container">
-          <span class="section-eyebrow international-eyebrow">
-            <span class="earth-icon" aria-hidden="true">🌍</span>
-            International Network
-          </span>
-          <h2 class="section-title regional-heading" style="margin-top: 0.5rem; margin-bottom: 2rem;">Regional Office Locations</h2>
-          <div class="regional-office-list">
-            ${[
-              { country: 'India', flag: '🇮🇳', city: 'Visakhapatnam & Mumbai', role: 'Flagship Registered HQ', email: 'india@mcigroup.co', phone: '+91 891 2561377' },
-              { country: 'UAE', flag: '🇦🇪', city: 'Dubai', role: 'GCC Maritime Hub', email: 'dubai@mcigroup.co', phone: '+971 4 388-9100' },
-              { country: 'Singapore', flag: '🇸🇬', city: 'Singapore', role: 'Asia-Pacific Liaison', email: 'singapore@mcigroup.co', phone: '+65 6778-4200' },
-              { country: 'Sri Lanka', flag: '🇱🇰', city: 'Colombo', role: 'IOR Station', email: 'lanka@mcigroup.co', phone: '+94 11 243-7800' },
-              { country: 'Russia', flag: '🇷🇺', city: 'Saint Petersburg', role: 'Baltic Office', email: 'russia@mcigroup.co', phone: '+7 812 320-1400' },
-            ].map(office => `
-              <details class="regional-office-card">
-                <summary>
-                  <span>${office.city}</span>
-                  <span class="material-symbols-outlined">expand_more</span>
-                </summary>
-                <div class="regional-office-details">
-                  <div style="font-size: 1.4rem; margin-bottom: 0.35rem;">${office.flag}</div>
-                  <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-secondary); margin-bottom: 4px;">${office.role}</div>
-                  <h4 style="font-size: 0.975rem; font-weight: 700; color: var(--color-primary); margin-bottom: 2px;">${office.country}</h4>
-                  <a href="tel:${office.phone}" style="font-size: 0.775rem; color: var(--color-secondary-dark); text-decoration: none; display: flex; align-items: center; gap: 4px;">
-                    <span class="material-symbols-outlined" style="font-size: 13px;">call</span>${office.phone}
-                  </a>
-                  <a href="mailto:${office.email}" style="font-size: 0.775rem; color: var(--color-secondary-dark); text-decoration: none; display: flex; align-items: center; gap: 4px;">
-                    <span class="material-symbols-outlined" style="font-size: 13px;">mail</span>${office.email}
-                  </a>
-                </div>
-              </details>
-            `).join('')}
-          </div>
-        </div>
-      </section>
     </div>
   `;
 }

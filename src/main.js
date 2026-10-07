@@ -1,7 +1,6 @@
 import './css/main.css';
 import { renderHeader } from './components/Header.js';
 import { renderFooter } from './components/Footer.js';
-import { renderContactModal } from './components/ContactModal.js';
 import { renderHome } from './pages/Home.js';
 import { renderAbout } from './pages/About.js';
 import { renderActivities } from './pages/Activities.js';
@@ -10,13 +9,6 @@ import { renderGroup } from './pages/Group.js';
 import { renderGlobalPresence } from './pages/GlobalPresence.js';
 import { renderInvestorRelations } from './pages/InvestorRelations.js';
 import { renderContact } from './pages/Contact.js';
-
-const THEME_KEY = 'mci-theme';
-
-function applyTheme(theme) {
-  document.documentElement.dataset.theme = theme;
-  localStorage.setItem(THEME_KEY, theme);
-}
 
 // ── ROUTER ───────────────────────────────────────────────────────────────────
 function getRoute() {
@@ -40,35 +32,15 @@ function renderPage(path) {
   }
 }
 
-function getPageTitle(path) {
-  const activityDetailMatch = path.match(/^\/activities\/(.+)$/);
-  if (activityDetailMatch) return 'Activities — MCI Marine Corporation of India';
-  const titles = {
-    '/': 'MCI — Marine Corporation of India | Sovereign Maritime Infrastructure & Engineering',
-    '/about': 'About MCI — Marine Corporation of India',
-    '/activities': 'Activities & Services — MCI Marine Corporation of India',
-    '/group': 'Group Companies — MCI Marine Corporation of India',
-    '/global-presence': 'Global Presence — MCI Marine Corporation of India',
-    '/investor-relations': 'Investor Relations — MCI Marine Corporation of India',
-    '/contact': 'Contact Us — MCI Marine Corporation of India',
-  };
-  return titles[path] || titles['/'];
-}
-
 function mount(path) {
   const header = document.getElementById('header-root');
   const page   = document.getElementById('page-root');
   const footer = document.getElementById('footer-root');
-  const modals = document.getElementById('modals-root');
 
   header.innerHTML = renderHeader(path);
   page.innerHTML   = renderPage(path);
   footer.innerHTML = renderFooter();
-  modals.innerHTML = renderContactModal();
-
-  applyTheme(localStorage.getItem(THEME_KEY) || 'light');
-
-  document.title = getPageTitle(path);
+  document.title = 'MCI';
   window.scrollTo({ top: 0, behavior: 'instant' });
 
   attachGlobalListeners();
@@ -81,19 +53,7 @@ function navigate(href) {
 }
 
 function attachGlobalListeners() {
-  // Theme toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = document.documentElement.dataset.theme || 'light';
-  if (themeToggle) {
-    themeToggle.setAttribute('aria-pressed', currentTheme === 'dark' ? 'true' : 'false');
-    themeToggle.querySelector('.material-symbols-outlined').textContent = currentTheme === 'dark' ? 'light_mode' : 'dark_mode';
-    themeToggle.addEventListener('click', () => {
-      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-      applyTheme(nextTheme);
-      themeToggle.setAttribute('aria-pressed', nextTheme === 'dark' ? 'true' : 'false');
-      themeToggle.querySelector('.material-symbols-outlined').textContent = nextTheme === 'dark' ? 'light_mode' : 'dark_mode';
-    });
-  }
+  attachOriginButtons();
 
   // Nav links
   document.querySelectorAll('[data-nav-link]').forEach(el => {
@@ -138,49 +98,23 @@ function attachGlobalListeners() {
     if (mobileArrow) mobileArrow.textContent = isOpen ? 'expand_less' : 'expand_more';
   });
 
-  // Dispatch modal
-  const btnOpen  = document.getElementById('btn-open-dispatch');
-  const modal    = document.getElementById('dispatch-modal');
-  const btnClose = document.getElementById('close-dispatch-modal');
-  const btnCancel = document.getElementById('cancel-dispatch-modal');
-  function openModal() {
-    modal?.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModal() {
-    modal?.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  btnOpen?.addEventListener('click', openModal);
-  btnClose?.addEventListener('click', closeModal);
-  btnCancel?.addEventListener('click', closeModal);
-  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
-  // Dispatch form
-  const dispatchForm = document.getElementById('modal-dispatch-form');
-  dispatchForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const alert = document.getElementById('modal-form-alert');
-    if (alert) {
-      alert.style.display = 'block';
-      alert.style.background = '#d4f4e4';
-      alert.style.color = '#0a5c35';
-      alert.style.border = '1px solid #10b981';
-      alert.innerHTML = '<strong>✓ Dispatch Request Submitted</strong> — Our duty superintendent will contact you within 60 minutes via the provided email and phone.';
-      dispatchForm.reset();
-      setTimeout(closeModal, 3000);
-    }
-  });
-
   // Contact page form
   const contactForm = document.getElementById('contact-page-form');
   contactForm?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const successEl = document.getElementById('contact-form-success');
-    if (successEl) {
-      successEl.style.display = 'block';
-      contactForm.reset();
-    }
+    if (!contactForm.reportValidity()) return;
+    const data = new FormData(contactForm);
+    const message = [
+      'MCI Contact Inquiry',
+      `Name: ${data.get('name')}`,
+      `Company / Vessel Owner: ${data.get('company') || 'Not provided'}`,
+      `Email: ${data.get('email')}`,
+      `Phone: ${data.get('phone')}`,
+      `Category: ${data.get('category')}`,
+      `Vessel / IMO: ${data.get('vessel') || 'Not provided'}`,
+      `Message: ${data.get('message')}`,
+    ].join('\n');
+    window.location.href = `https://wa.me/919059483826?text=${encodeURIComponent(message)}`;
   });
 
   // Header scroll effect
@@ -269,6 +203,52 @@ function attachGlobalListeners() {
       const a = document.createElement('a');
       a.href = url; a.download = `${tableId}-mci.csv`;
       a.click(); URL.revokeObjectURL(url);
+    });
+  });
+}
+
+function attachOriginButtons() {
+  document.querySelectorAll('button, a.btn').forEach((control) => {
+    if (control.dataset.originButton === 'true') return;
+    control.dataset.originButton = 'true';
+    control.classList.add('origin-button');
+
+    const fill = document.createElement('span');
+    fill.className = 'origin-fill';
+    fill.setAttribute('aria-hidden', 'true');
+    control.appendChild(fill);
+
+    const setOrigin = (event) => {
+      const rect = control.getBoundingClientRect();
+      const x = event ? event.clientX - rect.left : rect.width / 2;
+      const y = event ? event.clientY - rect.top : rect.height / 2;
+      const diameter = Math.ceil(2 * Math.max(
+        Math.hypot(x, y),
+        Math.hypot(rect.width - x, y),
+        Math.hypot(x, rect.height - y),
+        Math.hypot(rect.width - x, rect.height - y),
+      ));
+      fill.style.left = `${x}px`;
+      fill.style.top = `${y}px`;
+      fill.style.width = `${diameter}px`;
+      fill.style.height = `${diameter}px`;
+      requestAnimationFrame(() => {
+        fill.classList.add('visible');
+        control.classList.add('origin-filled');
+      });
+    };
+
+    const clearFill = () => {
+      fill.classList.remove('visible');
+      control.classList.remove('origin-filled');
+    };
+
+    control.addEventListener('pointerenter', setOrigin);
+    control.addEventListener('pointerdown', setOrigin);
+    control.addEventListener('pointerleave', clearFill);
+    control.addEventListener('blur', clearFill);
+    control.addEventListener('focus', () => {
+      if (control.matches(':focus-visible')) setOrigin();
     });
   });
 }

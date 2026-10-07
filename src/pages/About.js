@@ -56,9 +56,6 @@ export function renderAbout() {
               <span class="section-eyebrow">Institutional Foundation</span>
               <h2 class="section-title">Strategic Mandates &amp; Core Philosophy</h2>
             </div>
-            <p class="section-subtitle">
-              Governed by statutory frameworks, MCI operates at the strategic crossroads of national marine logistics, maritime defense readiness, and commercial viability.
-            </p>
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
@@ -72,10 +69,6 @@ export function renderAbout() {
               <p style="font-size: 0.8125rem; color: var(--color-slate); line-height: 1.5; margin-bottom: 1.25rem;">
                 Guaranteed fairway maintenance for strategic maritime passages, emergency deep-water salvage contingencies, and sovereign channel accessibility under all geopolitical and environmental conditions.
               </p>
-              <div style="font-size: 0.725rem; font-weight: 700; color: var(--color-secondary); display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-border); padding-top: 0.75rem;">
-                <span>DIRECTORATE DEFENSE LINK</span>
-                <span>PROTOCOL S-1</span>
-              </div>
             </div>
 
             <div class="card" style="padding: 1.75rem;">
@@ -88,10 +81,6 @@ export function renderAbout() {
               <p style="font-size: 0.8125rem; color: var(--color-slate); line-height: 1.5; margin-bottom: 1.25rem;">
                 Adhering rigorously to Indian Register of Shipping (IRS), IACS unified requirements, and International Maritime Organization (IMO) SOLAS conventions across the entire engineering lifecycle.
               </p>
-              <div style="font-size: 0.725rem; font-weight: 700; color: var(--color-secondary); display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-border); padding-top: 0.75rem;">
-                <span>IRS / IACS STANDARDS</span>
-                <span>CLASS 1A+</span>
-              </div>
             </div>
 
             <div class="card" style="padding: 1.75rem;">
@@ -104,10 +93,6 @@ export function renderAbout() {
               <p style="font-size: 0.8125rem; color: var(--color-slate); line-height: 1.5; margin-bottom: 1.25rem;">
                 Executing the national maritime green transition through cold-ironing shore electrification, dual-fuel LNG bunkering facilities, and low-wake hull engineering for delicate marine ecosystems.
               </p>
-              <div style="font-size: 0.725rem; font-weight: 700; color: var(--color-secondary); display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-border); padding-top: 0.75rem;">
-                <span>MARPOL ANNEX VI COMPLIANT</span>
-                <span>NET-ZERO 2045</span>
-              </div>
             </div>
           </div>
         </div>
@@ -163,106 +148,6 @@ export function renderAbout() {
         </div>
       </section>
 
-      <!-- CHRONICLES OF MARINE SELF-RELIANCE (TIMELINE) -->
-      <section class="section section-light">
-        <div class="container">
-          <div class="section-header" style="text-align: center; max-width: 680px; margin: 0 auto 3rem;">
-            <span class="section-eyebrow" style="justify-content: center;">Engineering Heritage</span>
-            <h2 class="section-title">Chronicles of Marine Self-Reliance</h2>
-            <p class="section-subtitle" style="margin: 0 auto;">
-              A documented progression of corporate growth, asset commissioning, and hydrographic capability since inception.
-            </p>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-            <div class="card" style="padding: 1.75rem;">
-              <span class="badge badge-accent" style="margin-bottom: 0.75rem;">1990 // ERA 01</span>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">
-                Foundational Inception &amp; Micro-Enterprise
-              </h3>
-              <p style="font-size: 0.8125rem; color: var(--color-slate); line-height: 1.5; margin-bottom: 1rem;">
-                Founded in 1990 in Visakhapatnam, the MCI Group transformed from humble beginnings into a diversified conglomerate with foundational interests in Marine, Oil &amp; Gas, Ports, Coal, Power &amp; Shipping.
-              </p>
-              <div style="font-size: 0.725rem; color: var(--color-secondary); font-weight: 600; border-top: 1px solid var(--color-border); padding-top: 0.5rem;">
-                Registered: "MCI TOWERS", Visakhapatnam
-              </div>
-            </div>
-
-            <div class="card" style="padding: 1.75rem;">
-              <span class="badge badge-accent" style="margin-bottom: 0.75rem;">2008 // ERA 02</span>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">
-                Fleet Modernization &amp; Capesize Scale
-              </h3>
-              <p style="font-size: 0.8125rem; color: var(--color-slate); line-height: 1.5; margin-bottom: 1rem;">
-                Commissioning of Capesize graving dry docks, modern trailing suction hopper dredgers (TSHDs), and 120-tonne bollard-pull Anchor Handling Tug Supply (AHTS) vessels for deep offshore sovereign fields.
-              </p>
-              <div style="font-size: 0.725rem; color: var(--color-secondary); font-weight: 600; border-top: 1px solid var(--color-border); padding-top: 0.5rem;">
-                Drydock Expansion Phase II
-              </div>
-            </div>
-
-            <div class="card" style="padding: 1.75rem;">
-              <span class="badge badge-accent" style="margin-bottom: 0.75rem;">PRESENT // ERA 03</span>
-              <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem;">
-                Digital Telemetry &amp; Green Transition
-              </h3>
-              <p style="font-size: 0.8125rem; color: var(--color-slate); line-height: 1.5; margin-bottom: 1rem;">
-                Integration of real-time S-44 IHO hydrographic feeds, shore-power cold ironing grids, autonomous multi-beam bathymetry, and Tier III IMO NOx emission reduction retrofits across 100% of operational tonnage.
-              </p>
-              <div style="font-size: 0.725rem; color: var(--color-secondary); font-weight: 600; border-top: 1px solid var(--color-border); padding-top: 0.5rem;">
-                S-44 Bathymetric Grid Active
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- BALLARD ESTATE ADMINISTRATIVE COMPLEX -->
-      <section class="section section-white">
-        <div class="container">
-          <div class="profile-grid">
-            <div>
-              <span class="section-eyebrow">Heritage Operations Hub</span>
-              <h2 class="section-title" style="margin-bottom: 1rem;">Ballard Estate Administrative Complex</h2>
-              <p style="font-size: 0.95rem; color: var(--color-on-surface-variant); line-height: 1.6; margin-bottom: 1.5rem;">
-                The historic seat of maritime planning, adjacent to the port trust docks. MCI coordinates sovereign dry dock allocations, fairway dredging tenders, and fleet deployment directly from its landmark heritage complex in Mumbai.
-              </p>
-
-              <div class="card" style="padding: 1.25rem; background: var(--color-surface-container-low); margin-bottom: 1.5rem;">
-                <div style="font-size: 0.875rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.25rem;">
-                  Ballard Pier, Fort, Mumbai 400 001, Maharashtra
-                </div>
-                <div style="font-size: 0.75rem; color: var(--color-slate);">
-                  Geographic Anchor: 18°55'58.2"N 72°50'34.8"E &bull; Direct Dispatch Telemetry: +91 (22) 2261-0000 / VTS CH 12
-                </div>
-              </div>
-
-              <div style="display: flex; gap: 1rem;">
-                <a href="/contact" class="btn btn-primary" data-nav-link>
-                  <span class="material-symbols-outlined" style="font-size: 16px;">pin_drop</span>
-                  <span>Station Coordinates</span>
-                </a>
-                <a href="/contact" class="btn btn-secondary" data-nav-link>
-                  <span class="material-symbols-outlined" style="font-size: 16px;">schedule</span>
-                  <span>Port Clearance Hours</span>
-                </a>
-              </div>
-            </div>
-
-            <div class="profile-media-box">
-              <img src="/assets/images/asset_3_about_mci.jpg" alt="Ballard Estate Maritime Complex" class="profile-img" />
-              <div class="profile-floating-badge">
-                <h4>
-                  <span class="material-symbols-outlined" style="font-size: 16px;">location_city</span>
-                  Sector 01 // Ballard Harbour Estate
-                </h4>
-                <p>Historic clock tower and maritime administrative complex overlooking Mumbai harbor.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- CONSULT WITH OPERATIONS CTA -->
       <section class="section section-dark">
         <div class="container" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem;">
@@ -278,10 +163,6 @@ export function renderAbout() {
             <a href="/investor-relations" class="btn btn-outline-white" data-nav-link>
               <span class="material-symbols-outlined" style="font-size: 16px;">download</span>
               <span>Download Corporate Profile PDF</span>
-            </a>
-            <a href="/contact" class="btn btn-accent" data-nav-link>
-              <span class="material-symbols-outlined" style="font-size: 16px;">support_agent</span>
-              <span>Direct Duty Officer</span>
             </a>
           </div>
         </div>

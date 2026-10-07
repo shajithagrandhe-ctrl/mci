@@ -41,7 +41,7 @@ export function renderContact() {
             <!-- LEFT: HQ DETAILS + REGIONAL OFFICES -->
             <div>
               <!-- HQ CARD -->
-              <div style="background: var(--color-primary); color: #fff; border-radius: var(--radius-xl); padding: 2rem; margin-bottom: 1.5rem;">
+              <div class="contact-hq-card" style="background: #111; color: #fff; border-radius: var(--radius-xl); padding: 2rem; margin-bottom: 1.5rem;">
                 <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
                   <img src="/assets/mci-logo-transparent.png" alt="MCI Logo" style="height: 44px;" />
                   <div>
@@ -107,11 +107,11 @@ export function renderContact() {
                 <strong>✓ Inquiry Received</strong> — Our team will respond within 2 business hours. For urgent matters, call our 24/7 dispatch line directly.
               </div>
 
-              <form id="contact-page-form" novalidate style="display: grid; gap: 1rem;">
+              <form id="contact-page-form" style="display: grid; gap: 1rem;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
                   <div class="form-group">
                     <label class="form-label" for="cp-name">Full Name <span class="required">*</span></label>
-                    <input type="text" class="form-input" id="cp-name" name="name" placeholder="Capt. / Mr. / Ms. Name" required />
+                    <input type="text" class="form-input" id="cp-name" name="name" placeholder="Full name" pattern="[A-Za-z]+(?: [A-Za-z]+)*" minlength="2" maxlength="80" title="Use letters and spaces only." required />
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="cp-company">Company / Vessel Owner</label>
@@ -125,7 +125,7 @@ export function renderContact() {
                   </div>
                   <div class="form-group">
                     <label class="form-label" for="cp-phone">Contact Phone <span class="required">*</span></label>
-                    <input type="tel" class="form-input" id="cp-phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
+                    <input type="tel" class="form-input" id="cp-phone" name="phone" placeholder="10-digit phone number" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Enter exactly 10 digits." required />
                   </div>
                 </div>
                 <div class="form-group">
@@ -142,10 +142,6 @@ export function renderContact() {
                 <div class="form-group">
                   <label class="form-label" for="cp-message">Operational Brief / Message <span class="required">*</span></label>
                   <textarea class="form-textarea" id="cp-message" name="message" required placeholder="Describe your requirement — port of call, berth specifications, timing, cargo type, or survey scope..." style="min-height: 120px;"></textarea>
-                </div>
-                <div style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.8rem; color: var(--color-charcoal-navy);">
-                  <input type="checkbox" id="cp-urgent" name="urgent" style="margin-top: 3px; flex-shrink: 0;" />
-                  <label for="cp-urgent"><strong>Mark as Urgent / Emergency Priority</strong> — For distress berths, emergency towing, and immediate salvage interventions only.</label>
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
                   <span class="material-symbols-outlined">send</span>
