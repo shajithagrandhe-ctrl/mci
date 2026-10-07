@@ -135,6 +135,19 @@ function attachGlobalListeners() {
   const btnTop = document.getElementById('btn-back-top');
   btnTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+  // Keep the home hero media looping even if autoplay policies interrupt playback.
+  const heroVideo = document.querySelector('.hero-bg-video');
+  if (heroVideo) {
+    heroVideo.loop = true;
+    heroVideo.muted = true;
+    heroVideo.playsInline = true;
+    heroVideo.addEventListener('ended', () => {
+      heroVideo.currentTime = 0;
+      heroVideo.play().catch(() => {});
+    });
+    heroVideo.play().catch(() => {});
+  }
+
   // Activity filter tabs
   document.querySelectorAll('.filter-pill').forEach(pill => {
     pill.addEventListener('click', () => {
