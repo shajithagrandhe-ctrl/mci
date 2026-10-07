@@ -2669,3 +2669,60 @@ body:has(#home-hero) .site-header .brand-subtext {
     0 14px 34px rgba(0, 0, 0, 0.14) !important;
   backdrop-filter: blur(20px) saturate(1.45) !important;
 }
+
+/* Latest annotation pass: lower hero content and clarify footer card. */
+#home-hero .hero-content {
+  transform: translate(clamp(-5cm, -12vw, -2rem), 2cm) !important;
+}
+
+.site-footer {
+  padding: clamp(1.4rem, 3vw, 2.3rem) 0 !important;
+  background:
+    linear-gradient(rgba(245, 250, 248, 0.12), rgba(245, 250, 248, 0.17)),
+    url('/assets/footer-submarine.png') center / cover no-repeat !important;
+}
+
+.site-footer > .container {
+  width: min(calc(100% - 2rem), 1240px);
+  margin-inline: auto;
+  padding: clamp(1.25rem, 2.4vw, 2rem) !important;
+  background: rgba(255, 255, 255, 0.14) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  border-radius: 8px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 24px 72px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(4px) saturate(1.02) !important;
+}
+
+.site-footer .footer-top {
+  padding-bottom: 1.8rem;
+  margin-bottom: 1.8rem;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+.site-footer .footer-grid {
+  gap: clamp(1.2rem, 3vw, 2.25rem);
+  margin-bottom: 2rem;
+}
+
+.site-footer .footer-bottom {
+  padding-top: 1.4rem;
+  border-top-color: rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 1180px) {
+  #home-hero .hero-content {
+    transform: translateY(2cm) !important;
+  }
+}
+
+@media (max-width: 720px) {
+  #home-hero .hero-content {
+    transform: translateY(1cm) !important;
+  }
+
+  .site-footer > .container {
+    width: min(calc(100% - 1rem), 1240px);
+  }
+}
