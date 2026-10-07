@@ -13,7 +13,7 @@ export function renderHeader(currentPath) {
           <img src="/assets/mci-logo-transparent.png" alt="Marine Corporation of India Logo" class="brand-logo-img" />
           <div class="brand-text-block">
             <span class="brand-name">MCI</span>
-            <span class="brand-subtext">Sovereign Infrastructure &amp; Maritime Fleet</span>
+            <span class="brand-subtext">Marine Corporation of India</span>
           </div>
         </a>
 
@@ -54,7 +54,7 @@ export function renderHeader(currentPath) {
             <img src="/assets/mci-logo-transparent.png" alt="MCI Logo" style="height: 38px;" />
             <div class="brand-text-block">
               <span class="brand-name" style="font-size: 0.9rem;">MCI</span>
-              <span class="brand-subtext" style="font-size: 0.6rem;">Group of Companies</span>
+              <span class="brand-subtext" style="font-size: 0.6rem;">Marine Corporation of India</span>
             </div>
           </div>
           <button type="button" class="btn btn-sm" id="close-drawer" aria-label="Close Navigation" style="padding: 4px;">

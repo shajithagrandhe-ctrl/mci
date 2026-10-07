@@ -41,10 +41,6 @@ export function renderActivities() {
       <section class="section section-dark activities-hero" style="padding: 3rem 0 2rem; position: relative; overflow: hidden;">
         <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #071a2b 0%, #0d2f4f 60%, #176b9c22 100%); z-index: 0;"></div>
         <div class="container" style="position: relative; z-index: 1;">
-          <span class="section-eyebrow" style="color: var(--color-secondary-container);">
-            <span class="material-symbols-outlined" style="font-size: 16px;">grid_view</span>
-            Engineering Verticals &amp; Service Divisions
-          </span>
           <h1 class="section-title activity-hero-heading" style="margin-top: 0.5rem; font-size: clamp(1.8rem, 3vw, 2.6rem);">
             Sovereign Maritime Industrial Capabilities
           </h1>

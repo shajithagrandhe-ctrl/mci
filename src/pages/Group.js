@@ -8,10 +8,6 @@ export function renderGroup() {
         <div class="container">
           <div class="profile-grid">
             <div>
-              <div class="badge badge-accent" style="margin-bottom: 1rem;">
-                <span class="material-symbols-outlined" style="font-size: 14px;">corporate_fare</span>
-                ESTABLISHED 1990 // MULTI-ENTITY CONGLOMERATE
-              </div>
               <h1 class="hero-title hero-title-slab" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 1rem;">
                 MCI Group of Companies
               </h1>

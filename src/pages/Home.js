@@ -18,15 +18,7 @@ export function renderHome() {
             Sovereign Maritime Infrastructure, Heavy Engineering &amp; Strategic Ocean Logistics
           </h1>
 
-          <p class="hero-desc">
-            Marine Corporation of India deploys end-to-end deepwater engineering, state-of-the-art vessel maintenance, dredging infrastructure, and commercial energy fleet logistics safeguarding national and international trade corridors.
-          </p>
-
           <div class="hero-actions">
-            <a href="/activities" class="btn btn-accent btn-lg" data-nav-link>
-              <span>Explore Operational Capabilities</span>
-              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-            </a>
             <a href="/global-presence" class="btn btn-outline-white btn-lg" data-nav-link>
               <span class="material-symbols-outlined" style="font-size: 18px;">satellite_alt</span>
               <span>Launch Fleet Telemetry Portal</span>

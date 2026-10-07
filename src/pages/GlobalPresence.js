@@ -52,21 +52,22 @@ export function renderGlobalPresence() {
           <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(7,26,43,0.58) 0%, rgba(7,26,43,0.16) 60%, rgba(7,26,43,0.48) 100%);"></div>
           <div style="position: absolute; inset: 0; display: flex; align-items: center;">
             <div class="container">
-              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 800px;">
-                ${[
-                  { corridor: 'Arabian Sea Corridor', status: 'Tier 1 — Active' },
-                  { corridor: 'Bay of Bengal Channel', status: 'Tier 1 — Active' },
-                  { corridor: 'Strait of Malacca Transit', status: 'Escort Operations' },
-                  { corridor: 'Suez Canal Approach', status: 'Alliance Tier' },
-                ].map(c => `
-                  <div class="corridor-card">
-                    <div style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-secondary-container); margin-bottom: 4px;">
-                      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #10b981; margin-right: 6px; vertical-align: middle; animation: pulse-ring 2s infinite;"></span>
-                      ${c.status}
-                    </div>
-                    <div style="font-size: 0.85rem; font-weight: 600; color: var(--color-white);">${c.corridor}</div>
-                  </div>
-                `).join('')}
+              <div class="global-network-panel">
+                <div>
+                  <span class="network-kicker">Global Network</span>
+                  <h2>Connected Maritime Corridors</h2>
+                  <p>
+                    Coordinated fleet, survey, salvage, port, and offshore support across Indian Ocean trade lanes, linking headquarters teams with regional operating desks and alliance partners.
+                  </p>
+                </div>
+                <div class="network-route-grid">
+                  <span>New Delhi</span>
+                  <span>Visakhapatnam</span>
+                  <span>Mumbai</span>
+                  <span>Arabian Sea</span>
+                  <span>Bay of Bengal</span>
+                  <span>Strait of Malacca</span>
+                </div>
               </div>
             </div>
           </div>
