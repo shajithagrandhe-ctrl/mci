@@ -39,20 +39,23 @@ export function renderGroup() {
       <!-- GROUP ENTITIES -->
       <section class="section section-white">
         <div class="container">
-          <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 2rem;">Constituent Companies &amp; Divisions</h2>
-          <div style="display: grid; gap: 1.5rem;">
+          <h2 class="section-title font-lobster" style="margin-top: 0.5rem; margin-bottom: 2rem;">Constituent Companies &amp; Divisions</h2>
+          <div class="group-card-stack" data-group-card-stack>
             ${groupEntitiesData.map((entity, i) => `
-              <details class="group-entity-card group-entity-disclosure" style="border-left: 4px solid ${i === 0 ? 'var(--color-secondary)' : 'var(--color-border)'};">
-                <summary>
-                  <span>${entity.name}</span>
-                  <span class="material-symbols-outlined">expand_more</span>
-                </summary>
+              <article class="group-entity-card group-stack-card" style="--stack-index: ${i};">
+                <div class="group-stack-card-heading">
+                  <span class="group-stack-index">${String(i + 1).padStart(2, '0')}</span>
+                  <span class="group-stack-summary-copy">
+                    <span>
+                      <h3>${entity.name}</h3>
+                      <small>${entity.designation}</small>
+                    </span>
+                  </span>
+                </div>
                 <div class="group-entity-details">
                   <div class="group-entity-header">
                     <div>
                       <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); display: block; margin-bottom: 4px;">${entity.incorporation}${i === 0 ? ' // FLAGSHIP' : ''}</span>
-                      <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--color-primary); margin-bottom: 4px;">${entity.name}</h3>
-                      <span style="font-size: 0.8rem; color: var(--color-slate);">${entity.designation}</span>
                     </div>
                     <div style="text-align: right; flex-shrink: 0;">
                       <div class="group-location">
@@ -76,7 +79,7 @@ export function renderGroup() {
                     `).join('')}
                   </div>
                 </div>
-              </details>
+              </article>
             `).join('')}
           </div>
         </div>

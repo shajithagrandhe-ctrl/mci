@@ -1,5 +1,7 @@
 ﻿import { globalPresenceData } from '../data/presence.js';
 
+import { renderGlobalCoverageMap } from '../components/GlobalCoverageMap.js';
+
 export function renderGlobalPresence() {
   return `
     <div class="page-transition">
@@ -21,11 +23,7 @@ export function renderGlobalPresence() {
       <!-- HERO -->
       <section class="section section-dark" style="padding: 3rem 0; background: linear-gradient(135deg, #001c28 0%, #071a2b 50%, #0d2f4f 100%);">
         <div class="container">
-          <span class="section-eyebrow" style="color: var(--color-secondary-container);">
-            <span class="material-symbols-outlined" style="font-size: 16px;">satellite_alt</span>
-            Live Maritime Operations Network
-          </span>
-          <h1 class="hero-title" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-top: 0.5rem; margin-bottom: 1rem;">
+          <h1 class="hero-title font-lobster" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-top: 0.5rem; margin-bottom: 1rem;">
             Strategic Global Presence &amp; Fleet Network
           </h1>
           <p style="font-size: 0.95rem; color: var(--color-primary-fixed-dim); max-width: 700px; line-height: 1.65; margin-bottom: 2.5rem;">
@@ -51,13 +49,17 @@ export function renderGlobalPresence() {
           <div class="world-map-shell" aria-label="Global maritime network routes">
             <div class="world-map-copy">
               <span class="network-kicker">Global Network</span>
-              <h2>Connected Maritime Corridors</h2>
+              <h2 class="font-lobster">Connected Maritime Corridors</h2>
               <p>
                 Animated route paths connect MCI command desks with strategic maritime corridors across India, the Gulf, Africa, Europe, and Southeast Asia.
               </p>
             </div>
 
-            <div class="world-map-stage">
+            ${renderGlobalCoverageMap({
+              id: 'global-presence-coverage',
+              ariaLabel: 'Interactive global service coverage map',
+            })}
+            <div class="world-map-stage legacy-world-map-stage" aria-hidden="true">
               <div class="world-map-grid" aria-hidden="true"></div>
               <svg class="world-map-svg" viewBox="0 0 800 400" role="img" aria-label="Prompt-style global route map">
                 <defs>

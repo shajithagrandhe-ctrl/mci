@@ -1,4 +1,5 @@
 import './css/main.css';
+import { attachContactGlobe } from './components/ContactGlobe.js';
 import { renderHeader } from './components/Header.js';
 import { renderFooter } from './components/Footer.js';
 import { renderHome } from './pages/Home.js';
@@ -53,7 +54,10 @@ function navigate(href) {
 }
 
 function attachGlobalListeners() {
+  attachContactGlobe();
   attachOriginButtons();
+  attachShutterTextListeners();
+  attachCoverageMapListeners();
 
   // Nav links
   document.querySelectorAll('[data-nav-link]').forEach(el => {
@@ -216,6 +220,58 @@ function attachGlobalListeners() {
       const a = document.createElement('a');
       a.href = url; a.download = `${tableId}-mci.csv`;
       a.click(); URL.revokeObjectURL(url);
+    });
+  });
+}
+
+function attachCoverageMapListeners() {
+  document.querySelectorAll('[data-coverage-map]').forEach((map) => {
+    const hotspot = map.querySelector('.india-hotspot');
+    const overlay = map.querySelector('.services-overlay');
+    const close = map.querySelector('.close-services');
+
+    const setOpen = (isOpen) => {
+      map.classList.toggle('is-open', isOpen);
+      hotspot?.setAttribute('aria-expanded', String(isOpen));
+      overlay?.setAttribute('aria-hidden', String(!isOpen));
+    };
+
+    hotspot?.addEventListener('pointerenter', () => setOpen(true));
+    hotspot?.addEventListener('click', () => setOpen(!map.classList.contains('is-open')));
+    map.addEventListener('pointerleave', () => setOpen(false));
+    close?.addEventListener('click', (event) => {
+      event.stopPropagation();
+      setOpen(false);
+      hotspot?.focus();
+    });
+    map.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        hotspot?.focus();
+      }
+    });
+  });
+}
+
+function attachShutterTextListeners() {
+  document.querySelectorAll('[data-shutter-text]').forEach((title) => {
+    const replay = () => {
+      const animatedCharacters = title.querySelectorAll('.shutter-character-main, .shutter-character-slice');
+      animatedCharacters.forEach((character) => {
+        character.style.animation = 'none';
+      });
+      void title.offsetWidth;
+      animatedCharacters.forEach((character) => {
+        character.style.removeProperty('animation');
+      });
+    };
+
+    title.addEventListener('click', replay);
+    title.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        replay();
+      }
     });
   });
 }

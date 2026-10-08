@@ -41,7 +41,7 @@ export function renderActivities() {
       <section class="section section-dark activities-hero" style="padding: 3rem 0 2rem; position: relative; overflow: hidden;">
         <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #071a2b 0%, #0d2f4f 60%, #176b9c22 100%); z-index: 0;"></div>
         <div class="container" style="position: relative; z-index: 1;">
-          <h1 class="section-title activity-hero-heading" style="margin-top: 0.5rem; font-size: clamp(1.8rem, 3vw, 2.6rem);">
+          <h1 class="section-title activity-hero-heading font-lobster" style="margin-top: 0.5rem; font-size: clamp(1.8rem, 3vw, 2.6rem);">
             Sovereign Maritime Industrial Capabilities
           </h1>
           <p style="font-size: 0.95rem; color: var(--color-primary-fixed-dim); max-width: 700px; line-height: 1.65; margin-top: 0.75rem; margin-bottom: 2rem;">
@@ -80,29 +80,6 @@ export function renderActivities() {
         </div>
       </section>
 
-      <!-- BOTTOM CTA -->
-      <section class="section section-dark" style="padding: 3rem 0;">
-        <div class="container">
-          <div class="cta-banner">
-            <div class="cta-banner-content">
-              <h2 class="section-title" style="margin-bottom: 0.5rem;">Request a Capability Briefing</h2>
-              <p style="font-size: 0.95rem; color: var(--color-primary-fixed-dim); line-height: 1.55;">
-                Connect with our duty superintendents to discuss your specific operational requirements, fleet mobilization timelines, and project scope assessments.
-              </p>
-            </div>
-            <div class="cta-banner-actions">
-              <a href="tel:+912222610940" class="btn btn-accent btn-lg">
-                <span class="material-symbols-outlined">call</span>
-                <span>+91 22 2261-0940</span>
-              </a>
-              <a href="/contact" class="btn btn-outline-white btn-lg" data-nav-link>
-                <span class="material-symbols-outlined">mail</span>
-                <span>Send Inquiry</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   `;
 }

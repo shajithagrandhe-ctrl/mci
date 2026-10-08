@@ -1,4 +1,7 @@
 import { activitiesData } from '../data/activities.js';
+import { renderHeroShutterText } from '../components/HeroShutterText.js';
+import { renderNotchedMediaCard } from '../components/NotchedCard.js';
+import { renderGlobalCoverageMap } from '../components/GlobalCoverageMap.js';
 export function renderHome() {
   const homeDivisions = activitiesData.slice(0, 6);
 
@@ -14,9 +17,10 @@ export function renderHome() {
         </div>
 
         <div class="container hero-content">
-          <h1 class="hero-title">
-            Sovereign Maritime Infrastructure, Heavy Engineering &amp; Strategic Ocean Logistics
-          </h1>
+          ${renderHeroShutterText({
+            title: 'Where Steel Meets Sea',
+            subtitle: 'Crafted for challenging waters. Designed to carry possibilities beyond the horizon.',
+          })}
 
           <div class="hero-actions">
             <a href="#capabilities" class="btn btn-accent btn-lg">
@@ -48,34 +52,19 @@ export function renderHome() {
         <div class="container">
           <div class="section-header-row">
             <div>
-              <h2 class="section-title">
+              <h2 class="section-title font-lobster">
                 Sovereign Industrial Capabilities &amp; Deepwater Logistics
               </h2>
             </div>
           </div>
 
           <div class="bento-grid coverflow-grid">
-            ${homeDivisions.map((div, i) => `
-              <a href="/activities/${div.id}" class="division-card" data-nav-link>
-                <div class="division-media">
-                  <img src="${div.heroImage}" alt="${div.heroAlt}" class="division-img" />
-                  <div class="division-tag">
-                    <span class="material-symbols-outlined" style="font-size: 14px;">anchor</span>
-                    <span>${div.sectorCode}</span>
-                  </div>
-                </div>
-                <div class="division-body">
-                  <div>
-                    <h3 class="division-name">${div.title}</h3>
-                    <p class="division-desc">${div.summary}</p>
-                  </div>
-                  <div class="division-footer">
-                    <span>${div.metrics[0].value} ${div.metrics[0].label}</span>
-                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-                  </div>
-                </div>
-              </a>
-            `).join('')}
+            ${homeDivisions.map((div) => renderNotchedMediaCard({
+              href: `/activities/${div.id}`,
+              image: div.heroImage,
+              imageAlt: div.heroAlt,
+              title: div.title,
+            })).join('')}
           </div>
         </div>
       </section>
@@ -87,20 +76,11 @@ export function renderHome() {
             <!-- Left Column: HQ Imagery & Telemetry Callout -->
             <div class="profile-media-box">
               <img src="/assets/images/asset_1_about_mci.jpg" alt="MCI Corporate Headquarters & Operations Control Center" class="profile-img" />
-              <div class="profile-floating-badge">
-                <h4>
-                  <span class="material-symbols-outlined" style="font-size: 16px;">domain</span>
-                  Central Command Tower
-                </h4>
-                <p>
-                  Centralized vessel telemetry, satellite routing control, and emergency incident dispatch in Mumbai &amp; Visakhapatnam HQ.
-                </p>
-              </div>
             </div>
 
             <!-- Right Column: Institutional Profile & Accreditations -->
             <div>
-              <h2 class="section-title" style="margin-bottom: 1rem;">
+              <h2 class="section-title font-lobster" style="margin-bottom: 1rem;">
                 Sovereign Trust Safeguarding National Oceanic Corridors
               </h2>
               <p class="premium-prose" style="margin-bottom: 1rem;">
@@ -111,9 +91,6 @@ export function renderHome() {
               </p>
 
               <div>
-                <span style="font-size: 0.725rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-slate); display: block; margin-bottom: 0.75rem;">
-                  Statutory Accreditations &amp; Class Approvals
-                </span>
                 <div class="accreditations-grid">
                   <div class="accreditation-chip">
                     <span class="material-symbols-outlined" style="color: var(--color-secondary);">verified</span>
@@ -169,11 +146,7 @@ export function renderHome() {
         <div class="container">
           <div class="section-header-row">
             <div>
-              <span class="section-eyebrow" style="color: var(--color-secondary-container);">
-                <span class="material-symbols-outlined" style="font-size: 16px;">hub</span>
-                Operational Geography
-              </span>
-              <h2 class="section-title">
+              <h2 class="section-title font-lobster">
                 Strategic Global Reach &amp; Primary Shipping Corridors
               </h2>
             </div>
@@ -184,7 +157,12 @@ export function renderHome() {
           </div>
 
           <div class="map-container prompt-map-container" aria-label="Animated global operations route map">
-            <div class="world-map-stage home-world-map-stage">
+            ${renderGlobalCoverageMap({
+              id: 'home-coverage',
+              ariaLabel: 'Interactive global coverage map',
+              className: 'home-coverage-map',
+            })}
+            <div class="world-map-stage home-world-map-stage legacy-world-map-stage" aria-hidden="true">
               <div class="world-map-grid" aria-hidden="true"></div>
               <svg class="world-map-svg" viewBox="0 0 800 400" role="img" aria-label="Animated maritime corridor network">
                 <defs>
@@ -253,32 +231,6 @@ export function renderHome() {
         </div>
       </section>
 
-      <!-- FINAL CTA / INITIATE FLEET DISPATCH -->
-      <section class="section section-light" id="desk-cta">
-        <div class="container">
-          <div class="cta-banner">
-            <div class="cta-banner-content">
-              <h2 class="section-title" style="margin-bottom: 0.5rem;">
-                Initiate Fleet Dispatch &amp; Operational Inquiry
-              </h2>
-              <p style="font-size: 0.95rem; color: var(--color-on-surface-variant); line-height: 1.55;">
-                Connect directly with our central duty superintendents for emergency towage, scheduled dry dock reservations, salvage interventions, or sovereign hydrographic project planning.
-              </p>
-            </div>
-
-            <div class="cta-banner-actions">
-              <a href="tel:+912222610940" class="btn btn-primary btn-lg">
-                <span class="material-symbols-outlined">call</span>
-                <span>+91 22 2261-0940</span>
-              </a>
-              <a href="/contact" class="btn btn-secondary btn-lg" data-nav-link>
-                <span class="material-symbols-outlined">mail</span>
-                <span>Send Dispatch Request</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   `;
 }

@@ -1,0 +1,1172 @@
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))n(t);new MutationObserver(t=>{for(const r of t)if(r.type==="childList")for(const c of r.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&n(c)}).observe(document,{childList:!0,subtree:!0});function i(t){const r={};return t.integrity&&(r.integrity=t.integrity),t.referrerPolicy&&(r.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?r.credentials="include":t.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function n(t){if(t.ep)return;t.ep=!0;const r=i(t);fetch(t.href,r)}})();const N=[[[-168,67],[-145,70],[-124,50],[-113,32],[-98,18],[-82,25],[-66,45],[-54,54],[-72,72],[-105,78],[-140,72],[-168,67]],[[-82,12],[-73,4],[-70,-16],[-60,-36],[-48,-55],[-37,-25],[-50,2],[-67,10],[-82,12]],[[-11,36],[3,51],[29,70],[62,72],[103,60],[143,52],[160,38],[127,8],[104,1],[80,8],[57,25],[36,31],[24,40],[8,43],[-11,36]],[[-17,34],[9,37],[33,30],[51,12],[43,-15],[28,-35],[13,-35],[-1,-22],[-13,5],[-17,34]],[[112,-11],[132,-12],[153,-27],[146,-42],[118,-35],[112,-11]],[[47,-13],[51,-18],[49,-26],[44,-24],[43,-16],[47,-13]],[[-53,60],[-39,68],[-22,76],[-43,83],[-62,77],[-53,60]]];function z(){return`
+    <div class="contact-globe" aria-label="Interactive rotating global operations network">
+      <canvas class="contact-globe-canvas" data-contact-globe role="img" aria-label="Rotating wireframe globe centered on India"></canvas>
+      <div class="contact-globe-fade" aria-hidden="true"></div>
+    </div>
+  `}function H(e,a,i,n,t){const r=(e+i.lon)*Math.PI/180,c=a*Math.PI/180,d=i.lat*Math.PI/180,u=Math.cos(c)*Math.sin(r),v=Math.sin(c),f=Math.cos(c)*Math.cos(r),y=v*Math.cos(d)-f*Math.sin(d),p=v*Math.sin(d)+f*Math.cos(d);return{x:t.x+u*n,y:t.y-y*n,visible:p>0}}function w(e,a,i,n,t){let r=!1;a.forEach(([c,d])=>{const u=H(c,d,i,n,t);if(!u.visible){r=!1;return}r?e.lineTo(u.x,u.y):e.moveTo(u.x,u.y),r=!0})}function G(e){return Array.from({length:73},(a,i)=>[e,-90+i*2.5])}function $(e){return Array.from({length:145},(a,i)=>[-180+i*2.5,e])}function F(e){if(e.dataset.ready==="true")return;e.dataset.ready="true";const a=e.getContext("2d"),i={lon:-78,lat:-12};let n=!1,t=null,r=null,c=!0,d=performance.now();const u=window.matchMedia("(prefers-reduced-motion: reduce)").matches,v=()=>{const p=e.getBoundingClientRect(),m=Math.min(window.devicePixelRatio||1,2),s=Math.max(1,Math.round(p.width)),o=Math.max(1,Math.round(p.height));(e.width!==Math.round(s*m)||e.height!==Math.round(o*m))&&(e.width=Math.round(s*m),e.height=Math.round(o*m)),a.setTransform(m,0,0,m,0,0),a.clearRect(0,0,s,o);const l=Math.min(s*.43,o*.66),g={x:s/2,y:o*.58};a.save(),a.beginPath(),a.arc(g.x,g.y,l,0,Math.PI*2),a.clip(),a.strokeStyle="rgba(21, 38, 52, 0.16)",a.lineWidth=.8,a.beginPath(),[-60,-30,0,30,60].forEach(h=>w(a,G(h),i,l,g)),[-60,-30,0,30,60].forEach(h=>w(a,$(h),i,l,g)),a.stroke(),a.strokeStyle="rgba(16, 30, 42, 0.72)",a.lineWidth=1.05,a.beginPath(),N.forEach(h=>w(a,h,i,l,g)),a.stroke(),a.restore(),a.strokeStyle="rgba(16, 30, 42, 0.58)",a.lineWidth=1.1,a.beginPath(),a.arc(g.x,g.y,l,0,Math.PI*2),a.stroke()},f=p=>{if(!e.isConnected){y.disconnect();return}const m=Math.min(32,p-d);d=p,c&&!n&&!u&&(i.lon=(i.lon+m*.0045)%360),v(),r=requestAnimationFrame(f)};e.addEventListener("pointerdown",p=>{n=!0,t={x:p.clientX,y:p.clientY},e.setPointerCapture(p.pointerId)}),e.addEventListener("pointermove",p=>{!n||!t||(i.lon+=(p.clientX-t.x)*.35,i.lat=Math.max(-50,Math.min(50,i.lat-(p.clientY-t.y)*.25)),t={x:p.clientX,y:p.clientY})}),e.addEventListener("pointerup",()=>{n=!1,t=null}),e.addEventListener("pointercancel",()=>{n=!1,t=null});const y=new IntersectionObserver(([p])=>{c=p.isIntersecting},{threshold:.05});y.observe(e),r=requestAnimationFrame(f),window.addEventListener("pagehide",()=>{y.disconnect(),r&&cancelAnimationFrame(r)},{once:!0})}function V(){document.querySelectorAll("[data-contact-globe]").forEach(F)}const S=[{id:"port-development",sectorCode:"DIV-01 // INFRASTRUCTURE",title:"Port Development & Marine Terminal Management",navLabel:"Port Development & Management",summary:"State-backed design, dredging operations, and berth management servicing Class-A deepwater terminals, automated gantry systems, and continuous multi-modal container transfer nodes.",heroImage:"/assets/images/asset_4_activities_serv.jpg",heroAlt:"High-end commercial container port terminal at twilight with automated gantry cranes",metrics:[{label:"Annual Throughput",value:"24M TEU/yr",sub:"+14.8% YoY Berth Utilization"},{label:"Harbor Depth Access",value:"6 Deepwater",sub:"Up to 24,000 TEU Vessel Class"},{label:"Sovereign Compliance",value:"100% ISPS",sub:"Certified Supply Chain Security"},{label:"Operational Turnaround",value:"99.4% Berth",sub:"Sub-18 hr Avg Port Stay"}],verifiedServices:["Port Site Selection","Port Feasibility Study","Port Master Planning","Environmental Consultancy","Port & Terminal Planning and Design","Port & Terminal Construction","Materials Handling","Shipyards Design & Construction","Project Management"],suites:[{icon:"forklift",title:"Automated Ship-to-Shore (STS) Cranes",desc:"Post-Panamax & Megamax electric STS cranes, automated rail-mounted gantry (ARMG) yards, real-time optical container OCR tracking.",specs:["Outreach: 65m","Lift Rating: 75-Tonne Twin-Lift","Power: 100% Electrified"]},{icon:"dock",title:"Deep-Water Berthing & Liquid Cargo Jetties",desc:"Continuous 1,200m quay walls with reinforced quick-release bollards, pneumatic foam fender systems, and dedicated bunkering lines.",specs:["Quay Draft: 16.5m – 20.5m CD","ULCV Readiness: 24,000 TEU","Bunkering: Dual Manifold LNG/VLSFO"]},{icon:"radar",title:"Vessel Traffic Management & Towage",desc:"Radar, AIS, and hydrographic real-time tidal telemetry tracking vessel movements. Flotilla of 70T–90T bollard pull Azimuth Stern Drive escort tugs.",specs:["VTS Level: IALA V-103 Certified","Escort Tugs: 85T Bollard Pull ASD","Pilot Dispatch: 24/7 Dedicated Station"]},{icon:"train",title:"Automated Freight & Rail Connectivity",desc:"Direct rail-mounted container transshipment yards, customs bonded freight stations (CFS), and cold-chain reefer monitoring infrastructure.",specs:["Rail Linkage: DFC Direct Spur","Reefer Points: 2,400 Monitored Plugs","Gate Turnaround: 15-Min Optical Gate"]}],tableManifest:{title:"Port Infrastructure & Berth Specification Sheet",headers:["Terminal Facility","Basin / Location","Max Draft","Quay Length","Gantry Equipment","Capacity","Status"],rows:[{c1:"Gateway West Terminal 01 // Mumbai",c2:"Offshore Basin A",c3:"16.5m",c4:"850m",c5:"6x Super Post-Panamax STS",c6:"18,000 TEU",status:"Full Capacity",statusType:"standby"},{c1:"Deepwater Transshipment Hub // Vizhinjam",c2:"Arabian Sea Deep Outer",c3:"20.5m",c4:"1,200m",c5:"8x Megamax Automation STS",c6:"24,000 TEU Megamax",status:"Open for Berthing",statusType:"operational"},{c1:"Eastern Liquid & Energy Jetty 03 // Vizag",c2:"Bay of Bengal Basin",c3:"17.8m",c4:"620m",c5:"Marine Loading Arms",c6:"VLCC 300,000 DWT",status:"Discharge in Progress",statusType:"operational"},{c1:"Container Terminal 02 // Ennore",c2:"Coromandel Coast",c3:"16.0m",c4:"730m",c5:"5x Post-Panamax STS",c6:"14,000 TEU Container",status:"Berthing Scheduled",statusType:"standby"},{c1:"Bulk & Heavy-Lift Terminal 04 // Paradip",c2:"Mahanadi Offshore Estuary",c3:"18.0m",c4:"550m",c5:"2x Automated Ship Unloaders",c6:"200,000 DWT Capesize",status:"Active Operations",statusType:"operational"}]},caseStudy:{tag:"CAPITAL DREDGING & BERTH EXPANSION PROJECT",title:"Mega-Berth 03 Modernization & 20.5m Draft Deepening Campaign",challenge:"Seasonal siltation and surging ultra-large container traffic required immediate berth deepening to accommodate 24,000 TEU vessels without suspending ongoing container discharge.",solution:"MCI oversaw fast-track capital dredging and quay stabilization of a 1,200m deepwater berth in 14 months, accommodating maiden calls of 24,188 TEU ultra-large container carriers with zero downtime.",stats:[{label:"Crane Productivity",value:"38 Moves/Hr"},{label:"Capital Dredging Executed",value:"1.8M m³"},{label:"Lost Time Incidents",value:"Zero (3.2M Hrs)"}]}},{id:"offshore-drilling",sectorCode:"DIV-02 // ENERGY FLEET",title:"Offshore Drilling Support & Energy Fleet Capabilities",navLabel:"Oil & Gas Drilling Support",summary:"Specialized offshore supply vessels (OSVs), Anchor Handling Tug Supply (AHTS), subsea inspection, and deep-water platform operations across critical maritime hydrocarbon basins.",heroImage:"/assets/images/asset_5_activities_serv.jpg",heroAlt:"Offshore supply vessel operating near semi-submersible platform",metrics:[{label:"Dynamic Positioning",value:"DP2 / DP3",sub:"Redundant Propulsion Fleet"},{label:"Active Energy Units",value:"22 Active",sub:"Commissioned Offshore Units"},{label:"Class Audited",value:"100%",sub:"IMCA & SOLAS Standard"},{label:"Standby Response",value:"24/7 Deepwater",sub:"Emergency Rescue Ready"}],verifiedServices:["Oil & Gas Drilling Support","Offshore Marine Logistics","Energy Fleet Coordination","Platform and Vessel Support","Technical Consultancy","Dynamic Positioning Management"],suites:[{icon:"oil_barrel",title:"Anchor Handling Tug Supply (AHTS)",desc:"High bollard pull (up to 180T), deep-water semi-submersible rig towage, four-point anchor laying, and heavy deck equipment dispatch.",specs:["180T Continuous Bollard Pull","Triple Drum Waterfall Winch","FiFi-1 & FiFi-2 Firefighting"]},{icon:"inventory_2",title:"Platform Supply Vessels (PSV)",desc:"High-capacity bulk liquid mud, drill water, fuel oil, brine, and deck cargo operations with DP2 high-precision dynamic positioning.",specs:["Up to 1,020 m² Clear Deck Area","Dedicated Dry Bulk Tanks","Automated Hose Handling Crane"]},{icon:"precision_manufacturing",title:"Subsea Intervention & ROV Support",desc:"Moonpool-equipped vessels, survey sensor suites, underwater pipeline inspections, and seabed telemetry mapping down to 3,000 meters.",specs:["7.2m x 7.2m Integrated Moonpool","Class II Work-Class ROV Hangars","Active Heave-Compensated Cranes"]},{icon:"groups",title:"Fast Utility & Crew Transfer (CTV)",desc:"High-speed passenger transfer under stringent North Sea / IOGP offshore safety protocols with stabilized gangway walk-to-work systems.",specs:["28-34 Knot Sprint Transit","60-Person Business Class Seating","Motion-Compensated Gangway"]}],tableManifest:{title:"Technical Fleet Specification Sheet",headers:["Vessel Name & Registry","Class","DP Rating","Clear Deck","Bollard Pull","Mud Tank","Status"],rows:[{c1:"M/V Sagar Rakshak // Mumbai",c2:"AHTS / Deepwater",c3:"DP2 (Kongsberg)",c4:"680 m²",c5:"180 MT Pull",c6:"780 m³",status:"On Charter",statusType:"operational"},{c1:"M/V Trishul Ocean // Kochi",c2:"Large PSV",c3:"DP2 (Converteam)",c4:"1,020 m²",c5:"4,600 DWT",c6:"1,240 m³",status:"Ready Berth",statusType:"operational"},{c1:"M/V Samudra Vikrant // Vizag",c2:"Subsea / ROV",c3:"DP3 (Kongsberg)",c4:"850 m²",c5:"150T AHC Crane",c6:"540 m³",status:"On Campaign",statusType:"operational"},{c1:"M/V Varun Express // Mangalore",c2:"Fast Crew Transfer",c3:"DP1 Joystick",c4:"140 m²",c5:"60 Pax / 32 Kts",c6:"N/A (Lube)",status:"Active Transit",statusType:"operational"},{c1:"M/V Sagar Kiran // Paradip",c2:"AHTS / Firefighting",c3:"DP2 (Kongsberg)",c4:"550 m²",c5:"160 MT Pull",c6:"620 m³",status:"Scheduled Docking",statusType:"standby"}]},caseStudy:{tag:"DEEPWATER BASIN CAMPAIGN",title:"Krishna-Godavari Deepwater Exploration Station-Keeping & Rig Towage",challenge:"Executing monsoon exploration rig shifts in the Bay of Bengal amidst 6.8m swell events and sustained 45-knot tropical gusts without loss of position.",solution:"MCI coordinated a dedicated 5-vessel flotilla sustaining uninterrupted rig support with 0.05m DP station accuracy and zero lost-time incidents throughout the 9-month monsoon season.",stats:[{label:"Station Uptime",value:"99.88%"},{label:"Bulk Deck Transferred",value:"48,000 MT"},{label:"LTI Incident Rate",value:"Zero"}]}},{id:"marine-repairs",sectorCode:"DIV-03 // SHIPBUILDING & YARD",title:"Commercial Marine Repairs & Heavy Dry Dock Engineering",navLabel:"Marine Repairs & Certifications",summary:"Full-spectrum dry dock overhauls, emergency hull fabrication, propulsion shaft alignment, and statutory special periodic surveys (SPS) for vessels up to Capesize and VLCC dimensions.",heroImage:"/assets/images/asset_6_activities_serv.jpg",heroAlt:"Commercial marine dry dock facility with commercial vessel hull undergoing maintenance",metrics:[{label:"Graving Docks",value:"4 Docks",sub:"Capesize & Suezmax Ready"},{label:"Vertical Lift Syncrolift",value:"12,000 T",sub:"Heavy Syncrolift Transfer"},{label:"Overhauls Completed",value:"350+ Units",sub:"Zero-Incident Safety Record"},{label:"Machining Capacity",value:"Class 1",sub:"Shaft Lathes up to 24m"}],verifiedServices:["Calibration Centre","Fire Fighting & Life Saving Appliances","Immersion Suit & Life Jackets","Non Destructive Testing","Compass Adjustment","Navigational & Bridge Equipment","Container Repairs & IICL Certification","Reconditioning Engine Components","Grab Repairs","Ship Equipment & Spares"],suites:[{icon:"build",title:"Heavy Hull Plating & Structural Fabrication",desc:"IACS Grade A and DH36 steel renewals with automated submerged arc welding. Ultrasonic thickness gauging and repairs of bulbous bow, side shell, and transom sections.",specs:["AH32/DH36 High-Yield Steel","Submerged Arc Welding","NDT / X-Ray Weld Testing"]},{icon:"settings",title:"Propulsion Shafting, Rudder & Stern Tube",desc:"Laser optical alignment, shaft straightening, controllable pitch propeller (CPP) blade rebuilds, Simplex seal bonding, and precision rudder pintle boring in dry dock.",specs:["Laser Optic Shaft Calibration","Simplex & Wärtsilä Seal Overhaul","Pintle In-Situ Boring"]},{icon:"water_drop",title:"Hydroblasting, UHP & Marine Coating",desc:"Automated robotic 3,000 bar ultra-high-pressure hydroblasting, advanced fouling-release silicone coatings, and IMO PSPC certified ballast tank preservation.",specs:["3,000 Bar UHP Hydroblasting","Silicone Foul-Release Coating","IMO PSPC Ballast Compliance"]},{icon:"speed",title:"Engine Room & Mechanical Auxiliary Overhaul",desc:"Main engine 2-stroke/4-stroke piston and liner overhauls, high-speed turbocharger dynamic balancing, main condenser retubing, and safety valve testing.",specs:["MAN / WinGD / Sulzer Overhaul","ABB / Napier Turbocharger Bench","Titanium Plate Exchangers"]}],tableManifest:{title:"Yard Berth & Dry Dock Basin Schedule",headers:["Dry Dock Basin ID","Type","Length x Breadth x Draft","Crane Capacity","Vessel Class","Power Utility","Current Status"],rows:[{c1:"Basin No. 1",c2:"Graving Dock",c3:"360m x 62m x 12.5m",c4:"2x 150T Gantry + 50T Jib",c5:"Capesize / VLCC",c6:"440V 60Hz / 380V 50Hz",status:"Occupied (Est: Nov 14)",statusType:"standby"},{c1:"Basin No. 2",c2:"Graving Dock",c3:"270m x 45m x 10.0m",c4:"2x 80T Level Luffing",c5:"Suezmax / Aframax",c6:"440V / Clean Shore Power",status:"Ready for Berthing",statusType:"operational"},{c1:"Floating Dock FD-03",c2:"Floating Dock",c3:"210m x 36m x 8.5m",c4:"2x 25T Traveling Cranes",c5:"Panamax / Tankers / OSVs",c6:"Dedicated Subsea Pumps",status:"Reserved // In Transit",statusType:"standby"},{c1:"Syncrolift Platform 01",c2:"Syncrolift Transfer",c3:"130m x 25m x 6.5m",c4:"4x 15T Rail Cranes",c5:"Offshore Supply / Tugs",c6:"Multi-bay Transfer Rail",status:"Active Overhaul",statusType:"operational"}]},caseStudy:{tag:"GROUNDING REPAIR & HULL ALIGNMENT",title:"Emergency Ballast Tank Plating & Rudder Stock Renewal — M/T Godavari Pride",challenge:"115,000 DWT Aframax sustained severe bottom distortion and internal longitudinal frame buckling following shallow-water grounding in the Arabian Sea.",solution:"MCI mobilized emergency diving teams for pre-docking laser telemetry. Upon docking in Basin 02, technicians replaced 48 metric tons of damaged plating and re-bedded the 22-ton rudder assembly with zero defects.",stats:[{label:"Turnaround Time",value:"14 Days Laytime"},{label:"AH36 Steel Renewed",value:"48 MT"},{label:"Docking Window SLA",value:"< 18 Hours"}]}},{id:"turbine-engineering",sectorCode:"DIV-04 // PROPULSION",title:"Propulsion Turbine Engineering & Machinery Overhaul",navLabel:"Turbine Repairs & Engineering",summary:"Precision dynamic balancing, high-pressure steam and gas marine turbine overhaul, reduction gear diagnostics, and auxiliary propulsion system remanufacturing to OEM tolerances.",heroImage:"/assets/images/asset_7_activities_serv.jpg",heroAlt:"Precision industrial propulsion turbine maintenance and mechanical shaft assembly",metrics:[{label:"Precision Machining",value:"±0.01 mm",sub:"Sub-Micron Laser Telemetry"},{label:"Dynamic Balancing Rig",value:"45 Tonne",sub:"Accommodating 14m LOA Rotors"},{label:"Engines & Turbines",value:"2,400+ Units",sub:"Overhauled Across Fleet"},{label:"Fly-Out Squad SLA",value:"< 72 Hours",sub:"Global Onboard Deployment"}],verifiedServices:["Dynamic Balancing","Motor Rewinding","Reconditioning Engine Components","Refrigeration & Air Conditioning","Marine Machinery Overhaul","Reduction Gear Diagnostics"],suites:[{icon:"settings",title:"Marine Gas & Steam Turbine Overhaul",desc:"Full blading renewal & root slot wire-EDM, shroud band peening, labyrinth steam gland sealing replacement, and rotor thermal deflection straightening.",specs:["Wire-EDM Root Machining","Thermal Deflection Straightening","API 612 / DIN 3962 Class 4"]},{icon:"precision_manufacturing",title:"Main Reduction Gearbox Diagnostics",desc:"Epicyclic & double-helical gear train profiling, contact tooth pattern and dye penetrant analysis, acoustic vibration spectrum FFT logging, and journal bearing babbiting.",specs:["AGMA 6011 / ISO 1328 Rating","FFT Vibration Analysis","White Metal Babbit Centrifugal Cast"]},{icon:"speed",title:"Turbocharger Dynamic Balancing",desc:"ABB, MAN, Napier & Mitsubishi cartridge overhauls, ultrasonic cleaning & hydro-testing of housings, rotor balancing at operational speeds up to 45,000 RPM.",specs:["Speeds up to 45,000 RPM","OEM Class A Certified","Gas Inlet Casing Micro-Restoration"]},{icon:"sync",title:"Shaft Line Auxiliary & Thrusters",desc:"Controllable pitch propeller hydraulic oil distribution hub rebuilds, bow thruster right-angle bevel gearboxes, steering gear ram actuators, and Simplex stern tube seals.",specs:["SOLAS II-1 Reg 29 Compliant","Right-Angle Bevel Gearing","Stern Tube Seal Re-Bonding"]}],tableManifest:{title:"Heavy Machinery Workshop & Test Bench Specification Sheet",headers:["Workshop Bay / Rig","Technical Specification","Maximum Capacity","Precision / Tolerance","Live Status"],rows:[{c1:"Bay 01 // Schenck Dynamic Balancer",c2:"Multi-plane dynamic rotor balancing",c3:"45 Tonnes // 14,000mm LOA // 3,200mm Dia",c4:"ISO 1940 Grade G1.0 / G2.5",status:"Active / On Test",statusType:"operational"},{c1:"Bay 02 // Horizontal Lathe & Grinder",c2:"Heavy shaft turning, journal superfinishing",c3:"60 Tonnes // 18,000mm Bed // 2,400mm Swing",c4:"Runout: 0.005mm TIR",status:"Available / Standby",statusType:"operational"},{c1:"Bay 03 // 5-Axis CNC Blading Center",c2:"Subtractive manufacture of turbine blades",c3:"5,000mm x 3,000mm Travel // Inconel & Ti",c4:"Positional: +0.003mm",status:"In Operation",statusType:"operational"},{c1:"Bay 04 // Hydraulic Load Absorption Dyno",c2:"Post-overhaul full endurance test runs",c3:"Up to 25,000 kW (33,500 HP) Continuous",c4:"Class Witnessed Telemetry",status:"Calibrated / Ready",statusType:"operational"},{c1:"Bay 05 // In-Situ Line Boring Laser Rig",c2:"Portable on-board engine block & stern tube",c3:"Bore Diameters 150mm - 1,800mm",c4:"Laser Collimation 0.01mm/10m",status:"Deployed Offshore",statusType:"standby"}]},caseStudy:{tag:"OFFSHORE RAPID RESPONSE",title:"Emergency LP Steam Turbine Re-Blading & Rotor Trueing — LNG Carrier Dishari",challenge:"Foreign object damage to row 4-7 low-pressure rotor blades during high-seas transit resulted in 9.4 mm/s vibration tripping automated shutdown outside Mumbai port limits.",solution:"MCI mobilized workshop emergency team: 3D laser-scanned blade root geometry, precision CNC-machined 142 replacement 12Cr stainless blades, and dynamically balanced rotor in 9 days, saving client $1.4M off-hire.",stats:[{label:"Workshop Turnaround",value:"9 Days Total"},{label:"Final Residual Vibration",value:"0.08 mm/s"},{label:"Class Sign-Off",value:"100% (DNV & IRS)"}]}},{id:"marine-surveys",sectorCode:"DIV-05 // STATUTORY AUDIT",title:"Marine Surveys, Inspections & Statutory Compliance",navLabel:"Marine Surveys & Inspections",summary:"Independent non-destructive testing (NDT), ultrasonic thickness measurement (UTM), pre-purchase condition surveys, flag state audits, and statutory SOLAS/MARPOL compliance certifications.",heroImage:"/assets/images/asset_8_activities_serv.jpg",heroAlt:"Certified marine surveyor in safety gear inspecting commercial vessel hull structure",metrics:[{label:"Annual Survey Volume",value:"4,800+",sub:"Commercial & Defense Vessels"},{label:"Rapid Mobilization",value:"< 24 Hours",sub:"Emergency Surveyor Dispatch"},{label:"Regulatory Acceptance",value:"100%",sub:"Full IACS & Flag Delegation"},{label:"Measurement Accuracy",value:"±0.05 mm",sub:"Class-Approved Level II NDT"}],verifiedServices:["Marine Chartering","Marine Inspections","Gas Free Inspections","Non Destructive Testing","Compass Adjustment","Safety Equipment Checks","Statutory Flag Audits"],suites:[{icon:"fact_check",title:"Statutory & Flag State Surveys",desc:"Full delegated authority audits under SOLAS (Safety Construction, Safety Equipment, Safety Radio), MARPOL Annexes I-VI, Load Line, and ISM/ISPS codes.",specs:["SOLAS / MARPOL Accredited","ISM / ISPS Code Certification","MLC 2006 Labor Protocols"]},{icon:"search_check",title:"Hull Structural & NDT Diagnostics",desc:"Ultrasonic Thickness Measurement (UTM), Close-up Enhanced Survey Programme (ESP) ballast tank evaluations, Magnetic Particle Testing (MPI), and Dye Penetrant.",specs:["UTM Ultrasonic Gauging","Phased Array Ultrasonic (PAUT)","Rope-Access Class Climbers"]},{icon:"settings_input_component",title:"Marine Engineering & Machinery Audits",desc:"Propulsion crankshaft deflection logging, auxiliary boiler safety valve popping certification, insulation megger verification, and emergency steering gear fail-safe trials.",specs:["Crankshaft Deflection Benchmarks","Megger Insulation Testing","Blackout Fail-Safe Proofing"]},{icon:"assignment",title:"Pre-Purchase & Condition Surveys",desc:"Condition Assessment Programme (CAP) indexing, Remaining On Board (ROB) bunker discrepancy audits, lay-up reactivation certification, and Marine Warranty Surveying (MWS).",specs:["CAP Indexing Level 1/2","Marine Warranty Survey (MWS)","BIMCO Standard Templates"]}],tableManifest:{title:"Live Statutory Survey Schedule & Vessel Inspection Manifest",headers:["Vessel Name & IMO","Audit Category","Survey Scope / Methodology","Classification / Registry","Compliance Status","Auditor Squad"],rows:[{c1:"M/V Bharat Jyoti // 9741029",c2:"Special Survey No. 3",c3:"Close-up ESP Tank Survey & UTM",c4:"IRS / DNV GL",status:"Active / In Progress",statusType:"operational"},{c1:"M/T Malabar Dawn // 9508112",c2:"Statutory Renewal",c3:"SOLAS Safety Equipment & Radio",c4:"Lloyd's Register",status:"Class Endorsed",statusType:"operational"},{c1:"M/V Ocean Pioneer // 9321453",c2:"Pre-Purchase Condition",c3:"Hull CAP Rating & Machinery Trial",c4:"ABS Approved",status:"Report Finalizing",statusType:"standby"},{c1:"Barge Sagar Setu // 8912340",c2:"Marine Warranty (MWS)",c3:"Heavy Lift Loadout & Sea Fastening",c4:"Bureau Veritas",status:"Approved for Transit",statusType:"operational"},{c1:"M/T Godavari Pride // 9655820",c2:"Damage Condition Survey",c3:"Post-Grounding Bottom Plating NDT",c4:"IRS / ClassNK",status:"Under Attestation",statusType:"standby"}]},caseStudy:{tag:"EMERGENCY FLAG-STATE INTERVENTION",title:"Fast-Track Intermediate Survey & Ultrasonic Re-Certification — M/V Dravida Pearl",challenge:"Port State Control (PSC) detention warning issued at Visakhapatnam Outer Anchorage due to reported structural pitting exceeding 30% in ballast tank #3 and auxiliary electrical trip faults.",solution:"MCI flying squad mobilized in under 6 hours with 3D laser ultrasonic scanning rigs. Performed in-situ weld verification and direct digital submission to Flag Administration, clearing PSC deficiencies in 36 hours.",stats:[{label:"Resolution Speed",value:"36 Hours Total"},{label:"Off-Hire Penalties Avoided",value:"$180,000"},{label:"Class Attestation",value:"100% Cleared"}]}},{id:"green-technologies",sectorCode:"DIV-06 // DECARBONIZATION",title:"Maritime Green Technologies & Vessel Decarbonization",navLabel:"Green Technologies & Environment",summary:"Comprehensive low-carbon marine solutions: IMO CII/EEXI rating optimization, shore-to-ship cold ironing grid integration, scrubbers and selective catalytic reduction (SCR), and dual-fuel retrofits.",heroImage:"/assets/images/asset_9_activities_serv.jpg",heroAlt:"Clean industrial engineering of maritime green technologies and eco-efficient machinery",metrics:[{label:"CO2e Reduction",value:"-35%",sub:"Average Vessel Lifecycle Intensity"},{label:"Vessels Retrofitted",value:"120+",sub:"Commercial Carriers & Tugs"},{label:"IMO MEPC Clearance",value:"100%",sub:"MARPOL Annex VI Ratified"},{label:"Cold Ironing Grid",value:"18.5 MW",sub:"High-Voltage Shore Power"}],verifiedServices:["Oily Water Separator","Environmental Consultancy","Green Technologies","Marine Equipment Support","Technical Advisory","Ballast Water Management Systems"],suites:[{icon:"local_gas_station",title:"Alternative Fuels & Dual-Fuel Conversions",desc:"Methanol, LNG, and green ammonia fuel delivery piping systems designed to withstand cryogenic parameters with double-walled IGF-code compliant manifolds.",specs:["Cryogenic Fuel Tank Insulation","Double-Walled IGF Manifolds","Autonomous Gas Leak Detection"]},{icon:"filter_alt",title:"Exhaust Gas Abatement & Carbon Capture (OCCS)",desc:"Hybrid and closed-loop SOx wet scrubbers, Selective Catalytic Reduction (SCR) for IMO Tier III compliance, and cryogenic CO2 liquefaction.",specs:["Modular Onboard Carbon Capture","Cryogenic CO2 Liquefaction","Zero-Discharge Washwater Systems"]},{icon:"air",title:"Wind-Assisted Propulsion & Clean Hydrodynamics",desc:"Flettner rotor sails, suction wings, and rigid wingsails paired with microscopic drag reduction coatings and Mewis Duct energy saving devices.",specs:["Rotor Sail Foundation Engineering","Air Lubrication Systems (ALS)","Mewis Duct & PBCP Propeller Boss"]},{icon:"bolt",title:"High-Voltage Shore Connection & Microgrids",desc:"IEC/IEEE 80005-1 high-voltage shore connection (HVSC) panels, automated cable management, and solid-state Battery Energy Storage Systems (BESS).",specs:["Zero Auxiliary Engine Emissions","Solid-State BESS Battery Systems","Hybrid Peak-Shaving Technology"]}],tableManifest:{title:"Vessel Decarbonization & Fleet Energy Efficiency Manifest",headers:["Vessel Name & IMO","Retrofit Architecture","Baseline CII","Target CII","Annual CO2 Savings","Workshop Status"],rows:[{c1:"M/V Ganga Fortune // 9842109",c2:"Rotor Sails (2x 24m) & Waste Heat Recovery",c3:"Rating D (Moderate)",c4:"Rating A (High Performance)",c5:"4,200 MT CO2/yr",status:"Active Retrofit (Kochi)",statusType:"operational"},{c1:"M/T Narmada Star // 9520114",c2:"Dual-Fuel Methanol Ready & Scrubber",c3:"Rating E (Non-Compliant)",c4:"Rating B (Compliant)",c5:"3,150 MT CO2/yr",status:"Sea Trials & Gas Cleared",statusType:"operational"},{c1:"M/V Kanyakumari // 9611430",c2:"Air Lubrication System (ALS) & Mewis Duct",c3:"Rating C (Borderline)",c4:"Rating B (Comfortable)",c5:"2,800 MT CO2/yr",status:"Engineering Sign-off",statusType:"operational"},{c1:"Tug Samudra Veer // 9931021",c2:"Fully Electric Hybrid BESS (2.4 MWh)",c3:"Non-rated Harbor Tug",c4:"Zero-Port Emission",c5:"920 MT CO2/yr",status:"Commissioned & Active",statusType:"operational"},{c1:"M/V Indian Ocean // 9703890",c2:"Sub-cooler Reliquefaction & Shaft Generator",c3:"Rating C (Baseline)",c4:"Rating A (Class Leader)",c5:"5,600 MT CO2/yr",status:"Class Verification (DNV)",statusType:"operational"}]},caseStudy:{tag:"AFRAMAX MODERNIZATION CAMPAIGN",title:"Rapid CII Rating Elevation & Hybrid Clean Retrofit — M/T Sindhu Ratna",challenge:"105,000 DWT tanker faced imminent IMO Carbon Intensity Indicator Category E downgrade, risking commercial off-charter in European trading zones.",solution:"MCI green engineering deployed turnkey package: in-situ hydrodynamic propeller boss cap fins, silicone foul-release hull coating during dry dock, and variable frequency drive cooling pumps, completing in 32 days.",stats:[{label:"Turnaround Time",value:"32 Days Total"},{label:"Hydrodynamic Fuel Savings",value:"-21.8% Fuel Burn"},{label:"New Attestation",value:"Category B Certified"}]}},{id:"ship-design",sectorCode:"DIV-07 // NAVAL ARCHITECTURE",title:"Ship Design, Naval Architecture & Marine Engineering",navLabel:"Yachts & Workboats Design",summary:"End-to-end commercial vessel design, computational fluid dynamics (CFD) hull hydrodynamics, structural FEA simulation, class-approved production engineering, and conversion design.",heroImage:"/assets/images/asset_21_ship_design_nav.jpg",heroAlt:"Commercial container vessel cutting through deep navy blue choppy ocean waters",metrics:[{label:"Vessel Designs",value:"380+ Hull",sub:"Tankers, Bulkers & Workboats"},{label:"Class Approval",value:"99.8%",sub:"First-Pass Verification"},{label:"HPC Computing",value:"3.2M+ Cores",sub:"High-Fidelity FEA / CFD Clusters"},{label:"Hydrodynamic SLA",value:"< 14 Days",sub:"Feasibility Simulation Models"}],verifiedServices:["Yachts & Workboats","Shipyards Design & Construction","Port & Terminal Planning and Design","Marine Engineering Advisory","Project Management","Naval Architecture & Hydrodynamics"],suites:[{icon:"architecture",title:"Hull Form Optimization & CFD",desc:"Parametric hull morphing, bulbous bow tuning, wave-making resistance minimization, propeller wakefield interaction modeling, and IMO EEDI/EEXI power-speed curves.",specs:["Adjoint Solver Algorithms","Trim Tables Optimization","Wake Cavitation Modeling"]},{icon:"grid_4x4",title:"FEA & Scantling Calculation",desc:"IACS Common Structural Rules (CSR-H) calculations, global hull girder longitudinal bending strength, spectral fatigue life cycle assessments, and bow-flare slamming reinforcement.",specs:["CSR-H Verified Code","Fatigue Cycle Simulation","ANSYS Mechanical Integration"]},{icon:"balance",title:"Damage & Intact Stability",desc:"Deterministic & probabilistic damage stability under SOLAS 2020, probabilistic flooding simulations, Grain Code, MODU stability booklets, and live incline experiment certification.",specs:["SOLAS 2020 Probabilistic Rules","Incline Experiment Trials","NAPA Stability Certified"]},{icon:"view_in_ar",title:"Production 3D Nesting & Digital Twin",desc:"Class-approved shipyard structural fabrication drawings, 3D piping spool isometric models, CNC cutting plate nesting, and laser-scanned retrofit digital twins.",specs:["CNC Nesting Optimization","Spool Isometrics Generation","AVEVA Marine Compatibility"]}],tableManifest:{title:"Live Naval Architecture Project Registry & Design Manifest",headers:["Project Code & Vessel Class","Design Discipline / Hull Type","Displacement / Capacity","Efficiency Gain","Classification Society","Design Stage & Status"],rows:[{c1:"MCI-NB-7201 // Chemical Tanker",c2:"Dual-Fuel Methanol Ready // Double Hull",c3:"14,200 m³",c4:"+15.2% Hull Hydro",c5:"IRS (India)",status:"Active Detail Engineering",statusType:"operational"},{c1:"MCI-NB-4480 // Escort ASD Tug",c2:"Azimuth Stern Drive // High Escort Braking",c3:"85T Bollard Pull",c4:"+11.4% Dynamic Steering",c5:"DNV GL",status:"Class Approved / Yard Build",statusType:"operational"},{c1:"MCI-CV-9102 // Capesize Bulker",c2:"Rotor Sail Aerodynamic Deck Retrofit",c3:"205,000 MT Displ.",c4:"-18.5% CII Energy Index",c5:"Lloyd's Register",status:"CFD Validation & Clearance",statusType:"operational"},{c1:"MCI-NB-6310 // OSV Supply",c2:"Offshore Support / FiFi-1 / Oil Recovery",c3:"3,400 DWT",c4:"DP Cap A Approved",c5:"ABS",status:"Sea Trial Hydrostatic Testing",statusType:"operational"},{c1:"MCI-DS-1055 // TSHD Dredger",c2:"Custom Shallow-Draft River-Sea Hull",c3:"8,200 MT Displ.",c4:"Low Silt Drag Profile",c5:"Bureau Veritas",status:"Concept Design & Towing Tank",statusType:"standby"}]},caseStudy:{tag:"BASIN AUDIT & HYDRODYNAMIC BREAKTHROUGH",title:"Next-Gen 8,500 TEU Green Methanol Container Carrier — Hull Optimization",challenge:"Traditional wide-beam container hulls suffer high wave-making resistance at 18-20 knot operating speeds, leading to excessive fuel consumption and challenging EEDI Phase 3 compliance.",solution:"MCI deployed 250+ automated parametric CFD iterations using adjoint solver algorithms to re-contour the bulbous bow and stern flow skegs, optimizing propeller inflow uniformity.",stats:[{label:"Delivered Power",value:"-13.4% Pe"},{label:"EEDI Phase 3 Exceeded",value:"+34.2% Margin"},{label:"Steel Weight Saved",value:"120 Tonnes"}]}},{id:"dredging",sectorCode:"DIV-08 // CAPITAL DREDGING",title:"Sovereign Capital Dredging & Marine Civil Infrastructure",navLabel:"Dredging & Port Construction",summary:"Large-scale capital & maintenance dredging, deep navigation channel deepening, island & port land reclamation, coastal revetment armoring, and subsea trenching executed by sovereign dredging fleet.",heroImage:"/assets/images/asset_14_dredging_marine.jpg",heroAlt:"A massive modern trailing suction hopper dredger operating in deep ocean approach channel",metrics:[{label:"Annual Excavation",value:"85M+ m³",sub:"Capital & Maintenance Volumes"},{label:"Dredge & Survey Fleet",value:"35+ Vessels",sub:"TSHDs, CSDs, Grab Dredgers"},{label:"Max Channel Depth",value:"-35.0m CD",sub:"Accommodating Capesize Drafts"},{label:"Mobilization SLA",value:"< 48 Hours",sub:"Siltation Rapid Response"}],verifiedServices:["Import & Export","Coal Imports","Materials Handling","Port & Terminal Construction","Marine Infrastructure Coordination","Capital & Maintenance Dredging"],suites:[{icon:"waves",title:"Trailing Suction Hopper Dredging (TSHD)",desc:"Long-distance trailing suction, continuous dredging in high-swell offshore fairways, bottom dumping and rainbowing reclamation for deep-draft container harbors.",specs:["Twin 1,000mm Suction Pipes","Integrated 3D Real-Time Bathymetry","Self-Discharge Bow Coupling"]},{icon:"architecture",title:"Heavy Cutter Suction & Hard Stratum Breaking",desc:"High-torque cutter head dredging in calcified basalt, sandstone, and hard seabed formations without explosive blasting. Subsea pipeline pre-trenching.",specs:["4,500 kW Heavy Rock Cutter Head","Zero-Blast Eco Excavation","Spud Carriage for 4-Knot Currents"]},{icon:"domain",title:"Port Land Reclamation & Breakwater Armoring",desc:"Geotextile containment bunding, hydraulic sand filling, vibroflotation ground improvement, tetrapod/accropode armor placement for deepwater harbor protection.",specs:["Geosynthetic Bund Construction","250 kPa Post-Reclamation Bearing","GPS-Guided 40T Crane Placement"]},{icon:"radar",title:"Multibeam Bathymetry & Seabed Telemetry",desc:"High-resolution multibeam echo sounding (MBES), sub-bottom acoustic profiling, side-scan sonar silt migration monitoring, and real-time nautical chart drafting.",specs:["Dual-Head 400 kHz Multibeam Sonar","0.02m Vertical Sounding Accuracy","CARIS HIPS/SIPS Processing"]}],tableManifest:{title:"Live Dredging Operations, Channel Deepening & Fleet Manifest",headers:["Project Code & Sector","Dredge Architecture / Vessel","Dredge Volume / Target","Production Rate & Slurry","Statutory Authority / Class","Operational Status"],rows:[{c1:"MCI-DR-8401 // JNPT Approach",c2:"TSHD Samudra Vikram (12,500 m³ Hopper)",c3:"4.8M m³ (Target: -16.5m CD)",c4:"4,200 m³/hr (1.48 t/m³ Slurry)",c5:"JNPA / IRS Class",status:"Active Capital Dredging",statusType:"operational"},{c1:"MCI-CS-3340 // Vadhavan Port Basin",c2:"CSD Vajra Shakti (4,500 kW Heavy Cutter)",c3:"2.2M m³ Basalt (Target: -20.0m CD)",c4:"1,850 m³/hr (High-Density Slurry)",c5:"MoPSW / DNV GL",status:"Hard Rock Excavation",statusType:"operational"},{c1:"MCI-RC-5520 // Vizhinjam Transshipment",c2:"Class Barge CB-04 & Hopper",c3:"2.1M m³ Silt (Reclamation Bund Fill)",c4:"Vibroflotation Ground Consolidation",c5:"Vizhinjam Port / IRS",status:"Armoring & Bund Construction",statusType:"operational"},{c1:"MCI-MN-1105 // Hooghly River Channel",c2:"TSHD Ganga Rakshak (4,500 m³ Shallow Draft)",c3:"1.9M m³ Silt Sweep (Target: -8.2m CD)",c4:"3,100 m³/hr (Continuous Silt Sweep)",c5:"SMP Kolkata / BV",status:"Continuous Maintenance",statusType:"operational"},{c1:"MCI-HY-9042 // Gulf of Khambhat",c2:"RV Sagarnidhi (Hydrographic Catamaran)",c3:"94 km Corridor (Sub-Bottom Profiling)",c4:"High-Res 0.05m Mesh Silt Mapping",c5:"IHO / Indian Navy NHO",status:"Pre-Dredge Survey Active",statusType:"operational"}]},caseStudy:{tag:"NATIONAL MARITIME CORRIDOR 01",title:"Sovereign Maritime Deepening Breakthrough // Jawaharlal Nehru Port Fairway Elevation",challenge:"Heavy seasonal monsoon siltation reduced JNPT container vessel access to tidal windows, risking off-hire demurrage for ultra-large 20,000+ TEU container vessels.",solution:"Deployed twin mega-TSHDs with dynamic trailing dragheads and real-time RTK-GNSS seabed profiling, operating continuously in adverse sea states to excavate 4.8M m³ of consolidated silt and hard clay within 90 days.",stats:[{label:"Draft Unlocked",value:"-17.5m CD"},{label:"Execution Speed",value:"90 Days (-18 Ahead)"},{label:"Excavated Mass",value:"4.8M m³"}]}}];function _(){return`
+    <div class="mega-menu" id="activities-mega-menu" role="region" aria-label="Activities Mega Menu">
+      <div class="container mega-inner">
+        <div class="mega-sidebar">
+          <div>
+            <span class="mega-sidebar-title">Engineering Verticals</span>
+            <h3 class="mega-sidebar-heading">Sovereign Industrial Capabilities</h3>
+            <p class="mega-sidebar-desc">
+              Explore MCI's eight specialized marine engineering, deep-draft infrastructure, and fleet operations divisions.
+            </p>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <a href="/activities" class="btn btn-secondary btn-sm" data-nav-link>
+              <span>Browse Full Directory</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+        <div class="mega-grid">
+          ${S.map(e=>`
+            <a href="/activities/${e.id}" class="mega-item" data-nav-link>
+              <div class="mega-item-icon">
+                <span class="material-symbols-outlined">${q(e.id)}</span>
+              </div>
+              <div class="mega-item-info">
+                <h4>${e.navLabel||e.title}</h4>
+                <p>${e.summary.slice(0,80)}...</p>
+              </div>
+            </a>
+          `).join("")}
+        </div>
+      </div>
+    </div>
+  `}function q(e){return{"port-development":"forklift","offshore-drilling":"oil_barrel","marine-repairs":"build","turbine-engineering":"settings","marine-surveys":"fact_check","green-technologies":"eco","ship-design":"architecture",dredging:"waves"}[e]||"anchor"}function U(e){const a=e.startsWith("/activities");return`
+    <header class="site-header" id="main-header">
+      <!-- Main Navigation Strip -->
+      <div class="container header-main">
+        <!-- Brand Identity with Official Logo -->
+        <a href="/" class="brand-anchor" data-nav-link aria-label="Marine Corporation of India Home">
+          <img src="/assets/mci-logo-transparent.png" alt="Marine Corporation of India Logo" class="brand-logo-img" />
+          <div class="brand-text-block">
+            <span class="brand-name">MCI</span>
+            <span class="brand-subtext">Marine Corporation of India</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Bar -->
+        <nav class="nav-desktop" aria-label="Main Navigation">
+          <a href="/" class="nav-link ${e==="/"?"active":""}" data-nav-link>Home</a>
+          <a href="/about" class="nav-link ${e==="/about"?"active":""}" data-nav-link>About</a>
+          
+          <div class="nav-has-mega">
+            <a href="/activities" class="nav-link ${a?"active":""}" data-nav-link id="nav-activities-trigger">
+              Activities
+            </a>
+            ${_()}
+          </div>
+
+          <a href="/group" class="nav-link ${e==="/group"?"active":""}" data-nav-link>Group</a>
+          <a href="/global-presence" class="nav-link ${e==="/global-presence"?"active":""}" data-nav-link>Global Presence</a>
+          <a href="/investor-relations" class="nav-link ${e==="/investor-relations"?"active":""}" data-nav-link>Investor Relations</a>
+          <a href="/contact" class="nav-link ${e==="/contact"?"active":""}" data-nav-link>Contact</a>
+        </nav>
+
+        <!-- Right Quick Actions -->
+        <div class="header-actions">
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="drawer-scrim" id="drawer-scrim"></div>
+      <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+        <div class="mobile-drawer-header">
+          <div class="brand-anchor">
+            <img src="/assets/mci-logo-transparent.png" alt="MCI Logo" style="height: 38px;" />
+            <div class="brand-text-block">
+              <span class="brand-name" style="font-size: 0.9rem;">MCI</span>
+              <span class="brand-subtext" style="font-size: 0.6rem;">Marine Corporation of India</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-sm" id="close-drawer" aria-label="Close Navigation" style="padding: 4px;">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+
+        <nav class="mobile-nav-list">
+          <a href="/" class="mobile-nav-link ${e==="/"?"active":""}" data-nav-link>
+            <span>Home</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+          </a>
+          <a href="/about" class="mobile-nav-link ${e==="/about"?"active":""}" data-nav-link>
+            <span>About</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+          </a>
+          
+          <div>
+            <div class="mobile-nav-link" id="mobile-activities-toggle" style="cursor: pointer;">
+              <span>Activities</span>
+              <span class="material-symbols-outlined" id="mobile-acc-arrow" style="font-size: 18px;">expand_more</span>
+            </div>
+            <div class="mobile-activities-accordion" id="mobile-activities-acc">
+              <a href="/activities" class="mobile-sub-link" style="font-weight: 700; color: var(--color-secondary);" data-nav-link>
+                • Master Activities Directory
+              </a>
+              ${S.map(i=>`
+                <a href="/activities/${i.id}" class="mobile-sub-link" data-nav-link>
+                  ${i.navLabel||i.title}
+                </a>
+              `).join("")}
+            </div>
+          </div>
+
+          <a href="/group" class="mobile-nav-link ${e==="/group"?"active":""}" data-nav-link>
+            <span>Group</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+          </a>
+          <a href="/global-presence" class="mobile-nav-link ${e==="/global-presence"?"active":""}" data-nav-link>
+            <span>Global Presence</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+          </a>
+          <a href="/investor-relations" class="mobile-nav-link ${e==="/investor-relations"?"active":""}" data-nav-link>
+            <span>Investor Relations</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+          </a>
+          <a href="/contact" class="mobile-nav-link ${e==="/contact"?"active":""}" data-nav-link>
+            <span>Contact</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">chevron_right</span>
+          </a>
+        </nav>
+
+        <div style="margin-top: auto; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+          <div style="font-size: 0.75rem; color: var(--color-slate); margin-bottom: 0.5rem;">CENTRAL DISPATCH:</div>
+          <a href="tel:+912222610940" class="btn btn-primary" style="width: 100%; margin-bottom: 0.5rem;">
+            <span class="material-symbols-outlined">call</span>
+            <span>+91 22 2261-0940</span>
+          </a>
+          <a href="tel:+918912561377" class="btn btn-secondary" style="width: 100%;">
+            <span class="material-symbols-outlined">location_city</span>
+            <span>HQ: +91 891 2561377</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  `}function j(){return`
+    <footer class="site-footer">
+      <div class="container">
+        <!-- Footer Top Brand & Certification Bar -->
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img src="/assets/mci-logo-transparent.png" alt="MCI Group Logo" class="footer-logo-img" />
+            <div>
+              <span style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; display: block;">
+                MCI
+              </span>
+              <span style="font-size: 0.75rem; color: var(--color-primary-fixed-dim); display: block; margin-top: 2px;">
+                Statutory Maritime Infrastructure &amp; Technical Fleet Operations
+              </span>
+            </div>
+          </div>
+          
+          <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.75rem; color: var(--color-primary-fixed-dim);">
+            <button type="button" class="btn btn-sm btn-outline-white" id="btn-back-top" aria-label="Scroll back to top" title="Scroll back to top">
+              <span class="material-symbols-outlined" style="font-size: 16px;">arrow_upward</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4-Column Directory Links -->
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4>Fleet Operations</h4>
+            <div class="footer-links">
+              <a href="/activities/port-development" data-nav-link>Port Terminal Management</a>
+              <a href="/activities/offshore-drilling" data-nav-link>Offshore Energy Fleet</a>
+              <a href="/activities/marine-repairs" data-nav-link>Dry Dock Graving Basins</a>
+              <a href="/activities/dredging" data-nav-link>Capital Dredging Corridors</a>
+              <a href="/global-presence" data-nav-link>Live Fleet Telemetry</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Governance &amp; Class</h4>
+            <div class="footer-links">
+              <a href="/about" data-nav-link>Institutional Profile</a>
+              <a href="/activities/marine-surveys" data-nav-link>Statutory Survey Directorate</a>
+              <a href="/investor-relations" data-nav-link>Multi-Tier Governance</a>
+              <a href="/investor-relations" data-nav-link>Regulatory Filings</a>
+              <a href="/about" data-nav-link>DGS &amp; IACS Accreditations</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Sustainability &amp; Tech</h4>
+            <div class="footer-links">
+              <a href="/activities/green-technologies" data-nav-link>CII Decarbonization Charter</a>
+              <a href="/activities/turbine-engineering" data-nav-link>Propulsion Machinery Overhaul</a>
+              <a href="/activities/ship-design" data-nav-link>CFD Naval Architecture</a>
+              <a href="/activities/green-technologies" data-nav-link>Cold-Ironing Shore Power</a>
+              <a href="/activities/green-technologies" data-nav-link>MARPOL Annex I-VI Compliance</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Group Headquarters</h4>
+            <div class="footer-links">
+              <span style="color: var(--color-white); font-weight: 600;">"MCI TOWERS"</span>
+              <span style="color: var(--color-cool-gray);">25-12-31, Kotaveedhi, Visakhapatnam 530001, Andhra Pradesh</span>
+              <a href="tel:+918912561377">Ph: +91 - 891 - 2561377</a>
+              <a href="mailto:info@mcigroup.co">Email: info@mcigroup.co</a>
+              <a href="/contact" data-nav-link style="color: var(--color-secondary-container); font-weight: 600; margin-top: 4px;">
+                → Operational Dispatch Desk
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright & Bottom Disclaimers -->
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Marine Corporation of India (MCI). All maritime operations certified under IMO, ISO 9001 &amp; SOLAS standards. Sovereign infrastructure logistics.
+          </p>
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <span>Founded 1990</span>
+            <span>&bull;</span>
+            <a href="/investor-relations" data-nav-link style="color: var(--color-cool-gray);">Statutory Disclosures</a>
+            <span>&bull;</span>
+            <a href="/contact" data-nav-link style="color: var(--color-cool-gray);">Regional Contacts</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  `}function E(e){return String(e).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;")}function T(e,a){let i=0;return e.split(" ").map(n=>{const t=Array.from(n).map(r=>{const c=a*.22+i*.035;i+=1;const d=E(r);return`
+        <span class="shutter-character" style="--shutter-delay: ${c.toFixed(3)}s;">
+          <span class="shutter-character-main">${d}</span>
+          <span class="shutter-character-slice shutter-character-slice-top" aria-hidden="true">${d}</span>
+          <span class="shutter-character-slice shutter-character-slice-middle" aria-hidden="true">${d}</span>
+          <span class="shutter-character-slice shutter-character-slice-bottom" aria-hidden="true">${d}</span>
+        </span>
+      `}).join("");return i+=1,`<span class="shutter-word">${t}</span>`}).join("")}function W({title:e,subtitle:a}){const i=`${e}. ${a}`;return`
+    <h1 class="hero-title hero-shutter-text" aria-label="${E(i)}" data-shutter-text tabindex="0">
+      <span class="hero-shutter-line hero-shutter-line-primary" aria-hidden="true">
+        ${T(e,0)}
+      </span>
+      <span class="hero-shutter-line hero-shutter-line-secondary" aria-hidden="true">
+        ${T(a,1)}
+      </span>
+    </h1>
+  `}function Y(){return`
+    <span class="notched-card-arrow" aria-hidden="true">
+      <span class="material-symbols-outlined">arrow_outward</span>
+    </span>
+  `}function K({href:e,image:a,imageAlt:i,title:n}){return`
+    <a href="${e}" class="division-card notched-card notched-card-media" data-nav-link>
+      <div class="division-media notched-card-cover">
+        <img src="${a}" alt="${i}" class="division-img" />
+        <span class="notched-card-fillet notched-card-fillet-vertical" aria-hidden="true"></span>
+        <span class="notched-card-fillet notched-card-fillet-horizontal" aria-hidden="true"></span>
+        <span class="notched-card-cutout" aria-hidden="true"></span>
+        ${Y()}
+      </div>
+      <div class="division-body">
+        <h3 class="division-name">${n}</h3>
+      </div>
+    </a>
+  `}function M({title:e,description:a,image:i,imageAlt:n}){return`
+    <article class="notched-card notched-card-info">
+      <div class="notched-card-cover notched-card-info-cover">
+        <img src="${i}" alt="${n}" class="notched-card-info-image" />
+        <div class="notched-card-info-wash" aria-hidden="true"></div>
+        <span class="notched-card-fillet notched-card-fillet-vertical" aria-hidden="true"></span>
+        <span class="notched-card-fillet notched-card-fillet-horizontal" aria-hidden="true"></span>
+        <span class="notched-card-cutout" aria-hidden="true"></span>
+      </div>
+      <h3>${e}</h3>
+      <p>${a}</p>
+    </article>
+  `}function k({id:e,ariaLabel:a,className:i=""}){return`
+    <section class="coverage-section ${i}" aria-label="${a}">
+      <div class="coverage-container">
+        <div class="coverage-world-map-wrapper" data-coverage-map>
+          <canvas
+            class="coverage-world-map coverage-globe-canvas"
+            data-contact-globe
+            role="img"
+            aria-label="${a}"
+          ></canvas>
+        </div>
+      </div>
+    </section>
+  `}function x(){const e=S.slice(0,6);return`
+    <div class="page-transition">
+      <!-- HERO SECTION -->
+      <section class="hero" id="home-hero">
+        <div class="hero-bg">
+          <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+            <source src="/assets/ship-coming-to-frame.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-gradient"></div>
+        </div>
+
+        <div class="container hero-content">
+          ${W({title:"Where Steel Meets Sea",subtitle:"Crafted for challenging waters. Designed to carry possibilities beyond the horizon."})}
+
+          <div class="hero-actions">
+            <a href="#capabilities" class="btn btn-accent btn-lg">
+              <span>Operational Capabilities</span>
+              <span class="material-symbols-outlined" style="font-size: 18px;">arrow_downward</span>
+            </a>
+          </div>
+
+          <div class="workflow-strip">
+            <div class="workflow-step">
+              <strong>Explore</strong>
+              <span>Choose a maritime capability or operating region.</span>
+            </div>
+            <div class="workflow-step">
+              <strong>Inspect</strong>
+              <span>Open the capability sheet or station profile for details.</span>
+            </div>
+            <div class="workflow-step">
+              <strong>Dispatch</strong>
+              <span>Contact operations when the requirement is ready.</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- CORE DIVISIONS BENTO GRID -->
+      <section class="section section-light" id="capabilities">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title font-lobster">
+                Sovereign Industrial Capabilities &amp; Deepwater Logistics
+              </h2>
+            </div>
+          </div>
+
+          <div class="bento-grid coverflow-grid">
+            ${e.map(a=>K({href:`/activities/${a.id}`,image:a.heroImage,imageAlt:a.heroAlt,title:a.title})).join("")}
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTITUTIONAL PROFILE & CREDIBILITY -->
+      <section class="section section-white" id="corporate-profile">
+        <div class="container">
+          <div class="profile-grid">
+            <!-- Left Column: HQ Imagery & Telemetry Callout -->
+            <div class="profile-media-box">
+              <img src="/assets/images/asset_1_about_mci.jpg" alt="MCI Corporate Headquarters & Operations Control Center" class="profile-img" />
+            </div>
+
+            <!-- Right Column: Institutional Profile & Accreditations -->
+            <div>
+              <h2 class="section-title font-lobster" style="margin-bottom: 1rem;">
+                Sovereign Trust Safeguarding National Oceanic Corridors
+              </h2>
+              <p class="premium-prose" style="margin-bottom: 1rem;">
+                Established under national infrastructure mandates, the Marine Corporation of India (MCI) provides the institutional backbone for national maritime resilience, specialized deep-sea towage, salvage operations, and maritime asset integrity across the Indian Ocean Region (IOR).
+              </p>
+              <p class="premium-prose" style="margin-bottom: 1.5rem;">
+                Our multi-disciplinary team brings together naval architects, master mariners, salvage engineers, and regulatory specialists executing operations in full compliance with United Nations IMO protocols and international classification society requirements.
+              </p>
+
+              <div>
+                <div class="accreditations-grid">
+                  <div class="accreditation-chip">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary);">verified</span>
+                    <div>
+                      <strong>DGS</strong>
+                      <span>Govt. of India</span>
+                    </div>
+                  </div>
+                  <div class="accreditation-chip">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary);">shield</span>
+                    <div>
+                      <strong>IRS</strong>
+                      <span>Indian Register</span>
+                    </div>
+                  </div>
+                  <div class="accreditation-chip">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary);">waves</span>
+                    <div>
+                      <strong>IWAI</strong>
+                      <span>Inland Waterways</span>
+                    </div>
+                  </div>
+                  <div class="accreditation-chip">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary);">public</span>
+                    <div>
+                      <strong>IMO / SOLAS</strong>
+                      <span>UN Maritime</span>
+                    </div>
+                  </div>
+                  <div class="accreditation-chip">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary);">map</span>
+                    <div>
+                      <strong>IHO S-44</strong>
+                      <span>Hydrographic Class</span>
+                    </div>
+                  </div>
+                  <div class="accreditation-chip">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary);">military_tech</span>
+                    <div>
+                      <strong>ISO 9001/14001</strong>
+                      <span>Bureau Veritas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GLOBAL REACH & MARITIME CORRIDORS TEASER -->
+      <section class="section section-dark" id="global-ports">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title font-lobster">
+                Strategic Global Reach &amp; Primary Shipping Corridors
+              </h2>
+            </div>
+            <a href="/global-presence" class="btn btn-outline-white" data-nav-link>
+              <span>View Global Presence Directory</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">open_in_new</span>
+            </a>
+          </div>
+
+          <div class="map-container prompt-map-container" aria-label="Animated global operations route map">
+            ${k({id:"home-coverage",ariaLabel:"Interactive global coverage map",className:"home-coverage-map"})}
+            <div class="world-map-stage home-world-map-stage legacy-world-map-stage" aria-hidden="true">
+              <div class="world-map-grid" aria-hidden="true"></div>
+              <svg class="world-map-svg" viewBox="0 0 800 400" role="img" aria-label="Animated maritime corridor network">
+                <defs>
+                  <linearGradient id="home-route-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+                    <stop offset="8%" stop-color="#111111" stop-opacity="0.95" />
+                    <stop offset="92%" stop-color="#111111" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </linearGradient>
+                  <filter id="home-point-glow">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <path class="world-map-land" d="M102 122c30-28 76-26 100 0 20 22 15 54-16 70-34 18-88 7-104-24-8-16-4-32 20-46Zm177-22c31-10 78-2 99 24 20 25 14 61-14 80-29 20-75 14-99-12-24-27-20-77 14-92Zm193 34c38-38 113-24 146 14 39 45 24 116-36 137-58 20-139-13-151-72-5-26 5-55 41-79Zm-40 168c26-10 62-5 78 13 18 19 10 46-15 57-27 12-66 0-78-24-9-18-3-37 15-46Zm-295-17c25-7 58 1 71 20 14 21 3 47-22 55-27 8-62-6-72-30-8-19 0-38 23-45Z" />
+
+                <path class="world-route route-delay-0 home-world-route" d="M548 212 Q506 148 465 190" />
+                <path class="world-route route-delay-1 home-world-route" d="M548 212 Q604 180 660 224" />
+                <path class="world-route route-delay-2 home-world-route" d="M548 212 Q480 240 410 210" />
+                <path class="world-route route-delay-3 home-world-route" d="M410 210 Q350 166 292 188" />
+                <path class="world-route route-delay-4 home-world-route" d="M548 212 Q528 270 482 314" />
+                <path class="world-route route-delay-5 home-world-route" d="M548 212 Q454 126 352 108" />
+
+                <g class="world-point" transform="translate(548 212)">
+                  <circle r="15" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="12" y="-10">New Delhi</text>
+                </g>
+                <g class="world-point" transform="translate(465 190)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="-84" y="-8">Gulf Desk</text>
+                </g>
+                <g class="world-point" transform="translate(660 224)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="-4" y="28">Malacca</text>
+                </g>
+                <g class="world-point" transform="translate(410 210)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="-86" y="26">Arabian Sea</text>
+                </g>
+                <g class="world-point" transform="translate(292 188)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="-38" y="-16">Lisbon</text>
+                </g>
+                <g class="world-point" transform="translate(482 314)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="-22" y="30">Nairobi</text>
+                </g>
+                <g class="world-point" transform="translate(352 108)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#home-point-glow)"></circle>
+                  <text x="-36" y="-15">London</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  `}const R=[{id:"mci-india",name:"Marine Corporation of India",designation:"Flagship Statutory & Heavy Engineering Entity",incorporation:"Founded 1990",hq:"Visakhapatnam, Andhra Pradesh, India",desc:"The primary industrial and statutory anchor of the group, executing deep-water capital dredging, commercial shipyard dry dock engineering, offshore energy logistics, and sovereign maritime infrastructure projects across the Indian sub-continent.",coreCapabilities:["Commercial Shipyard Dry Docking & Graving Facilities","Offshore Energy Support Flotilla & DP2/DP3 Vessel Logistics","Capital & Maintenance Channel Dredging Operations","Statutory Marine Surveys, NDT Ultrasonic Testing & Class Compliance","High-Pressure Turbine Re-blading & Dynamic Balancing","Calibration Centre & Life Saving Appliances (LSA/FFA)"],accreditations:["DGS Approved","IRS Class Authorized","ISO 9001:2015","SOLAS / MARPOL"]},{id:"mega-corp",name:"Mega Corp International",designation:"International Trade & Materials Handling",incorporation:"Group Subsidiary",hq:"Visakhapatnam & International Trading Nodes",desc:"Specialized global commercial trading and materials handling arm managing bulk mineral flows, coal import logistics, multimodal transshipment, and industrial port-terminal bulk supply contracts.",coreCapabilities:["Bulk Coal & Mineral Import Logistics","Port & Rail Multimodal Material Handling","Dry Bulk Vessel Chartering & Voyage Fixtures","Industrial Raw Material Supply Chain Security","Customs Clearance & Bonded Stockyard Management"],accreditations:["BIMCO Member","FIATA Licensed","ISO 14001:2015"]},{id:"marine-charterers",name:"Marine Charterers & Inspectors",designation:"Independent Maritime Assurance & Brokering",incorporation:"Specialized Inspection Division",hq:"Mumbai & Visakhapatnam",desc:"Autonomous marine assurance, chartering brokering, and statutory condition survey agency conducting pre-purchase evaluations, gas-free safety inspections, and marine warranty surveys on behalf of international underwriters and cargo principals.",coreCapabilities:["Commercial Vessel Chartering & Spot Market Brokering","Pre-Purchase & On-Hire / Off-Hire Condition Surveys","Gas-Free Inspections & Tank Entry Certifications","Marine Warranty Surveying (MWS) for Heavy Lift Sea Fastenings","Bunker Discrepancy & Cargo Quantity Audits"],accreditations:["IACS Society Surveyor Cadre","BIMCO Standard Form","ASNT Level II NDT"]},{id:"mci-dubai",name:"MCI World Dubai",designation:"Middle East & Persian Gulf Regional Office",incorporation:"UAE Operational Center",hq:"Dubai Maritime City, United Arab Emirates",desc:"Regional headquarters for the Arabian Gulf and Red Sea corridors, coordinating tanker escort operations, bunkering advisory, offshore oilfield logistics, and marine spare parts staging at key UAE deep-water anchorages.",coreCapabilities:["Persian Gulf & Red Sea Marine Logistics Coordination","Fujairah & Khor Fakkan Offshore Bunkering Advisory","AHTS & Utility Boat Deployments for Gulf Oilfields","Bonded Marine Spare Parts Forward Staging","Emergency Fly-Out Technical Superintendent Dispatch"],accreditations:["Dubai Maritime Authority Certified","ISO 9001:2015"]},{id:"mci-singapore",name:"MCI World Singapore",designation:"Southeast Asia & Malacca Straits Command",incorporation:"Singapore Operational Hub",hq:"Tuas Marine Basin, Singapore",desc:"Southeast Asian operating node overseeing high-density vessel transit support through the Singapore and Malacca Straits, rapid dry-dock spare mobilization, and transshipment cargo coordination connecting East Asia and the Indian Ocean.",coreCapabilities:["Straits of Malacca Transit Support & Safe Passage Advisory","Regional Technical Spares Staging & Direct Vessel Delivery","International Shiprepair Sub-contracting & Yard Supervision","Southeast Asian Port Agent & Crew Logistics Network","Dual-Fuel & Decarbonization Technical Advisory Desk"],accreditations:["MPA Singapore Licensed","ClassNK / DNV GL Liaison"]},{id:"mci-srilanka",name:"MCI World Sri Lanka",designation:"Indian Ocean Transshipment & Agency",incorporation:"Colombo Operating Center",hq:"Colombo Port & Galle Anchorage, Sri Lanka",desc:"Strategic deep-ocean gateway station servicing east-west container shipping lanes, offshore crew changes at Galle OPL, and emergency towage response across the central Indian Ocean trade corridors.",coreCapabilities:["Colombo Deepwater Transshipment Agency Coordination","Off-Port Limits (OPL) Galle Fast Crew Transfer & Supply","Indian Ocean Emergency Towage & Salvage Mobilization","Sludge & Slop Disposal Environmental Compliance","Marine Safety Equipment Testing & SCBA Refills"],accreditations:["Sri Lanka Ports Authority (SLPA) Regulated","ISO 9001:2015"]},{id:"mci-russia",name:"MCI World Russia",designation:"Northern & Black Sea Maritime Gateway",incorporation:"Russian Federation Office",hq:"St. Petersburg & Novorossiysk",desc:"Strategic commercial coordination office facilitating maritime logistics, energy tanker clearances, ice-class vessel chartering advisory, and bilateral freight documentation across Northern Sea and Black Sea terminals.",coreCapabilities:["Black Sea & Baltic Trade Corridor Vessel Coordination","Ice-Class Energy Tanker & Bulker Chartering Advisory","Marine Engine Components & Mechanical Spares Procurement","Bilateral Customs & Maritime Freight Manifest Processing","Technical Translation & Classification Documentation Liaison"],accreditations:["Russian Maritime Register of Shipping (RMRS) Liaison"]}];function Z(){return`
+    <div class="page-transition">
+      <!-- ABOUT HERO -->
+      <section class="section section-white">
+        <div class="container">
+          <div class="profile-grid">
+            <div>
+              <h1 class="hero-title font-lobster" style="color: var(--color-primary); margin-bottom: 1rem;">
+                Architects of Sovereign Maritime Power &amp; Ocean Infrastructure
+              </h1>
+              <p style="font-size: 1rem; color: var(--color-on-surface-variant); line-height: 1.6; margin-bottom: 2rem;">
+                Established to spearhead maritime self-reliance and commercial industrial capability, the Marine Corporation of India (MCI) anchors national port capacity, high-tonnage engineering modernization, and strategic deep-sea fairway maintenance across global sea lanes.
+              </p>
+
+              <div class="about-stats-row" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+                <div>
+                  <div style="font-size: 1.85rem; font-weight: 800; color: var(--color-primary);">1990</div>
+                  <div style="font-size: 0.75rem; color: var(--color-slate); font-weight: 600;">FOUNDING YEAR</div>
+                  <div style="font-size: 0.7rem; color: var(--color-secondary);">34+ Years Operational Legacy</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.85rem; font-weight: 800; color: var(--color-primary);">142</div>
+                  <div style="font-size: 0.75rem; color: var(--color-slate); font-weight: 600;">ACTIVE FLEET</div>
+                  <div style="font-size: 0.7rem; color: var(--color-secondary);">Sovereign &amp; Auxiliary Units</div>
+                </div>
+                <div>
+                  <div style="font-size: 1.85rem; font-weight: 800; color: var(--color-primary);">100%</div>
+                  <div style="font-size: 0.75rem; color: var(--color-slate); font-weight: 600;">CLASS AUDITED</div>
+                  <div style="font-size: 0.7rem; color: var(--color-secondary);">SOLAS &amp; IMO Tier-III Ready</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-media-box">
+              <img src="/assets/images/asset_1_about_mci.jpg" alt="MCI Central Operations & Command Tower" class="profile-img" />
+              <div class="profile-floating-badge">
+                <h4>
+                  <span class="material-symbols-outlined" style="font-size: 16px;">domain</span>
+                  MCI Central Operations &amp; Command Tower
+                </h4>
+                <p>24/7 Vessel Traffic Service (VTS) &amp; Deep-Water Port Command.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STRATEGIC MANDATES & CORE PHILOSOPHY -->
+      <section class="section section-light">
+        <div class="container">
+          <div class="section-header-row">
+            <div>
+              <h2 class="section-title font-lobster">Strategic Mandates &amp; Core Philosophy</h2>
+            </div>
+          </div>
+
+          <div class="mandate-card-grid">
+            ${M({title:"Sovereign Readiness &amp; Security",description:"Guaranteed fairway maintenance for strategic maritime passages, emergency deep-water salvage contingencies, and sovereign channel accessibility under all geopolitical and environmental conditions.",image:"/assets/images/asset_14_dredging_marine.jpg",imageAlt:"Marine infrastructure operating in challenging waters"})}
+            ${M({title:"Classification Integrity",description:"Adhering rigorously to Indian Register of Shipping (IRS), IACS unified requirements, and International Maritime Organization (IMO) SOLAS conventions across the entire engineering lifecycle.",image:"/assets/images/asset_21_ship_design_nav.jpg",imageAlt:"Technical marine engineering and classification work"})}
+            ${M({title:"Decarbonization &amp; Green Corridors",description:"Executing the national maritime green transition through cold-ironing shore electrification, dual-fuel LNG bunkering facilities, and low-wake hull engineering for delicate marine ecosystems.",image:"/assets/images/asset_20_maritime_green_.jpg",imageAlt:"Low-carbon maritime corridor operations"})}
+          </div>
+        </div>
+      </section>
+
+      <!-- SOVEREIGN GOVERNANCE MATRIX & GROUP COMPANIES -->
+      <section class="section section-white">
+        <div class="container">
+          <div class="profile-grid">
+            <div class="profile-media-box">
+              <img src="/assets/images/asset_2_about_mci.jpg" alt="MCI Executive Boardroom & Leadership" class="profile-img" />
+            </div>
+
+            <div>
+              <h2 class="section-title font-lobster" style="margin-bottom: 1rem;">Sovereign Governance Matrix</h2>
+
+              <div style="margin-bottom: 1.5rem;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.65rem;">
+                  ${R.map(e=>`
+                    <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8125rem; font-weight: 600; color: var(--color-primary); background: var(--color-surface-container-low); padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border);">
+                      <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-secondary);">check_circle</span>
+                      <span>${e.name}</span>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/group" class="btn btn-primary" data-nav-link>
+                  <span>Explore Group Structure</span>
+                  <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+                </a>
+                <a href="/investor-relations" class="btn btn-secondary" data-nav-link>
+                  <span>Read Annual Charter</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  `}function Q(){const e=[{id:"all",label:"All Capabilities"},{id:"infrastructure",label:"Port & Infrastructure"},{id:"energy",label:"Energy & Offshore"},{id:"engineering",label:"Marine Engineering"},{id:"sustainability",label:"Green & Sustainability"}],a={"port-development":"infrastructure","offshore-drilling":"energy","marine-repairs":"engineering","turbine-engineering":"engineering","marine-surveys":"engineering","green-technologies":"sustainability","ship-design":"engineering",dredging:"infrastructure"};return`
+    <div class="page-transition">
+      <!-- BREADCRUMB -->
+      <div class="breadcrumbs-strip">
+        <div class="container">
+          <div class="breadcrumbs-path">
+            <a href="/" data-nav-link>PORTAL DIRECTORY</a>
+            <span class="material-symbols-outlined" style="font-size: 14px;">chevron_right</span>
+            <span style="color: var(--color-white); font-weight: 600;">ACTIVITIES &amp; SERVICES</span>
+          </div>
+          <div class="breadcrumbs-meta">
+            <span>8 ACTIVE DIVISIONS</span>
+            <span>FULL OPERATIONAL STATUS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACTIVITIES HERO -->
+      <section class="section section-dark activities-hero" style="padding: 3rem 0 2rem; position: relative; overflow: hidden;">
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #071a2b 0%, #0d2f4f 60%, #176b9c22 100%); z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+          <h1 class="section-title activity-hero-heading font-lobster" style="margin-top: 0.5rem; font-size: clamp(1.8rem, 3vw, 2.6rem);">
+            Sovereign Maritime Industrial Capabilities
+          </h1>
+          <p style="font-size: 0.95rem; color: var(--color-primary-fixed-dim); max-width: 700px; line-height: 1.65; margin-top: 0.75rem; margin-bottom: 2rem;">
+            Eight precision-engineered marine divisions spanning deepwater port infrastructure, energy fleet logistics, commercial shipyard engineering, hydrographic surveys, green propulsion technologies, and naval architectural design.
+          </p>
+
+          <!-- FILTER PILLS -->
+          <div class="filter-pills">
+            ${e.map((i,n)=>`
+              <button class="filter-pill ${n===0?"active":""}" data-filter="${i.id}" type="button">${i.label}</button>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <!-- ACTIVITIES GRID -->
+      <section class="section section-light" style="padding-top: 2.5rem;">
+        <div class="container">
+          <div class="activities-grid coverflow-grid">
+            ${S.map(i=>`
+              <a href="/activities/${i.id}" class="activity-card" data-nav-link data-category="${a[i.id]||"engineering"}">
+                <div class="activity-card-media">
+                  <img src="${i.heroImage}" alt="${i.heroAlt}" class="activity-card-img" loading="lazy" />
+                  <div class="activity-card-overlay"></div>
+                </div>
+                <div class="activity-card-body">
+                  <h3 class="activity-card-title">${i.title}</h3>
+                  <div class="activity-card-cta">
+                    <span>View Full Capability Sheet</span>
+                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+                  </div>
+                </div>
+              </a>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  `}function J(e){const a=S.find(i=>i.id===e);return a?`
+    <div class="page-transition">
+      <!-- BREADCRUMB -->
+      <div class="breadcrumbs-strip">
+        <div class="container">
+          <div class="breadcrumbs-path">
+            <a href="/" data-nav-link>PORTAL DIRECTORY</a>
+            <span class="material-symbols-outlined" style="font-size: 14px;">chevron_right</span>
+            <a href="/activities" data-nav-link>ACTIVITIES</a>
+            <span class="material-symbols-outlined" style="font-size: 14px;">chevron_right</span>
+            <span style="color: var(--color-white); font-weight: 600;">${a.sectorCode}</span>
+          </div>
+          <div class="breadcrumbs-meta">
+            <span>FULL OPERATIONAL STATUS</span>
+            <span>${a.sectorCode}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <section class="section section-dark" style="padding: 0; position: relative; min-height: 420px; display: flex; align-items: flex-end;">
+        <div style="position: absolute; inset: 0; overflow: hidden;">
+          <img src="${a.heroImage}" alt="${a.heroAlt}" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+          <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(7,26,43,0.97) 0%, rgba(7,26,43,0.65) 50%, rgba(7,26,43,0.2) 100%);"></div>
+        </div>
+        <div class="container" style="position: relative; z-index: 1; padding: 3rem var(--gutter-desktop);">
+          <h1 class="hero-title" style="font-size: clamp(1.6rem, 3.5vw, 2.8rem); max-width: 800px;">${a.title}</h1>
+          <p style="font-size: 0.975rem; color: var(--color-primary-fixed-dim); max-width: 720px; line-height: 1.65; margin-top: 1rem;">${a.summary}</p>
+        </div>
+      </section>
+
+      <!-- METRICS BAR -->
+      <section class="activity-metrics-bar" style="padding: 1.5rem 0;">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
+            ${a.metrics.map(i=>`
+              <div style="text-align: center; padding: 0.5rem;">
+                <div style="font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800; color: #ffffff;">${i.value}</div>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; margin-top: 4px;">${i.label}</div>
+                <div style="font-size: 0.7rem; color: #d6d6d6; margin-top: 2px;">${i.sub}</div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICE SUITES -->
+      <section class="section section-white">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+            <div>
+              <span class="section-eyebrow">
+                <span class="material-symbols-outlined" style="font-size: 16px;">verified</span>
+                Verified Service Portfolio
+              </span>
+              <h2 class="section-title" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Core Technical Capabilities</h2>
+              ${a.suites?a.suites.map(i=>`
+                <div class="suite-card">
+                  <div class="suite-icon">
+                    <span class="material-symbols-outlined">${i.icon}</span>
+                  </div>
+                  <div>
+                    <h4 style="font-size: 0.975rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.375rem;">${i.title}</h4>
+                    <p style="font-size: 0.85rem; color: var(--color-on-surface-variant); line-height: 1.6; margin-bottom: 0.5rem;">${i.desc}</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+                      ${i.specs.map(n=>`<span style="font-size: 0.7rem; background: var(--color-surface-container); color: var(--color-secondary); padding: 2px 8px; border-radius: 3px; font-weight: 600;">${n}</span>`).join("")}
+                    </div>
+                  </div>
+                </div>
+              `).join(""):""}
+            </div>
+
+            <div>
+              ${a.verifiedServices?`
+                <div style="background: var(--color-surface-container-low); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1.5rem;">
+                  <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-slate); margin-bottom: 1rem;">
+                    <span class="material-symbols-outlined" style="font-size: 14px; vertical-align: middle; margin-right: 4px;">checklist</span>
+                    Verified Services Manifest
+                  </div>
+                  <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem;">
+                    ${a.verifiedServices.map(i=>`
+                      <li style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: var(--color-charcoal-navy);">
+                        <span class="material-symbols-outlined" style="font-size: 16px; color: var(--color-secondary); flex-shrink: 0;">check_circle</span>
+                        ${i}
+                      </li>
+                    `).join("")}
+                  </ul>
+                </div>
+              `:""}
+
+              ${a.caseStudy?`
+                <div class="activity-case-study" style="border-radius: var(--radius-lg); padding: 1.5rem;">
+                  <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary-container); display: block; margin-bottom: 0.5rem;">${a.caseStudy.tag}</span>
+                  <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.75rem;">${a.caseStudy.title}</h4>
+                  <div style="font-size: 0.8rem; line-height: 1.6; color: var(--color-primary-fixed-dim);">
+                    <strong style="color: var(--color-secondary-container);">Challenge:</strong> ${a.caseStudy.challenge}
+                  </div>
+                  <div style="font-size: 0.8rem; line-height: 1.6; color: var(--color-primary-fixed-dim); margin-top: 0.5rem;">
+                    <strong style="color: var(--color-secondary-container);">Solution:</strong> ${a.caseStudy.solution}
+                  </div>
+                  <div style="display: flex; gap: 1rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    ${a.caseStudy.stats.map(i=>`
+                      <div style="text-align: center; flex: 1;">
+                        <div style="font-size: 1rem; font-weight: 800; color: var(--color-secondary-container);">${i.value}</div>
+                        <div style="font-size: 0.65rem; color: var(--color-primary-fixed-dim); margin-top: 2px;">${i.label}</div>
+                      </div>
+                    `).join("")}
+                  </div>
+                </div>
+              `:""}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPEC TABLE -->
+    </div>
+  `:'<div class="page-transition"><div class="container" style="padding: 6rem 0; text-align: center;"><h1 style="color: var(--color-primary);">Division Not Found</h1><a href="/activities" data-nav-link class="btn btn-primary" style="margin-top: 1.5rem;">Back to Activities</a></div></div>'}function X(){return`
+    <div class="page-transition">
+      <!-- GROUP HERO -->
+      <section class="section section-dark" style="padding: 3rem 0; background: linear-gradient(135deg, #071a2b 0%, #0d2f4f 100%);">
+        <div class="container">
+          <div class="profile-grid">
+            <div>
+              <h1 class="hero-title hero-title-slab" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom: 1rem;">
+                MCI Group of Companies
+              </h1>
+              <p style="font-size: 0.975rem; color: var(--color-primary-fixed-dim); line-height: 1.65; max-width: 600px; margin-bottom: 2rem;">
+                The Marine Corporation of India Group operates as a diversified maritime industrial conglomerate spanning sovereign infrastructure engineering, international trade, independent marine assurance, and technical fleet management across global sea lanes.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 480px;">
+                <div style="text-align: center;">
+                  <div style="font-size: 2rem; font-weight: 800; color: var(--color-secondary-container); font-family: var(--font-heading);">4</div>
+                  <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-fixed-dim);">Group Entities</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 2rem; font-weight: 800; color: var(--color-secondary-container); font-family: var(--font-heading);">34+</div>
+                  <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-fixed-dim);">Years Legacy</div>
+                </div>
+                <div style="text-align: center;">
+                  <div style="font-size: 2rem; font-weight: 800; color: var(--color-secondary-container); font-family: var(--font-heading);">5</div>
+                  <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-fixed-dim);">Nations Active</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img src="/assets/images/asset_2_about_mci.jpg" alt="MCI Group Operations" style="width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-lg);" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GROUP ENTITIES -->
+      <section class="section section-white">
+        <div class="container">
+          <h2 class="section-title font-lobster" style="margin-top: 0.5rem; margin-bottom: 2rem;">Constituent Companies &amp; Divisions</h2>
+          <div class="group-card-stack" data-group-card-stack>
+            ${R.map((e,a)=>`
+              <article class="group-entity-card group-stack-card" style="--stack-index: ${a};">
+                <div class="group-stack-card-heading">
+                  <span class="group-stack-index">${String(a+1).padStart(2,"0")}</span>
+                  <span class="group-stack-summary-copy">
+                    <span>
+                      <h3>${e.name}</h3>
+                      <small>${e.designation}</small>
+                    </span>
+                  </span>
+                </div>
+                <div class="group-entity-details">
+                  <div class="group-entity-header">
+                    <div>
+                      <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); display: block; margin-bottom: 4px;">${e.incorporation}${a===0?" // FLAGSHIP":""}</span>
+                    </div>
+                    <div style="text-align: right; flex-shrink: 0;">
+                      <div class="group-location">
+                        <span class="material-symbols-outlined" style="font-size: 13px; vertical-align: middle; margin-right: 3px;">location_on</span>
+                        ${e.hq}
+                      </div>
+                    </div>
+                  </div>
+                  <p style="font-size: 0.875rem; color: var(--color-on-surface-variant); line-height: 1.65; margin: 1rem 0;">${e.desc}</p>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;">
+                    ${e.coreCapabilities.map(i=>`
+                      <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--color-charcoal-navy);">
+                        <span class="material-symbols-outlined" style="font-size: 14px; color: var(--color-secondary); flex-shrink: 0;">check_circle</span>
+                        ${i}
+                      </div>
+                    `).join("")}
+                  </div>
+                  <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding-top: 1rem; border-top: 1px solid var(--color-border);">
+                    ${e.accreditations.map(i=>`
+                      <span style="font-size: 0.7rem; background: var(--color-surface-container); color: var(--color-secondary-dark); padding: 3px 10px; border-radius: var(--radius-full); font-weight: 700; border: 1px solid var(--color-border);">${i}</span>
+                    `).join("")}
+                  </div>
+                </div>
+              </article>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  `}const ee={overviewMetrics:[{label:"Active Sea Corridors",value:"14",sub:"100% Monitored"},{label:"Forward Fleet Command",value:"142",sub:"Deployed Vessels"},{label:"Emergency Response",value:"< 45m",sub:"Coastal Dispatch"}]};function ae(){return`
+    <div class="page-transition">
+      <!-- BREADCRUMB -->
+      <div class="breadcrumbs-strip">
+        <div class="container">
+          <div class="breadcrumbs-path">
+            <a href="/" data-nav-link>PORTAL DIRECTORY</a>
+            <span class="material-symbols-outlined" style="font-size: 14px;">chevron_right</span>
+            <span style="color: var(--color-white); font-weight: 600;">GLOBAL PRESENCE</span>
+          </div>
+          <div class="breadcrumbs-meta">
+            <span>14 ACTIVE SEA CORRIDORS</span>
+            <span>LIVE FLEET TELEMETRY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <section class="section section-dark" style="padding: 3rem 0; background: linear-gradient(135deg, #001c28 0%, #071a2b 50%, #0d2f4f 100%);">
+        <div class="container">
+          <h1 class="hero-title font-lobster" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); margin-top: 0.5rem; margin-bottom: 1rem;">
+            Strategic Global Presence &amp; Fleet Network
+          </h1>
+          <p style="font-size: 0.95rem; color: var(--color-primary-fixed-dim); max-width: 700px; line-height: 1.65; margin-bottom: 2.5rem;">
+            MCI's maritime network spans primary shipping lanes across the Indian Ocean Region, with forward fleet commands positioned at critical strategic choke points from the Gulf of Aden to the Strait of Malacca.
+          </p>
+
+          <!-- OVERVIEW METRICS -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 600px;">
+            ${ee.overviewMetrics.map(e=>`
+              <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 1.25rem; text-align: center;">
+                <div style="font-size: 2rem; font-weight: 800; color: var(--color-secondary-container); font-family: var(--font-heading);">${e.value}</div>
+                <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-primary-fixed-dim); margin-top: 4px;">${e.label}</div>
+                <div style="font-size: 0.65rem; color: var(--color-primary-fixed-dim); opacity: 0.6; margin-top: 2px;">${e.sub}</div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMPT MAP SECTION -->
+      <section class="section section-dark global-prompt-map-section">
+        <div class="container">
+          <div class="world-map-shell" aria-label="Global maritime network routes">
+            <div class="world-map-copy">
+              <span class="network-kicker">Global Network</span>
+              <h2 class="font-lobster">Connected Maritime Corridors</h2>
+              <p>
+                Animated route paths connect MCI command desks with strategic maritime corridors across India, the Gulf, Africa, Europe, and Southeast Asia.
+              </p>
+            </div>
+
+            ${k({id:"global-presence-coverage",ariaLabel:"Interactive global service coverage map"})}
+            <div class="world-map-stage legacy-world-map-stage" aria-hidden="true">
+              <div class="world-map-grid" aria-hidden="true"></div>
+              <svg class="world-map-svg" viewBox="0 0 800 400" role="img" aria-label="Prompt-style global route map">
+                <defs>
+                  <linearGradient id="route-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+                    <stop offset="10%" stop-color="#111111" stop-opacity="0.95" />
+                    <stop offset="90%" stop-color="#111111" stop-opacity="0.95" />
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                  </linearGradient>
+                  <filter id="point-glow">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <path class="world-map-land" d="M102 122c30-28 76-26 100 0 20 22 15 54-16 70-34 18-88 7-104-24-8-16-4-32 20-46Zm177-22c31-10 78-2 99 24 20 25 14 61-14 80-29 20-75 14-99-12-24-27-20-77 14-92Zm193 34c38-38 113-24 146 14 39 45 24 116-36 137-58 20-139-13-151-72-5-26 5-55 41-79Zm-40 168c26-10 62-5 78 13 18 19 10 46-15 57-27 12-66 0-78-24-9-18-3-37 15-46Zm-295-17c25-7 58 1 71 20 14 21 3 47-22 55-27 8-62-6-72-30-8-19 0-38 23-45Z" />
+
+                <path class="world-route route-delay-0" d="M548 212 Q506 148 465 190" />
+                <path class="world-route route-delay-1" d="M548 212 Q604 180 660 224" />
+                <path class="world-route route-delay-2" d="M548 212 Q480 240 410 210" />
+                <path class="world-route route-delay-3" d="M410 210 Q350 166 292 188" />
+                <path class="world-route route-delay-4" d="M548 212 Q528 270 482 314" />
+                <path class="world-route route-delay-5" d="M548 212 Q454 126 352 108" />
+
+                <g class="world-point" transform="translate(548 212)">
+                  <circle r="15" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="12" y="-10">New Delhi</text>
+                </g>
+                <g class="world-point" transform="translate(465 190)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-84" y="-8">Gulf Desk</text>
+                </g>
+                <g class="world-point" transform="translate(660 224)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-4" y="28">Malacca</text>
+                </g>
+                <g class="world-point" transform="translate(410 210)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-86" y="26">Arabian Sea</text>
+                </g>
+                <g class="world-point" transform="translate(292 188)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-38" y="-16">Lisbon</text>
+                </g>
+                <g class="world-point" transform="translate(482 314)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-22" y="30">Nairobi</text>
+                </g>
+                <g class="world-point" transform="translate(352 108)">
+                  <circle r="13" class="pulse-ring"></circle>
+                  <circle r="5" filter="url(#point-glow)"></circle>
+                  <text x="-36" y="-15">London</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  `}const ie={pillars:[{code:"PILLAR I // CORE ASSET",title:"State-of-the-Art Dredging & Energy Fleet",desc:"Disciplined capital expenditure directed towards advanced trailing suction hopper dredgers (TSHD) and DP2/DP3 support units to maintain critical navigable draft across Major Ports, de-risking sovereign commerce corridors.",capexFocus:"Fleet Expansion & Technological Refits"},{code:"PILLAR II // INFRASTRUCTURE",title:"Automated Container Terminals & Quays",desc:"Modernization of deepwater quay structures, high-efficiency rail-mounted gantry cranes, and automated berth reservation telemetry driving vessel turnaround times under 22.4 hours.",capexFocus:"Terminal Automation & Berthing Depths"},{code:"PILLAR III // DECARBONIZATION",title:"Green Vessel Conversions & Shore Power",desc:"Dual-fuel LNG/Methanol repowering of coastal tugs, shore-power cold ironing grid installations, and ballast water management retrofits aligned with IMO MEPC 2030 targets.",capexFocus:"Alternative Propulsion & Environmental Compliance"}]};function te(){return`
+    <div class="page-transition">
+      <section class="section section-dark investor-hero">
+        <div class="container">
+          <h1 class="hero-title font-lobster" style="font-size: clamp(1.8rem, 3.5vw, 2.6rem); max-width: 800px; margin-bottom: 1rem;">Investor Relations</h1>
+          <p style="font-size: 0.975rem; color: #d6d6d6; max-width: 680px; line-height: 1.65;">MCI maintains clear, direct communication with investors and stakeholders.</p>
+        </div>
+      </section>
+
+      <section class="section section-white">
+        <div class="container">
+          <h2 class="section-title font-lobster" style="margin-top: 0.5rem; margin-bottom: 2rem;">Strategic Investment Pillars</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            ${ie.pillars.map(e=>`
+              <div style="background: var(--color-surface-container-low); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; border-top: 3px solid var(--color-secondary);">
+                <span style="font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-secondary); display: block; margin-bottom: 0.75rem;">${e.code}</span>
+                <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--color-primary); margin-bottom: 0.75rem;">${e.title}</h3>
+                <p style="font-size: 0.85rem; color: var(--color-on-surface-variant); line-height: 1.65; margin-bottom: 1rem;">${e.desc}</p>
+                <div style="font-size: 0.75rem; background: var(--color-surface-container); color: var(--color-secondary-dark); padding: 0.5rem 0.75rem; border-radius: var(--radius-md); font-weight: 600;">CAPEX FOCUS: ${e.capexFocus}</div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light">
+        <div class="container">
+          <h2 class="section-title font-lobster" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Direct Investor Relations</h2>
+          <div class="investor-profile-card">
+            <img src="/assets/images/asset_2_about_mci.jpg" alt="MCI investor relations office" />
+            <div>
+              <h3>Mr. John Mathew</h3>
+              <p>Investor Relation Officer</p>
+              <p>MCI Group of Companies</p>
+              <a href="mailto:info@mcigroup.co">Email: info@mcigroup.co</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  `}const b={headOffice:{phone:"+91 - 891 - 2561377",mobile:"+91 - 984 - 8194806 / 807",email:"info@mcigroup.co"},operationalDesks:[{name:"JNPT / Mumbai Operations Center",location:"Container Berth Terminal 4, Sector Maritime Corridor, Navi Mumbai",phone:"+91 22 2724-4001",email:"ops@marinecorpindia.gov.in",radio:"VHF Channel 16 / 12"},{name:"Kolkata SMP Port Desk",location:"Syama Prasad Mookerjee Port Trust Building, Strand Road, Kolkata",phone:"+91 33 2230-7411",email:"kolkata@marinecorpindia.gov.in",radio:"VHF Channel 16 / 08"},{name:"Vizhinjam Deepwater Maritime Cell",location:"South Breakwater Command Office, Thiruvananthapuram, Kerala",phone:"+91 471 230-1880",email:"vizhinjam@marinecorpindia.gov.in",radio:"VHF Channel 16 / 14"}],inquiryCategories:["Commercial Shipyard Dry Dock Reservation","Offshore Energy Vessel / AHTS Chartering","Port Development & Marine Terminal Concession","Capital Dredging & Channel Deepening Request","Marine Survey, NDT & Statutory Audit Booking","Propulsion Machinery / Turbine Overhaul Work Order","Green Technology & CII Decarbonization Advisory","General Corporate / Group Secretarial Inquiry"]};function re(){return`
+    <div class="page-transition">
+      <div class="breadcrumbs-strip">
+        <div class="container">
+          <div class="breadcrumbs-path">
+            <a href="/" data-nav-link>PORTAL DIRECTORY</a>
+            <span class="material-symbols-outlined" style="font-size: 14px;">chevron_right</span>
+            <span style="color: var(--color-white); font-weight: 600;">CONTACT &amp; OPERATIONS DESK</span>
+          </div>
+          <div class="breadcrumbs-meta"><span>24/7 DUTY SUPERINTENDENTS</span></div>
+        </div>
+      </div>
+
+      <section class="contact-globe-section">
+        <div class="container">
+          <div class="contact-globe-intro">
+            <h2>Connect with MCI</h2>
+          </div>
+
+          <div class="contact-globe-grid">
+            <div class="contact-direct">
+              <h3 class="font-lobster">Get in touch</h3>
+
+              <div class="contact-link-list">
+                <a class="contact-channel" href="mailto:${b.headOffice.email}">
+                  <span class="contact-channel-icon"><span class="material-symbols-outlined">mail</span></span>
+                  <span>${b.headOffice.email}</span>
+                </a>
+                <a class="contact-channel" href="tel:${b.headOffice.phone}">
+                  <span class="contact-channel-icon"><span class="material-symbols-outlined">call</span></span>
+                  <span>${b.headOffice.phone}</span>
+                </a>
+                <a class="contact-channel" href="tel:${b.headOffice.mobile}">
+                  <span class="contact-channel-icon"><span class="material-symbols-outlined">support_agent</span></span>
+                  <span>${b.headOffice.mobile}</span>
+                </a>
+              </div>
+
+              ${z()}
+            </div>
+
+            <div class="contact-inquiry-panel">
+              <div class="contact-panel-heading">
+                <h3 class="font-lobster">Send an operational inquiry</h3>
+              </div>
+              <div class="contact-form-dots" aria-hidden="true"></div>
+
+              <div id="contact-form-success" style="display: none; padding: 1rem 1.25rem; background: #d4f4e4; border: 1px solid #10b981; border-radius: var(--radius-md); font-size: 0.875rem; color: #0a5c35;">
+                <strong>Inquiry Received</strong> - Our team will respond within 2 business hours. For urgent matters, call our 24/7 dispatch line directly.
+              </div>
+
+              <form id="contact-page-form" class="contact-modern-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="cp-name">Full Name <span class="required">*</span></label>
+                    <input type="text" class="form-input" id="cp-name" name="name" placeholder="Full name" pattern="[A-Za-z]+(?: [A-Za-z]+)*" minlength="2" maxlength="80" title="Use letters and spaces only." required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="cp-company">Company / Vessel Owner</label>
+                    <input type="text" class="form-input" id="cp-company" name="company" placeholder="Shipping Line / Port Authority" />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label" for="cp-email">Official Email <span class="required">*</span></label>
+                    <input type="email" class="form-input" id="cp-email" name="email" placeholder="contact@lineagency.com" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="cp-phone">Contact Phone <span class="required">*</span></label>
+                    <input type="tel" class="form-input" id="cp-phone" name="phone" placeholder="10-digit phone number" inputmode="numeric" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Enter exactly 10 digits." required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-category">Inquiry Category <span class="required">*</span></label>
+                  <select class="form-select" id="cp-category" name="category" required>
+                    <option value="">Select service area...</option>
+                    ${b.inquiryCategories.map(e=>`<option value="${e}">${e}</option>`).join("")}
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-vessel">Vessel Name &amp; IMO No. (if applicable)</label>
+                  <input type="text" class="form-input" id="cp-vessel" name="vessel" placeholder="e.g. M/V SAGAR PRIDE / IMO 9412086 (optional)" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="cp-message">Operational Brief / Message <span class="required">*</span></label>
+                  <textarea class="form-textarea" id="cp-message" name="message" required placeholder="Describe your requirement - port of call, berth specifications, timing, cargo type, or survey scope..." style="min-height: 120px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg contact-modern-submit">
+                  <span>Submit Inquiry</span>
+                  <span class="material-symbols-outlined">arrow_forward</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" style="padding: 3rem 0;">
+        <div class="container">
+          <h2 class="section-title font-lobster" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">Key Operational Desks</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+            ${b.operationalDesks.map(e=>`
+              <div style="background: var(--color-white); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                  <div style="width: 40px; height: 40px; border-radius: var(--radius-md); background: var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <span class="material-symbols-outlined" style="color: var(--color-secondary-container); font-size: 18px;">anchor</span>
+                  </div>
+                  <h4 style="font-size: 0.925rem; font-weight: 700; color: var(--color-primary);">${e.name}</h4>
+                </div>
+                <p style="font-size: 0.775rem; color: var(--color-slate); margin-bottom: 0.875rem; line-height: 1.5;">${e.location}</p>
+                <div style="display: grid; gap: 5px;">
+                  <a href="tel:${e.phone}" style="font-size: 0.8rem; color: var(--color-secondary-dark); text-decoration: none; display: flex; align-items: center; gap: 4px; font-weight: 600;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">call</span>${e.phone}
+                  </a>
+                  <a href="mailto:${e.email}" style="font-size: 0.8rem; color: var(--color-secondary-dark); text-decoration: none; display: flex; align-items: center; gap: 4px;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">mail</span>${e.email}
+                  </a>
+                  <span style="font-size: 0.775rem; color: var(--color-slate); display: flex; align-items: center; gap: 4px;">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">radio</span>${e.radio}
+                  </span>
+                </div>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+      </section>
+    </div>
+  `}function P(){return window.location.pathname}function ne(e){const a=e.match(/^\/activities\/(.+)$/);if(a)return J(a[1]);switch(e){case"/":return x();case"/about":return Z();case"/activities":return Q();case"/group":return X();case"/global-presence":return ae();case"/investor-relations":return te();case"/contact":return re();default:return x()}}function I(e){const a=document.getElementById("header-root"),i=document.getElementById("page-root"),n=document.getElementById("footer-root");a.innerHTML=U(e),i.innerHTML=ne(e),n.innerHTML=j(),document.title="MCI",window.scrollTo({top:0,behavior:"instant"}),oe()}function se(e){history.pushState(null,"",e),I(e)}function oe(){V(),de(),ce(),le(),document.querySelectorAll("[data-nav-link]").forEach(s=>{s.removeEventListener("click",D),s.addEventListener("click",D)}),document.querySelectorAll('a[href^="tel:"]').forEach(s=>{var g;const l=(((g=s.getAttribute("href"))==null?void 0:g.replace(/^tel:/,""))||s.textContent||"").replace(/[^\d+]/g,"").replace(/(?!^)\+/g,"");l&&s.setAttribute("href",`tel:${l}`)});const e=document.getElementById("menu-toggle"),a=document.getElementById("mobile-drawer"),i=document.getElementById("drawer-scrim"),n=document.getElementById("close-drawer");function t(){a==null||a.classList.add("open"),i==null||i.classList.add("open"),e==null||e.setAttribute("aria-expanded","true"),document.body.style.overflow="hidden"}function r(){a==null||a.classList.remove("open"),i==null||i.classList.remove("open"),e==null||e.setAttribute("aria-expanded","false"),document.body.style.overflow=""}e==null||e.addEventListener("click",t),n==null||n.addEventListener("click",r),i==null||i.addEventListener("click",r);const c=document.getElementById("mobile-activities-toggle"),d=document.getElementById("mobile-activities-acc"),u=document.getElementById("mobile-acc-arrow");c==null||c.addEventListener("click",()=>{const s=d==null?void 0:d.classList.toggle("open");u&&(u.textContent=s?"expand_less":"expand_more")});const v=document.getElementById("contact-page-form");v==null||v.addEventListener("submit",s=>{if(s.preventDefault(),!v.reportValidity())return;const o=new FormData(v),l=["MCI Contact Inquiry",`Name: ${o.get("name")}`,`Company / Vessel Owner: ${o.get("company")||"Not provided"}`,`Email: ${o.get("email")}`,`Phone: ${o.get("phone")}`,`Category: ${o.get("category")}`,`Vessel / IMO: ${o.get("vessel")||"Not provided"}`,`Message: ${o.get("message")}`].join(`
+`);window.location.href=`https://wa.me/919059483826?text=${encodeURIComponent(l)}`});const f=document.getElementById("main-header");function y(){f&&(window.scrollY>50?f.classList.add("scrolled"):f.classList.remove("scrolled"))}window.removeEventListener("scroll",y),window.addEventListener("scroll",y,{passive:!0});const p=document.getElementById("btn-back-top");p==null||p.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));const m=document.querySelector(".hero-bg-video");m&&(m.loop=!0,m.muted=!0,m.playsInline=!0,m.addEventListener("ended",()=>{m.currentTime=0,m.play().catch(()=>{})}),m.play().catch(()=>{})),document.querySelectorAll(".filter-pill").forEach(s=>{s.addEventListener("click",()=>{document.querySelectorAll(".filter-pill").forEach(l=>l.classList.remove("active")),s.classList.add("active");const o=s.dataset.filter;document.querySelectorAll(".activity-card").forEach(l=>{o==="all"||l.dataset.category===o?l.style.display="":l.style.display="none"})})}),document.querySelectorAll(".doc-download-btn").forEach(s=>{s.addEventListener("click",()=>{const o=document.createElement("div");o.style.cssText="position:fixed;bottom:2rem;right:2rem;background:#071a2b;color:#fff;padding:1rem 1.5rem;border-radius:8px;font-size:0.875rem;z-index:9999;box-shadow:0 8px 32px rgba(0,0,0,0.3);",o.innerHTML="<strong>Download Initiated</strong><br>Document access subject to NDA verification.",document.body.appendChild(o),setTimeout(()=>o.remove(),4e3)})}),document.querySelectorAll(".station-tab").forEach(s=>{s.addEventListener("click",()=>{document.querySelectorAll(".station-tab").forEach(l=>l.classList.remove("active")),document.querySelectorAll(".station-panel").forEach(l=>l.classList.remove("active")),s.classList.add("active");const o=document.getElementById(`panel-${s.dataset.station}`);o==null||o.classList.add("active")})}),document.querySelectorAll(".table-search").forEach(s=>{s.addEventListener("input",()=>{const o=s.dataset.tableId,l=s.value.toLowerCase(),g=document.getElementById(o);g&&g.querySelectorAll("tbody tr").forEach(h=>{h.style.display=h.textContent.toLowerCase().includes(l)?"":"none"})})}),document.querySelectorAll(".export-csv-btn").forEach(s=>{s.addEventListener("click",()=>{const o=s.dataset.tableId,l=document.getElementById(o);if(!l)return;const h=Array.from(l.querySelectorAll("tr")).map(O=>Array.from(O.querySelectorAll("th, td")).map(B=>`"${B.textContent.trim().replace(/"/g,'""')}"`).join(",")).join(`
+`),L=new Blob([h],{type:"text/csv"}),A=URL.createObjectURL(L),C=document.createElement("a");C.href=A,C.download=`${o}-mci.csv`,C.click(),URL.revokeObjectURL(A)})})}function le(){document.querySelectorAll("[data-coverage-map]").forEach(e=>{const a=e.querySelector(".india-hotspot"),i=e.querySelector(".services-overlay"),n=e.querySelector(".close-services"),t=r=>{e.classList.toggle("is-open",r),a==null||a.setAttribute("aria-expanded",String(r)),i==null||i.setAttribute("aria-hidden",String(!r))};a==null||a.addEventListener("pointerenter",()=>t(!0)),a==null||a.addEventListener("click",()=>t(!e.classList.contains("is-open"))),e.addEventListener("pointerleave",()=>t(!1)),n==null||n.addEventListener("click",r=>{r.stopPropagation(),t(!1),a==null||a.focus()}),e.addEventListener("keydown",r=>{r.key==="Escape"&&(t(!1),a==null||a.focus())})})}function ce(){document.querySelectorAll("[data-shutter-text]").forEach(e=>{const a=()=>{const i=e.querySelectorAll(".shutter-character-main, .shutter-character-slice");i.forEach(n=>{n.style.animation="none"}),e.offsetWidth,i.forEach(n=>{n.style.removeProperty("animation")})};e.addEventListener("click",a),e.addEventListener("keydown",i=>{(i.key==="Enter"||i.key===" ")&&(i.preventDefault(),a())})})}function de(){document.querySelectorAll("button, a.btn").forEach(e=>{if(e.dataset.originButton==="true")return;e.dataset.originButton="true",e.classList.add("origin-button");const a=document.createElement("span");a.className="origin-fill",a.setAttribute("aria-hidden","true"),e.appendChild(a);const i=t=>{const r=e.getBoundingClientRect(),c=t?t.clientX-r.left:r.width/2,d=t?t.clientY-r.top:r.height/2,u=Math.ceil(2*Math.max(Math.hypot(c,d),Math.hypot(r.width-c,d),Math.hypot(c,r.height-d),Math.hypot(r.width-c,r.height-d)));a.style.left=`${c}px`,a.style.top=`${d}px`,a.style.width=`${u}px`,a.style.height=`${u}px`,requestAnimationFrame(()=>{a.classList.add("visible"),e.classList.add("origin-filled")})},n=()=>{a.classList.remove("visible"),e.classList.remove("origin-filled")};e.addEventListener("pointerenter",i),e.addEventListener("pointerdown",i),e.addEventListener("pointerleave",n),e.addEventListener("blur",n),e.addEventListener("focus",()=>{e.matches(":focus-visible")&&i()})})}function D(e){var n,t;const i=e.currentTarget.getAttribute("href");i&&i.startsWith("/")&&(e.preventDefault(),(n=document.getElementById("mobile-drawer"))==null||n.classList.remove("open"),(t=document.getElementById("drawer-scrim"))==null||t.classList.remove("open"),document.body.style.overflow="",se(i))}window.addEventListener("popstate",()=>I(P()));I(P());
